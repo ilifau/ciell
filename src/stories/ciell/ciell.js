@@ -10,7 +10,6 @@ let Story = [
         title: 'Welcome to CIELL',
         content: `<p>Stories are structured in <span class="highlight"><strong>Chapters</strong></span>. This is the first Chapter of the Story "Welcome to CIELL".</p>
         <p>Just like the rest of the app, chapters can include basically any kind of content that can be displayed on a website. I assume that the main content of the chapters will be comic strips that move the story forward.</p>
-        <p style="text-align:center;margin: 2em 0;">[image|comic-strip.jpg|Example Comic Strip]</p>
         <p>Chapters also consist of any number of <span class="highlight"><strong>Choices</strong></span> (cf. the large buttons below) that take the user to the next chapter. This will help us to develop our <span class="highlight"><strong>Storyboards</strong></span>. Click on one of them to continue to the respective chapter.</p>`,
         choices: [
           {
@@ -99,10 +98,143 @@ let Story = [
     ]
   },
   {
-    title: 'Another Story with No Content and a Different Title That Is Rather Long',
+    title: 'Another Story With a Slightly Longer Title',
     author: 'CIELL',
     description: 'This is another empty story.',
     preview: 'preview-story-2.jpg',
+    color: '#cec12c',
+    chapters: [
+      {
+        id: 0,
+        title: 'Another Story, Another Chapter!',
+        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
+        choices: [
+          {
+            'text': 'Next',
+            'chapterId': 1
+          }
+        ]
+      },
+      {
+        id: 1,
+        title: 'More Content',
+        content: '<p>Test...</p>',
+        choices: [
+          {
+            'text': 'Restart',
+            'chapterId': 0
+          }
+        ],
+        finalChapter: true
+      }
+    ]
+  },
+  {
+    placeholder: true,
+    title: 'Another Story',
+    author: 'CIELL',
+    description: 'This is another empty story.',
+    preview: 'preview-story-2.jpg',
+    color: '#66aea7',
+    chapters: [
+      {
+        id: 0,
+        title: 'Another Story, Another Chapter!',
+        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
+        choices: [
+          {
+            'text': 'Next',
+            'chapterId': 1
+          }
+        ]
+      },
+      {
+        id: 1,
+        title: 'More Content',
+        content: '<p>Test...</p>',
+        choices: [
+          {
+            'text': 'Restart',
+            'chapterId': 0
+          }
+        ],
+        finalChapter: true
+      }
+    ]
+  },
+  {
+    placeholder: true,
+    title: 'Another Story',
+    author: 'CIELL',
+    description: 'This is another empty story.',
+    preview: 'preview-story-2.jpg',
+    color: '#ad27bd',
+    chapters: [
+      {
+        id: 0,
+        title: 'Another Story, Another Chapter!',
+        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
+        choices: [
+          {
+            'text': 'Next',
+            'chapterId': 1
+          }
+        ]
+      },
+      {
+        id: 1,
+        title: 'More Content',
+        content: '<p>Test...</p>',
+        choices: [
+          {
+            'text': 'Restart',
+            'chapterId': 0
+          }
+        ],
+        finalChapter: true
+      }
+    ]
+  },
+  {
+    placeholder: true,
+    title: 'Another Story',
+    author: 'CIELL',
+    description: 'This is another empty story.',
+    preview: 'preview-story-2.jpg',
+    color: '#b93620',
+    chapters: [
+      {
+        id: 0,
+        title: 'Another Story, Another Chapter!',
+        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
+        choices: [
+          {
+            'text': 'Next',
+            'chapterId': 1
+          }
+        ]
+      },
+      {
+        id: 1,
+        title: 'More Content',
+        content: '<p>Test...</p>',
+        choices: [
+          {
+            'text': 'Restart',
+            'chapterId': 0
+          }
+        ],
+        finalChapter: true
+      }
+    ]
+  },
+  {
+    placeholder: true,
+    title: 'Another Story',
+    author: 'CIELL',
+    description: 'This is another empty story.',
+    preview: 'preview-story-2.jpg',
+    color: '#3e9115',
     chapters: [
       {
         id: 0,

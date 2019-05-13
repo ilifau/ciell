@@ -1,13 +1,13 @@
 <template>
-  <div class="storyPanel">
-    <h2>{{ title() }}</h2>
+  <div class="story-pabel">
+    <h1 class="chapter-title">{{ title() }}</h1>
     <component :is="dynamicContent" />
     <ul class="choices">
       <li v-for="choice in choices()" :key="choice.chapterId">
         <a v-on:click="openChapter(choice.chapterId)">{{ choice.text }}</a>
       </li>
       <li v-if="finalChapter()">
-        <a v-on:click="$router.push('/')">Close Story</a>
+        <a v-on:click="$router.push('/')">Choose another Story</a>
       </li>
     </ul>
   </div>
@@ -37,6 +37,8 @@ export default {
       let score = this.$store.state.userScore + 10
       this.$store.commit('setUserScore', score)
       this.$store.commit('setCurrentChapterId', id)
+
+      window.scrollTo(0, 0)
     },
     finalChapter () {
       return typeof this.$props.story.chapters[this.$store.state.currentChapterId].finalChapter !== 'undefined'
@@ -79,6 +81,10 @@ export default {
 </script>
 
 <style scoped>
+.chapter-title {
+  margin-top: 0;
+}
+
 .choices {
   list-style-type: none;
   margin: 1.5em 0 0;
@@ -86,14 +92,17 @@ export default {
 }
 
 .choices a {
-  font-size: .93875em;
-  display: inline-block;
+  font-size: 1em;
+  display: block;
+  text-align: center;
   padding: .375em .75em;
-  color: #0056a2;
+  color: #fff;
+  background: #2a99bf;
   margin-bottom: .375em;
   transition: all .15s linear;
-  border: 1px solid #0056a2;
-  border-radius: 1em;
+  border-radius: .5em;
+  position: relative;
+  z-index: 6;
 }
 
 .choices li:last-child a {
@@ -102,8 +111,7 @@ export default {
 
 .choices a:hover,
 .choices a:active {
-  background: #0056a2;
   color: #fff;
-  border-color: #0056a2;
+  background: #32b3df;
 }
 </style>

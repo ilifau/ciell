@@ -1,10 +1,10 @@
 <template>
   <div class="container about">
     <Header />
-    <h3>About CIELL</h3>
+    <h1>About CIELL</h1>
     <p>The app contains a router that allows us to easily switch between different components. This is the <span class="highlight"><strong>About</strong></span> component. It will contain information on the project and the partners.</p>
     <p>CIELL is short for "Comics for Inclusive English Language Learning". And this is just a very boring prototype. But stay tuned – things are going to greatly improve in the future! The source code of the app is also available on <a href="https://github.com/SebastianHonert/ciell" target="_blank">GitHub</a>.</p>
-    <h3>Project Partners</h3>
+    <h2>Project Partners</h2>
     <ul>
       <li>...</li>
       <li>...</li>
@@ -12,7 +12,7 @@
       <li>...</li>
       <li>...</li>
     </ul>
-    <p><br /><a v-on:click="back">Back</a></p>
+    <p><br /><a v-on:click="back">← Back to the Stories</a></p>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="story-pabel">
+  <div class="story-panel">
     <h1 class="chapter-title">{{ title() }}</h1>
     <component :is="dynamicContent" />
     <ul class="choices">
@@ -97,7 +97,7 @@ export default {
   text-align: center;
   padding: .375em .75em;
   color: #fff;
-  background: #2a99bf;
+  background: #219ac2;
   margin-bottom: .375em;
   transition: all .15s linear;
   border-radius: .5em;
@@ -112,6 +112,6 @@ export default {
 .choices a:hover,
 .choices a:active {
   color: #fff;
-  background: #32b3df;
+  background: #1c85a8;
 }
 </style>

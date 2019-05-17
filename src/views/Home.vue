@@ -1,7 +1,15 @@
 <template>
   <div class="container home">
-    <Header v-bind:story="this.$props.stories[this.$props.currentStoryId]" />
-    <Home v-bind:stories="this.$props.stories" />
+    <Header
+      v-bind:story="this.$props.stories[this.$props.currentStoryId]"
+      v-bind:stories="this.$props.stories"
+      @openStory="openStory($event)"
+    />
+    <Home
+      v-bind:stories="this.$props.stories"
+      @openStory="openStory($event)"
+    />
+    <v-dialog />
   </div>
 </template>
 
@@ -18,6 +26,32 @@ export default {
   props: [
     'stories',
     'currentStoryId'
-  ]
+  ],
+  methods: {
+    openStory (id) {
+      if (typeof this.stories[id].placeholder !== 'undefined') {
+        this.$modal.show('dialog', {
+          title: 'Please Note',
+          text: 'This story will be available soon.',
+          buttons: [
+            {
+              title: 'Close'
+            }
+          ]
+        })
+
+        return
+      }
+
+      if (id !== this.$store.state.currentStoryId) {
+        this.$store.commit('setCurrentChapterId', 0)
+      }
+
+      this.$store.commit('setCurrentStoryId', id)
+      this.$router.push('story')
+
+      window.scrollTo(0, 0)
+    }
+  }
 }
 </script>

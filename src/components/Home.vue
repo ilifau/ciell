@@ -3,7 +3,7 @@
     <div class="container home">
       <!-- <div class="ciell-logo"><img src="@/assets/img/ciell-logo-text-only.png" alt=""></div> -->
       <h1 class="home-title">CIELL</h1>
-      <h2 class="ciell-subtitle">Visually enhanced learning of writing organization for people with dyslexia.</h2>
+      <h2 class="home-subtitle">Visually enhanced learning of writing organization for people with dyslexia.</h2>
       <!-- <p style="padding-bottom:1em">This is the <strong><span class="highlight">Welcome Screen</span></strong> of the app. It will contain links to the contents of the app. Please keep in mind that all elements of the app are preliminary and will be redesigned. The app will be responsive and cross-plattform. Try it by changig the size of your browser window. Click on the first tile below to open the demo story.</p> -->
       <div class="stories">
         <div v-for="(story, id) in this.$props.stories" :key="id">
@@ -13,7 +13,6 @@
           </a>
         </div>
       </div>
-      <v-dialog :width="computeModalWidth" />
     </div>
   </div>
 </template>
@@ -23,28 +22,7 @@ export default {
   props: ['stories'],
   methods: {
     openStory (id) {
-      if (typeof this.$props.stories[id].placeholder !== 'undefined') {
-        this.$modal.show('dialog', {
-          title: 'Please Note',
-          text: 'This story will be available soon.',
-          buttons: [
-            {
-              title: 'Close'
-            }
-          ]
-        })
-
-        return
-      }
-
-      if (id !== this.$store.state.currentStoryId) {
-        this.$store.commit('setCurrentChapterId', 0)
-      }
-
-      this.$store.commit('setCurrentStoryId', id)
-      this.$router.push('story')
-
-      window.scrollTo(0, 0)
+      this.$emit('openStory', id)
     },
     storyBackgroundImage () {
       return this.$props.stories[this.$store.state.currentStoryId].preview
@@ -70,17 +48,19 @@ export default {
   h1.home-title {
     margin: 0;
     font-weight: 700;
+    color: #fff386;
+    text-shadow: 3px 3px 0 rgba(0,0,0,.6), 6px 6px 0 rgba(0,0,0,.3);
+    font-size: 2.5em;
   }
 
-  .ciell-subtitle {
+  .home-subtitle {
     text-align: center;
-    font-size: .93875em;
+    font-size: 1em;
     width: 480px;
     max-width: 90%;
     margin: 0 auto 2.5em;
-    color: #2a99bf;
-    padding-top: .5em;
-    margin-top: .25em;
+    color: #21677e;
+    margin-top: .5em;
   }
 
   .stories {
@@ -104,7 +84,7 @@ export default {
   }
 
   .stories div:hover {
-    box-shadow: 1px 3px 8px rgba(0,0,0,.5);
+    box-shadow: 0 3px 10px rgba(0,0,0,.6);
   }
 
   .stories div a {
@@ -121,8 +101,7 @@ export default {
     background-size: cover;
     color: #fff;
     font-size: 1.125em;
-    /* font-family: 'Patrick Hand'; */
-    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
+    text-shadow: 1px 1px 0 rgba(0,0,0,.6);
   }
 
   .stories div a .title {
@@ -136,7 +115,7 @@ export default {
     top: 0;
     width: 100%;
     height: 100%;
-    background: #2a99bf;
+    background: #1c85a8;
     opacity: .4;
     z-index: 0;
     transition: opacity linear .3s;
@@ -146,7 +125,7 @@ export default {
     opacity: .7;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 812px) {
     .stories {
       width: 640px;
       max-width: 100%;
@@ -155,6 +134,7 @@ export default {
     .stories div {
       width: 12em;
       height: 12em;
+      margin-bottom: 0em;
     }
 
     .stories div a .title {

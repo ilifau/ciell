@@ -13,7 +13,10 @@
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-on:click="toggleNav()" v-bind:class="{ active: navIsActive }">
       <span class="nav-header">Contents</span>
-      <router-link to="/">The Stories</router-link>
+      <router-link to="/">Stories</router-link>
+      <div v-for="(story, id) in stories" :key="id">
+        <a class="story-link" v-on:click="openStory(id)">{{ id + 1 }}. {{ story.title }}</a>
+      </div>
       <router-link to="/about">About CIELL</router-link>
     </div>
   </div>
@@ -43,11 +46,13 @@ export default {
     closeNav: function () {
       if (this.navIsActive) {
         this.navIsActive = false
-        console.log(this.$router.currentRoute)
       }
     },
     isStory: function () {
       return this.$router.currentRoute.name === 'story'
+    },
+    openStory (id) {
+      this.$emit('openStory', id)
     }
   }
 }
@@ -63,11 +68,12 @@ export default {
   padding: .5em .75em;
   z-index: 9;
   line-height: 1;
+  align-items: flex-start;
 }
 
 .header.story {
   /* background: rgb(227, 239, 248, .95); */
-  background: rgb(255, 255, 255, .925);
+  background: rgb(255, 255, 255, .9);
 }
 
 .header a {
@@ -78,14 +84,13 @@ export default {
 .header a.story-title {
   white-space: nowrap;
   width: 100%;
-  overflow: hidden;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   padding-right: 2em;
   font-size: .75em;
-  position: relative;
-  top: 2px;
-  color: #2a99bf;
+  color: #1c85a8;
+  overflow: hidden;
+  text-transform: uppercase;
 }
 
 /* .header a:last-of-type {
@@ -121,7 +126,6 @@ export default {
   max-width: 280px;
   background: #20323e;
   transition: all .25s ease;
-  text-align: center;
 }
 
 .nav-toggle a {
@@ -135,15 +139,11 @@ export default {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #2a99bf;
+  background: #219ac2;
   transition: all ease-in .25s;
   margin-left: 6px;
   position: relative;
   left: 0;
-}
-
-.nav-toggle:hover .nav-circle {
-  background: #32b3df;
 }
 
 .nav-toggle:hover .nav-circle:first-of-type,
@@ -161,7 +161,7 @@ export default {
 .nav a,
 .nav .nav-header {
   display: block;
-  padding: .5em;
+  padding: .5rem 1rem;
   color: #fff;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
@@ -177,7 +177,7 @@ export default {
 }
 
 .nav .nav-header {
-  color: #2a99bf;
+  color: #1c85a8;
   font-size: .75em;
   text-transform: uppercase;
   padding-top: 1.5em;
@@ -204,5 +204,30 @@ export default {
 .close-nav.active {
   pointer-events: all;
   background: rgba(0,0,0,.4)
+}
+
+.nav .story-link {
+  font-size: .875em;
+  padding-left: 2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-circle {
+    width: 8px;
+    height: 8px;
+    margin-left: 5px;
+  }
+
+.nav-toggle:hover .nav-circle:first-of-type,
+.nav-toggle.active .nav-circle:first-of-type {
+  position: relative;
+  left: -2px;
+}
+
+.nav-toggle:hover .nav-circle:last-of-type,
+.nav-toggle.active .nav-circle:last-of-type {
+  position: relative;
+  left: 2px;
+}
 }
 </style>

@@ -151,19 +151,66 @@ img {
 }
 
 /* Comics */
-.comics-wrapper {
-  margin-bottom: 2em;
+.comic-grid {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
-.comics-wrapper img {
+.comic-grid div {
+  position: relative;
+  background: #f7f7f7;
+  box-shadow: 1px 1px 5px rgba(0,0,0,.5);
+  border: 3px solid #000;
+  overflow: hidden;
+  margin-bottom: 1em;
+}
+
+.comic-grid div span {
+  color: #333;
+  background: rgba(255,255,255,.7);
+  font-size: .5em;
+  margin: 1em;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  padding: .25em;
+}
+
+.comic-grid div::before {
+  content: "";
   display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  border-bottom: 1em;
 }
 
-.comics-wrapper img:last-of-type {
-  margin-bottom: 0;
+.comic-grid .full {
+  width: 100%;
+}
+
+.comic-grid .full::before {
+  padding-top: 50%;
+}
+
+.comic-grid .half {
+  width: calc(50% - .5em);
+  margin-right: 1em;
+}
+
+.comic-grid .half.last {
+  margin-right: 0;
+}
+
+.comic-grid .half::before {
+  padding-top: 100%;
+}
+
+.comic-grid div img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /* Responsive */
@@ -183,6 +230,17 @@ img {
   .v--modal {
     margin: 0 auto;
     max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .comic-grid div {
+    border: 2px solid #000;
+}
+
+  .comic-grid .half {
+    width: 100%;
+    margin: 0 0 1em;
   }
 }
 </style>

@@ -137,6 +137,7 @@ export default {
       width: 12em;
       height: 12em;
       margin-bottom: 0em;
+      border: .2em solid #219ac2;
     }
 
     .story a .title {

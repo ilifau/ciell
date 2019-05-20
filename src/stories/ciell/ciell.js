@@ -38,13 +38,41 @@ let Story = [
         id: 2,
         title: 'This is a Comic',
         content: `
-        <div class="comics-wrapper">
-          [image|test-1.jpg|Comic 1]
-          [image|test-2.jpg|Comic 2]
-          [image|test-3.jpg|Comic 3]
-          [image|test-4.jpg|Comic 4]
+        <div class="comic-grid">
+          <div class="full">
+            [image|1280x640-1.jpg|Comic 1-1]
+            <span>1280x640</span>
+          </div>
+          <div class="half">
+            [image|640x640-1.jpg|Comic 1-2]
+            <span>640x640</span>
+          </div>
+          <div class="half last">
+            [image|640x640-2.jpg|Comic 1-3]
+            <span>640x640</span>
+          </div>
+          <div class="half">
+            [image|640x640-3.jpg|Comic 1-4]
+            <span>640x640</span>
+          </div>
+          <div class="half last">
+            [image|640x640-4.jpg|Comic 1-5]
+            <span>640x640</span>
+          </div>
+          <div class="full">
+            [image|1280x640-2.jpg|Comic 1-6]
+            <span>1280x640</span>
+          </div>
+          <div class="half">
+            [image|640x640-5.jpg|Comic 1-7]
+            <span>640x640</span>
+          </div>
+          <div class="half last">
+            [image|640x640-6.jpg|Comic 1-8]
+            <span>640x640</span>
+          </div>
         </div>
-        <p>This chapter contains a <span class="highlight">Comic</span>. Comics consist of a variable amount of square or rectangular images organized in rows. The default image width is <strong>1280 pixels</strong>.</p>
+        <p>Comics consist of a variable amount of square or rectangular images organized in rows. Square images will resize to full width on smaller screen sizes. Rectangular images will keep their width and only adjust in height. Rectangular images should be <strong>1280x640 pixels</strong> and square images <strong>640x640 pixels</strong>.</p>
         <p>Oh, and yes, this chapter is almost identical to [decorator|chapter 1|1].</p>`,
         choices: [
           {
@@ -92,8 +120,7 @@ let Story = [
       {
         id: 6,
         title: 'Feedback',
-        content: `<p>The final Chapter of a Story might include some sort of <span class="highlight"><strong>Feedback</strong></span> that reflects how well the user did in the learning activities.</p>
-        <p style="margin-top:1.5em">[image|spiderman-victory.jpg|Goodbye!]</p>`,
+        content: `<p>The final Chapter of a Story might include some sort of <span class="highlight"><strong>Feedback</strong></span> that reflects how well the user did in the learning activities.</p>`,
         choices: [
           {
             'text': 'Restart the Story',

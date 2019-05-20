@@ -150,6 +150,24 @@ img {
   padding: 0 0 1em;
 }
 
+/* Comics */
+.comics-wrapper {
+  margin-bottom: 2em;
+}
+
+.comics-wrapper img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border-bottom: 1em;
+}
+
+.comics-wrapper img:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+
 @media screen and (max-width: 1023px) {
   .container {
     padding: 2.5em 0 2em;

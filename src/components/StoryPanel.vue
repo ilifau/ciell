@@ -1,6 +1,6 @@
 <template>
   <div class="story-panel">
-    <h1 class="chapter-title">{{ title() }}</h1>
+    <h1 class="chapter-title" v-if="title()">{{ title() }}</h1>
     <component :is="dynamicContent" />
     <ul class="choices">
       <li v-for="choice in choices()" :key="choice.chapterId">

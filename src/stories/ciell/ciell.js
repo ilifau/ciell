@@ -36,9 +36,16 @@ let Story = [
       },
       {
         id: 2,
-        title: 'I am Chapter 2',
-        content: `<p>Navigating between chapters is really simple. This chapter is more or less empty, except for an element called <span class="highlight"><strong>Decorator</strong></span>. Try clicking on the following [decorator|Decorator (click me)|5]. A Decorator can provide additional information by linking to a specific chapter from inside the current chapter's content.</p>
-        <p>And yes, this chapter is almost identical to [decorator|chapter 1|1].</p>`,
+        title: 'This is a Comic',
+        content: `
+        <div class="comics-wrapper">
+          [image|test-1.jpg|Comic 1]
+          [image|test-2.jpg|Comic 2]
+          [image|test-3.jpg|Comic 3]
+          [image|test-4.jpg|Comic 4]
+        </div>
+        <p>This chapter contains a <span class="highlight">Comic</span>. Comics consist of a variable amount of square or rectangular images organized in rows. The default image width is <strong>1280 pixels</strong>.</p>
+        <p>Oh, and yes, this chapter is almost identical to [decorator|chapter 1|1].</p>`,
         choices: [
           {
             'text': 'Proceed to Chapter 3',

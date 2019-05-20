@@ -6,7 +6,7 @@
       <h2 class="home-subtitle">Visually enhanced learning of writing organization for people with dyslexia.</h2>
       <!-- <p style="padding-bottom:1em">This is the <strong><span class="highlight">Welcome Screen</span></strong> of the app. It will contain links to the contents of the app. Please keep in mind that all elements of the app are preliminary and will be redesigned. The app will be responsive and cross-plattform. Try it by changig the size of your browser window. Click on the first tile below to open the demo story.</p> -->
       <div class="stories">
-        <div v-for="(story, id) in this.$props.stories" :key="id">
+        <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
           <a v-on:click="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
             <span class="title">{{ story.title }}</span>
             <div class="dark" :style="{ backgroundColor: story.color ? story.color : ''}"></div>
@@ -73,21 +73,23 @@ export default {
     max-width: 100%;
   }
 
-  .stories div {
+  .story {
     position: relative;
     width: 14em;
     height: 14em;
     border-radius: 50%;
     overflow: hidden;
     margin-bottom: .5em;
-    transition: box-shadow .3s linear;
+    transition: box-shadow .3s linear, border-color .3s linear;
+    border: .375em solid #219ac2;
   }
 
-  .stories div:hover {
+  .story:hover {
     box-shadow: 0 3px 10px rgba(0,0,0,.6);
+    border-color: #fff386;
   }
 
-  .stories div a {
+  .story a {
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -104,12 +106,12 @@ export default {
     text-shadow: 1px 1px 0 rgba(0,0,0,.6);
   }
 
-  .stories div a .title {
+  .story a .title {
     z-index: 2;
     position: relative;
   }
 
-  .stories div a .dark {
+  .story a .dark {
     position: absolute;
     left: 0;
     top: 0;
@@ -121,7 +123,7 @@ export default {
     transition: opacity linear .3s;
   }
 
-  .stories div a:hover .dark {
+  .story a:hover .dark {
     opacity: .7;
   }
 
@@ -131,68 +133,68 @@ export default {
       max-width: 100%;
     }
 
-    .stories div {
+    .story {
       width: 12em;
       height: 12em;
       margin-bottom: 0em;
     }
 
-    .stories div a .title {
+    .story a .title {
       font-size: .93875em;
     }
   }
 
   @media screen and (max-width: 640px) {
-    .stories div {
+    .story {
       width: 11em;
       height: 11em;
     }
 
-    .stories div a {
+    .story a {
       padding: 1em;
     }
 
-    .stories div a .title {
+    .story a .title {
       font-size: .875em;
     }
   }
 
   @media screen and (max-width: 560px) {
-    .stories div {
+    .story {
       width: 10em;
       height: 10em;
     }
   }
 
   @media screen and (max-width: 480px) {
-    .stories div {
+    .story {
       width: 9em;
       height: 9em;
     }
 
-    .stories div a .title {
+    .story a .title {
       font-size: .75em;
     }
   }
 
   @media screen and (max-width: 430px) {
-    .stories div {
+    .story {
       width: 7em;
       height: 7em;
     }
 
-    .stories div a .title {
+    .story a .title {
       font-size: .6125em;
     }
   }
 
   @media screen and (max-width: 359px) {
-    .stories div {
+    .story {
       width: 6em;
       height: 6em;
     }
 
-    .stories div a .title {
+    .story a .title {
       font-size: .6125em;
     }
   }

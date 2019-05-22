@@ -64,24 +64,29 @@ export default {
   }
 
   .stories {
-    display: grid;
-    grid-template-columns: calc(50% - 1em) calc(50% - 1em);
-    grid-gap: 2em;
-    justify-items: center;
-    margin: 1em auto 0;
-    width: 720px;
-    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-size: 1em;
   }
 
   .story {
+    display: block;
     position: relative;
-    width: 14em;
-    height: 14em;
     border-radius: 50%;
+    width: calc(50% - 2em);
     overflow: hidden;
-    margin-bottom: .5em;
+    margin: 0 1em 2em;
     transition: box-shadow .3s linear, border-color .3s linear;
-    border: .375em solid #219ac2;
+    border: .25em solid #219ac2;
+  }
+
+  .story::after {
+    content: "";
+    display: block;
+    padding-top: 100%;
   }
 
   .story:hover {
@@ -90,6 +95,7 @@ export default {
   }
 
   .story a {
+    position: absolute;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -98,6 +104,7 @@ export default {
     align-items: center;
     justify-content: center;
     height: 100%;
+    width: 100%;
     padding: 1.5em;
     text-align: center;
     background-size: cover;
@@ -127,76 +134,19 @@ export default {
     opacity: .7;
   }
 
-  @media screen and (max-width: 812px) {
+  @media screen and (max-width: 639px) {
     .stories {
-      width: 640px;
+      display: block;
+      margin: 0 auto;
+      width: 360px;
       max-width: 100%;
     }
 
     .story {
-      width: 12em;
-      height: 12em;
-      margin-bottom: 0em;
-      border: .2em solid #219ac2;
-    }
-
-    .story a .title {
-      font-size: .93875em;
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    .story {
-      width: 11em;
-      height: 11em;
-    }
-
-    .story a {
-      padding: 1em;
-    }
-
-    .story a .title {
-      font-size: .875em;
-    }
-  }
-
-  @media screen and (max-width: 560px) {
-    .story {
-      width: 10em;
-      height: 10em;
-    }
-  }
-
-  @media screen and (max-width: 480px) {
-    .story {
-      width: 9em;
-      height: 9em;
-    }
-
-    .story a .title {
-      font-size: .75em;
-    }
-  }
-
-  @media screen and (max-width: 430px) {
-    .story {
-      width: 7em;
-      height: 7em;
-    }
-
-    .story a .title {
-      font-size: .6125em;
-    }
-  }
-
-  @media screen and (max-width: 359px) {
-    .story {
-      width: 6em;
-      height: 6em;
-    }
-
-    .story a .title {
-      font-size: .6125em;
+      width: 100%;
+      margin: 0 0 2em;
+      transition: box-shadow .3s linear, border-color .3s linear;
+      border: .375em solid #219ac2;
     }
   }
 </style>

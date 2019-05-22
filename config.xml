@@ -24,6 +24,7 @@
         <allow-intent href="itms-apps:*" />
     </platform>
     <preference name="Fullscreen" value="true" />
+    <plugin name="cordova-plugin-fullscreen" spec="^1.2.0" />
     <engine name="browser" spec="^5.0.4" />
     <engine name="android" spec="^8.0.0" />
     <engine name="ios" spec="^4.5.0" />

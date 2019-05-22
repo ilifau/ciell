@@ -128,6 +128,7 @@ export default {
     opacity: .4;
     z-index: 0;
     transition: opacity linear .3s;
+    border-radius: 50%;
   }
 
   .story a:hover .dark {

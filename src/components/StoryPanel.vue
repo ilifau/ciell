@@ -38,7 +38,7 @@ export default {
       this.$store.commit('setUserScore', score)
       this.$store.commit('setCurrentChapterId', id)
 
-      document.body.scrollTop = 0
+      window.scrollTo(0, 0)
     },
     finalChapter () {
       return typeof this.$props.story.chapters[this.$store.state.currentChapterId].finalChapter !== 'undefined'
@@ -99,7 +99,7 @@ export default {
   color: #fff;
   background: #219ac2;
   margin-bottom: .375em;
-  transition: all .15s linear;
+  transition: background .15s linear;
   border-radius: .5em;
   position: relative;
   z-index: 6;

@@ -9,7 +9,6 @@
       v-bind:stories="this.$props.stories"
       @openStory="openStory($event)"
     />
-    <v-dialog />
   </div>
 </template>
 
@@ -29,28 +28,7 @@ export default {
   ],
   methods: {
     openStory (id) {
-      if (typeof this.stories[id].placeholder !== 'undefined') {
-        this.$modal.show('dialog', {
-          title: 'Please Note',
-          text: 'This story will be available soon.',
-          buttons: [
-            {
-              title: 'Close'
-            }
-          ]
-        })
-
-        return
-      }
-
-      if (id !== this.$store.state.currentStoryId) {
-        this.$store.commit('setCurrentChapterId', 0)
-      }
-
-      this.$store.commit('setCurrentStoryId', id)
-      this.$router.push('story')
-
-      document.body.scrollTop = 0
+      this.$emit('openStory', id)
     }
   }
 }

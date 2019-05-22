@@ -15,7 +15,9 @@
       <span class="nav-header">Contents</span>
       <router-link to="/">Stories</router-link>
       <div v-for="(story, id) in stories" :key="id">
-        <a class="story-link" v-on:click="openStory(id)">{{ id + 1 }}. {{ story.title }}</a>
+        <a class="story-link" v-bind:class="{ current: id === $store.state.currentStoryId }" v-on:click="openStory(id)">
+          {{ id + 1 }}. {{ story.title }}
+        </a>
       </div>
       <router-link to="/about">About CIELL</router-link>
     </div>
@@ -35,7 +37,8 @@ export default {
       if (this.$route.name !== 'story') {
         return ''
       } else {
-        return '← ' + this.$props.stories[this.$store.state.currentStoryId].title
+        // return '← ' + this.$props.stories[this.$store.state.currentStoryId].title
+        return 'Home'
       }
     }
   },
@@ -209,6 +212,11 @@ export default {
 .nav .story-link {
   font-size: .875em;
   padding-left: 2rem;
+}
+
+.nav .story-link.current {
+  color: rgba(255,255,255,.4);
+  background: rgba(0,0,0,.2);
 }
 
 @media screen and (max-width: 767px) {

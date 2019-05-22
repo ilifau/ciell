@@ -2,8 +2,12 @@
   <div id="app" v-bind:class="{ story: isStory() }">
     <div v-if="showRotatedBackground()" class="rotated-background"></div>
     <div id="close-nav" @click="$emit('closeNav')"></div>
-    <router-view v-bind:stories="stories" />
+    <router-view
+      v-bind:stories="stories"
+      @openStory="openStory($event)"
+    />
     <div id="footer"></div>
+    <v-dialog />
   </div>
 </template>
 
@@ -22,6 +26,30 @@ export default {
     },
     isStory: function () {
       return this.$router.currentRoute.name === 'story'
+    },
+    openStory (id) {
+      if (typeof this.stories[id].placeholder !== 'undefined') {
+        this.$modal.show('dialog', {
+          title: 'Please Note',
+          text: 'This story will be available soon.',
+          buttons: [
+            {
+              title: 'Close'
+            }
+          ]
+        })
+
+        return
+      }
+
+      if (id !== this.$store.state.currentStoryId) {
+        this.$store.commit('setCurrentChapterId', 0)
+      }
+
+      this.$store.commit('setCurrentStoryId', id)
+      this.$router.push('story')
+
+      document.body.scrollTop = 0
     }
   }
 }
@@ -37,9 +65,7 @@ export default {
 html, body {
   height: 100%;
   min-height: 100%;
-  /* background: rgb(227, 239, 248); */
   background: #fff;
-  overflow-x: hidden;
 }
 
 html {
@@ -68,6 +94,7 @@ body {
   width: 100%;
   min-height: 100%;
   position: relative;
+  overflow-x: hidden;
 }
 
 /* #app.story {
@@ -234,6 +261,7 @@ img {
   .v--modal {
     margin: 0 auto;
     max-width: 90%;
+    left: 0 !important;
   }
 }
 

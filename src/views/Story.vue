@@ -1,6 +1,9 @@
 <template>
   <div class="container story">
-    <Header v-bind:stories="this.$props.stories" />
+    <Header
+      v-bind:stories="this.$props.stories"
+      @openStory="openStory($event)"
+    />
     <StoryPanel v-bind:story="this.$props.stories[this.$store.state.currentStoryId]" />
   </div>
 </template>
@@ -15,6 +18,11 @@ export default {
     Header,
     StoryPanel
   },
-  props: ['stories']
+  props: ['stories'],
+  methods: {
+    openStory (id) {
+      this.$emit('openStory', id)
+    }
+  }
 }
 </script>

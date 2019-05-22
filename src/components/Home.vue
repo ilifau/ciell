@@ -139,14 +139,13 @@ export default {
       display: block;
       margin: 0 auto;
       width: 360px;
-      max-width: 100%;
+      max-width: 86%;
     }
 
     .story {
       width: 100%;
       margin: 0 0 2em;
       transition: box-shadow .3s linear, border-color .3s linear;
-      border: .375em solid #219ac2;
     }
   }
 </style>

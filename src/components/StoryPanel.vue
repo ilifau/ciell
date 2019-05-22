@@ -38,7 +38,7 @@ export default {
       this.$store.commit('setUserScore', score)
       this.$store.commit('setCurrentChapterId', id)
 
-      window.scrollTo(0, 0)
+      document.body.scrollTop = 0
     },
     finalChapter () {
       return typeof this.$props.story.chapters[this.$store.state.currentChapterId].finalChapter !== 'undefined'

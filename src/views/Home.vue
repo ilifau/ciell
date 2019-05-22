@@ -50,7 +50,7 @@ export default {
       this.$store.commit('setCurrentStoryId', id)
       this.$router.push('story')
 
-      window.scrollTo(0, 0)
+      document.body.scrollTop = 0
     }
   }
 }

@@ -219,6 +219,10 @@ img {
   .container {
     padding: 2.5em 0 2em;
   }
+
+  .rotated-background {
+    max-height: 50%;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -230,6 +234,12 @@ img {
   .v--modal {
     margin: 0 auto;
     max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .rotated-background {
+    max-height: 39%;
   }
 }
 

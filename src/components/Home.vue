@@ -75,7 +75,7 @@ export default {
   .story {
     display: block;
     position: relative;
-    border-radius: 50%;
+    border-radius: 100%;
     width: calc(50% - 2em);
     overflow: hidden;
     margin: 0 1em 2em;

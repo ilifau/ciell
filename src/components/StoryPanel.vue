@@ -48,7 +48,7 @@ export default {
     dynamicContent () {
       let _this = this
 
-      // Images
+      // Content types
       let content = this.$props.story.chapters[this.$store.state.currentChapterId].content.replace(/\[.+?\]/g, function (template) {
         let params = template.split('|')
         let type = params[0].replace('[', '')
@@ -100,7 +100,6 @@ export default {
   background: #219ac2;
   margin-bottom: .375em;
   transition: background .15s linear;
-  border-radius: .5em;
   position: relative;
   z-index: 6;
 }

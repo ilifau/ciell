@@ -74,6 +74,14 @@ export default {
   align-items: flex-start;
 }
 
+/* @supports(padding: max(0px)) {
+    .header {
+        top: max(1em, env(safe-area-inset-top));
+        padding-left: max(1em, env(safe-area-inset-left));
+        padding-right: max(1em, env(safe-area-inset-right));
+    }
+} */
+
 .header.story {
   /* background: rgb(227, 239, 248, .95); */
   background: rgb(255, 255, 255, .9);
@@ -130,6 +138,15 @@ export default {
   background: #20323e;
   transition: all .25s ease;
 }
+
+/* @supports(padding: max(0px)) {
+    .nav {
+        padding-top: max(1em, env(safe-area-inset-top));
+        padding-left: max(1em, env(safe-area-inset-left));
+        padding-right: max(1em, env(safe-area-inset-right));
+        padding-bottom: max(1em, env(safe-area-inset-bottom));
+    }
+} */
 
 .nav-toggle a {
   display: flex;
@@ -226,16 +243,16 @@ export default {
     margin-left: 5px;
   }
 
-.nav-toggle:hover .nav-circle:first-of-type,
-.nav-toggle.active .nav-circle:first-of-type {
-  position: relative;
-  left: -2px;
-}
+  .nav-toggle:hover .nav-circle:first-of-type,
+  .nav-toggle.active .nav-circle:first-of-type {
+    position: relative;
+    left: -2px;
+  }
 
-.nav-toggle:hover .nav-circle:last-of-type,
-.nav-toggle.active .nav-circle:last-of-type {
-  position: relative;
-  left: 2px;
-}
+  .nav-toggle:hover .nav-circle:last-of-type,
+  .nav-toggle.active .nav-circle:last-of-type {
+    position: relative;
+    left: 2px;
+  }
 }
 </style>

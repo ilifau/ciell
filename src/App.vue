@@ -97,6 +97,16 @@ body {
   overflow-x: hidden;
 }
 
+/* iOS */
+/* @supports(padding: max(0px)) {
+    #app {
+        padding-top: max(1em, env(safe-area-inset-top));
+        padding-left: max(1em, env(safe-area-inset-left));
+        padding-right: max(1em, env(safe-area-inset-right));
+        padding-bottom: max(1em, env(safe-area-inset-bottom));
+    }
+} */
+
 /* #app.story {
   background: #d8f4fd;
 } */

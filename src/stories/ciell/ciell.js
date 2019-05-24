@@ -7,7 +7,7 @@ let Story = [
     chapters: [
       {
         id: 0,
-        title: 'Welcome to CIELL',
+        title: 'Introduction',
         content: `<p>Stories are structured in <span class="highlight"><strong>Chapters</strong></span>. This is the first Chapter of the Story "Welcome to CIELL".</p>
         <p>Just like the rest of the app, chapters can include basically any kind of content that can be displayed on a website. I assume that the main content of the chapters will be comic strips that move the story forward.</p>
         <p>Chapters also consist of any number of <span class="highlight"><strong>Choices</strong></span> (cf. the large buttons below) that take the user to the next chapter. This will help us to develop our <span class="highlight"><strong>Storyboards</strong></span>. Click on one of them to continue to the respective chapter.</p>`,
@@ -36,7 +36,6 @@ let Story = [
       },
       {
         id: 2,
-        title: 'This is a Comic',
         content: `
         <div class="comic-grid">
           <div class="full">

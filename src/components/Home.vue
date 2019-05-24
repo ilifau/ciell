@@ -75,7 +75,7 @@ export default {
   .story {
     display: block;
     position: relative;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     width: calc(50% - 2em);
     overflow: hidden;
     margin: 0 1em 2em;
@@ -128,7 +128,7 @@ export default {
     opacity: .4;
     z-index: 0;
     transition: opacity linear .3s;
-    border-radius: 50%;
+    /* border-radius: 50%; */
   }
 
   .story a:hover .dark {

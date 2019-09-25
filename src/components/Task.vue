@@ -1,9 +1,10 @@
 <template>
   <div class="task" v-bind:class="{ isSorted: isSorted }">
-    <h1>{{ task.title }}</h1>
+    <h1 v-if="task.title">{{ task.title }}</h1>
+    <p v-if="task.description">{{ task.description }}</p>
     <draggable v-model="task.items" group="tasks" @start="drag=true" @change="onChange" @end="drag=false">
       <div class="task-item" v-for="item in task.items" :key="item.id">
-        {{item.title}}
+        {{ item.title }}
         <img v-if="item.image" :src="require('@/stories/ciell/assets/img/' + item.image)" alt="" />
       </div>
     </draggable>

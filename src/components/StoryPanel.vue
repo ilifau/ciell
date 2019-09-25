@@ -2,6 +2,7 @@
   <div class="story-panel">
     <h1 class="chapter-title" v-if="title()">{{ title() }}</h1>
     <component :is="dynamicContent" />
+    <Task v-if="hasTask()" v-bind:story="this.$props.story" v-bind:task="getTask(this.$props.story.chapters[this.$store.state.currentChapterId].taskId)" />
     <ul class="choices">
       <li v-for="choice in choices()" :key="choice.chapterId">
         <a v-on:click="openChapter(choice.chapterId)">{{ choice.text }}</a>
@@ -14,7 +15,12 @@
 </template>
 
 <script>
+import Task from '@/components/Task.vue'
+
 export default {
+  components: {
+    Task
+  },
   props: ['story'],
   methods: {
     title () {
@@ -42,21 +48,29 @@ export default {
     },
     finalChapter () {
       return typeof this.$props.story.chapters[this.$store.state.currentChapterId].finalChapter !== 'undefined'
+    },
+    hasTask () {
+      return this.$props.story.chapters[this.$store.state.currentChapterId].hasOwnProperty('taskId')
+    },
+    getTask (id) {
+      return this.$props.story.tasks.find(function (task) {
+        return task.id === id
+      })
     }
   },
   computed: {
     dynamicContent () {
       let _this = this
 
-      // Content types
+      // Content types (images, decorators)
       let content = this.$props.story.chapters[this.$store.state.currentChapterId].content.replace(/\[.+?\]/g, function (template) {
         let params = template.split('|')
         let type = params[0].replace('[', '')
 
         switch (type) {
           case 'image':
-            let src = params[1].replace('[[', '')
-            let alt = params[2].replace(']]', '')
+            let src = params[1]
+            let alt = params[2]
             let img = require('@/stories/ciell/assets/img/' + src)
             return '<img src="' + img + '" alt="' + alt + '" />'
 

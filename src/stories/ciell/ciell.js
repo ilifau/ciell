@@ -4,6 +4,36 @@ let Story = [
     author: 'CIELL',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
     preview: 'preview-story-1.jpg',
+    tasks: [
+      {
+        id: 0,
+        type: 'sort',
+        title: 'My title is Sorting',
+        description: 'Please put the items in the correct order (drag & drop).',
+        items: [
+          {
+            order: 10,
+            title: 'I am the item title 1'
+          },
+          {
+            order: 20,
+            title: 'I am the item title 2'
+          },
+          {
+            order: 30,
+            title: 'I am the item title 3'
+          },
+          {
+            order: 40,
+            title: 'I am the item title 4'
+          },
+          {
+            order: 50,
+            title: 'I am the item title 5'
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -82,9 +112,9 @@ let Story = [
       },
       {
         id: 3,
-        title: 'Learning Activity',
-        content: `<p>The Chapters will also contain the <span class="highlight"><strong>Learning Activities</strong></span> of the app.</p>
-        <p>[image|pacman.jpg|PacMan]</p>`,
+        title: '',
+        content: '',
+        taskId: 0,
         choices: [
           {
             'text': 'Proceed to the Final Chapter',

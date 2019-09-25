@@ -13,7 +13,8 @@ let Story = [
         items: [
           {
             order: 10,
-            title: 'I am the item title 1'
+            title: 'I am the item title 1',
+            image: '1280x640-1.jpg'
           },
           {
             order: 20,

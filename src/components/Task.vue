@@ -4,6 +4,7 @@
     <draggable v-model="task.items" group="tasks" @start="drag=true" @change="onChange" @end="drag=false">
       <div class="task-item" v-for="item in task.items" :key="item.id">
         {{item.title}}
+        <img v-if="item.image" :src="require('@/stories/ciell/assets/img/' + item.image)" alt="" />
       </div>
     </draggable>
     <a class="check-task" slot="footer" @click="checkTask">Check order</a>
@@ -82,6 +83,10 @@ export default {
     content: "\2b0d";
     display: inline-block;
     margin-right: .5em;
+  }
+
+  .task-item img {
+    margin-top: .25em;
   }
 
   .check-task {

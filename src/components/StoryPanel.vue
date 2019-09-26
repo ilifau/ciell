@@ -3,7 +3,7 @@
     <h1 class="chapter-title" v-if="title()">{{ title() }}</h1>
     <div v-if="hasAudio()" class="audio-wrapper">
       <label v-for="(file, index) in audioSources" :key="index">
-        <AudioButton class="audio-button" :sources="file.path" :loop="false" /> {{ file.label }}
+        <AudioButton v-bind:label="file.label" class="audio-button" :sources="file.path" :loop="false" />
       </label>
     </div>
     <component :is="dynamicContent" />
@@ -164,6 +164,5 @@ export default {
 
 label {
   display: block;
-  font-size: .875em;
 }
 </style>

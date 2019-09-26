@@ -1,8 +1,12 @@
 <template>
   <div class="audio-group">
     <div class="audio-buttons">
-      <a class="play" @click="togglePlayback">{{ playing ? '&#10073;&#10073; Pause' : '&#9658; Play' }}</a>
-      <a class="stop" @click="stop">&#9724; Stop</a>
+      <a class="play" @click="togglePlayback">
+        <span v-if="playing"><v-icon name="pause" scale=".75" /></span>
+        <span v-if="!playing"><v-icon name="play" scale=".75" /></span>
+        {{ playing ? this.$props.label : this.$props.label }}
+      </a>
+      <a class="stop" @click="stop"><v-icon name="stop" scale=".75" /> Stop</a>
     </div>
   </div>
 </template>
@@ -11,7 +15,8 @@
 import VueHowler from 'vue-howler'
 
 export default {
-  mixins: [VueHowler]
+  mixins: [VueHowler],
+  props: ['label']
 }
 </script>
 
@@ -19,10 +24,10 @@ export default {
 .audio-buttons {
   display: inline-block;
   margin-right: .25em;
+  font-size: .75em;
 }
 
 .audio-buttons a {
-  font-size: .75em;
   color: #fff;
   text-decoration: none;
   background: #219ac2;
@@ -30,12 +35,17 @@ export default {
   border-radius: .25em;
   display: inline-block;
   border: 0;
-  transition: all .4s ease 0s;
+  transition: all .4s ease;
   margin-top: .5em;
   cursor: pointer;
 }
 
 .audio-buttons a.play {
   background: #08723d;
+}
+
+.audio-buttons a.play:hover,
+.audio-buttons a.play:hover {
+  background: #185d3a;
 }
 </style>

@@ -44,12 +44,8 @@ let Story = [
         <p>Chapters also consist of any number of <span class="highlight"><strong>Choices</strong></span> (cf. the large buttons below) that take the user to the next chapter. This will help us to develop our <span class="highlight"><strong>Storyboards</strong></span>. Click on one of them to continue to the respective chapter.</p>`,
         audio: [
           {
-            filename: 'bell.mp3',
-            label: 'A simple bell sound'
-          },
-          {
-            filename: 'bell.mp3',
-            label: 'And here we go again'
+            filename: 'sine-wave.mp3',
+            label: 'Audio Content'
           }
         ],
         choices: [

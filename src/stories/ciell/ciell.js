@@ -9,7 +9,7 @@ let Story = [
         id: 0,
         type: 'sort',
         title: 'My title is Sorting',
-        description: 'Please put the items below in the correct order (drag & drop).',
+        description: 'Please put the items below in the correct order (drag & drop). Once you\'re done, click the "Check order" button at the end of the list.',
         items: [
           {
             order: 10,

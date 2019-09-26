@@ -1,5 +1,5 @@
 <template>
-  <div class="task" v-bind:class="{ isSorted: isSorted }">
+  <div class="task" v-bind:class="{ isDone: taskIsDone(task.id) }">
     <h1 v-if="task.title">{{ task.title }}</h1>
     <p v-if="task.description">{{ task.description }}</p>
     <draggable v-model="task.items" group="tasks" @start="drag=true" @change="onChange" @end="drag=false">
@@ -23,13 +23,12 @@ export default {
     'story',
     'task'
   ],
-  data () {
-    return {
-      isSorted: false
-    }
-  },
   created () {
     // Shuffle sortable items
+    if (this.$store.isDone) {
+      return
+    }
+
     let items = this.task.items
     for (var i = items.length - 1; i > 0; i--) {
       var j = Math.floor(Math.random() * (i + 1))
@@ -42,11 +41,14 @@ export default {
   },
   methods: {
     checkTask () {
-      if (this.isSorted) {
+      if (this.taskIsDone()) {
         alert('Superb!')
       } else {
         alert('Not quite...')
       }
+    },
+    taskIsDone () {
+      return this.$store.state.tasksDone.includes(this.task.id)
     },
     onChange () {
       let items = this.task.items
@@ -54,9 +56,9 @@ export default {
         let current = items[i]
         let next = items[i + 1]
         if (current.order < next.order) {
-          this.isSorted = true
+          this.$store.commit('setTaskDone', this.task.id)
         } else {
-          this.isSorted = false
+          this.$store.commit('removeTaskDone', this.task.id)
           break
         }
       }
@@ -75,7 +77,7 @@ export default {
     color: #7e170e;
   }
 
-  .isSorted .task-item {
+  .isDone .task-item {
     background: #d1e6db;
     color: #08723d;
   }

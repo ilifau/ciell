@@ -1,6 +1,11 @@
 <template>
   <div class="story-panel">
     <h1 class="chapter-title" v-if="title()">{{ title() }}</h1>
+    <div v-if="hasAudio()" class="audio-wrapper">
+      <label v-for="(file, index) in audioSources" :key="index">
+        <AudioButton class="audio-button" :sources="file.path" :loop="false" /> {{ file.label }}
+      </label>
+    </div>
     <component :is="dynamicContent" />
     <Task v-if="hasTask()" v-bind:story="this.$props.story" v-bind:task="getTask(this.$props.story.chapters[this.$store.state.currentChapterId].taskId)" />
     <ul class="choices">
@@ -16,10 +21,12 @@
 
 <script>
 import Task from '@/components/Task.vue'
+import AudioButton from '@/components/AudioButton.vue'
 
 export default {
   components: {
-    Task
+    Task,
+    AudioButton
   },
   props: ['story'],
   methods: {
@@ -56,9 +63,27 @@ export default {
       return this.$props.story.tasks.find(function (task) {
         return task.id === id
       })
+    },
+    hasAudio () {
+      return this.$props.story.chapters[this.$store.state.currentChapterId].hasOwnProperty('audio')
     }
   },
   computed: {
+    audioSources () {
+      if (!this.hasAudio()) return
+
+      let sources = []
+
+      let files = this.$props.story.chapters[this.$store.state.currentChapterId].audio
+      files.forEach((file) => {
+        sources.push({
+          path: [require('@/stories/ciell/assets/audio/' + file.filename)],
+          label: file.label
+        })
+      })
+
+      return sources
+    },
     dynamicContent () {
       let _this = this
 
@@ -126,5 +151,19 @@ export default {
 .choices a:active {
   color: #fff;
   background: #1c85a8;
+}
+
+.audio-wrapper {
+  display: block;
+  margin-bottom: 1em;
+}
+
+.audio-button {
+  display: inline-block;
+}
+
+label {
+  display: block;
+  font-size: .875em;
 }
 </style>

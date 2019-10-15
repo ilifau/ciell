@@ -1,15 +1,19 @@
 <template>
   <div class="background">
     <div class="container home">
-      <!-- <div class="ciell-logo"><img src="@/assets/img/ciell-logo-text-only.png" alt=""></div> -->
+      <!-- <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt=""></div> -->
       <h1 class="home-title">CIELL</h1>
       <h2 class="home-subtitle">Visually enhanced learning of writing organization for people with dyslexia.</h2>
       <!-- <p style="padding-bottom:1em">This is the <strong><span class="highlight">Welcome Screen</span></strong> of the app. It will contain links to the contents of the app. Please keep in mind that all elements of the app are preliminary and will be redesigned. The app will be responsive and cross-plattform. Try it by changig the size of your browser window. Click on the first tile below to open the demo story.</p> -->
       <div class="stories">
         <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
           <a v-on:click="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
-            <span class="title">{{ story.title }}</span>
-            <div class="dark" :style="{ backgroundColor: story.color ? story.color : ''}"></div>
+            <span class="title">
+              <span class="number">#{{ id + 1 }}</span>
+              {{ story.title }}
+              <span class="title-background" :style="{ backgroundColor: story.color ? story.color : '', transform: 'rotate(' + (Math.floor(Math.random() * 4) - 2) + 'deg)' }"></span>
+            </span>
+            <div class="dark"></div>
           </a>
         </div>
       </div>
@@ -39,6 +43,8 @@ export default {
   .ciell-logo {
     display: block;
     text-align: center;
+    width: 10em;
+    margin: 0 auto;
   }
 
   h1 {
@@ -77,10 +83,12 @@ export default {
     position: relative;
     /* border-radius: 100%; */
     width: calc(50% - 2em);
-    overflow: hidden;
-    margin: 0 1em 2em;
+    /* overflow: hidden; */
+    margin: 0 1em 1em;
     transition: box-shadow .3s linear, border-color .3s linear;
-    border: .25em solid #219ac2;
+    /* border: .25em solid #219ac2; */
+    /* box-shadow: 0 1px 3px rgba(0,0,0,.2); */
+    mix-blend-mode: multiply;
   }
 
   .story::after {
@@ -105,17 +113,38 @@ export default {
     justify-content: center;
     height: 100%;
     width: 100%;
-    padding: 1.5em;
-    text-align: center;
+    text-align: left;
     background-size: cover;
     color: #fff;
-    font-size: 1.125em;
+    font-size: 1.375em;
     text-shadow: 1px 1px 0 rgba(0,0,0,.6);
   }
 
   .story a .title {
     z-index: 2;
-    position: relative;
+    position: absolute;
+    bottom: 1em;
+    padding: .75em 1em;
+    left: -.5em;
+  }
+
+  .story a .title span.number {
+    display: block;
+    text-align: left;
+    font-size: .6125em;
+    line-height: 1.2;
+  }
+
+  .story a .title span.title-background {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #092d3a;
+    opacity: .6;
   }
 
   .story a .dark {
@@ -124,15 +153,20 @@ export default {
     top: 0;
     width: 100%;
     height: 100%;
-    background: #1c85a8;
-    opacity: .4;
+    background: #000;
+    opacity: 0;
     z-index: 0;
     transition: opacity linear .3s;
-    /* border-radius: 50%; */
   }
 
   .story a:hover .dark {
-    opacity: .7;
+    opacity: .125;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 768px) {
+    .story a {
+      font-size: 1.125em;
+    }
   }
 
   @media screen and (max-width: 639px) {
@@ -147,6 +181,12 @@ export default {
       width: 100%;
       margin: 0 0 2em;
       transition: box-shadow .3s linear, border-color .3s linear;
+    }
+  }
+
+  @media screen and (max-width: 479px) {
+    .story a {
+      font-size: 1.125em;
     }
   }
 </style>

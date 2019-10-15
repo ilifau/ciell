@@ -1,9 +1,123 @@
 let Story = [
   {
-    title: 'Welcome to CIELL',
-    author: 'CIELL',
+    id: 0,
+    title: 'The Invisible Girls',
+    author: 'CIELL Team',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
-    preview: 'preview-story-1.jpg',
+    preview: 'invisible-girls/cover.jpg',
+    color: 'rgb(50, 60, 50)',
+    chapters: [
+      {
+        id: 0,
+        title: 'Introduction',
+        content: `<p>This is the first story.</p>`,
+        choices: [
+          {
+            'text': 'Proceed to Chapter 2',
+            'chapterId': 20
+          },
+          {
+            'text': 'Proceed to Chapter 3',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 20,
+        content: `<p>This is chapter 2.</p>`,
+        choices: [
+          {
+            'text': 'Restart',
+            'chapterId': 0
+          }
+        ]
+      },
+      {
+        id: 30,
+        content: `<p>This is chapter 3.</p>`,
+        choices: [
+          {
+            'text': 'Restart',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 10,
+    title: 'Nuclear Power',
+    author: 'CIELL Team',
+    description: 'This is another empty story.',
+    preview: 'nuclear-power/cover.jpg',
+    color: 'rgb(230, 79, 78)',
+    chapters: [
+      {
+        id: 0,
+        title: 'Another Story, Another Chapter!',
+        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
+        choices: [
+          {
+            'text': 'Next',
+            'chapterId': 1
+          }
+        ]
+      },
+      {
+        id: 1,
+        title: 'More Content',
+        content: '<p>Test...</p>',
+        choices: [
+          {
+            'text': 'Restart',
+            'chapterId': 0
+          }
+        ],
+        finalChapter: true
+      }
+    ]
+  },
+  {
+    id: 20,
+    placeholder: true,
+    title: 'Agatha Christie',
+    author: 'CIELL Team',
+    description: 'This is another empty story.',
+    preview: 'agatha-christie/cover.jpg',
+    color: 'rgb(38, 35, 64)',
+    chapters: [
+      {
+        id: 0,
+        title: 'Another Story, Another Chapter!',
+        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
+        choices: [
+          {
+            'text': 'Next',
+            'chapterId': 1
+          }
+        ]
+      },
+      {
+        id: 1,
+        title: 'More Content',
+        content: '<p>Test...</p>',
+        choices: [
+          {
+            'text': 'Restart',
+            'chapterId': 0
+          }
+        ],
+        finalChapter: true
+      }
+    ]
+  },
+  {
+    id: 30,
+    title: 'App Testing',
+    author: 'CIELL Team',
+    description: 'This is just a very short demo story. It is pretty much about nothing.',
+    preview: 'invisible-girls/cover.jpg',
+    color: 'rgb(50, 60, 50)',
     tasks: [
       {
         id: 0,
@@ -160,170 +274,6 @@ let Story = [
         choices: [
           {
             'text': 'Restart the Story',
-            'chapterId': 0
-          }
-        ],
-        finalChapter: true
-      }
-    ]
-  },
-  {
-    title: 'Another Story With a Slightly Longer Title',
-    author: 'CIELL',
-    description: 'This is another empty story.',
-    preview: 'preview-story-2.jpg',
-    color: '#cec12c',
-    chapters: [
-      {
-        id: 0,
-        title: 'Another Story, Another Chapter!',
-        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
-        choices: [
-          {
-            'text': 'Next',
-            'chapterId': 1
-          }
-        ]
-      },
-      {
-        id: 1,
-        title: 'More Content',
-        content: '<p>Test...</p>',
-        choices: [
-          {
-            'text': 'Restart',
-            'chapterId': 0
-          }
-        ],
-        finalChapter: true
-      }
-    ]
-  },
-  {
-    placeholder: true,
-    title: 'Another Story',
-    author: 'CIELL',
-    description: 'This is another empty story.',
-    preview: 'preview-story-2.jpg',
-    color: '#66aea7',
-    chapters: [
-      {
-        id: 0,
-        title: 'Another Story, Another Chapter!',
-        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
-        choices: [
-          {
-            'text': 'Next',
-            'chapterId': 1
-          }
-        ]
-      },
-      {
-        id: 1,
-        title: 'More Content',
-        content: '<p>Test...</p>',
-        choices: [
-          {
-            'text': 'Restart',
-            'chapterId': 0
-          }
-        ],
-        finalChapter: true
-      }
-    ]
-  },
-  {
-    placeholder: true,
-    title: 'Another Story',
-    author: 'CIELL',
-    description: 'This is another empty story.',
-    preview: 'preview-story-2.jpg',
-    color: '#ad27bd',
-    chapters: [
-      {
-        id: 0,
-        title: 'Another Story, Another Chapter!',
-        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
-        choices: [
-          {
-            'text': 'Next',
-            'chapterId': 1
-          }
-        ]
-      },
-      {
-        id: 1,
-        title: 'More Content',
-        content: '<p>Test...</p>',
-        choices: [
-          {
-            'text': 'Restart',
-            'chapterId': 0
-          }
-        ],
-        finalChapter: true
-      }
-    ]
-  },
-  {
-    placeholder: true,
-    title: 'Another Story',
-    author: 'CIELL',
-    description: 'This is another empty story.',
-    preview: 'preview-story-2.jpg',
-    color: '#b93620',
-    chapters: [
-      {
-        id: 0,
-        title: 'Another Story, Another Chapter!',
-        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
-        choices: [
-          {
-            'text': 'Next',
-            'chapterId': 1
-          }
-        ]
-      },
-      {
-        id: 1,
-        title: 'More Content',
-        content: '<p>Test...</p>',
-        choices: [
-          {
-            'text': 'Restart',
-            'chapterId': 0
-          }
-        ],
-        finalChapter: true
-      }
-    ]
-  },
-  {
-    placeholder: true,
-    title: 'Another Story',
-    author: 'CIELL',
-    description: 'This is another empty story.',
-    preview: 'preview-story-2.jpg',
-    color: '#3e9115',
-    chapters: [
-      {
-        id: 0,
-        title: 'Another Story, Another Chapter!',
-        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
-        choices: [
-          {
-            'text': 'Next',
-            'chapterId': 1
-          }
-        ]
-      },
-      {
-        id: 1,
-        title: 'More Content',
-        content: '<p>Test...</p>',
-        choices: [
-          {
-            'text': 'Restart',
             'chapterId': 0
           }
         ],

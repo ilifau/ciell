@@ -1,13 +1,13 @@
 <template>
   <div class="story-panel">
-    <h1 class="chapter-title" v-if="title()">{{ title() }}</h1>
+    <!-- <h1 class="chapter-title" v-if="title()">{{ title() }}</h1> -->
     <div v-if="hasAudio()" class="audio-wrapper">
       <label v-for="(file, index) in audioSources" :key="index">
         <AudioButton v-bind:label="file.label" class="audio-button" :sources="file.path" :loop="false" />
       </label>
     </div>
     <component :is="dynamicContent" />
-    <Task v-if="hasTask()" v-bind:story="this.$props.story" v-bind:task="getTask(this.$props.story.chapters[this.$store.state.currentChapterId].taskId)" />
+    <Task v-if="hasTask()" v-bind:story="this.$props.story" v-bind:task="getTask(this.getChapter(this.$store.state.currentChapterId).taskId)" />
     <ul class="choices">
       <li v-for="choice in choices()" :key="choice.chapterId">
         <a v-on:click="openChapter(choice.chapterId)">{{ choice.text }}</a>
@@ -31,21 +31,22 @@ export default {
   props: ['story'],
   methods: {
     title () {
-      return this.$props.story.chapters[this.$store.state.currentChapterId].title
+      return this.getChapter(this.$store.state.currentChapterId).title
     },
     choices () {
-      return this.getChapter(this.$store.state.currentChapterId)[0].choices
+      return this.getChapter(this.$store.state.currentChapterId).choices
     },
     getChapter (id = null) {
       let chapterId = id || this.$store.state.currentChapterId
-      return this.$props.story.chapters.filter((chapter) => { return chapter.id === chapterId })
+      let chapter = this.$props.story.chapters.find(c => c.id === chapterId)
+      return chapter
     },
     openChapter (id) {
       let currentChapter = this.getChapter()
       let nextChapter = this.getChapter(id)
 
-      if (typeof currentChapter[0].after === 'function') currentChapter[0].after()
-      if (typeof nextChapter[0].before === 'function') nextChapter[0].before()
+      if (typeof currentChapter.after === 'function') currentChapter.after()
+      if (typeof nextChapter.before === 'function') nextChapter.before()
 
       let score = this.$store.state.userScore + 10
       this.$store.commit('setUserScore', score)
@@ -54,10 +55,10 @@ export default {
       window.scrollTo(0, 0)
     },
     finalChapter () {
-      return typeof this.$props.story.chapters[this.$store.state.currentChapterId].finalChapter !== 'undefined'
+      return typeof this.getChapter(this.$store.state.currentChapterId).finalChapter !== 'undefined'
     },
     hasTask () {
-      return this.$props.story.chapters[this.$store.state.currentChapterId].hasOwnProperty('taskId')
+      return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('taskId')
     },
     getTask (id) {
       return this.$props.story.tasks.find(function (task) {
@@ -65,7 +66,7 @@ export default {
       })
     },
     hasAudio () {
-      return this.$props.story.chapters[this.$store.state.currentChapterId].hasOwnProperty('audio')
+      return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('audio')
     }
   },
   computed: {
@@ -74,7 +75,7 @@ export default {
 
       let sources = []
 
-      let files = this.$props.story.chapters[this.$store.state.currentChapterId].audio
+      let files = this.getChapter(this.$store.state.currentChapterId).audio
       files.forEach((file) => {
         sources.push({
           path: [require('@/stories/ciell/assets/audio/' + file.filename)],
@@ -88,7 +89,7 @@ export default {
       let _this = this
 
       // Content types (images, decorators)
-      let content = this.$props.story.chapters[this.$store.state.currentChapterId].content.replace(/\[.+?\]/g, function (template) {
+      let content = this.getChapter(this.$store.state.currentChapterId).content.replace(/\[.+?\]/g, function (template) {
         let params = template.split('|')
         let type = params[0].replace('[', '')
 

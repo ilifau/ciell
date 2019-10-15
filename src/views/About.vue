@@ -1,16 +1,34 @@
 <template>
   <div class="container about">
-    <Header />
+    <Header v-bind:stories="this.$props.stories" />
     <h1>About CIELL</h1>
-    <p>The app contains a router that allows us to easily switch between different components. This is the <span class="highlight"><strong>About</strong></span> component. It will contain information on the project and the partners.</p>
-    <p>CIELL is short for "Comics for Inclusive English Language Learning". And this is just a very boring prototype. But stay tuned – things are going to greatly improve in the future! The source code of the app is also available on <a href="https://github.com/SebastianHonert/ciell" target="_blank">GitHub</a>.</p>
-    <h2>Project Partners</h2>
+    <p>The <strong>Comics for Inclusive English Language Learning (CIELL)</strong> project aims to develop the competences of second language teachers by promoting the use of comic art, and other visual representations of knowledge. Another goal of the project to enhance the quality of language teaching materials used for teaching writing as a  second language and support the needs of dyslexic learners in a socially inclusive manner.</p>
+    <h2>Steering Committee</h2>
     <ul>
-      <li>...</li>
-      <li>...</li>
-      <li>...</li>
-      <li>...</li>
-      <li>...</li>
+      <li>Prof. Julie-Ann Sime, Lancaster University</li>
+      <li>Shaunna Joannidou, University of Cyprus</li>
+      <li>Alexandros Despotopoulos, AKTO Greece</li>
+      <li>Shaunna Joannidou, University of Cyprus</li>
+      <li>Dr. Iris Wunder, FAU Germany</li>
+    </ul>
+    <h2>Team Members</h2>
+    <ul>
+      <li>Argiri Argyro, AKTO Greece</li>
+      <li>Dr. Sebastian Honert, FAU Germany</li>
+      <li>Prof. Judit Kormos, Lancaster University</li>
+      <li>Dr. Natasa Lackovic, Lancaster University</li>
+      <li>Eleni Nikiforou, University of Cyprus</li>
+      <li>Evelyn Schlenk, FAU Germany</li>
+      <li>Dr. Chryssa Themelis, Lancaster University</li>
+      <li>Eleni Tsampra, AKTO</li>
+    </ul>
+    <h2>Artwork</h2>
+    <ul>
+      <li>Eleni Tsampra, AKTO</li>
+    </ul>
+    <h2>Coding</h2>
+    <ul>
+      <li>Dr. Sebastian Honert, FAU</li>
     </ul>
     <p><br /><a v-on:click="back">← Back to the Stories</a></p>
   </div>
@@ -27,7 +45,7 @@ export default {
   props: ['stories'],
   methods: {
     back () {
-      this.$router.go(-1)
+      this.$router.push('/')
     }
   }
 }

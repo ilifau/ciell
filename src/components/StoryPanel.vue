@@ -1,6 +1,6 @@
 <template>
   <div class="story-panel">
-    <!-- <h1 class="chapter-title" v-if="title()">{{ title() }}</h1> -->
+    <h1 class="chapter-title" v-if="title()">{{ title() }}</h1>
     <div v-if="hasAudio()" class="audio-wrapper">
       <label v-for="(file, index) in audioSources" :key="index">
         <AudioButton v-bind:label="file.label" class="audio-button" :sources="file.path" :loop="false" />
@@ -10,7 +10,11 @@
     <Task v-if="hasTask()" v-bind:story="this.$props.story" v-bind:task="getTask(this.getChapter(this.$store.state.currentChapterId).taskId)" />
     <ul class="choices">
       <li v-for="choice in choices()" :key="choice.chapterId">
-        <a v-on:click="openChapter(choice.chapterId)">{{ choice.text }}</a>
+        <a v-on:click="openChapter(choice.chapterId)" :class="choice.class">
+          <span v-if="choice.iconBefore"><v-icon :name="choice.iconBefore" scale="0.875"/></span>
+          {{ choice.text }}
+          <span v-if="choice.iconAfter"><v-icon :name="choice.iconAfter" scale="0.875" /></span>
+        </a>
       </li>
       <li v-if="finalChapter()">
         <a v-on:click="$router.push('/')">Choose another Story</a>
@@ -48,8 +52,6 @@ export default {
       if (typeof currentChapter.after === 'function') currentChapter.after()
       if (typeof nextChapter.before === 'function') nextChapter.before()
 
-      let score = this.$store.state.userScore + 10
-      this.$store.commit('setUserScore', score)
       this.$store.commit('setCurrentChapterId', id)
 
       window.scrollTo(0, 0)
@@ -129,6 +131,8 @@ export default {
   list-style-type: none;
   margin: 1.5em 0 0;
   padding: 0;
+  overflow: hidden;
+  clear: both;
 }
 
 .choices a {
@@ -142,6 +146,26 @@ export default {
   transition: background .15s linear;
   position: relative;
   z-index: 6;
+  border-radius: 3px;
+}
+
+.choices a.previous,
+.choices a.next {
+  display: inline-block;
+  width: 25%;
+}
+
+.choices a.previous {
+  float: left;
+}
+
+.choices a.next {
+  float: right;
+}
+
+.choices a.previous::after,
+.choices a.next::after {
+  clear: both;
 }
 
 .choices li:last-child a {
@@ -165,5 +189,13 @@ export default {
 
 label {
   display: block;
+}
+
+@media screen and (max-width: 640px) {
+  .choices a.previous,
+  .choices a.next {
+    display: inline-block;
+    width: 49%;
+  }
 }
 </style>

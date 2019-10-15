@@ -9,35 +9,88 @@ let Story = [
     chapters: [
       {
         id: 0,
-        title: 'Introduction',
-        content: `<p>This is the first story.</p>`,
+        title: 'The Invisible Girls',
+        content: `<div class="comic-grid">
+            <div class="half">
+              [image|invisible-girls/invisible 00.jpg|Invisible Girls 1]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 02.jpg|Invisible Girls 2]
+            </div>
+            <div class="half no-margin">
+              [image|invisible-girls/invisible 03.jpg|Invisible Girls 1]
+            </div>
+            <div class="half last no-margin">
+              [image|invisible-girls/invisible 04.jpg|Invisible Girls 2]
+            </div>
+          </div>`,
         choices: [
           {
-            'text': 'Proceed to Chapter 2',
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
             'chapterId': 20
-          },
-          {
-            'text': 'Proceed to Chapter 3',
-            'chapterId': 30
           }
         ]
       },
       {
         id: 20,
-        content: `<p>This is chapter 2.</p>`,
+        content: `<div class="comic-grid">
+        <div class="half">
+          [image|invisible-girls/invisible 05.jpg|Invisible Girls 1]
+        </div>
+        <div class="half last">
+          [image|invisible-girls/invisible 06.jpg|Invisible Girls 2]
+        </div>
+        <div class="half">
+          [image|invisible-girls/invisible 07.jpg|Invisible Girls 7]
+        </div>
+        <div class="half last no-margin">
+          [image|invisible-girls/invisible 08.jpg|Invisible Girls 8]
+        </div>
+        <div class="half no-margin centered">
+          [image|invisible-girls/invisible 09.jpg|Invisible Girls 9]
+        </div>
+      </div>`,
         choices: [
           {
-            'text': 'Restart',
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
             'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
           }
         ]
       },
       {
         id: 30,
-        content: `<p>This is chapter 3.</p>`,
+        content: `<div class="comic-grid">
+        <div class="half last">
+          [image|invisible-girls/invisible 10.jpg|Invisible Girls 10]
+        </div>
+        <div class="half no-margin">
+          [image|invisible-girls/invisible 11.jpg|Invisible Girls 11]
+        </div>
+        <div class="half no-margin centered">
+          [image|invisible-girls/invisible 12.jpg|Invisible Girls 12]
+        </div>
+      </div>`,
         choices: [
           {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
             'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
             'chapterId': 0
           }
         ]
@@ -46,6 +99,7 @@ let Story = [
   },
   {
     id: 10,
+    placeholder: true,
     title: 'Nuclear Power',
     author: 'CIELL Team',
     description: 'This is another empty story.',

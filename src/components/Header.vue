@@ -2,8 +2,6 @@
   <div class="header-wrapper">
     <div class="header" v-bind:class="{ story: isStory() }">
       <router-link class="story-title" to="/">{{ storyTitle }}</router-link>
-      <!-- <span class="heart"><img src="@/stories/ciell/assets/img/heart.png" alt=""></span> -->
-      <!-- <span class="user-score">{{ this.$store.state.userScore }}</span> -->
       <span class="nav-toggle" v-bind:class="{ active: navIsActive, story: isStory() }">
         <a v-on:click="toggleNav()">
           <span class="nav-circle"></span><span class="nav-circle"></span><span class="nav-circle"></span>
@@ -34,11 +32,11 @@ export default {
   props: ['stories'],
   computed: {
     storyTitle: function () {
-      if (this.$route.name !== 'story') {
-        return ''
-      } else {
-        // return '← ' + this.$props.stories[this.$store.state.currentStoryId].title
+      let show = ['story', 'about']
+      if (show.includes(this.$route.name)) {
         return 'Home'
+      } else {
+        return ''
       }
     }
   },
@@ -104,26 +102,8 @@ export default {
   text-transform: uppercase;
 }
 
-/* .header a:last-of-type {
-  text-align: left;
-} */
-
 .ciell-logo img {
   height: 2em;
-}
-
-.user-score {
-  display: inline-block;
-  margin-right: 1em;
-  font-weight: 700;
-}
-
-.heart {
-  display: inline-block;
-  width: 1em;
-  margin-right: .2em;
-  position: relative;
-  top: 1px;
 }
 
 .nav {

@@ -198,8 +198,8 @@ img {
 .comic-grid div {
   position: relative;
   background: #f7f7f7;
-  box-shadow: 1px 1px 5px rgba(0,0,0,.5);
-  border: 3px solid #333;
+  /* box-shadow: 1px 1px 5px rgba(0,0,0,.5); */
+  /* border: 3px solid #333; */
   overflow: hidden;
   margin-bottom: 1em;
 }
@@ -242,12 +242,21 @@ img {
   padding-top: 100%;
 }
 
+/* .comic-grid .centered {
+  margin-left: auto;
+  margin-right: auto;
+} */
+
 .comic-grid div img {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+.comic-grid .no-margin {
+  margin-bottom: 0;
 }
 
 /* Responsive */
@@ -283,8 +292,8 @@ img {
 
 @media screen and (max-width: 580px) {
   .comic-grid div {
-    border: 2px solid #333;
-}
+    /* border: 2px solid #333; */
+  }
 
   .comic-grid .half {
     width: 100%;

@@ -1,11 +1,11 @@
 <template>
   <div id="app" v-bind:class="{ story: isStory() }">
     <div id="close-nav" @click="$emit('closeNav')"></div>
-    <transition name="fade" mode="out-in">
-    <router-view
-      v-bind:stories="stories"
-      @openStory="openStory($event)"
-    />
+    <transition name="fade" mode="out-in" v-on:after-leave="afterLeave()">
+      <router-view
+        v-bind:stories="stories"
+        @openStory="openStory($event)"
+      />
     </transition>
     <div id="footer"></div>
     <v-dialog />
@@ -18,7 +18,8 @@ import Stories from '@/stories/ciell/ciell.js'
 export default {
   data () {
     return {
-      stories: Stories
+      stories: Stories,
+      transitionName: 'slide-left'
     }
   },
   methods: {
@@ -40,13 +41,15 @@ export default {
         return
       }
 
-      if (id !== this.$store.state.currentStoryId) {
-        this.$store.commit('setCurrentChapterId', 0)
-      }
+      // Keep current chapter id alive
+      // if (id !== this.$store.state.currentStoryId) {
+      this.$store.commit('setCurrentChapterId', 0)
+      // }
 
       this.$store.commit('setCurrentStoryId', id)
       this.$router.push('story')
-
+    },
+    afterLeave () {
       document.body.scrollTop = 0
     }
   }
@@ -246,10 +249,10 @@ img {
 
 /* Transitions */
 .fade-enter-active, .fade-leave-active {
-    transition: opacity .2s
+  transition: opacity .25s ease;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
-    opacity: 0
+.fade-enter, .fade-leave-active {
+  opacity: 0;
 }
 
 /* Responsive */

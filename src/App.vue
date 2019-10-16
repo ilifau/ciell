@@ -1,11 +1,12 @@
 <template>
   <div id="app" v-bind:class="{ story: isStory() }">
-    <div v-if="showRotatedBackground()" class="rotated-background"></div>
     <div id="close-nav" @click="$emit('closeNav')"></div>
+    <transition name="fade" mode="out-in">
     <router-view
       v-bind:stories="stories"
       @openStory="openStory($event)"
     />
+    </transition>
     <div id="footer"></div>
     <v-dialog />
   </div>
@@ -21,9 +22,6 @@ export default {
     }
   },
   methods: {
-    showRotatedBackground () {
-      return this.$router.currentRoute.name === 'home'
-    },
     isStory: function () {
       return this.$router.currentRoute.name === 'story'
     },
@@ -110,19 +108,6 @@ body {
 /* #app.story {
   background: #d8f4fd;
 } */
-
-.rotated-background {
-  position: absolute;
-  left: -20%;
-  top: -20%;
-  height: 55%;
-  max-height: 40em;
-  width: calc(100% + 40%);
-  transform: rotate(-8deg);
-  background: linear-gradient(140deg, #3ec2ee, #9edbf0);
-  z-index: 0;
-  min-height: 20em;
-}
 
 #nav-close {
   position: fixed;
@@ -259,15 +244,19 @@ img {
   margin-bottom: 0;
 }
 
+/* Transitions */
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .2s
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active in <2.1.8 */ {
+    opacity: 0
+}
+
 /* Responsive */
 
 @media screen and (max-width: 1023px) {
   .container {
     padding: 2.5em 0 2em;
-  }
-
-  .rotated-background {
-    max-height: 50%;
   }
 }
 
@@ -284,17 +273,7 @@ img {
   }
 }
 
-@media screen and (max-width: 639px) {
-  .rotated-background {
-    max-height: 39%;
-  }
-}
-
 @media screen and (max-width: 580px) {
-  .comic-grid div {
-    /* border: 2px solid #333; */
-  }
-
   .comic-grid .half {
     width: 100%;
     margin: 0 0 1em;

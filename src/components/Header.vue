@@ -11,9 +11,9 @@
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-on:click="toggleNav()" v-bind:class="{ active: navIsActive }">
       <span class="nav-header">NAVIGATION</span>
-      <router-link to="/">Stories</router-link>
+      <router-link to="/"><v-icon name="comment" /> Stories</router-link>
       <div v-for="(story, id) in stories" :key="id">
-        <a class="story-link" v-bind:class="{ current: id === $store.state.currentStoryId }" v-on:click="openStory(id)">
+        <a class="story-link" v-bind:class="{ current: id === $store.state.currentStoryId, placeholder: story.placeholder }" v-on:click="openStory(id)">
           {{ id + 1 }}. {{ story.title }}
         </a>
       </div>
@@ -215,8 +215,11 @@ export default {
 }
 
 .nav .story-link.current {
-  color: rgba(255,255,255,.4);
   background: rgba(0,0,0,.2);
+}
+
+.nav .story-link.placeholder {
+  color: rgba(255,255,255,.4);
 }
 
 @media screen and (max-width: 767px) {

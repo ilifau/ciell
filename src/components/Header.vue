@@ -50,7 +50,8 @@ export default {
       }
     },
     isStory: function () {
-      return this.$router.currentRoute.name === 'story'
+      let show = ['story', 'about']
+      return show.includes(this.$route.name)
     },
     openStory (id) {
       this.$emit('openStory', id)
@@ -130,8 +131,10 @@ export default {
 
 .nav-toggle a {
   display: flex;
-  position: relative;
-  top: 4px;
+  position: absolute;
+  top: -.25em;
+  padding: 1em;
+  right: 0;
 }
 
 .nav-circle {

@@ -145,22 +145,11 @@ export default {
     background: #092d3a;
     opacity: .6;
     transform: rotate(-2deg);
+    transition: all .3s linear;
   }
 
-  .story a .dark {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    opacity: 0;
-    z-index: 0;
-    transition: opacity linear .3s;
-  }
-
-  .story a:hover .dark {
-    opacity: .125;
+  .story a:hover .title span.title-background {
+    opacity: .85;
   }
 
   @media screen and (min-width: 640px) and (max-width: 800px) {

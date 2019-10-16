@@ -4,7 +4,7 @@ let Story = [
     title: 'The Invisible Girls',
     author: 'CIELL Team',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
-    preview: 'invisible-girls/cover.jpg',
+    preview: 'invisible-girls/cover.png',
     color: 'rgb(50, 60, 50)',
     chapters: [
       {
@@ -103,7 +103,7 @@ let Story = [
     title: 'Nuclear Power',
     author: 'CIELL Team',
     description: 'This is another empty story.',
-    preview: 'nuclear-power/cover.jpg',
+    preview: 'nuclear-power/cover.png',
     color: 'rgb(230, 79, 78)',
     chapters: [
       {
@@ -137,7 +137,7 @@ let Story = [
     title: 'Agatha Christie',
     author: 'CIELL Team',
     description: 'This is another empty story.',
-    preview: 'agatha-christie/cover.jpg',
+    preview: 'agatha-christie/cover.png',
     color: 'rgb(38, 35, 64)',
     chapters: [
       {
@@ -170,7 +170,7 @@ let Story = [
     title: 'App Testing',
     author: 'CIELL Team',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
-    preview: 'invisible-girls/cover.jpg',
+    preview: 'invisible-girls/cover.png',
     color: 'rgb(50, 60, 50)',
     tasks: [
       {

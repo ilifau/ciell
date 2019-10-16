@@ -1,6 +1,10 @@
 <template>
   <div class="container about">
-    <Header v-bind:stories="this.$props.stories" />
+    <Header
+      v-bind:story="this.$props.stories[this.$props.currentStoryId]"
+      v-bind:stories="this.$props.stories"
+      @openStory="openStory($event)"
+    />
     <h1>About CIELL</h1>
     <p>The <strong>Comics for Inclusive English Language Learning (CIELL)</strong> project aims to develop the competences of second language teachers by promoting the use of comic art, and other visual representations of knowledge. Another goal of the project to enhance the quality of language teaching materials used for teaching writing as a  second language and support the needs of dyslexic learners in a socially inclusive manner.</p>
     <h2>Steering Committee</h2>
@@ -24,13 +28,13 @@
     </ul>
     <h2>Artwork</h2>
     <ul>
-      <li>Eleni Tsampra, AKTO</li>
+      <li><a href="https://www.behance.net/elenitsampra" target="_blank">Eleni Tsampra, AKTO</a></li>
     </ul>
     <h2>Coding</h2>
     <ul>
-      <li>Dr. Sebastian Honert, FAU</li>
+      <li><a href="https://www.ili.fau.de/team/sebastian-honert/" target="_blank">Dr. Sebastian Honert, FAU</a></li>
+      <li><a href="https://github.com/SebastianHonert/ciell" target="_blank">https://github.com/SebastianHonert/ciell</a></li>
     </ul>
-    <p><br /><a v-on:click="back">← Back to the Stories</a></p>
   </div>
 </template>
 
@@ -44,8 +48,8 @@ export default {
   },
   props: ['stories'],
   methods: {
-    back () {
-      this.$router.push('/')
+    openStory (id) {
+      this.$emit('openStory', id)
     }
   }
 }

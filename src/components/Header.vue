@@ -1,7 +1,7 @@
 <template>
   <div class="header-wrapper">
     <div class="header" v-bind:class="{ story: isStory() }">
-      <router-link class="story-title" to="/">{{ storyTitle }}</router-link>
+      <router-link class="story-title" to="/"><v-icon v-if="isStory()" name="arrow-left" scale="0.75" /> {{ storyTitle }}</router-link>
       <span class="nav-toggle" v-bind:class="{ active: navIsActive, story: isStory() }">
         <a v-on:click="toggleNav()">
           <span class="nav-circle"></span><span class="nav-circle"></span><span class="nav-circle"></span>
@@ -10,7 +10,7 @@
     </div>
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-on:click="toggleNav()" v-bind:class="{ active: navIsActive }">
-      <span class="nav-header">Contents</span>
+      <span class="nav-header">NAVIGATION</span>
       <router-link to="/">Stories</router-link>
       <div v-for="(story, id) in stories" :key="id">
         <a class="story-link" v-bind:class="{ current: id === $store.state.currentStoryId }" v-on:click="openStory(id)">
@@ -34,7 +34,7 @@ export default {
     storyTitle: function () {
       let show = ['story', 'about']
       if (show.includes(this.$route.name)) {
-        return 'Home'
+        return 'Stories'
       } else {
         return ''
       }
@@ -180,12 +180,12 @@ export default {
 }
 
 .nav .nav-header {
-  color: #1c85a8;
-  font-size: .75em;
-  text-transform: uppercase;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
+  color: #28acd8;
+  font-size: .875em;
+  padding-top: .875em;
+  padding-bottom: .875em;
   letter-spacing: 2px;
+  font-weight: 500;
 }
 
 .nav.active {

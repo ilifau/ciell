@@ -5,23 +5,39 @@ let Story = [
     author: 'CIELL Team',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
     preview: 'invisible-girls/cover.png',
-    color: 'rgb(50, 60, 50)',
+    color: 'rgb(65, 85, 109)',
     chapters: [
       {
         id: 0,
-        title: 'The Invisible Girls',
-        content: `<div class="comic-grid">
+        title: 'The Invisible Girls – Introduction',
+        content: `<p class="info info--introduction">Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
+          <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
-              [image|invisible-girls/invisible 00.jpg|Invisible Girls 1]
+              [image|invisible-girls/invisible 00.jpg|Invisible Girls 0]
             </div>
             <div class="half last">
               [image|invisible-girls/invisible 02.jpg|Invisible Girls 2]
             </div>
             <div class="half no-margin">
-              [image|invisible-girls/invisible 03.jpg|Invisible Girls 1]
+              [image|invisible-girls/invisible 03.jpg|Invisible Girls 3]
             </div>
             <div class="half last no-margin">
-              [image|invisible-girls/invisible 04.jpg|Invisible Girls 2]
+              [image|invisible-girls/invisible 04.jpg|Invisible Girls 4]
+            </div>
+            <div class="half">
+              [image|invisible-girls/invisible 05.jpg|Invisible Girls 5]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 06.jpg|Invisible Girls 6]
+            </div>
+            <div class="half">
+              [image|invisible-girls/invisible 07.jpg|Invisible Girls 7]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 08.jpg|Invisible Girls 8]
+            </div>
+            <div class="half no-margin centered">
+              [image|invisible-girls/invisible 09.jpg|Invisible Girls 9]
             </div>
           </div>`,
         choices: [
@@ -29,29 +45,27 @@ let Story = [
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 20
+            'chapterId': 30
           }
         ]
       },
       {
-        id: 20,
-        content: `<div class="comic-grid">
-        <div class="half">
-          [image|invisible-girls/invisible 05.jpg|Invisible Girls 1]
-        </div>
-        <div class="half last">
-          [image|invisible-girls/invisible 06.jpg|Invisible Girls 2]
-        </div>
-        <div class="half">
-          [image|invisible-girls/invisible 07.jpg|Invisible Girls 7]
-        </div>
-        <div class="half last no-margin">
-          [image|invisible-girls/invisible 08.jpg|Invisible Girls 8]
-        </div>
-        <div class="half no-margin centered">
-          [image|invisible-girls/invisible 09.jpg|Invisible Girls 9]
-        </div>
-      </div>`,
+        id: 30,
+        title: 'Body: Paragraph 1',
+        content: `<p class="info info--paragraph">The body of the essay is the part that addresses the title. It should be organised into <strong>paragraphs</strong>. Each
+          paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
+          way to those that precede and follow it.</p>
+            <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half last">
+              [image|invisible-girls/invisible 10.jpg|Invisible Girls 10]
+            </div>
+            <div class="half no-margin">
+              [image|invisible-girls/invisible 11.jpg|Invisible Girls 11]
+            </div>
+            <div class="half no-margin centered">
+              [image|invisible-girls/invisible 12.jpg|Invisible Girls 12]
+            </div>
+          </div>`,
         choices: [
           {
             'text': 'Previous',
@@ -63,29 +77,171 @@ let Story = [
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 30
+            'chapterId': 40
           }
         ]
       },
       {
-        id: 30,
+        id: 40,
+        title: 'Body: Paragraph 2',
         content: `<div class="comic-grid">
-        <div class="half last">
-          [image|invisible-girls/invisible 10.jpg|Invisible Girls 10]
-        </div>
-        <div class="half no-margin">
-          [image|invisible-girls/invisible 11.jpg|Invisible Girls 11]
-        </div>
-        <div class="half no-margin centered">
-          [image|invisible-girls/invisible 12.jpg|Invisible Girls 12]
-        </div>
-      </div>`,
+            <div class="half">
+              [image|invisible-girls/invisible 13.jpg|Invisible Girls 13]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 14.jpg|Invisible Girls 14]
+            </div>
+            <div class="half">
+              [image|invisible-girls/invisible 15.jpg|Invisible Girls 15]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 16.jpg|Invisible Girls 16]
+            </div>
+            <div class="half no-margin centered">
+              [image|invisible-girls/invisible 17.jpg|Invisible Girls 17]
+            </div>
+          </div>`,
         choices: [
           {
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 20
+            'chapterId': 30
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        title: 'Body: Paragraph 3',
+        content: `<div class="comic-grid">
+            <div class="half">
+              [image|invisible-girls/invisible 18.jpg|Invisible Girls 18]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 19.jpg|Invisible Girls 19]
+            </div>
+            <div class="half">
+              [image|invisible-girls/invisible 20.jpg|Invisible Girls 20]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 21.jpg|Invisible Girls 21]
+            </div>
+            <div class="half no-margin centered">
+              [image|invisible-girls/invisible 22.jpg|Invisible Girls 22]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        title: 'Conclusion',
+        content: `<p class="info info--conclusion">The <strong>conclusion</strong> reminds your readers what the essay was meant to do. It provides an answer to the title. It reminds your readers how you reached that answer. The conclusion should normally occupy just one paragraph. Here’s a simple conclusion to our story.</p>
+            <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|invisible-girls/invisible 23.jpg|Invisible Girls 23]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 24.jpg|Invisible Girls 24]
+            </div>
+            <div class="half no-margin centered">
+              [image|invisible-girls/invisible 25.jpg|Invisible Girls 25]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        title: 'Info Graphic: Basic Essay Structure',
+        titleClass: 'center dotted-border',
+        content: `<p>A basic essay consists of three main parts: <strong>introduction</strong>, <strong>body</strong>, and <strong>conclusion</strong>. Following this format will
+        help you write and organize an essay. However, flexibility is important. While keeping this basic essay
+        format in mind, let the topic and specific assignment guide the writing and organization.</p>
+          <h2 class="separator">1. Introduction</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
+            </div>
+            <div class="half last">
+              [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
+            </div>
+          </div>
+          `,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        title: 'Task: The Invisible Girls',
+        content: `<p>This chapter will contain the task for this story.`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        title: 'Evaluation: The Invisible Girls',
+        content: `<p>This chapter will contain the evaluation for this story.`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
           },
           {
             'text': 'Restart',
@@ -171,7 +327,7 @@ let Story = [
     author: 'CIELL Team',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
     preview: 'invisible-girls/cover.png',
-    color: 'rgb(50, 60, 50)',
+    color: 'rgb(65, 85, 109)',
     tasks: [
       {
         id: 0,

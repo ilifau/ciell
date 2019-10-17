@@ -1,7 +1,7 @@
 <template>
   <div class="header-wrapper">
     <div class="header" v-bind:class="{ story: isStory() }">
-      <router-link class="story-title" to="/"><v-icon v-if="isStory()" name="arrow-left" scale="0.75" /> {{ storyTitle }}</router-link>
+      <router-link class="story-title" to="/"><v-icon name="arrow-left" v-if="isStory()" scale="0.75" /> {{ storyTitle }}</router-link>
       <span class="nav-toggle" v-bind:class="{ active: navIsActive, story: isStory() }">
         <a v-on:click="toggleNav()">
           <span class="nav-circle"></span><span class="nav-circle"></span><span class="nav-circle"></span>
@@ -11,7 +11,7 @@
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-on:click="toggleNav()" v-bind:class="{ active: navIsActive }">
       <span class="nav-header">NAVIGATION</span>
-      <router-link to="/"><v-icon name="comment" /> Stories</router-link>
+      <router-link to="/">Stories</router-link>
       <div v-for="(story, id) in stories" :key="id">
         <a class="story-link" v-bind:class="{ current: id === $store.state.currentStoryId, placeholder: story.placeholder }" v-on:click="openStory(id)">
           {{ id + 1 }}. {{ story.title }}
@@ -68,7 +68,7 @@ export default {
   left: 0;
   right: 0;
   padding: .5em .75em;
-  z-index: 9;
+  z-index: 10;
   line-height: 1;
   align-items: flex-start;
 }
@@ -82,7 +82,6 @@ export default {
 } */
 
 .header.story {
-  /* background: rgb(227, 239, 248, .95); */
   background: rgb(255, 255, 255, .9);
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="story-panel">
-    <h1 class="chapter-title" v-if="title()">{{ title() }}</h1>
+    <h1 :class="'chapter-title ' + this.getChapter(this.$store.state.currentChapterId).titleClass" v-if="title()">{{ title() }}</h1>
     <div v-if="hasAudio()" class="audio-wrapper">
       <label v-for="(file, index) in audioSources" :key="index">
         <AudioButton v-bind:label="file.label" class="audio-button" :sources="file.path" :loop="false" />
@@ -127,9 +127,13 @@ export default {
   margin-top: 0;
 }
 
+.chapter-title.center {
+  text-align: center;
+}
+
 .choices {
   list-style-type: none;
-  margin: 1.5em 0 0;
+  margin: 2.5em 0 0;
   padding: 0;
   overflow: hidden;
   clear: both;

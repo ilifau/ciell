@@ -2,8 +2,8 @@
   <div class="background">
     <div class="container home">
       <!-- <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt=""></div> -->
-      <h1 class="home-title">CIELL</h1>
-      <h2 class="home-subtitle">Visually enhanced learning of writing organization for people with dyslexia.</h2>
+      <h1 class="home-title default-font">CIELL</h1>
+      <h2 class="home-subtitle default-font">Visually enhanced learning of writing organization for people with dyslexia.</h2>
       <div class="stories">
         <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
           <a v-on:click="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
@@ -66,6 +66,7 @@ export default {
     margin: 0 auto 2.5em;
     color: #21677e;
     margin-top: .5em;
+    font-weight: 600;
   }
 
   .stories {
@@ -115,8 +116,10 @@ export default {
     text-align: left;
     background-size: cover;
     color: #fff;
-    font-size: 1.4em;
+    font-size: 1.5em;
     text-shadow: 1px 1px 0 rgba(0,0,0,.6);
+    font-family: 'aka-acidgr-diarygirlmedium';
+    font-weight: 400;
   }
 
   .story a .title {
@@ -124,7 +127,8 @@ export default {
     position: absolute;
     bottom: 1em;
     padding: .75em 1em;
-    left: -.5em;
+    left: -.375em;
+    transition: all .3s linear;
   }
 
   .story a .title span.number {
@@ -143,13 +147,17 @@ export default {
     right: 0;
     bottom: 0;
     background: #092d3a;
-    opacity: .6;
+    opacity: .8;
     transform: rotate(-2deg);
-    transition: all .3s linear;
+    transition: all .3s ease-in-out;
   }
 
+  /* .story a:hover .title {
+    transform: scale(1.06125);
+  } */
+
   .story a:hover .title span.title-background {
-    opacity: .85;
+    opacity: .95;
   }
 
   @media screen and (min-width: 640px) and (max-width: 800px) {
@@ -173,9 +181,9 @@ export default {
     }
   }
 
-  @media screen and (max-width: 479px) {
+  @media screen and (max-width: 420px) {
     .story a {
-      font-size: 1.125em;
+      font-size: 1.25em;
     }
   }
 </style>

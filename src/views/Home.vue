@@ -1,11 +1,6 @@
 <template>
   <div class="container home">
     <div class="rotated-background"></div>
-    <Header
-      v-bind:story="this.$props.stories[this.$props.currentStoryId]"
-      v-bind:stories="this.$props.stories"
-      @openStory="openStory($event)"
-    />
     <Home
       v-bind:stories="this.$props.stories"
       @openStory="openStory($event)"
@@ -14,13 +9,11 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
 import Home from '@/components/Home.vue'
 
 export default {
   name: 'home',
   components: {
-    Header,
     Home
   },
   props: [

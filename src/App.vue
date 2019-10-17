@@ -165,6 +165,10 @@ h6 { font-size: .875em; }
   border-bottom: dotted 5px #2d383b;
 }
 
+h3.dotted-border {
+  padding-bottom: .25em;
+}
+
 p {
   margin: 0 0 .5em;
 }
@@ -309,7 +313,7 @@ img {
   background: url(./stories/ciell/assets/img/info-graphics/arrow.png) center center no-repeat;
   background-size: cover !important;
   z-index: 999;
-  right: -2em;
+  right: -2.8em;
   top: calc(50% - 1em);
 }
 

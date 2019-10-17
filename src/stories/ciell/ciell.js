@@ -184,11 +184,11 @@ let Story = [
       {
         id: 70,
         title: 'Info Graphic: Basic Essay Structure',
-        titleClass: 'center dotted-border',
-        content: `<p>A basic essay consists of three main parts: <strong>introduction</strong>, <strong>body</strong>, and <strong>conclusion</strong>. Following this format will
+        titleClass: 'center',
+        content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
         help you write and organize an essay. However, flexibility is important. While keeping this basic essay
         format in mind, let the topic and specific assignment guide the writing and organization.</p>
-          <h2 class="separator">1. Introduction</h2>
+          <h2 class="separator dotted-border">1. Introduction</h2>
           <div class="comic-grid narrow">
             <div class="half">
               [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
@@ -197,8 +197,8 @@ let Story = [
               [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
             </div>
           </div>
-          <h2 class="separator">2. Body</h2>
-          <h3 class="separator dotted-border">Paragraph 1</h3>
+          <h2 class="separator dotted-border">2. Body</h2>
+          <h3 class="separator">Paragraph 1</h3>
           <div class="comic-grid narrow">
             <div class="half arrow">
               [image|info-graphics/basic-essay-structure-3.jpg|Basic Essay Structure 3]
@@ -213,7 +213,7 @@ let Story = [
               [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
             </div>
           </div>
-          <h3 class="separator dotted-border">Paragraph 2</h3>
+          <h3 class="separator">Paragraph 2</h3>
           <div class="comic-grid narrow">
             <div class="half arrow">
               [image|info-graphics/basic-essay-structure-7.jpg|Basic Essay Structure 7]
@@ -228,7 +228,9 @@ let Story = [
               [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
             </div>
           </div>
-          <h2 class="separator">3. Conclusion</h2>
+          <h3 class="separator">Paragraph 3, 4, 5&hellip;</h3>
+          <p style="text-align:center">Feel free to add more paragraphs!</p>
+          <h2 class="separator dotted-border">3. Conclusion</h2>
           <div class="comic-grid narrow">
             <div class="half">
               [image|info-graphics/basic-essay-structure-conclusion-1.jpg|Basic Essay Structure 7]

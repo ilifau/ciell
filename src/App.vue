@@ -162,7 +162,7 @@ h6 { font-size: .875em; }
 
 .dotted-border {
   padding-bottom: .125em;
-  border-bottom: dotted 5px #222;
+  border-bottom: dotted 5px #2d383b;
 }
 
 p {
@@ -238,6 +238,22 @@ img {
   margin: 0 auto;
 }
 
+.comic-grid.narrow {
+  max-width: 66.67%;
+}
+
+@media screen and (max-width: 960px) {
+  .comic-grid.narrow {
+    max-width: 75%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .comic-grid.narrow {
+    max-width: 87%;
+  }
+}
+
 .comic-grid div {
   position: relative;
   background: #f7f7f7;
@@ -279,6 +295,36 @@ img {
 
 .comic-grid .half.last {
   margin-right: 0;
+}
+
+.comic-grid .arrow {
+  overflow: visible;
+}
+
+.comic-grid .arrow::after {
+  content: '';
+  width: 4em;
+  height: 1.75em;
+  position: absolute;
+  background: url(./stories/ciell/assets/img/info-graphics/arrow.png) center center no-repeat;
+  background-size: cover !important;
+  z-index: 999;
+  right: -2em;
+  top: calc(50% - 1em);
+}
+
+@media screen and (min-width: 581px) {
+  .comic-grid div:nth-child(2n+2).arrow::after {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .comic-grid .arrow::after {
+    right: calc(50% - 2em);
+    top: 100%;
+    transform: rotate(90deg);
+  }
 }
 
 .comic-grid .half::before {

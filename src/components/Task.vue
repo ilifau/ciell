@@ -172,10 +172,10 @@ export default {
     justify-content: center;
     position: fixed;
     z-index: 7;
-    left: -20%;
-    top: -20%;
-    width: 140%;
-    height: 140%;
+    left: 0%;
+    top: 0%;
+    width: 100%;
+    height: 100%;
     background: rgba(0,0,0,.5);
   }
 
@@ -184,7 +184,7 @@ export default {
     background: #fff;
     box-shadow: 1px 2px 2em rgba(0,0,0,.5);
     width: 480px;
-    max-width: 96%;
+    max-width: 92%;
   }
 
   .close-task-message {

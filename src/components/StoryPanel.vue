@@ -1,7 +1,7 @@
 <template>
   <div class="story-panel">
     <h1 :class="'chapter-title ' + this.getChapter(this.$store.state.currentChapterId).titleClass" v-if="title()">
-      <span class="chapter-title-checkmark" v-if="taskDone()"><v-icon name="check" scale="2" /></span>{{ title() }}
+      <span class="chapter-title-checkmark" v-if="taskDone()"><v-icon name="check" scale="1.5" /></span>{{ title() }}
     </h1>
     <div v-if="hasAudio()" class="audio-wrapper">
       <label v-for="(file, index) in audioSources" :key="index">

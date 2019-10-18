@@ -294,7 +294,7 @@ let Story = [
         id: 80,
         taskId: 0,
         title: 'Task: The Invisible Girls.',
-        content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Place the following story elements in their correct order (introduction, paragraphs, and conclusion) and click the "Check Order" button.</p>`,
+        content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Place the following story elements in their correct order (drag &amp; drop) and click the "Check Order" button.</p>`,
         choices: [
           {
             'text': 'Previous',

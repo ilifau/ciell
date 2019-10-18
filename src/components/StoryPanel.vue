@@ -1,6 +1,8 @@
 <template>
   <div class="story-panel">
-    <h1 :class="'chapter-title ' + this.getChapter(this.$store.state.currentChapterId).titleClass" v-if="title()">{{ title() }}</h1>
+    <h1 :class="'chapter-title ' + this.getChapter(this.$store.state.currentChapterId).titleClass" v-if="title()">
+      <span class="chapter-title-checkmark" v-if="taskDone()"><v-icon name="check" scale="2" /></span>{{ title() }}
+    </h1>
     <div v-if="hasAudio()" class="audio-wrapper">
       <label v-for="(file, index) in audioSources" :key="index">
         <AudioButton v-bind:label="file.label" class="audio-button" :sources="file.path" :loop="false" />
@@ -67,6 +69,9 @@ export default {
         return task.id === id
       })
     },
+    taskDone () {
+      return typeof this.getChapter(this.$store.state.currentChapterId).taskId !== 'undefined' && this.$store.state.tasksComplete.includes(this.getChapter(this.$store.state.currentChapterId).taskId)
+    },
     hasAudio () {
       return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('audio')
     }
@@ -125,6 +130,12 @@ export default {
 <style scoped>
 .chapter-title {
   margin-top: 0;
+}
+
+.chapter-title-checkmark {
+  color: #08723d;
+  display: inline-block;
+  margin-right: .125em;
 }
 
 .chapter-title.center {

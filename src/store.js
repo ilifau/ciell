@@ -8,7 +8,7 @@ export const store = new Vuex.Store({
     currentStoryId: 0,
     currentChapterId: 0,
     userScore: 0,
-    tasksDone: []
+    tasksComplete: []
   },
   mutations: {
     setCurrentStoryId (state, id) {
@@ -24,15 +24,15 @@ export const store = new Vuex.Store({
         state.userScore = 1000
       }
     },
-    setTaskDone (state, id) {
-      if (!state.tasksDone.includes(id)) {
-        state.tasksDone.push(id)
+    setTaskComplete (state, id) {
+      if (!state.tasksComplete.includes(id)) {
+        state.tasksComplete.push(id)
       }
     },
-    removeTaskDone (state, id) {
-      let index = state.tasksDone.indexOf(id)
+    removeTaskComplete (state, id) {
+      let index = state.tasksComplete.indexOf(id)
       if (index > -1) {
-        state.tasksDone.splice(index, 1)
+        state.tasksComplete.splice(index, 1)
       }
     }
   },
@@ -40,6 +40,6 @@ export const store = new Vuex.Store({
     currentStoryId: state => state.currentStoryId,
     currentChapterId: state => state.currentChapterId,
     userScore: state => state.userScore,
-    tasksDone: state => state.tasksDone
+    tasksComplete: state => state.tasksComplete
   }
 })

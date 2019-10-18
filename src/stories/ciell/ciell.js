@@ -6,6 +6,41 @@ let Story = [
     description: 'This is just a very short demo story. It is pretty much about nothing.',
     preview: 'invisible-girls/cover.png',
     color: 'rgb(65, 85, 109)',
+    tasks: [
+      {
+        id: 0,
+        type: 'sort',
+        title: '',
+        description: '',
+        items: [
+          {
+            order: 10,
+            title: 'Introduction',
+            class: 'introduction'
+          },
+          {
+            order: 20,
+            title: 'Paragraph 1',
+            class: 'paragraph'
+          },
+          {
+            order: 30,
+            title: 'Paragraph 2',
+            class: 'paragraph'
+          },
+          {
+            order: 40,
+            title: 'Paragraph 3',
+            class: 'paragraph'
+          },
+          {
+            order: 50,
+            title: 'Conclusion',
+            class: 'conclusion'
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -257,8 +292,9 @@ let Story = [
       },
       {
         id: 80,
-        title: 'Task: The Invisible Girls',
-        content: `<p>This chapter will contain the task for this story.`,
+        taskId: 0,
+        title: 'Task: The Invisible Girls.',
+        content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Place the following story elements in their correct order (introduction, paragraphs, and conclusion) and click the "Check Order" button.</p>`,
         choices: [
           {
             'text': 'Previous',
@@ -277,7 +313,7 @@ let Story = [
       {
         id: 90,
         title: 'Evaluation: The Invisible Girls',
-        content: `<p>This chapter will contain the evaluation for this story.`,
+        content: `<p>This chapter will contain the evaluation for this story.</p>`,
         choices: [
           {
             'text': 'Previous',

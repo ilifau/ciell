@@ -31,7 +31,7 @@ export default {
   data () {
     return {
       stories: Stories,
-      transition: 'slide-left',
+      transition: this.$route.name === 'home' ? 'slide-left' : 'slide-right',
       showHeaderBackground: this.$route.name !== 'home'
     }
   },
@@ -185,6 +185,14 @@ p {
   margin: 0 0 .5em;
 }
 
+.first {
+  margin-top: 0;
+}
+
+.last {
+  margin-bottom: 0;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -242,6 +250,10 @@ img {
   text-align: center;
   color: #aaa;
   padding: 0 0 1em;
+}
+
+.clearfix {
+  clear: both;
 }
 
 /* Comics */
@@ -392,6 +404,19 @@ img {
 .slide-right-enter {
   opacity: 0;
   transform: translate(-2em, 0);
+}
+
+/* MEssages */
+.msg {
+  display: block;
+  background: #f3f3f3;
+  padding: 1em;
+  margin-bottom: 1em;
+}
+
+.msg--success {
+  background: #d1e6db;
+  color: #08723d;
 }
 
 /* Responsive */

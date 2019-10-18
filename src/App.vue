@@ -32,7 +32,7 @@ export default {
     return {
       stories: Stories,
       transition: 'slide-left',
-      showHeaderBackground: false
+      showHeaderBackground: this.$route.name !== 'home'
     }
   },
   components: {
@@ -63,19 +63,11 @@ export default {
       this.$router.push('story')
     },
     beforeEnter () {
-      if (this.$route.name === 'home') {
-        this.transition = 'slide-left'
-      } else {
-        this.transition = 'slide-right'
-      }
+      this.transition = this.$route.name === 'home' ? 'slide-left' : 'slide-right'
     },
     afterLeave () {
       document.body.scrollTop = 0
-      if (this.$route.name === 'home') {
-        this.showHeaderBackground = false
-      } else {
-        this.showHeaderBackground = true
-      }
+      this.showHeaderBackground = (this.$route.name !== 'home')
     }
   }
 }

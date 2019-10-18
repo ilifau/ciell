@@ -3,10 +3,16 @@
     <Header
       v-bind:story="this.stories[this.$store.state.currentStoryId]"
       v-bind:stories="this.stories"
+      v-bind:showHeaderBackground="this.showHeaderBackground"
       @openStory="openStory($event)"
     />
     <div id="close-nav" @click="$emit('closeNav')"></div>
-    <transition name="fade" mode="out-in" v-on:after-leave="afterLeave()">
+    <transition
+      :name="this.transition"
+      mode="out-in"
+      v-on:before-enter="beforeEnter()"
+      v-on:after-leave="afterLeave()"
+    >
       <router-view
         v-bind:stories="stories"
         @openStory="openStory($event)"
@@ -24,7 +30,9 @@ import Stories from '@/stories/ciell/ciell.js'
 export default {
   data () {
     return {
-      stories: Stories
+      stories: Stories,
+      transition: 'slide-left',
+      showHeaderBackground: false
     }
   },
   components: {
@@ -54,8 +62,20 @@ export default {
       this.$store.commit('setCurrentStoryId', id)
       this.$router.push('story')
     },
+    beforeEnter () {
+      if (this.$route.name === 'home') {
+        this.transition = 'slide-left'
+      } else {
+        this.transition = 'slide-right'
+      }
+    },
     afterLeave () {
       document.body.scrollTop = 0
+      if (this.$route.name === 'home') {
+        this.showHeaderBackground = false
+      } else {
+        this.showHeaderBackground = true
+      }
     }
   }
 }
@@ -358,6 +378,28 @@ img {
 }
 .fade-enter, .fade-leave-active {
   opacity: 0;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition-duration: 0.5s;
+  transition-property: height, opacity, transform;
+  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+  /* overflow: hidden; */
+}
+
+.slide-left-enter,
+.slide-right-leave-active {
+  opacity: 0;
+  transform: translate(2em, 0);
+}
+
+.slide-left-leave-active,
+.slide-right-enter {
+  opacity: 0;
+  transform: translate(-2em, 0);
 }
 
 /* Responsive */

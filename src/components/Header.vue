@@ -1,7 +1,10 @@
 <template>
   <div class="header-wrapper">
-    <div class="header" v-bind:class="{ story: isStory() }">
-      <router-link class="story-title" to="/"><v-icon name="arrow-left" v-if="isStory()" scale="0.75" /> {{ storyTitle }}</router-link>
+    <div class="header" v-bind:class="{ showHeaderBackground: showHeaderBackground }">
+      <router-link class="story-title" to="/">
+        <div v-if="isStory()"><v-icon name="arrow-left" v-if="isStory()" scale="0.75" /> {{ storyTitle }}</div>
+        <div v-if="!isStory()">&nbsp;</div>
+      </router-link>
       <span class="nav-toggle" v-bind:class="{ active: navIsActive, story: isStory() }">
         <a v-on:click="toggleNav()">
           <span class="nav-circle"></span><span class="nav-circle"></span><span class="nav-circle"></span>
@@ -29,10 +32,10 @@ export default {
       navIsActive: false
     }
   },
-  props: ['stories'],
+  props: ['stories', 'showHeaderBackground'],
   computed: {
     storyTitle: function () {
-      let show = ['story', 'about']
+      let show = ['story', 'about', 'home']
       if (show.includes(this.$route.name)) {
         return 'Stories'
       } else {
@@ -73,6 +76,12 @@ export default {
   align-items: flex-start;
 }
 
+@media screen and (max-width: 1279px) {
+  .header.showHeaderBackground {
+    background: rgb(255, 255, 255, .9);
+  }
+}
+
 /* @supports(padding: max(0px)) {
     .header {
         top: max(1em, env(safe-area-inset-top));
@@ -80,10 +89,6 @@ export default {
         padding-right: max(1em, env(safe-area-inset-right));
     }
 } */
-
-.header.story {
-  background: rgb(255, 255, 255, .9);
-}
 
 .header a {
   flex-grow: 1;
@@ -131,7 +136,7 @@ export default {
 .nav-toggle a {
   display: flex;
   position: absolute;
-  top: -.25em;
+  top: -.3em;
   padding: 1em;
   right: 0;
 }

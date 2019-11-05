@@ -1,11 +1,11 @@
 let Story = [
   {
-    id: 0,
+    id: 40,
     title: 'The Invisible Girls',
     author: 'CIELL Team',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
     preview: 'invisible-girls/cover.png',
-    color: 'rgb(65, 85, 109)',
+    color: 'rgb(71, 87, 109)',
     tasks: [
       {
         id: 0,
@@ -44,34 +44,37 @@ let Story = [
     chapters: [
       {
         id: 0,
-        title: 'The Invisible Girls – Introduction',
-        content: `<p class="info info--introduction">Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
+        title: 'The Invisible Girls',
+        content: `
           <div class="comic-grid" style="margin-top:1.5em">
-            <div class="half">
+            <div class="half text info info--introduction">
+              <h2>Introduction</h2><p>Essay <span class="highlight">introduction</span> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
+            </div>
+            <div class="half last">
               [image|invisible-girls/invisible 00.jpg|Invisible Girls 0]
             </div>
-            <div class="half last">
+            <div class="half">
               [image|invisible-girls/invisible 02.jpg|Invisible Girls 2]
             </div>
-            <div class="half no-margin">
+            <div class="half last">
               [image|invisible-girls/invisible 03.jpg|Invisible Girls 3]
             </div>
-            <div class="half last no-margin">
+            <div class="half">
               [image|invisible-girls/invisible 04.jpg|Invisible Girls 4]
             </div>
-            <div class="half">
+            <div class="half last">
               [image|invisible-girls/invisible 05.jpg|Invisible Girls 5]
             </div>
-            <div class="half last">
+            <div class="half">
               [image|invisible-girls/invisible 06.jpg|Invisible Girls 6]
             </div>
-            <div class="half">
+            <div class="half last">
               [image|invisible-girls/invisible 07.jpg|Invisible Girls 7]
             </div>
-            <div class="half last">
+            <div class="half">
               [image|invisible-girls/invisible 08.jpg|Invisible Girls 8]
             </div>
-            <div class="half no-margin centered">
+            <div class="half last">
               [image|invisible-girls/invisible 09.jpg|Invisible Girls 9]
             </div>
           </div>`,
@@ -86,19 +89,52 @@ let Story = [
       },
       {
         id: 30,
-        title: 'Body: Paragraph 1',
-        content: `<p class="info info--paragraph">The body of the essay is the part that addresses the title. It should be organised into <strong>paragraphs</strong>. Each
-          paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
-          way to those that precede and follow it.</p>
+        title: '',
+        content: `
             <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half text info info--paragraph">
+              <h2>Paragraphs</h2><p>The <strong>body</strong> of the essay is the part that addresses the title. It should be organised into <strong>paragraphs</strong>. Each
+              paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
+              way to those that precede and follow it.</p>
+            </div>
             <div class="half last">
               [image|invisible-girls/invisible 10.jpg|Invisible Girls 10]
             </div>
-            <div class="half no-margin">
+            <div class="half">
               [image|invisible-girls/invisible 11.jpg|Invisible Girls 11]
             </div>
-            <div class="half no-margin centered">
+            <div class="half last">
               [image|invisible-girls/invisible 12.jpg|Invisible Girls 12]
+            </div>
+            <div class="half">
+              [image|invisible-girls/invisible 13.jpg|Invisible Girls 13]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 14.jpg|Invisible Girls 14]
+            </div>
+            <div class="half">
+              [image|invisible-girls/invisible 15.jpg|Invisible Girls 15]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 16.jpg|Invisible Girls 16]
+            </div>
+            <div class="half">
+              [image|invisible-girls/invisible 17.jpg|Invisible Girls 17]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 18.jpg|Invisible Girls 18]
+            </div>
+            <div class="half">
+              [image|invisible-girls/invisible 19.jpg|Invisible Girls 19]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 20.jpg|Invisible Girls 20]
+            </div>
+            <div class="half">
+              [image|invisible-girls/invisible 21.jpg|Invisible Girls 21]
+            </div>
+            <div class="half last">
+              [image|invisible-girls/invisible 22.jpg|Invisible Girls 22]
             </div>
           </div>`,
         choices: [
@@ -112,92 +148,25 @@ let Story = [
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 40
-          }
-        ]
-      },
-      {
-        id: 40,
-        title: 'Body: Paragraph 2',
-        content: `<div class="comic-grid">
-            <div class="half">
-              [image|invisible-girls/invisible 13.jpg|Invisible Girls 13]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 14.jpg|Invisible Girls 14]
-            </div>
-            <div class="half">
-              [image|invisible-girls/invisible 15.jpg|Invisible Girls 15]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 16.jpg|Invisible Girls 16]
-            </div>
-            <div class="half no-margin centered">
-              [image|invisible-girls/invisible 17.jpg|Invisible Girls 17]
-            </div>
-          </div>`,
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 30
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 50
-          }
-        ]
-      },
-      {
-        id: 50,
-        title: 'Body: Paragraph 3',
-        content: `<div class="comic-grid">
-            <div class="half">
-              [image|invisible-girls/invisible 18.jpg|Invisible Girls 18]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 19.jpg|Invisible Girls 19]
-            </div>
-            <div class="half">
-              [image|invisible-girls/invisible 20.jpg|Invisible Girls 20]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 21.jpg|Invisible Girls 21]
-            </div>
-            <div class="half no-margin centered">
-              [image|invisible-girls/invisible 22.jpg|Invisible Girls 22]
-            </div>
-          </div>`,
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 40
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
             'chapterId': 60
           }
         ]
       },
       {
         id: 60,
-        title: 'Conclusion',
-        content: `<p class="info info--conclusion">The <strong>conclusion</strong> reminds your readers what the essay was meant to do. It provides an answer to the title. It reminds your readers how you reached that answer. The conclusion should normally occupy just one paragraph. Here’s a simple conclusion to our story.</p>
+        title: '',
+        content: `
             <div class="comic-grid" style="margin-top:1.5em">
-            <div class="half">
-              [image|invisible-girls/invisible 23.jpg|Invisible Girls 23]
+            <div class="half text info info--conclusion">
+            <h2>Conslusion</h2><p>The <strong>conclusion</strong> reminds your readers what the essay was meant to do. It provides an answer to the title. It reminds your readers how you reached that answer. The conclusion should normally occupy just one paragraph. Here’s a simple conclusion to our story.</p>
             </div>
             <div class="half last">
+              [image|invisible-girls/invisible 23.jpg|Invisible Girls 23]
+            </div>
+            <div class="half">
               [image|invisible-girls/invisible 24.jpg|Invisible Girls 24]
             </div>
-            <div class="half no-margin centered">
+            <div class="half last">
               [image|invisible-girls/invisible 25.jpg|Invisible Girls 25]
             </div>
           </div>`,
@@ -206,7 +175,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 50
+            'chapterId': 30
           },
           {
             'text': 'Next',
@@ -241,10 +210,10 @@ let Story = [
             <div class="half last arrow">
               [image|info-graphics/basic-essay-structure-4.jpg|Basic Essay Structure 4]
             </div>
-            <div class="half no-margin arrow">
+            <div class="half arrow">
               [image|info-graphics/basic-essay-structure-5.jpg|Basic Essay Structure 5]
             </div>
-            <div class="half last no-margin">
+            <div class="half last">
               [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
             </div>
           </div>
@@ -256,10 +225,10 @@ let Story = [
             <div class="half arrow last">
               [image|info-graphics/basic-essay-structure-8.jpg|Basic Essay Structure 8]
             </div>
-            <div class="half arrow no-margin">
+            <div class="half arrow">
               [image|info-graphics/basic-essay-structure-9.jpg|Basic Essay Structure 9]
             </div>
-            <div class="half last no-margin">
+            <div class="half last">
               [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
             </div>
           </div>
@@ -332,80 +301,445 @@ let Story = [
     ]
   },
   {
-    id: 10,
-    placeholder: true,
-    title: 'Nuclear Power',
+    id: 30,
+    title: 'Climate Change',
+    description: 'This is a story about climate change.',
     author: 'CIELL Team',
-    description: 'This is another empty story.',
-    preview: 'nuclear-power/cover.png',
-    color: 'rgb(230, 79, 78)',
+    preview: 'climate-change/cover.png',
+    color: 'rgb(73, 90, 98)',
+    tasks: null,
     chapters: [
       {
         id: 0,
-        title: 'Another Story, Another Chapter!',
-        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
+        title: 'Climate Change',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|climate-change/climate 01.jpg|Climate Change 1]
+            </div>
+            <div class="half last">
+              [image|climate-change/climate 02.jpg|Climate Change 2]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 03.jpg|Climate Change 3]
+            </div>
+            <div class="half last">
+              [image|climate-change/climate 04.jpg|Climate Change 4]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 05.jpg|Climate Change 5]
+            </div>
+            <div class="half last">
+              [image|climate-change/climate 06.jpg|Climate Change 6]
+            </div>
+          </div>`,
         choices: [
           {
             'text': 'Next',
-            'chapterId': 1
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
           }
         ]
       },
       {
-        id: 1,
-        title: 'More Content',
-        content: '<p>Test...</p>',
+        id: 10,
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|climate-change/climate 07.jpg|Climate Change 7]
+            </div>
+            <div class="half last">
+              [image|climate-change/climate 08.jpg|Climate Change 8]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 09.jpg|Climate Change 9]
+            </div>
+            <div class="half last">
+              [image|climate-change/climate 10.jpg|Climate Change 10]
+            </div>
+          </div>`,
         choices: [
           {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconAfter': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|climate-change/climate 11.jpg|Climate Change 11]
+            </div>
+            <div class="half last">
+              [image|climate-change/climate 12.jpg|Climate Change 12]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 13.jpg|Climate Change 13]
+            </div>
+            <div class="half last">
+              [image|climate-change/climate 14.jpg|Climate Change 14]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 15.jpg|Climate Change 15]
+            </div>
+            <div class="half last">
+              [image|climate-change/climate 16.jpg|Climate Change 16]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconAfter': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|climate-change/climate 17.jpg|Climate Change 17]
+            </div>
+            <div class="half last">
+              [image|climate-change/climate 18.jpg|Climate Change 18]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 19.jpg|Climate Change 19]
+            </div>
+            <div class="half last">
+              [image|climate-change/climate 20.jpg|Climate Change 20]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconAfter': 'arrow-left',
+            'chapterId': 20
+          },
+          {
             'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
             'chapterId': 0
           }
-        ],
-        finalChapter: true
+        ]
       }
     ]
   },
   {
     id: 20,
-    placeholder: true,
-    title: 'Agatha Christie',
+    title: 'Nuclear Power',
     author: 'CIELL Team',
     description: 'This is another empty story.',
-    preview: 'agatha-christie/cover.png',
-    color: 'rgb(38, 35, 64)',
+    preview: 'nuclear-power/cover.png',
+    color: 'rgb(247, 128, 60)',
     chapters: [
       {
         id: 0,
-        title: 'Another Story, Another Chapter!',
-        content: '<p>Consetetur sadipscing elitr, sed diam tempor invidunt ut labore.</p>',
+        title: 'Nuclear Power',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|nuclear-power/nuclear 01.jpg|Agatha 1]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 02.jpg|Agatha 2]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 03.jpg|Agatha 3]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 04.jpg|Agatha 4]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 05.jpg|Agatha 5]
+            </div>
+          </div>`,
         choices: [
           {
             'text': 'Next',
-            'chapterId': 1
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
           }
         ]
       },
       {
-        id: 1,
-        title: 'More Content',
-        content: '<p>Test...</p>',
+        id: 20,
+        title: '',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="half">
+              [image|nuclear-power/nuclear 06.jpg|Agatha 6]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 07.jpg|Agatha 7]
+            </div>
+            <div class="half">
+            [image|nuclear-power/nuclear 08.jpg|Agatha 8]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 09.jpg|Agatha 9]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 10.jpg|Agatha 10]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 11.jpg|Agatha 11]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 12.jpg|Agatha 12]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 13.jpg|Agatha 13]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 14.jpg|Agatha 14]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 15.jpg|Agatha 15]
+            </div>
+          </div>`,
         choices: [
           {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconAfter': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|nuclear-power/nuclear 16.jpg|Agatha 16]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 17.jpg|Agatha 17]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 18.jpg|Agatha 18]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 19.jpg|Agatha 19]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 20.jpg|Agatha 20]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 21.jpg|Agatha 21]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 22.jpg|Agatha 22]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 23.jpg|Agatha 23]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 24.jpg|Agatha 24]
+            </div>
+            <div class="half last">
+              [image|nuclear-power/nuclear 25.jpg|Agatha 25]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconAfter': 'arrow-left',
+            'chapterId': 20
+          },
+          {
             'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
             'chapterId': 0
           }
-        ],
-        finalChapter: true
+        ]
       }
     ]
   },
   {
-    id: 30,
+    id: 10,
+    title: 'Agatha Christie',
+    author: 'CIELL Team',
+    description: 'A story on the issue of gender equality.',
+    preview: 'agatha-christie/cover.png',
+    color: 'rgb(142, 1, 49)',
+    chapters: [
+      {
+        id: 0,
+        title: 'Agatha Christie',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|agatha-christie/agatha 01.jpg|Agatha 1]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 02.jpg|Agatha 2]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 03.jpg|Agatha 3]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 04.jpg|Agatha 4]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 05.jpg|Agatha 5]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 06.jpg|Agatha 6]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 07.jpg|Agatha 7]
+            </div>
+            <div class="half last">
+            [image|agatha-christie/agatha 08.jpg|Agatha 8]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|agatha-christie/agatha 09.jpg|Agatha 9]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 10.jpg|Agatha 10]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 11.jpg|Agatha 11]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 12.jpg|Agatha 12]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 13.jpg|Agatha 13]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 14.jpg|Agatha 14]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 15.jpg|Agatha 15]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 16.jpg|Agatha 16]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconAfter': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|agatha-christie/agatha 17.jpg|Agatha 17]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 18.jpg|Agatha 18]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 19.jpg|Agatha 19]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 20.jpg|Agatha 20]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 21.jpg|Agatha 21]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 22.jpg|Agatha 22]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 23.jpg|Agatha 23]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 24.jpg|Agatha 24]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 25.jpg|Agatha 25]
+            </div>
+            <div class="half last">
+              [image|agatha-christie/agatha 26.jpg|Agatha 26]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconAfter': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 50,
     title: 'App Testing',
     author: 'CIELL Team',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
     preview: 'invisible-girls/cover.png',
-    color: 'rgb(65, 85, 109)',
+    color: 'rgb(71, 87, 109)',
     tasks: [
       {
         id: 0,

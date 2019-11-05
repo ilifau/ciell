@@ -30,6 +30,7 @@ export default {
 
 <style>
   .rotated-background {
+    display: none !important;
     position: absolute;
     left: -100%;
     top: -20%;

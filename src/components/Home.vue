@@ -1,8 +1,8 @@
 <template>
   <div class="background">
     <div class="container home">
-      <!-- <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt=""></div> -->
-      <h1 class="home-title default-font">CIELL</h1>
+      <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt=""></div>
+      <!-- <h1 class="home-title default-font">CIELL</h1> -->
       <h2 class="home-subtitle default-font">Visually enhanced learning of writing organization for people with dyslexia.</h2>
       <div class="stories">
         <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
@@ -42,8 +42,10 @@ export default {
   .ciell-logo {
     display: block;
     text-align: center;
-    width: 10em;
+    width: 8em;
     margin: 0 auto;
+    position: relative;
+    top: -.5em;
   }
 
   h1 {
@@ -59,20 +61,24 @@ export default {
   }
 
   .home-subtitle {
+    font-family: 'aka-acidgr-diarygirlmedium';
     text-align: center;
-    font-size: 1em;
-    width: 480px;
+    font-size: 1.125em;
+    line-height: 1.5;
+    width: 384px;
     max-width: 90%;
     margin: 0 auto 2.5em;
-    color: #21677e;
+    /* color: #21677e; */
     margin-top: .5em;
+    margin-bottom: 1.6125em;
     font-weight: 600;
+    letter-spacing: .75px;
   }
 
   .stories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
     position: relative;
     font-size: 1em;
@@ -116,18 +122,19 @@ export default {
     text-align: left;
     background-size: cover;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.25em;
     text-shadow: 1px 1px 0 rgba(0,0,0,.6);
     font-family: 'aka-acidgr-diarygirlmedium';
     font-weight: 400;
   }
 
   .story a .title {
+    /* display: none !important; */
     z-index: 2;
     position: absolute;
-    bottom: 1em;
+    bottom: -.375em;
     padding: .75em 1em;
-    left: -.375em;
+    left: -.5em;
     transition: all .3s linear;
   }
 
@@ -150,6 +157,7 @@ export default {
     opacity: .8;
     transform: rotate(-2deg);
     transition: all .3s ease-in-out;
+    border-radius: 2px;
   }
 
   /* .story a:hover .title {

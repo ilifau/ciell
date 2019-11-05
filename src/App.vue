@@ -30,7 +30,7 @@ import Stories from '@/stories/ciell/ciell.js'
 export default {
   data () {
     return {
-      stories: Stories,
+      stories: Stories.sort((a, b) => (a.id > b.id) ? 1 : -1),
       transition: this.$route.name === 'home' ? 'slide-left' : 'slide-right',
       showHeaderBackground: this.$route.name !== 'home'
     }
@@ -198,23 +198,29 @@ a {
   text-decoration: none;
 }
 
-p.info {
+div.info {
   padding: 1em;
+  border: .375em solid white;
+  font-size: .93875em;
 }
 
-p.info.info--introduction {
-  background: #c2f4f1;
-  color: #212627;
+div.info h2 {
+  margin-top: .5em;
 }
 
-p.info.info--paragraph {
-  background: #fff898;
-  color: #21211c;
+div.info.info--introduction {
+  /* background: #c2f4f1;
+  color: #212627; */
 }
 
-p.info.info--conclusion {
-  background: #d5f1a4;
-  color: #131511;
+div.info.info--paragraph {
+  /* background: #ffffbd; */
+  /* color: #21211c; */
+}
+
+div.info.info--conclusion {
+  /* background: #d5f1a4;
+  color: #131511; */
 }
 
 .container {
@@ -223,7 +229,7 @@ p.info.info--conclusion {
   width: 920px;
   max-width: 100%;
   line-height: 1.5;
-  padding: 3em 0 2em;
+  padding: 2em 0;
   z-index: 1;
 }
 
@@ -239,6 +245,7 @@ p.info.info--conclusion {
 
 .highlight {
   background: #fff151;
+  font-weight: 600;
 }
 
 img {
@@ -288,10 +295,10 @@ img {
   /* box-shadow: 1px 1px 5px rgba(0,0,0,.5); */
   /* border: 3px solid #333; */
   overflow: hidden;
-  margin-bottom: 1em;
+  margin-bottom: .25em;
 }
 
-.comic-grid div span {
+/* .comic-grid div span {
   color: #333;
   background: rgba(255,255,255,.7);
   font-size: .5em;
@@ -301,7 +308,7 @@ img {
   bottom: 0;
   z-index: 2;
   padding: .25em;
-}
+} */
 
 .comic-grid div::before {
   content: "";
@@ -317,12 +324,16 @@ img {
 }
 
 .comic-grid .half {
-  width: calc(50% - .5em);
-  margin-right: 1em;
+  width: calc(50% - .125em);
+  margin-right: .25em;
 }
 
 .comic-grid .half.last {
   margin-right: 0;
+}
+
+.comic-grid .text {
+  background: #fff;
 }
 
 .comic-grid .arrow {
@@ -355,13 +366,8 @@ img {
   }
 }
 
-.comic-grid .half::before {
+.comic-grid .half:not(.text)::before {
   padding-top: 100%;
-}
-
-.comic-grid .centered {
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .comic-grid div img {
@@ -370,10 +376,6 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
-}
-
-.comic-grid .no-margin {
-  margin-bottom: 0;
 }
 
 /* Transitions */
@@ -425,6 +427,17 @@ img {
   .container {
     padding: 2.5em 0 2em;
   }
+
+  div.info h2 {
+    margin-top: 0;
+  }
+
+  .comic-grid .half.text {
+    clear: both;
+    width: 100%;
+    padding: 0;
+    border: 0;
+  }
 }
 
 @media screen and (max-width: 640px) {
@@ -447,7 +460,7 @@ img {
 
   .comic-grid .half {
     width: 100%;
-    margin: 0 0 1em;
+    margin: 0 0 .25em;
   }
 }
 

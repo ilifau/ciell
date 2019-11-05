@@ -48,7 +48,7 @@ let Story = [
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
             <div class="half text info info--introduction">
-              <h2>Introduction</h2><p>Essay <span class="highlight">introduction</span> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
+              <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
             </div>
             <div class="half last">
               [image|invisible-girls/invisible 00.jpg|Invisible Girls 0]

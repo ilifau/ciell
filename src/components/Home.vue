@@ -65,7 +65,7 @@ export default {
     text-align: center;
     font-size: 1.125em;
     line-height: 1.5;
-    width: 384px;
+    width: 580px;
     max-width: 90%;
     margin: 0 auto 2.5em;
     /* color: #21677e; */

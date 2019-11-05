@@ -459,19 +459,22 @@ let Story = [
         title: 'Nuclear Power',
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
-            <div class="half">
+            <div class="half text info info--introduction">
+              <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
+            </div>
+            <div class="half last">
               [image|nuclear-power/nuclear 01.jpg|Agatha 1]
             </div>
-            <div class="half last">
+            <div class="half">
               [image|nuclear-power/nuclear 02.jpg|Agatha 2]
             </div>
-            <div class="half">
+            <div class="half last">
               [image|nuclear-power/nuclear 03.jpg|Agatha 3]
             </div>
-            <div class="half last">
+            <div class="half">
               [image|nuclear-power/nuclear 04.jpg|Agatha 4]
             </div>
-            <div class="half">
+            <div class="half last">
               [image|nuclear-power/nuclear 05.jpg|Agatha 5]
             </div>
           </div>`,

@@ -8,7 +8,7 @@ let Story = [
     color: 'rgb(71, 87, 109)',
     tasks: [
       {
-        id: 0,
+        id: 10,
         type: 'sort',
         title: '',
         description: '',
@@ -261,9 +261,9 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 0,
+        taskId: 10,
         title: 'Task: The Invisible Girls.',
-        content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Place the following story elements in their correct order (drag &amp; drop) and click the "Check Order" button.</p>`,
+        content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Place the following story elements in their correct order (drag &amp; drop) and click the "Check order" button.</p>`,
         choices: [
           {
             'text': 'Previous',
@@ -363,7 +363,7 @@ let Story = [
           {
             'text': 'Previous',
             'class': 'previous',
-            'iconAfter': 'arrow-left',
+            'iconBefore': 'arrow-left',
             'chapterId': 0
           },
           {
@@ -401,7 +401,7 @@ let Story = [
           {
             'text': 'Previous',
             'class': 'previous',
-            'iconAfter': 'arrow-left',
+            'iconBefore': 'arrow-left',
             'chapterId': 10
           },
           {
@@ -598,6 +598,121 @@ let Story = [
     description: 'A story on the issue of gender equality.',
     preview: 'agatha-christie/cover.png',
     color: 'rgb(142, 1, 49)',
+    tasks: [
+      {
+        id: 20,
+        type: 'sort',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Instructions:</strong> Place the following story elements in their correct order (drag &amp; drop) and click the "Check order" button.</p>',
+        puzzle: true,
+        items: [
+          {
+            order: 0,
+            image: 'agatha-christie/agatha 01.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 02.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 03.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 04.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 05.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 06.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 07.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 08.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 09.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 10.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 11.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 12.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 13.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 14.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 15.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 16.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 17.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 18.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 19.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 20.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 21.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 22.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 23.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 24.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 25.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 26.jpg'
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -672,7 +787,7 @@ let Story = [
           {
             'text': 'Previous',
             'class': 'previous',
-            'iconAfter': 'arrow-left',
+            'iconBefore': 'arrow-left',
             'chapterId': 0
           },
           {
@@ -723,8 +838,28 @@ let Story = [
           {
             'text': 'Previous',
             'class': 'previous',
-            'iconAfter': 'arrow-left',
+            'iconBefore': 'arrow-left',
             'chapterId': 20
+          },
+          {
+            'text': 'Task',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        taskId: 20,
+        title: 'Task: Agatha Christie',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
           },
           {
             'text': 'Restart',
@@ -741,11 +876,11 @@ let Story = [
     title: 'App Testing',
     author: 'CIELL Team',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
-    preview: 'invisible-girls/cover.png',
+    preview: 'agatha-christie/cover.png',
     color: 'rgb(71, 87, 109)',
     tasks: [
       {
-        id: 0,
+        id: 30,
         type: 'sort',
         title: 'My title is Sorting',
         description: 'Please put the items below in the correct order (drag & drop). Once you\'re done, click the "Check order" button at the end of the list.',
@@ -860,7 +995,7 @@ let Story = [
         id: 3,
         title: '',
         content: '',
-        taskId: 0,
+        taskId: 30,
         choices: [
           {
             'text': 'Proceed to the Final Chapter',

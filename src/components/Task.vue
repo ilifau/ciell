@@ -1,27 +1,29 @@
 <template>
-  <div class="task" v-bind:class="{ completed: this.$store.state.tasksComplete.includes(this.task.id)}">
-    <div class="task-message-wrapper" v-if="showTaskMessage" v-on:click="hideTaskMessage()">
-      <div v-if="showTaskMessage" class="task-message">
-        <div class="close-task-message"><v-icon name="home" /></div>
-        <div v-if="this.$store.state.tasksComplete.includes(this.task.id)">
-          <h3 class="first">Superb, you did it!</h3>
-          <p class="last">You completed this task successfully. Your progress will be saved. Congratulations!</p>
-        </div>
-        <div v-if="!this.$store.state.tasksComplete.includes(this.task.id)">
-          <h3 class="first">Not quite&hellip;</h3>
-          <p class="last">Nope, that doesn't seem to be correct. Try again, you can try as often as you like.</p>
+  <div>
+    <div class="task" v-bind:class="{ puzzle: this.task.puzzle, completed: this.$store.state.tasksComplete.includes(this.task.id)}">
+      <div class="task-message-wrapper" v-if="showTaskMessage" v-on:click="hideTaskMessage()">
+        <div v-if="showTaskMessage" class="task-message">
+          <div class="close-task-message"><v-icon name="home" /></div>
+          <div v-if="this.$store.state.tasksComplete.includes(this.task.id)">
+            <h3 class="first">Superb, you did it!</h3>
+            <p class="last">You completed this task successfully. Your progress will be saved. Congratulations!</p>
+          </div>
+          <div v-if="!this.$store.state.tasksComplete.includes(this.task.id)">
+            <h3 class="first">Not quite&hellip;</h3>
+            <p class="last">Nope, that doesn't seem to be correct. Try again, you can try as often as you like.</p>
+          </div>
         </div>
       </div>
+      <h1 v-if="task.title">{{ task.title }}</h1>
+      <div v-if="task.description" v-html="task.description"></div>
+      <draggable v-model="task.items" group="tasks" @start="drag=true" @change="onChange" @end="drag=false">
+        <div class="task-item" v-bind:class="item.class" v-for="item in task.items" :key="item.id">
+          <h4 v-if="item.title">{{ item.title }}</h4>
+          <img v-if="item.image" :src="require('@/stories/ciell/assets/img/' + item.image)" alt="" />
+        </div>
+        <div class="clearfix"></div>
+      </draggable>
     </div>
-    <h1 v-if="task.title">{{ task.title }}</h1>
-    <p v-if="task.description">{{ task.description }}</p>
-    <draggable v-model="task.items" group="tasks" @start="drag=true" @change="onChange" @end="drag=false">
-      <div class="task-item" v-bind:class="item.class" v-for="item in task.items" :key="item.id">
-        <h4>{{ item.title }}</h4>
-        <img v-if="item.image" :src="require('@/stories/ciell/assets/img/' + item.image)" alt="" />
-      </div>
-      <div class="clearfix"></div>
-    </draggable>
     <a class="check-task" slot="footer" @click="checkTask">Check order</a>
   </div>
 </template>
@@ -148,7 +150,7 @@ export default {
     border: 0;
     transition: all .4s ease 0s;
     font-size: 1em;
-    margin-top: .5em;
+    margin-top: 1em;
     cursor: pointer;
     line-height: 1;
   }
@@ -192,5 +194,52 @@ export default {
     right: .5em;
     top: .5em;
     color: red;
+  }
+
+  /* Puzzle */
+  .puzzle .task-item {
+    background: #fff;
+    position: relative;
+    width: calc(33.333% - .7em);
+    float: left;
+    margin: 0 .6125em 0 0;
+    height: 0;
+    padding: 0 0 33%;
+  }
+
+  .puzzle .task-item:nth-child(3n+3){
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 1023px) {
+    .puzzle .task-item {
+      width: calc(50% - .4em);
+      margin: 0 .75em .25em 0;
+      padding: 0 0 50%;
+    }
+
+    .puzzle .task-item:nth-child(3n+3) {
+      margin-right: .75em;
+    }
+
+    .puzzle .task-item:nth-child(2n+2) {
+      margin-right: 0;
+    }
+  }
+
+  @media screen and (max-width: 580px) {
+    .puzzle .task-item {
+      width: 100%;
+      margin: 0 0 .5em 0;
+      padding: 0 0 102%;
+    }
+
+    .puzzle .task-item:nth-child(3n+3) {
+      margin-right: 0;
+    }
+
+    .puzzle .task-item:nth-child(2n+2) {
+      margin-right: 0;
+    }
   }
 </style>

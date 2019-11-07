@@ -13,6 +13,7 @@
               <span class="title-background" :style="{ backgroundColor: story.color ? story.color : '' }"></span>
             </span>
             <div class="dark"></div>
+            <img v-if="isTaskComplete(id)" class="badge" src="@/stories/ciell/assets/img/badge.png" alt="Badge (task completed)" title="You did it!" />
           </a>
         </div>
       </div>
@@ -29,6 +30,13 @@ export default {
     },
     storyBackgroundImage () {
       return this.$props.stories[this.$store.state.currentStoryId].preview
+    },
+    isTaskComplete (id) {
+      if (!id || !this.$props.stories[id].tasks) {
+        return false
+      }
+
+      return this.$store.state.tasksComplete.includes(this.$props.stories[id].tasks[0].id)
     }
   }
 }
@@ -90,7 +98,7 @@ export default {
     /* border-radius: 100%; */
     width: calc(50% - 2em);
     /* overflow: hidden; */
-    margin: 0 1em 1em;
+    margin: 0 1em 1.75em;
     transition: box-shadow .3s linear, border-color .3s linear;
     /* border: .25em solid #219ac2; */
     /* box-shadow: 0 1px 3px rgba(0,0,0,.2); */
@@ -132,9 +140,9 @@ export default {
     /* display: none !important; */
     z-index: 2;
     position: absolute;
-    bottom: -.375em;
+    bottom: -.6125em;
     padding: .75em 1em;
-    left: -.5em;
+    left: -.6125em;
     transition: all .3s linear;
   }
 
@@ -166,6 +174,15 @@ export default {
 
   .story a:hover .title span.title-background {
     opacity: .95;
+  }
+
+  .badge {
+    position: absolute;
+    right: -.5em;
+    top: -.5em;
+    background-size: cover;
+    width: 25%;
+    height: 25%;
   }
 
   @media screen and (min-width: 640px) and (max-width: 800px) {

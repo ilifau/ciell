@@ -252,7 +252,7 @@ let Story = [
             'chapterId': 60
           },
           {
-            'text': 'Next',
+            'text': 'Task',
             'class': 'next',
             'iconAfter': 'arrow-right',
             'chapterId': 80
@@ -522,27 +522,6 @@ let Story = [
             <div class="half last">
               [image|nuclear-power/nuclear 15.jpg|Agatha 15]
             </div>
-          </div>`,
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconAfter': 'arrow-left',
-            'chapterId': 0
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 30
-          }
-        ]
-      },
-      {
-        id: 30,
-        title: '',
-        content: `
-          <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
               [image|nuclear-power/nuclear 16.jpg|Agatha 16]
             </div>
@@ -567,6 +546,27 @@ let Story = [
             <div class="half last">
               [image|nuclear-power/nuclear 23.jpg|Agatha 23]
             </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconAfter': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
               [image|nuclear-power/nuclear 24.jpg|Agatha 24]
             </div>

@@ -28,7 +28,7 @@
     <h2>Coding</h2>
     <ul>
       <li><a href="https://www.ili.fau.de/team/sebastian-honert/" target="_blank">Dr. Sebastian Honert, FAU</a></li>
-      <li><a href="https://github.com/SebastianHonert/ciell" target="_blank">https://github.com/SebastianHonert/ciell</a></li>
+      <li><a href="https://github.com/ilifau/ciell" target="_blank">https://github.com/ilifau/ciell</a></li>
     </ul>
   </div>
 </template>

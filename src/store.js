@@ -8,7 +8,12 @@ export const store = new Vuex.Store({
     currentStoryId: 0,
     currentChapterId: 0,
     userScore: 0,
-    tasksComplete: []
+    tasksComplete: [],
+    ratings: {
+      Design: 1,
+      Content: 3,
+      Usability: 5
+    }
   },
   mutations: {
     setCurrentStoryId (state, id) {
@@ -34,12 +39,10 @@ export const store = new Vuex.Store({
       if (index > -1) {
         state.tasksComplete.splice(index, 1)
       }
+    },
+    setRating (state, payload) {
+      state.ratings[payload.prop] = payload.rating
+      console.log(payload)
     }
-  },
-  getters: {
-    currentStoryId: state => state.currentStoryId,
-    currentChapterId: state => state.currentChapterId,
-    userScore: state => state.userScore,
-    tasksComplete: state => state.tasksComplete
   }
 })

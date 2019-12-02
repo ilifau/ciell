@@ -408,7 +408,7 @@ img {
   transform: translate(-2em, 0);
 }
 
-/* MEssages */
+/* Messages */
 .msg {
   display: block;
   background: #f3f3f3;
@@ -419,6 +419,33 @@ img {
 .msg--success {
   background: #d1e6db;
   color: #08723d;
+}
+
+/* Buttons */
+
+.btn {
+  color: #fff !important;
+  text-decoration: none;
+  background-color: #219ac2;
+  padding: .6125em .75em;
+  border-radius: .25em;
+  display: inline-block;
+  border: 0;
+  transition: all .4s ease;
+  margin-top: .5em;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #1c81a3;
+}
+
+.btn.btn--success {
+  background-color: #08723d;
+}
+
+.btn.btn--success {
+  background-color: #185d3a;
 }
 
 /* Responsive */

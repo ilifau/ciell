@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Story from './views/Story.vue'
 import About from './views/About.vue'
+import Evaluation from './views/Evaluation.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/evaluation',
+      name: 'evaluation',
+      component: Evaluation
     }
   ]
 })

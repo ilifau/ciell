@@ -20,6 +20,7 @@
           {{ id + 1 }}. {{ story.title }}
         </a>
       </div>
+      <router-link to="/evaluation">Evaluation</router-link>
       <router-link to="/about">About CIELL</router-link>
     </div>
   </div>

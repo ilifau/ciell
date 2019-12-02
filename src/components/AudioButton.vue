@@ -44,7 +44,6 @@ export default {
   background: #08723d;
 }
 
-.audio-buttons a.play:hover,
 .audio-buttons a.play:hover {
   background: #185d3a;
 }

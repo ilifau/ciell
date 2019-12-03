@@ -1,7 +1,7 @@
 <template>
   <div class="container about">
     <h1>Evalution</h1>
-    <p>Please take a minute to provide some feedback for our app. Simply choose a number of stars for each category click the "Submit" button.</p>
+    <p>Please take a few seconds to provide some feedback for our app. Simply choose a number of stars for each feedback category and then click the "Submit your rating" button.</p>
     <div class="ratings">
       <label v-for="(rating, index) in ratings()" :key="index">
         <div class="rating-wrapper">
@@ -10,7 +10,11 @@
         </div>
       </label>
     </div>
-    <p><a class="btn" v-on:click="submitRating()">Submit your ratings</a></p>
+    <p>
+      <span class="error" v-if="this.submitError"><strong>Ooops!</strong> {{ this.submitError }}</span>
+      <a v-if="canSubmit() || this.submitting" class="btn" v-on:click="submitRating()"><v-icon v-if="this.submitting" name="spinner" spin /> Submit your ratings</a>
+      <a v-if="!canSubmit() && !this.submitting" class="btn btn--wait" v-on:click="submitRating()">Thank you for your feedback!</a>
+    </p>
   </div>
 </template>
 
@@ -23,6 +27,17 @@ export default {
     Header
   },
   props: ['stories', 'showHeaderBackground'],
+  data () {
+    return {
+      submitTimer: 0,
+      refreshTimer: '',
+      submitError: '',
+      submitting: false
+    }
+  },
+  created () {
+    this.refreshTimer = setInterval(this.updateTimer, 10000)
+  },
   methods: {
     openStory (id) {
       this.$emit('openStory', id)
@@ -33,9 +48,58 @@ export default {
     rate (index, rating) {
       this.$store.commit('setRating', {prop: index, rating: rating})
     },
+    canSubmit () {
+      let d = Date.now()
+      return (this.submitTimer === 0 || d > this.submitTimer)
+    },
+    updateTimer () {
+      this.submitTimer = 0
+    },
+    cancelRefreshTimer () {
+      clearInterval(this.refreshTimer)
+    },
+    showSubmitError () {
+      this.submitTimer = 0
+      this.submitError = 'Something went wrong submitting your ratings. Is your device connected to the internet?'
+    },
     submitRating () {
-      // this.$store.commit('setRating', {prop: 'Design', rating: 3})
+      if (!this.canSubmit()) {
+        return
+      }
+
+      let d = Date.now()
+      this.submitTimer = d + 10000
+      this.submitting = true
+      this.submitError = ''
+      let that = this
+
+      this.axios.post('https://sebastianhonert.com/ciell/ciell-mysql.php', {
+        ratings: JSON.stringify(this.$store.state.ratings)
+      }, {
+        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+      }).then(function (response) {
+        console.log(response)
+        if (response.data === 'New record created successfully') {
+          that.submitError = ''
+          let d = Date.now()
+          that.submitTimer = d + 10000
+          that.cancelRefreshTimer()
+          that.refreshTimer = setInterval(that.updateTimer, 10000)
+        } else {
+          that.showSubmitError()
+        }
+        that.submitting = false
+      }).catch(function (error) {
+        if (error) {
+          console.log(error)
+          that.showSubmitError()
+        }
+        that.submitting = false
+      })
     }
+  },
+  beforeDestroy () {
+    this.cancelRefreshTimer()
   }
 }
 </script>
@@ -63,5 +127,16 @@ label {
 h2 {
   line-height: 1;
   margin-bottom: .5em;
+}
+
+.btn--wait {
+  background: #08723d !important;
+}
+
+.error {
+  display: block;
+  color: rgb(122, 10, 10);
+  background: rgb(245, 192, 192);
+  padding: .5em;
 }
 </style>

@@ -42,7 +42,7 @@ export const store = new Vuex.Store({
     },
     setRating (state, payload) {
       state.ratings[payload.prop] = payload.rating
-      console.log(payload)
+      console.log(JSON.stringify(state.ratings))
     }
   }
 })

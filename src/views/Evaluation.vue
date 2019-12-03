@@ -29,6 +29,7 @@ export default {
   props: ['stories', 'showHeaderBackground'],
   data () {
     return {
+      timerDuration: 15000,
       submitTimer: 0,
       refreshTimer: '',
       submitError: '',
@@ -36,7 +37,7 @@ export default {
     }
   },
   created () {
-    this.refreshTimer = setInterval(this.updateTimer, 10000)
+    this.refreshTimer = setInterval(this.updateTimer, this.timerDuration)
   },
   methods: {
     openStory (id) {
@@ -68,7 +69,7 @@ export default {
       }
 
       let d = Date.now()
-      this.submitTimer = d + 10000
+      this.submitTimer = d + this.timerDuration
       this.submitting = true
       this.submitError = ''
       let that = this
@@ -82,9 +83,9 @@ export default {
         if (response.data === 'New record created successfully') {
           that.submitError = ''
           let d = Date.now()
-          that.submitTimer = d + 10000
+          that.submitTimer = d + that.timerDuration
           that.cancelRefreshTimer()
-          that.refreshTimer = setInterval(that.updateTimer, 10000)
+          that.refreshTimer = setInterval(that.updateTimer, that.timerDuration)
         } else {
           that.showSubmitError()
         }

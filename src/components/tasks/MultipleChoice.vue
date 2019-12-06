@@ -10,24 +10,24 @@
           </div>
           <div v-if="!this.$store.state.tasksComplete.includes(this.task.id)">
             <h3 class="first">Not quite&hellip;</h3>
-            <p class="last">Nope, that doesn't seem to be correct. Try again, you can try as often as you like.</p>
+            <p class="last">Hm, not quite (<strong>{{ this.correct }} correct</strong>, <strong>{{ this.incorrect }} incorrect</strong>). Try again, you can try as often as you like.</p>
           </div>
         </div>
       </div>
       <h1 v-if="task.title">{{ task.title }}</h1>
       <div v-if="task.description" v-html="task.description"></div>
       <div class="multiple-choice">
-        <div class="item" v-for="(item, questionIndex) in task.items" :key="'question-' + questionIndex">
+        <div class="task-item" v-for="(item, questionIndex) in task.items" :key="'question-' + questionIndex">
           <h2 v-if="item.question">{{ questionIndex + 1 }}. {{ item.question }}</h2>
           <label class="answer" v-for="(answer, answerIndex) in item.answers" :key="'answer-' + answerIndex"> {{ answer.text }}
-            <input v-bind:value="answer.correct ? 1 : 0" v-on:click="onChange(item, questionIndex, answerIndex)" type="checkbox">
+            <input v-on:click="onChange()" v-model="selectedAnswers[questionIndex][answerIndex]" v-bind:value="answer.correct" type="checkbox" :checked="answer.correct" />
             <span class="checkmark"></span>
           </label>
         </div>
         <div class="clearfix"></div>
       </div>
     </div>
-    <a class="check-task" slot="footer" v-on:click="checkTask">Check order</a>
+    <a class="check-task" slot="footer" v-on:click="checkTask">Check results </a>
   </div>
 </template>
 
@@ -39,50 +39,71 @@ export default {
   ],
   data () {
     return {
-      correctAnswers: [],
-      checkedAnswers: [],
+      selectedAnswers: [],
       isComplete: this.$store.state.tasksComplete.includes(this.task.id),
       checked: false,
-      showTaskMessage: false
+      showTaskMessage: false,
+      correct: 0,
+      incorrect: 0
     }
   },
   created () {
-    this.task.items.forEach((question, questionIndex) => {
-      question.answers.forEach((answer, answerIndex) => {
-        if (answer.correct) {
-          this.correctAnswers.push([questionIndex, answerIndex])
+    let that = this
+    this.task.items.forEach(function (question, index) {
+      that.selectedAnswers.push([])
+      question.answers.forEach(function (answer) {
+        if (!that.isComplete) {
+          that.selectedAnswers[index].push(false)
+        } else {
+          that.selectedAnswers[index].push(answer.correct)
         }
       })
     })
   },
   methods: {
+    onChange () {
+      this.checked = false
+      this.isComplete = false
+      this.$store.commit('removeTaskComplete', this.task.id)
+
+      this.isComplete = this.incorrect === 0
+    },
     checkTask () {
-      if (this.checkedAnswers.length !== this.correctAnswers.length) {
-        alert('not quite...')
-      } else {
-        alert('well done!')
-      }
-    },
-    onChange (item, questionIndex, answerIndex) {
-      if (!this.checkedAnswersIncludes(questionIndex, answerIndex)) {
-        this.checkedAnswers.push([questionIndex, answerIndex])
-      }
-    },
-    checkedAnswersIncludes (questionIndex, answerIndex) {
-      if (this.checkedAnswers.length === 0) {
-        return false
-      }
+      // TODO: Compare selected answers to correct answers
+      let that = this
+      let correct = 0
+      let incorrect = 0
 
-      let checkedAnswersIncludes = false
-
-      this.checkedAnswers.forEach((answer, index) => {
-        if (answer[0] === questionIndex && answer[1] === answerIndex) {
-          checkedAnswersIncludes = true
-          this.checkedAnswers.splice(index, 1)
-        }
+      this.selectedAnswers.forEach(function (question, questionIndex) {
+        question.forEach(function (answer, answerIndex) {
+          if (answer) { // checked items
+            if (that.task.items[questionIndex].answers[answerIndex].correct) {
+              correct++
+            } else {
+              incorrect++
+            }
+          } else { // unchecked items
+            if (typeof that.task.items[questionIndex].answers[answerIndex].correct === 'undefined') {
+              correct++
+            } else {
+              incorrect++
+            }
+          }
+        })
       })
 
-      return checkedAnswersIncludes
+      this.correct = correct
+      this.incorrect = incorrect
+
+      if (this.incorrect === 0) {
+        this.$store.commit('setTaskComplete', this.task.id)
+        this.checked = true
+      } else {
+        this.$store.commit('removeTaskComplete', this.task.id)
+        this.checked = false
+      }
+
+      this.showTaskMessage = true
     },
     hideTaskMessage () {
       this.showTaskMessage = false
@@ -92,12 +113,12 @@ export default {
 </script>
 
 <style scoped>
-  .item {
+  .task-item {
     position: relative;
     padding-bottom: 1em;
   }
 
-  .item h2 {
+  .task-item h2 {
     margin-bottom: .5em;
   }
 
@@ -185,7 +206,7 @@ export default {
     line-height: 1;
   }
 
-  .check-task:::before {
+  .check-task::before {
     content: '✓';
     margin-right: .25em;
   }
@@ -224,5 +245,14 @@ export default {
     right: .5em;
     top: .5em;
     color: red;
+  }
+
+  .completed .task-item h2 {
+    color: #08723d;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .completed .answer input[value="true"]:checked ~ .checkmark {
+    background-color: #08723d;
   }
 </style>

@@ -8,6 +8,51 @@ let Story = [
     color: 'rgb(71, 87, 109)',
     tasks: [
       {
+        id: 20,
+        type: 'multiple-choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            question: 'What is the color of a ripe tomato?',
+            answers: [
+              {
+                text: 'Green'
+              },
+              {
+                text: 'Red',
+                correct: true
+              },
+              {
+                text: 'I don\'t know...'
+              },
+              {
+                text: 'Red again, also true!',
+                correct: true
+              }
+            ]
+          },
+          {
+            question: 'How many sides has a rectangle?',
+            answers: [
+              {
+                text: 'One'
+              },
+              {
+                text: 'Two'
+              },
+              {
+                text: 'Three'
+              },
+              {
+                text: 'Four',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
         id: 10,
         type: 'sort',
         title: '',
@@ -262,7 +307,7 @@ let Story = [
       {
         id: 80,
         taskId: 10,
-        title: 'Task: The Invisible Girls.',
+        title: 'Task: The Invisible Girls',
         content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Place the following story elements in their correct order (drag &amp; drop) and click the "Check order" button.</p>`,
         choices: [
           {
@@ -270,6 +315,26 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 85
+          }
+        ]
+      },
+      {
+        id: 85,
+        taskId: 20,
+        title: 'Task: Multiple Choice',
+        content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Answer the following questions and click the "Check answers" button.</p>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
           },
           {
             'text': 'Next',
@@ -601,10 +666,9 @@ let Story = [
     tasks: [
       {
         id: 20,
-        type: 'sort',
+        type: 'puzzle',
         title: '',
         description: '<p style="margin-bottom:1em"><strong>Instructions:</strong> Place the following story elements in their correct order (drag &amp; drop) and click the "Check order" button.</p>',
-        puzzle: true,
         items: [
           {
             order: 0,

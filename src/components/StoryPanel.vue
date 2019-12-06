@@ -1,15 +1,25 @@
 <template>
   <div class="story-panel">
+
+    <!-- Title -->
     <h1 :class="'chapter-title ' + this.getChapter(this.$store.state.currentChapterId).titleClass" v-if="title()">
       <span class="chapter-title-checkmark" v-if="taskDone()"><v-icon name="check" scale="1.5" /></span>{{ title() }}
     </h1>
+
+    <!-- Audio -->
     <div v-if="hasAudio()" class="audio-wrapper">
       <label v-for="(file, index) in audioSources" :key="index">
         <AudioButton v-bind:label="file.label" class="audio-button" :sources="file.path" :loop="false" />
       </label>
     </div>
+
+    <!-- Content -->
     <component :is="dynamicContent" />
-    <Task v-if="hasTask()" v-bind:story="this.$props.story" v-bind:task="getTask(this.getChapter(this.$store.state.currentChapterId).taskId)" />
+
+    <!-- Task Puzzle -->
+    <Task :is="dynamicTaskComponent" v-bind:story="this.$props.story" v-bind:task="getTask(this.getChapter(this.$store.state.currentChapterId).taskId)" />
+
+    <!-- Choices -->
     <ul class="choices">
       <li v-for="choice in choices()" :key="choice.chapterId">
         <a v-on:click="openChapter(choice.chapterId)" :class="choice.class">
@@ -22,16 +32,18 @@
         <a v-on:click="$router.push('/')">Choose another Story</a>
       </li>
     </ul>
+
   </div>
 </template>
 
 <script>
-import Task from '@/components/Task.vue'
+import Puzzle from '@/components/tasks/Puzzle.vue'
+import MultipleChoice from '@/components/tasks/MultipleChoice.vue'
 import AudioButton from '@/components/AudioButton.vue'
 
 export default {
   components: {
-    Task,
+    Puzzle,
     AudioButton
   },
   props: ['story'],
@@ -91,6 +103,24 @@ export default {
       })
 
       return sources
+    },
+    dynamicTaskComponent () {
+      let task = this.getTask(this.getChapter(this.$store.state.currentChapterId).taskId)
+
+      if (!task) {
+        return
+      }
+
+      switch (task.type) {
+        case 'puzzle':
+          return Puzzle
+        case 'sort':
+          return Puzzle
+        case 'multiple-choice':
+          return MultipleChoice
+        default:
+          return false
+      }
     },
     dynamicContent () {
       let _this = this

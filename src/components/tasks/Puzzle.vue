@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="task" v-bind:class="{ puzzle: this.task.puzzle, completed: this.$store.state.tasksComplete.includes(this.task.id)}">
+    <div class="task" v-bind:class="{ puzzle: this.task.type === 'puzzle', completed: this.$store.state.tasksComplete.includes(this.task.id)}">
       <div class="task-message-wrapper" v-if="showTaskMessage" v-on:click="hideTaskMessage()">
         <div v-if="showTaskMessage" class="task-message">
           <div class="close-task-message"><v-icon name="home" /></div>

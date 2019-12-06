@@ -77,6 +77,14 @@ export default {
       return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('taskId')
     },
     getTask (id) {
+      if (typeof this.$props.story.tasks === 'undefined') {
+        return
+      }
+
+      if (this.$props.story.tasks === null) {
+        return
+      }
+
       return this.$props.story.tasks.find(function (task) {
         return task.id === id
       })

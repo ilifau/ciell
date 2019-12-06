@@ -224,7 +224,7 @@ export default {
     align-items: center;
     justify-content: center;
     position: fixed;
-    z-index: 7;
+    z-index: 10;
     left: 0%;
     top: 0%;
     width: 100%;
@@ -245,10 +245,6 @@ export default {
     right: .5em;
     top: .5em;
     color: red;
-  }
-
-  .completed .task-item h2 {
-    color: #08723d;
   }
 
   /* When the checkbox is checked, add a blue background */

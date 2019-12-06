@@ -49,6 +49,26 @@ let Story = [
                 correct: true
               }
             ]
+          },
+          {
+            question: 'Select all words that contain the letter "E"',
+            answers: [
+              {
+                text: 'Elephant',
+                correct: true
+              },
+              {
+                text: 'Piano'
+              },
+              {
+                text: 'General',
+                correct: true
+              },
+              {
+                text: 'Bruce Lee',
+                correct: true
+              }
+            ]
           }
         ]
       },

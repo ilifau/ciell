@@ -54,11 +54,7 @@ export default {
         return
       }
 
-      // Keep current chapter id alive
-      // if (id !== this.$store.state.currentStoryId) {
       this.$store.commit('setCurrentChapterId', 0)
-      // }
-
       this.$store.commit('setCurrentStoryId', id)
       this.$router.push('story')
     },
@@ -380,7 +376,7 @@ img {
 
 /* Transitions */
 .fade-enter-active, .fade-leave-active {
-  transition: opacity .25s ease;
+  transition: opacity .375s ease;
 }
 .fade-enter, .fade-leave-active {
   opacity: 0;
@@ -390,10 +386,8 @@ img {
 .slide-left-leave-active,
 .slide-right-enter-active,
 .slide-right-leave-active {
-  transition-duration: 0.5s;
-  transition-property: height, opacity, transform;
-  transition-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
-  /* overflow: hidden; */
+  transition-duration: 0.375s;
+  transition-property: opacity, transform;
 }
 
 .slide-left-enter,

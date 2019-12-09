@@ -1,8 +1,7 @@
 <template>
   <div class="background">
     <div class="container home">
-      <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt=""></div>
-      <!-- <h1 class="home-title default-font">CIELL</h1> -->
+      <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt="CIELL logo"></div>
       <h2 class="home-subtitle default-font">Visually enhanced learning of writing organization for people with dyslexia.</h2>
       <div class="stories">
         <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
@@ -13,7 +12,7 @@
               <span class="title-background" :style="{ backgroundColor: story.color ? story.color : '' }"></span>
             </span>
             <div class="dark"></div>
-            <img v-if="isTaskComplete(id)" class="badge" src="@/stories/ciell/assets/img/badge.png" alt="Badge (task completed)" title="You did it!" />
+            <img v-if="tasksCompleted(id)" class="badge" src="@/stories/ciell/assets/img/badge.png" alt="Badge (task completed)" title="You successfully completed all tasks in this story. Well done!" />
           </a>
         </div>
       </div>
@@ -31,12 +30,18 @@ export default {
     storyBackgroundImage () {
       return this.$props.stories[this.$store.state.currentStoryId].preview
     },
-    isTaskComplete (id) {
-      if (!id || !this.$props.stories[id].tasks) {
+    tasksCompleted (storyId) {
+      if (!storyId || !this.$props.stories[storyId].tasks) {
         return false
       }
 
-      return this.$store.state.tasksComplete.includes(this.$props.stories[id].tasks[0].id)
+      const taskIds = this.$props.stories[storyId].tasks.map(function (task) {
+        return task.id
+      })
+
+      let checker = (arr, target) => target.every(v => arr.includes(v))
+
+      return checker(this.$store.state.tasksComplete, taskIds)
     }
   }
 }
@@ -56,18 +61,6 @@ export default {
     top: -.5em;
   }
 
-  h1 {
-    text-align: center;
-  }
-
-  h1.home-title {
-    margin: 0;
-    font-weight: 700;
-    color: #fff386;
-    text-shadow: 3px 3px 0 rgba(0,0,0,.6), 6px 6px 0 rgba(0,0,0,.3);
-    font-size: 2.5em;
-  }
-
   .home-subtitle {
     font-family: 'aka-acidgr-diarygirlmedium';
     text-align: center;
@@ -76,7 +69,6 @@ export default {
     width: 580px;
     max-width: 90%;
     margin: 0 auto 2.5em;
-    /* color: #21677e; */
     margin-top: .5em;
     margin-bottom: 1.6125em;
     font-weight: 600;

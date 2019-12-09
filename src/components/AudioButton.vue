@@ -36,7 +36,6 @@ export default {
   display: inline-block;
   border: 0;
   transition: all .4s ease;
-  margin-top: .5em;
   cursor: pointer;
 }
 

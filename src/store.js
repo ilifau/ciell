@@ -1,10 +1,12 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import {version} from '../package.json'
 
 Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
+    version: '1.0.0',
     currentStoryId: 0,
     currentChapterId: 0,
     userScore: 0,
@@ -16,6 +18,17 @@ export const store = new Vuex.Store({
     }
   },
   mutations: {
+    initialiseStore (state) {
+      if (localStorage.getItem('ciell')) {
+        let store = JSON.parse(localStorage.getItem('ciell'))
+
+        if (store.version === version) {
+          this.replaceState(Object.assign(state, store))
+        } else {
+          state.version = version
+        }
+      }
+    },
     setCurrentStoryId (state, id) {
       state.currentStoryId = id
     },
@@ -42,7 +55,19 @@ export const store = new Vuex.Store({
     },
     setRating (state, payload) {
       state.ratings[payload.prop] = payload.rating
-      console.log(JSON.stringify(state.ratings))
     }
   }
+})
+
+store.subscribe((mutation, state) => {
+  let store = {
+    version: state.version,
+    currentStoryId: 0,
+    currentChapterId: 0,
+    userScore: state.userScore,
+    tasksComplete: state.tasksComplete,
+    ratings: state.ratings
+  }
+
+  localStorage.setItem('ciell', JSON.stringify(store))
 })

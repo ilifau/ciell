@@ -62,8 +62,8 @@ export const store = new Vuex.Store({
 store.subscribe((mutation, state) => {
   let store = {
     version: state.version,
-    currentStoryId: 0,
-    currentChapterId: 0,
+    currentStoryId: state.currentStoryId, // 0
+    currentChapterId: state.currentChapterId, // 0
     userScore: state.userScore,
     tasksComplete: state.tasksComplete,
     ratings: state.ratings

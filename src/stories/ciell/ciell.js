@@ -14,6 +14,22 @@ let Story = [
         description: '',
         items: [
           {
+            singleChoice: true,
+            question: 'Which object is the heaviest?',
+            answers: [
+              {
+                text: 'A feather'
+              },
+              {
+                text: 'A spaceship',
+                correct: true
+              },
+              {
+                text: 'A car'
+              }
+            ]
+          },
+          {
             question: 'What is the color of a ripe tomato?',
             answers: [
               {
@@ -34,6 +50,7 @@ let Story = [
           },
           {
             question: 'How many sides has a rectangle?',
+            singleChoice: true,
             answers: [
               {
                 text: 'One'

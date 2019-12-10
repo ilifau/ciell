@@ -18,10 +18,12 @@
       <div v-if="task.description" v-html="task.description"></div>
       <div class="multiple-choice">
         <div class="task-item" v-for="(item, questionIndex) in task.items" :key="'question-' + questionIndex">
-          <h2 v-if="item.question">{{ questionIndex + 1 }}. {{ item.question }}</h2>
-          <label class="answer" v-for="(answer, answerIndex) in item.answers" :key="'answer-' + answerIndex"> {{ answer.text }}
-            <input v-on:click="onChange()" v-model="selectedAnswers[questionIndex][answerIndex]" v-bind:value="answer.correct" type="checkbox" :checked="answer.correct" />
+          <h2 v-if="item.question">{{ questionIndex + 1 }}. {{ item.question }} {{ item.singleChoice }}</h2>
+          <label class="answer" v-bind:class="{ radio: item.singleChoice }" v-for="(answer, answerIndex) in item.answers" :key="'answer-' + answerIndex">
+            <input v-if="item.singleChoice" v-on:click="onChange(questionIndex)" v-model="selectedAnswers[questionIndex][answerIndex]" v-bind:value="answer.correct === true ? true : answerIndex" type="radio" :name="'radio-' + (questionIndex)">
+            <input v-else v-on:click="onChange()" v-model="selectedAnswers[questionIndex][answerIndex]" v-bind:value="answer.correct" type="checkbox">
             <span class="checkmark"></span>
+            {{ answer.text }}
           </label>
         </div>
         <div class="clearfix"></div>
@@ -61,20 +63,27 @@ export default {
     })
   },
   methods: {
-    onChange () {
+    onChange (questionIndex = null) {
       this.checked = false
-      this.isComplete = false
+      this.isComplete = this.incorrect === 0
       this.$store.commit('removeTaskComplete', this.task.id)
 
-      this.isComplete = this.incorrect === 0
+      if (questionIndex !== null) { // Single choice
+        this.selectedAnswers[questionIndex] = this.selectedAnswers[questionIndex].map(function (answer, index) {
+          return false
+        })
+      }
     },
     checkTask () {
-      // TODO: Compare selected answers to correct answers
       let that = this
       let correct = 0
       let incorrect = 0
 
       this.selectedAnswers.forEach(function (question, questionIndex) {
+        // if (typeof that.task.items[questionIndex].singleChoice !== 'undefined') { // Single choice
+        //   if ()
+        // }
+
         question.forEach(function (answer, answerIndex) {
           if (answer) { // checked items
             if (that.task.items[questionIndex].answers[answerIndex].correct) {
@@ -178,7 +187,7 @@ export default {
   }
 
   /* Style the checkmark/indicator */
-  .answer .checkmark::after {
+  .answer:not(.radio) .checkmark::after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -188,6 +197,23 @@ export default {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+  }
+
+  .answer.radio .checkmark {
+    border-radius: 50%;
+  }
+
+   .answer.radio input:checked ~ .checkmark::after {
+    width: 9px;
+    height: 9px;
+    border: 0 0;
+    border-width: 0;
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    background: #fff;
+    z-index: 1;
+    border-radius: 50%;
   }
 
   .check-task {

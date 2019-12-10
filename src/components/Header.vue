@@ -2,10 +2,10 @@
   <div class="header-wrapper">
     <div class="header" v-bind:class="{ showHeaderBackground: showHeaderBackground }">
       <router-link class="story-title" to="/">
-        <div v-if="isStory()"><v-icon name="arrow-left" v-if="isStory()" scale="0.75" /> {{ storyTitle }}</div>
-        <div v-if="!isStory()">&nbsp;</div>
+        <div v-if="showBacktoStoriesLink()"><v-icon name="arrow-left" v-if="showBacktoStoriesLink()" scale="0.75" /> {{ storyTitle }}</div>
+        <div v-else>&nbsp;</div>
       </router-link>
-      <span class="nav-toggle" v-bind:class="{ active: navIsActive, story: isStory() }">
+      <span class="nav-toggle" v-bind:class="{ active: navIsActive, story: showBacktoStoriesLink() }">
         <a v-on:click="toggleNav()">
           <span class="nav-circle"></span><span class="nav-circle"></span><span class="nav-circle"></span>
         </a>
@@ -36,7 +36,7 @@ export default {
   props: ['stories', 'showHeaderBackground'],
   computed: {
     storyTitle: function () {
-      let show = ['story', 'about', 'home']
+      let show = ['story', 'about', 'home', 'evaluation']
       if (show.includes(this.$route.name)) {
         return 'Stories'
       } else {
@@ -53,8 +53,8 @@ export default {
         this.navIsActive = false
       }
     },
-    isStory: function () {
-      let show = ['story', 'about']
+    showBacktoStoriesLink: function () {
+      let show = ['story', 'about', 'evaluation']
       return show.includes(this.$route.name)
     },
     openStory (id) {

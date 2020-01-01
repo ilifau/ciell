@@ -1,20 +1,18 @@
 <template>
-  <div class="background">
-    <div class="container home">
-      <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt="CIELL logo"></div>
-      <h2 class="home-subtitle default-font">Visually enhanced learning of writing organization for people with dyslexia.</h2>
-      <div class="stories">
-        <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
-          <a v-on:click="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
-            <span class="title">
-              <span class="number">#{{ id + 1 }}</span>
-              {{ story.title }}
-              <span class="title-background" :style="{ backgroundColor: story.color ? story.color : '' }"></span>
-            </span>
-            <div class="dark"></div>
-            <img v-if="tasksCompleted(id)" class="badge" src="@/stories/ciell/assets/img/badge.png" alt="Badge (task completed)" title="You successfully completed all tasks in this story. Well done!" />
-          </a>
-        </div>
+  <div class="container home">
+    <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt="CIELL logo"></div>
+    <h2 class="home-subtitle default-font">Visually enhanced learning of writing organization for people with dyslexia.</h2>
+    <div class="stories">
+      <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
+        <a v-on:click="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
+          <span class="title">
+            <span class="number">#{{ id + 1 }}</span>
+            {{ story.title }}
+            <span class="title-background" :style="{ backgroundColor: story.color ? story.color : '' }"></span>
+          </span>
+          <div class="dark"></div>
+          <img v-if="tasksCompleted(id)" class="badge" src="@/stories/ciell/assets/img/badge.png" alt="Badge (task completed)" title="You successfully completed all tasks in this story. Well done!" />
+        </a>
       </div>
     </div>
   </div>

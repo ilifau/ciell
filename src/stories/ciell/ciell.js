@@ -385,6 +385,12 @@ let Story = [
         id: 90,
         title: 'Evaluation: The Invisible Girls',
         content: `<p>This chapter will contain the evaluation for this story.</p>`,
+        audio: [
+          {
+            filename: 'sine-wave.mp3',
+            label: 'Audio Content'
+          }
+        ],
         choices: [
           {
             'text': 'Previous',

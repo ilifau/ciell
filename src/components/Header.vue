@@ -14,7 +14,7 @@
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-on:click="toggleNav()" v-bind:class="{ active: navIsActive }">
       <span class="nav-header">NAVIGATION</span>
-      <router-link to="/">Stories</router-link>
+      <router-link to="/">Essays</router-link>
       <div v-for="(story, id) in stories" :key="id">
         <a class="story-link" v-bind:class="{ current: id === $store.state.currentStoryId, placeholder: story.placeholder }" v-on:click="openStory(id)">
           {{ id + 1 }}. {{ story.title }}
@@ -38,7 +38,7 @@ export default {
     storyTitle: function () {
       let show = ['story', 'about', 'home', 'evaluation']
       if (show.includes(this.$route.name)) {
-        return 'Stories'
+        return 'Essays'
       } else {
         return ''
       }

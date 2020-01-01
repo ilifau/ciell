@@ -2,6 +2,8 @@
 
 > Comics for Inclusive English Language Learning
 
+**Please note:** this app is still work in progress.
+
 ## Build Setup
 
 ``` bash

@@ -121,6 +121,56 @@ let Story = [
             class: 'conclusion'
           }
         ]
+      },
+      {
+        id: 40,
+        type: 'image-choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Which object is the heaviest?',
+            answers: [
+              {
+                text: 'A feather',
+                image: 'invisible-girls/invisible 08.jpg'
+              },
+              {
+                text: 'A spaceship',
+                image: 'invisible-girls/invisible 09.jpg',
+                correct: true
+              },
+              {
+                text: 'A car',
+                image: 'invisible-girls/invisible 10.jpg'
+              }
+            ]
+          },
+          {
+            question: 'What is the color of a ripe tomato?',
+            answers: [
+              {
+                text: 'Green',
+                image: 'invisible-girls/invisible 03.jpg'
+              },
+              {
+                text: 'Red',
+                image: 'invisible-girls/invisible 04.jpg',
+                correct: true
+              },
+              {
+                text: 'I don\'t know...',
+                image: 'invisible-girls/invisible 05.jpg'
+              },
+              {
+                text: 'Red again, also true!',
+                image: 'invisible-girls/invisible 06.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
       }
     ],
     chapters: [
@@ -372,6 +422,26 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 80
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 87
+          }
+        ]
+      },
+      {
+        id: 87,
+        taskId: 40,
+        title: 'Task: Image Choice',
+        content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Answer the following questions and click the "Check answers" button.</p>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 85
           },
           {
             'text': 'Next',

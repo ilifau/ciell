@@ -39,6 +39,7 @@
 <script>
 import Puzzle from '@/components/tasks/Puzzle.vue'
 import MultipleChoice from '@/components/tasks/MultipleChoice.vue'
+import ImageChoice from '@/components/tasks/ImageChoice.vue'
 import AudioButton from '@/components/AudioButton.vue'
 
 export default {
@@ -126,6 +127,8 @@ export default {
           return Puzzle
         case 'multiple-choice':
           return MultipleChoice
+        case 'image-choice':
+          return ImageChoice
         default:
           return false
       }

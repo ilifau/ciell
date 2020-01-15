@@ -16,14 +16,16 @@
       </div>
       <h1 v-if="task.title">{{ task.title }}</h1>
       <div v-if="task.description" v-html="task.description"></div>
-      <div class="multiple-choice">
+      <div class="image-choice">
         <div class="task-item" v-for="(item, questionIndex) in task.items" :key="'question-' + questionIndex">
-          <h2 v-if="item.question">{{ questionIndex + 1 }}. {{ item.question }}</h2>
-          <label class="answer" v-bind:class="{ radio: item.singleChoice }" v-for="(answer, answerIndex) in item.answers" :key="'answer-' + answerIndex">
+          <h2 class="answer-title" v-if="item.question">{{ questionIndex + 1 }}. {{ item.question }}</h2>
+          <label class="answer" v-for="(answer, answerIndex) in item.answers" :key="'answer-' + answerIndex">
             <input v-if="item.singleChoice" v-on:click="onChange(questionIndex)" v-model="selectedAnswers[questionIndex][answerIndex]" v-bind:value="answer.correct === true ? true : answerIndex" type="radio" :name="'radio-' + (questionIndex)">
             <input v-else v-on:click="onChange()" v-model="selectedAnswers[questionIndex][answerIndex]" v-bind:value="answer.correct" type="checkbox">
-            <span class="checkmark"></span>
-            {{ answer.text }}
+            <div>
+              <img :src="require('@/stories/ciell/assets/img/' + answer.image)" alt="answer.text" class="answer-image" />
+              <p>{{ answer.text }}</p>
+            </div>
           </label>
         </div>
         <div class="clearfix"></div>
@@ -131,17 +133,50 @@ export default {
     margin-bottom: .5em;
   }
 
+  label div p {
+    display: flex;
+    justify-content: center;
+    font-size: .875em;
+    width: 100%;
+    max-width: 96%;
+    padding: 0;
+    margin-bottom: 1em;
+    font-weight: 600;
+  }
+
   .answer {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
+    padding-left: 0;
+    margin: 0 1em 1em 0;
     cursor: pointer;
-    font-size: 22px;
+    font-size: .875em;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    width: calc(33% - 1em);
+    float: left;
+    z-index: 1;
+  }
+
+  .answer-title {
+    clear: both;
+  }
+
+  /* On mouse-over, add a grey background color */
+  .answer img {
+    transition: all .3s linear;
+    border: 10px solid #eee;
+    background-color: #eee;
+  }
+
+  /* When the checkbox is checked, add a blue background */
+  .answer input:checked + div img {
+    border: 10px solid #219ac2;
+    background-color: #219ac2;
   }
 
   /* Hide the browser's default checkbox */
@@ -153,67 +188,9 @@ export default {
     width: 0;
   }
 
-  /* Create a custom checkbox */
-  .checkmark {
-    position: absolute;
-    top: 4px;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    transition: background-color .2s linear;
-    background-color: #eee;
-  }
-
-  /* On mouse-over, add a grey background color */
-  .answer:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-
-  /* When the checkbox is checked, add a blue background */
-  .answer input:checked ~ .checkmark {
-    background-color: #219ac2;
-  }
-
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark::after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-
-  /* Show the checkmark when checked */
-  .answer input:checked ~ .checkmark::after {
-    display: block;
-  }
-
-  /* Style the checkmark/indicator */
-  .answer:not(.radio) .checkmark::after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-  .answer.radio .checkmark {
-    border-radius: 50%;
-  }
-
-   .answer.radio input:checked ~ .checkmark::after {
-    width: 9px;
-    height: 9px;
-    border: 0 0;
-    border-width: 0;
-    position: absolute;
-    left: 8px;
-    top: 8px;
-    background: #fff;
-    z-index: 1;
-    border-radius: 50%;
+  .answer-image {
+    width: 100%;
+    border: 10px solid #eee;
   }
 
   .check-task {
@@ -273,8 +250,21 @@ export default {
     color: red;
   }
 
-  /* When the checkbox is checked, add a blue background */
-  .completed .answer input[value="true"]:checked ~ .checkmark {
-    background-color: #08723d;
+  /* When the checkbox is checked, style the answer image */
+  .completed input:checked + div img {
+    border: 10px solid #08723d;
+    background: #08723d;
+  }
+
+  @media screen and (max-width: 767px) {
+    .answer {
+      width: calc(50% - 1em);
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .answer {
+      width: 100%;
+    }
   }
 </style>

@@ -19,7 +19,7 @@
       <draggable drag-class="drag" v-model="task.items" group="tasks" @start="drag=true" @change="onChange" @end="drag=false">
         <div class="task-item" v-bind:class="item.class" v-for="item in task.items" :key="item.id">
           <h4 v-if="item.title">{{ item.title }}</h4>
-          <img v-if="item.image" :src="require('@/stories/ciell/assets/img/' + item.image)" alt="" />
+          <img v-if="item.image" :src="require('@/stories/ciell/assets/img/' + item.image)" alt="" rel="preload" />
         </div>
         <div class="clearfix"></div>
       </draggable>

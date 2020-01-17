@@ -1,6 +1,6 @@
 <template>
   <div class="container home">
-    <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt="CIELL logo"></div>
+    <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt="CIELL logo" rel="preload"></div>
     <h2 class="home-subtitle default-font">Visually enhanced learning of writing organization for people with dyslexia.</h2>
     <div class="stories">
       <div class="story" v-for="(story, id) in this.$props.stories" :key="id">

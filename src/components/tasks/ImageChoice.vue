@@ -23,7 +23,7 @@
             <input v-if="item.singleChoice" v-on:click="onChange(questionIndex)" v-model="selectedAnswers[questionIndex][answerIndex]" v-bind:value="answer.correct === true ? true : answerIndex" type="radio" :name="'radio-' + (questionIndex)">
             <input v-else v-on:click="onChange()" v-model="selectedAnswers[questionIndex][answerIndex]" v-bind:value="answer.correct" type="checkbox">
             <div>
-              <img :src="require('@/stories/ciell/assets/img/' + answer.image)" alt="answer.text" class="answer-image" />
+              <img :src="require('@/stories/ciell/assets/img/' + answer.image)" alt="answer.text" class="answer-image" rel="preload" />
               <p>{{ answer.text }}</p>
             </div>
           </label>

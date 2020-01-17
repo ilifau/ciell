@@ -146,7 +146,7 @@ export default {
             let src = params[1]
             let alt = params[2]
             let img = require('@/stories/ciell/assets/img/' + src)
-            return '<img src="' + img + '" alt="' + alt + '" />'
+            return '<img src="' + img + '" alt="' + alt + '" rel="preload" />'
 
           case 'decorator':
             let text = params[1]

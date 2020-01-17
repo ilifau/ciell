@@ -4,8 +4,8 @@ let Story = [
     title: 'The Invisible Girls',
     author: 'CIELL Team',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
-    preview: 'invisible-girls/cover.png',
-    color: 'rgb(71, 87, 109)',
+    preview: 'gender-equality/cover.png',
+    color: 'rgb(65, 84, 108)',
     tasks: [
       {
         id: 20,
@@ -134,16 +134,16 @@ let Story = [
             answers: [
               {
                 text: 'A feather',
-                image: 'invisible-girls/invisible 08.jpg'
+                image: 'gender-equality/invisible 08.png'
               },
               {
                 text: 'A spaceship',
-                image: 'invisible-girls/invisible 09.jpg',
+                image: 'gender-equality/invisible 09.png',
                 correct: true
               },
               {
                 text: 'A car',
-                image: 'invisible-girls/invisible 10.jpg'
+                image: 'gender-equality/invisible 10.png'
               }
             ]
           },
@@ -152,20 +152,20 @@ let Story = [
             answers: [
               {
                 text: 'Green',
-                image: 'invisible-girls/invisible 03.jpg'
+                image: 'gender-equality/invisible 03.png'
               },
               {
                 text: 'Red',
-                image: 'invisible-girls/invisible 04.jpg',
+                image: 'gender-equality/invisible 04.png',
                 correct: true
               },
               {
                 text: 'I don\'t know...',
-                image: 'invisible-girls/invisible 05.jpg'
+                image: 'gender-equality/invisible 05.png'
               },
               {
                 text: 'Red again, also true!',
-                image: 'invisible-girls/invisible 06.jpg',
+                image: 'gender-equality/invisible 06.png',
                 correct: true
               }
             ]
@@ -182,32 +182,32 @@ let Story = [
             <div class="half text info info--introduction">
               <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
             </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 00.jpg|Invisible Girls 0]
+            <div class="half">
+              [image|gender-equality/invisible 00.png|Invisible Girls 0]
             </div>
             <div class="half">
-              [image|invisible-girls/invisible 02.jpg|Invisible Girls 2]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 03.jpg|Invisible Girls 3]
+              [image|gender-equality/invisible 02.png|Invisible Girls 2]
             </div>
             <div class="half">
-              [image|invisible-girls/invisible 04.jpg|Invisible Girls 4]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 05.jpg|Invisible Girls 5]
+              [image|gender-equality/invisible 03.png|Invisible Girls 3]
             </div>
             <div class="half">
-              [image|invisible-girls/invisible 06.jpg|Invisible Girls 6]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 07.jpg|Invisible Girls 7]
+              [image|gender-equality/invisible 04.png|Invisible Girls 4]
             </div>
             <div class="half">
-              [image|invisible-girls/invisible 08.jpg|Invisible Girls 8]
+              [image|gender-equality/invisible 05.png|Invisible Girls 5]
             </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 09.jpg|Invisible Girls 9]
+            <div class="half">
+              [image|gender-equality/invisible 06.png|Invisible Girls 6]
+            </div>
+            <div class="half">
+              [image|gender-equality/invisible 07.png|Invisible Girls 7]
+            </div>
+            <div class="half">
+              [image|gender-equality/invisible 08.png|Invisible Girls 8]
+            </div>
+            <div class="half">
+              [image|gender-equality/invisible 09.png|Invisible Girls 9]
             </div>
           </div>`,
         choices: [
@@ -229,44 +229,44 @@ let Story = [
               paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
               way to those that precede and follow it.</p>
             </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 10.jpg|Invisible Girls 10]
+            <div class="half">
+              [image|gender-equality/invisible 10.png|Invisible Girls 10]
             </div>
             <div class="half">
-              [image|invisible-girls/invisible 11.jpg|Invisible Girls 11]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 12.jpg|Invisible Girls 12]
+              [image|gender-equality/invisible 11.png|Invisible Girls 11]
             </div>
             <div class="half">
-              [image|invisible-girls/invisible 13.jpg|Invisible Girls 13]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 14.jpg|Invisible Girls 14]
+              [image|gender-equality/invisible 12.png|Invisible Girls 12]
             </div>
             <div class="half">
-              [image|invisible-girls/invisible 15.jpg|Invisible Girls 15]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 16.jpg|Invisible Girls 16]
+              [image|gender-equality/invisible 13.png|Invisible Girls 13]
             </div>
             <div class="half">
-              [image|invisible-girls/invisible 17.jpg|Invisible Girls 17]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 18.jpg|Invisible Girls 18]
+              [image|gender-equality/invisible 14.png|Invisible Girls 14]
             </div>
             <div class="half">
-              [image|invisible-girls/invisible 19.jpg|Invisible Girls 19]
-            </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 20.jpg|Invisible Girls 20]
+              [image|gender-equality/invisible 15.png|Invisible Girls 15]
             </div>
             <div class="half">
-              [image|invisible-girls/invisible 21.jpg|Invisible Girls 21]
+              [image|gender-equality/invisible 16.png|Invisible Girls 16]
             </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 22.jpg|Invisible Girls 22]
+            <div class="half">
+              [image|gender-equality/invisible 17.png|Invisible Girls 17]
+            </div>
+            <div class="half">
+              [image|gender-equality/invisible 18.png|Invisible Girls 18]
+            </div>
+            <div class="half">
+              [image|gender-equality/invisible 19.png|Invisible Girls 19]
+            </div>
+            <div class="half">
+              [image|gender-equality/invisible 20.png|Invisible Girls 20]
+            </div>
+            <div class="half">
+              [image|gender-equality/invisible 21.png|Invisible Girls 21]
+            </div>
+            <div class="half">
+              [image|gender-equality/invisible 22.png|Invisible Girls 22]
             </div>
           </div>`,
         choices: [
@@ -292,14 +292,14 @@ let Story = [
             <div class="half text info info--conclusion">
             <h2>Conslusion</h2><p>The <strong>conclusion</strong> reminds your readers what the essay was meant to do. It provides an answer to the title. It reminds your readers how you reached that answer. The conclusion should normally occupy just one paragraph. Here’s a simple conclusion to our story.</p>
             </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 23.jpg|Invisible Girls 23]
+            <div class="half">
+              [image|gender-equality/invisible 23.png|Invisible Girls 23]
             </div>
             <div class="half">
-              [image|invisible-girls/invisible 24.jpg|Invisible Girls 24]
+              [image|gender-equality/invisible 24.png|Invisible Girls 24]
             </div>
-            <div class="half last">
-              [image|invisible-girls/invisible 25.jpg|Invisible Girls 25]
+            <div class="half">
+              [image|gender-equality/invisible 25.png|Invisible Girls 25]
             </div>
           </div>`,
         choices: [
@@ -329,7 +329,7 @@ let Story = [
             <div class="half">
               [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
             </div>
-            <div class="half last">
+            <div class="half">
               [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
             </div>
           </div>
@@ -345,7 +345,7 @@ let Story = [
             <div class="half arrow">
               [image|info-graphics/basic-essay-structure-5.jpg|Basic Essay Structure 5]
             </div>
-            <div class="half last">
+            <div class="half">
               [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
             </div>
           </div>
@@ -354,13 +354,13 @@ let Story = [
             <div class="half arrow">
               [image|info-graphics/basic-essay-structure-7.jpg|Basic Essay Structure 7]
             </div>
-            <div class="half arrow last">
+            <div class="half arrow">
               [image|info-graphics/basic-essay-structure-8.jpg|Basic Essay Structure 8]
             </div>
             <div class="half arrow">
               [image|info-graphics/basic-essay-structure-9.jpg|Basic Essay Structure 9]
             </div>
-            <div class="half last">
+            <div class="half">
               [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
             </div>
           </div>
@@ -371,7 +371,7 @@ let Story = [
             <div class="half">
               [image|info-graphics/basic-essay-structure-conclusion-1.jpg|Basic Essay Structure 7]
             </div>
-            <div class="half last">
+            <div class="half">
               [image|info-graphics/basic-essay-structure-conclusion-2.jpg|Basic Essay Structure 8]
             </div>
           </div>
@@ -466,7 +466,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 80
+            'chapterId': 87
           },
           {
             'text': 'Restart',
@@ -484,7 +484,7 @@ let Story = [
     description: 'This is a story about climate change.',
     author: 'CIELL Team',
     preview: 'climate-change/cover.png',
-    color: 'rgb(73, 90, 98)',
+    color: 'rgb(113, 104, 123)',
     tasks: null,
     chapters: [
       {
@@ -499,22 +499,22 @@ let Story = [
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
-              [image|climate-change/climate 01.jpg|Climate Change 1]
-            </div>
-            <div class="half last">
-              [image|climate-change/climate 02.jpg|Climate Change 2]
+              [image|climate-change/climate 01.png|Climate Change 1]
             </div>
             <div class="half">
-              [image|climate-change/climate 03.jpg|Climate Change 3]
-            </div>
-            <div class="half last">
-              [image|climate-change/climate 04.jpg|Climate Change 4]
+              [image|climate-change/climate 02.png|Climate Change 2]
             </div>
             <div class="half">
-              [image|climate-change/climate 05.jpg|Climate Change 5]
+              [image|climate-change/climate 03.png|Climate Change 3]
             </div>
-            <div class="half last">
-              [image|climate-change/climate 06.jpg|Climate Change 6]
+            <div class="half">
+              [image|climate-change/climate 04.png|Climate Change 4]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 05.png|Climate Change 5]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 06.png|Climate Change 6]
             </div>
           </div>`,
         choices: [
@@ -531,16 +531,16 @@ let Story = [
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
-              [image|climate-change/climate 07.jpg|Climate Change 7]
-            </div>
-            <div class="half last">
-              [image|climate-change/climate 08.jpg|Climate Change 8]
+              [image|climate-change/climate 07.png|Climate Change 7]
             </div>
             <div class="half">
-              [image|climate-change/climate 09.jpg|Climate Change 9]
+              [image|climate-change/climate 08.png|Climate Change 8]
             </div>
-            <div class="half last">
-              [image|climate-change/climate 10.jpg|Climate Change 10]
+            <div class="half">
+              [image|climate-change/climate 09.png|Climate Change 9]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 10.png|Climate Change 10]
             </div>
           </div>`,
         choices: [
@@ -563,22 +563,22 @@ let Story = [
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
-              [image|climate-change/climate 11.jpg|Climate Change 11]
-            </div>
-            <div class="half last">
-              [image|climate-change/climate 12.jpg|Climate Change 12]
+              [image|climate-change/climate 11.png|Climate Change 11]
             </div>
             <div class="half">
-              [image|climate-change/climate 13.jpg|Climate Change 13]
-            </div>
-            <div class="half last">
-              [image|climate-change/climate 14.jpg|Climate Change 14]
+              [image|climate-change/climate 12.png|Climate Change 12]
             </div>
             <div class="half">
-              [image|climate-change/climate 15.jpg|Climate Change 15]
+              [image|climate-change/climate 13.png|Climate Change 13]
             </div>
-            <div class="half last">
-              [image|climate-change/climate 16.jpg|Climate Change 16]
+            <div class="half">
+              [image|climate-change/climate 14.png|Climate Change 14]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 15.png|Climate Change 15]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 16.png|Climate Change 16]
             </div>
           </div>`,
         choices: [
@@ -601,16 +601,16 @@ let Story = [
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
-              [image|climate-change/climate 17.jpg|Climate Change 17]
-            </div>
-            <div class="half last">
-              [image|climate-change/climate 18.jpg|Climate Change 18]
+              [image|climate-change/climate 17.png|Climate Change 17]
             </div>
             <div class="half">
-              [image|climate-change/climate 19.jpg|Climate Change 19]
+              [image|climate-change/climate 18.png|Climate Change 18]
             </div>
-            <div class="half last">
-              [image|climate-change/climate 20.jpg|Climate Change 20]
+            <div class="half">
+              [image|climate-change/climate 19.png|Climate Change 19]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 20.png|Climate Change 20]
             </div>
           </div>`,
         choices: [
@@ -636,7 +636,7 @@ let Story = [
     author: 'CIELL Team',
     description: 'This is another empty story.',
     preview: 'nuclear-power/cover.png',
-    color: 'rgb(247, 128, 60)',
+    color: 'rgb(240, 78, 79)',
     chapters: [
       {
         id: 0,
@@ -646,20 +646,20 @@ let Story = [
             <div class="half text info info--introduction">
               <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
             </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 01.jpg|Agatha 1]
+            <div class="half">
+              [image|nuclear-power/nuclear 01.png|Nuclear Power 1]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 02.jpg|Agatha 2]
-            </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 03.jpg|Agatha 3]
+              [image|nuclear-power/nuclear 02.png|Nuclear Power 2]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 04.jpg|Agatha 4]
+              [image|nuclear-power/nuclear 03.png|Nuclear Power 3]
             </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 05.jpg|Agatha 5]
+            <div class="half">
+              [image|nuclear-power/nuclear 04.png|Nuclear Power 4]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 05.png|Nuclear Power 5]
             </div>
           </div>`,
         choices: [
@@ -677,65 +677,62 @@ let Story = [
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
           <div class="half">
-              [image|nuclear-power/nuclear 06.jpg|Agatha 6]
-            </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 07.jpg|Agatha 7]
+              [image|nuclear-power/nuclear 06.png|Nuclear Power 6]
             </div>
             <div class="half">
-            [image|nuclear-power/nuclear 08.jpg|Agatha 8]
-            </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 09.jpg|Agatha 9]
+              [image|nuclear-power/nuclear 07.png|Nuclear Power 7]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 10.jpg|Agatha 10]
-            </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 11.jpg|Agatha 11]
+            [image|nuclear-power/nuclear 08.png|Nuclear Power 8]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 12.jpg|Agatha 12]
-            </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 13.jpg|Agatha 13]
+              [image|nuclear-power/nuclear 09.png|Nuclear Power 9]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 14.jpg|Agatha 14]
-            </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 15.jpg|Agatha 15]
+              [image|nuclear-power/nuclear 10.png|Nuclear Power 10]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 16.jpg|Agatha 16]
-            </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 17.jpg|Agatha 17]
+              [image|nuclear-power/nuclear 11.png|Nuclear Power 11]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 18.jpg|Agatha 18]
-            </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 19.jpg|Agatha 19]
+              [image|nuclear-power/nuclear 12.png|Nuclear Power 12]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 20.jpg|Agatha 20]
-            </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 21.jpg|Agatha 21]
+              [image|nuclear-power/nuclear 13.png|Nuclear Power 13]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 22.jpg|Agatha 22]
+              [image|nuclear-power/nuclear 14.png|Nuclear Power 14]
             </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 23.jpg|Agatha 23]
+            <div class="half">
+              [image|nuclear-power/nuclear 15.png|Nuclear Power 15]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 16.png|Nuclear Power 16]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 17.png|Nuclear Power 17]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 18.png|Nuclear Power 18]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 19.png|Nuclear Power 19]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 20.png|Nuclear Power 20]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 21.png|Nuclear Power 21]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 22.png|Nuclear Power 22]
             </div>
           </div>`,
         choices: [
           {
             'text': 'Previous',
             'class': 'previous',
-            'iconAfter': 'arrow-left',
+            'iconBefore': 'arrow-left',
             'chapterId': 0
           },
           {
@@ -752,17 +749,304 @@ let Story = [
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
-              [image|nuclear-power/nuclear 24.jpg|Agatha 24]
+              [image|nuclear-power/nuclear 23.png|Nuclear Power 23]
             </div>
-            <div class="half last">
-              [image|nuclear-power/nuclear 25.jpg|Agatha 25]
+            <div class="half">
+              [image|nuclear-power/nuclear 24.png|Nuclear Power 24]
+            </div>
+            <div class="half">
+              [image|nuclear-power/nuclear 25.png|Nuclear Power 25]
             </div>
           </div>`,
         choices: [
           {
             'text': 'Previous',
             'class': 'previous',
-            'iconAfter': 'arrow-left',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 50,
+    title: 'Disability',
+    author: 'CIELL Team',
+    description: 'This is an essay on disability.',
+    preview: 'disability/cover.png',
+    color: 'rgb(166, 53, 52)',
+    chapters: [
+      {
+        id: 0,
+        title: 'Disability',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half text info info--introduction">
+              <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
+            </div>
+            <div class="half">
+              [image|disability/disability 01.png|Disability 1]
+            </div>
+            <div class="half">
+              [image|disability/disability 02.png|Disability2]
+            </div>
+            <div class="half">
+              [image|disability/disability 03.png|Disability 3]
+            </div>
+            <div class="half">
+              [image|disability/disability 04.png|Disability 4]
+            </div>
+            <div class="half">
+              [image|disability/disability 05.png|Disability 5]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: '',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="half">
+              [image|disability/disability 06.png|Disability 6]
+            </div>
+            <div class="half">
+              [image|disability/disability 07.png|Disability 7]
+            </div>
+            <div class="half">
+            [image|disability/disability 08.png|Disability 8]
+            </div>
+            <div class="half">
+              [image|disability/disability 09.png|Disability 9]
+            </div>
+            <div class="half">
+              [image|disability/disability 10.png|Disability 10]
+            </div>
+            <div class="half">
+              [image|disability/disability 11.png|Disability 11]
+            </div>
+            <div class="half">
+              [image|disability/disability 12.png|Disability 12]
+            </div>
+            <div class="half">
+              [image|disability/disability 13.png|Disability 13]
+            </div>
+            <div class="half">
+              [image|disability/disability 14.png|Disability 14]
+            </div>
+            <div class="half">
+              [image|disability/disability 15.png|Disability 15]
+            </div>
+            <div class="half">
+              [image|disability/disability 16.png|Disability 16]
+            </div>
+            <div class="half">
+              [image|disability/disability 17.png|Disability 17]
+            </div>
+            <div class="half">
+              [image|disability/disability 18.png|Disability 18]
+            </div>
+            <div class="half">
+              [image|disability/disability 19.png|Disability 19]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|disability/disability 20.png|Disability 20]
+            </div>
+            <div class="half">
+              [image|disability/disability 21.png|Disability21]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 60,
+    title: 'Transports',
+    author: 'CIELL Team',
+    description: 'This is an essay on transports.',
+    preview: 'transports/cover.png',
+    color: 'rgb(62, 57, 63)',
+    chapters: [
+      {
+        id: 0,
+        title: 'Transports',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|transports/transports 01.png|Transports 1]
+            </div>
+            <div class="half">
+              [image|transports/transports 02.png|Transports 2]
+            </div>
+            <div class="half">
+              [image|transports/transports 03.png|Transports 3]
+            </div>
+            <div class="half">
+              [image|transports/transports 04.png|Transports 4]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: '',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|transports/transports 05.png|Transports 5]
+            </div>
+            <div class="half">
+              [image|transports/transports 06.png|Transports 6]
+            </div>
+            <div class="half">
+              [image|transports/transports 07.png|Transports 7]
+            </div>
+            <div class="half">
+              [image|transports/transports 08.png|Transports 8]
+            </div>
+            <div class="half">
+              [image|transports/transports 09.png|Transports 9]
+            </div>
+            <div class="half">
+              [image|transports/transports 10.png|Transports 10]
+            </div>
+            <div class="half">
+              [image|transports/transports 11.png|Transports 11]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        content: `
+        <div class="comic-grid" style="margin-top:1.5em">
+          <div class="half">
+            [image|transports/transports 12.png|Transports 12]
+          </div>
+          <div class="half">
+            [image|transports/transports 13.png|Transports 13]
+          </div>
+          <div class="half">
+            [image|transports/transports 14.png|Transports 14]
+          </div>
+          <div class="half">
+            [image|transports/transports 15.png|Transports 15]
+          </div>
+          <div class="half">
+            [image|transports/transports 16.png|Transports 16]
+          </div>
+          <div class="half">
+            [image|transports/transports 17.png|Transports 17]
+          </div>
+        </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        content: `
+          <div class="comic-grid" style="margin-top:1.5em">
+            <div class="half">
+              [image|transports/transports 18.png|Transports 18]
+            </div>
+            <div class="half">
+              [image|transports/transports 19.png|Transports 19]
+            </div>
+            <div class="half">
+              [image|transports/transports 20.png|Transports 20]
+            </div>
+            <div class="half">
+              [image|transports/transports 21.png|Transports 21]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
             'chapterId': 20
           },
           {
@@ -791,107 +1075,107 @@ let Story = [
         items: [
           {
             order: 0,
-            image: 'agatha-christie/agatha 01.jpg'
+            image: 'agatha-christie/agatha 01.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 02.jpg'
+            image: 'agatha-christie/agatha 02.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 03.jpg'
+            image: 'agatha-christie/agatha 03.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 04.jpg'
+            image: 'agatha-christie/agatha 04.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 05.jpg'
+            image: 'agatha-christie/agatha 05.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 06.jpg'
+            image: 'agatha-christie/agatha 06.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 07.jpg'
+            image: 'agatha-christie/agatha 07.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 08.jpg'
+            image: 'agatha-christie/agatha 08.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 09.jpg'
+            image: 'agatha-christie/agatha 09.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 10.jpg'
+            image: 'agatha-christie/agatha 10.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 11.jpg'
+            image: 'agatha-christie/agatha 11.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 12.jpg'
+            image: 'agatha-christie/agatha 12.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 13.jpg'
+            image: 'agatha-christie/agatha 13.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 14.jpg'
+            image: 'agatha-christie/agatha 14.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 15.jpg'
+            image: 'agatha-christie/agatha 15.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 16.jpg'
+            image: 'agatha-christie/agatha 16.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 17.jpg'
+            image: 'agatha-christie/agatha 17.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 18.jpg'
+            image: 'agatha-christie/agatha 18.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 19.jpg'
+            image: 'agatha-christie/agatha 19.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 20.jpg'
+            image: 'agatha-christie/agatha 20.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 21.jpg'
+            image: 'agatha-christie/agatha 21.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 22.jpg'
+            image: 'agatha-christie/agatha 22.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 23.jpg'
+            image: 'agatha-christie/agatha 23.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 24.jpg'
+            image: 'agatha-christie/agatha 24.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 25.jpg'
+            image: 'agatha-christie/agatha 25.png'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 26.jpg'
+            image: 'agatha-christie/agatha 26.png'
           }
         ]
       }
@@ -903,28 +1187,28 @@ let Story = [
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
-              [image|agatha-christie/agatha 01.jpg|Agatha 1]
-            </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 02.jpg|Agatha 2]
+              [image|agatha-christie/agatha 01.png|Agatha 1]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 03.jpg|Agatha 3]
-            </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 04.jpg|Agatha 4]
+              [image|agatha-christie/agatha 04.png|Agatha 2]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 05.jpg|Agatha 5]
-            </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 06.jpg|Agatha 6]
+              [image|agatha-christie/agatha 05.png|Agatha 3]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 07.jpg|Agatha 7]
+              [image|agatha-christie/agatha 06.png|Agatha 4]
             </div>
-            <div class="half last">
-            [image|agatha-christie/agatha 08.jpg|Agatha 8]
+            <div class="half">
+              [image|agatha-christie/agatha 08.png|Agatha 5]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 09.png|Agatha 6]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 10.png|Agatha 7]
+            </div>
+            <div class="half">
+            [image|agatha-christie/agatha 11.png|Agatha 8]
             </div>
           </div>`,
         choices: [
@@ -942,28 +1226,28 @@ let Story = [
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
-              [image|agatha-christie/agatha 09.jpg|Agatha 9]
-            </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 10.jpg|Agatha 10]
+              [image|agatha-christie/agatha 13.png|Agatha 9]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 11.jpg|Agatha 11]
-            </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 12.jpg|Agatha 12]
+              [image|agatha-christie/agatha 14.png|Agatha 10]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 13.jpg|Agatha 13]
-            </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 14.jpg|Agatha 14]
+              [image|agatha-christie/agatha 17.png|Agatha 11]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 15.jpg|Agatha 15]
+              [image|agatha-christie/agatha 18.png|Agatha 12]
             </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 16.jpg|Agatha 16]
+            <div class="half">
+              [image|agatha-christie/agatha 19.png|Agatha 13]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 20.png|Agatha 14]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 21.png|Agatha 15]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 22.png|Agatha 16]
             </div>
           </div>`,
         choices: [
@@ -987,34 +1271,16 @@ let Story = [
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
-              [image|agatha-christie/agatha 17.jpg|Agatha 17]
-            </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 18.jpg|Agatha 18]
+              [image|agatha-christie/agatha 23.png|Agatha 17]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 19.jpg|Agatha 19]
-            </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 20.jpg|Agatha 20]
+              [image|agatha-christie/agatha 24.png|Agatha 18]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 21.jpg|Agatha 21]
-            </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 22.jpg|Agatha 22]
+              [image|agatha-christie/agatha 25.png|Agatha 19]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 23.jpg|Agatha 23]
-            </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 24.jpg|Agatha 24]
-            </div>
-            <div class="half">
-              [image|agatha-christie/agatha 25.jpg|Agatha 25]
-            </div>
-            <div class="half last">
-              [image|agatha-christie/agatha 26.jpg|Agatha 26]
+              [image|agatha-christie/agatha 26.png|Agatha 20]
             </div>
           </div>`,
         choices: [

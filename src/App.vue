@@ -265,7 +265,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  max-width: 97%;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -287,24 +287,8 @@ img {
 
 .comic-grid div {
   position: relative;
-  background: #f7f7f7;
-  /* box-shadow: 1px 1px 5px rgba(0,0,0,.5); */
-  /* border: 3px solid #333; */
   overflow: hidden;
-  margin-bottom: .25em;
 }
-
-/* .comic-grid div span {
-  color: #333;
-  background: rgba(255,255,255,.7);
-  font-size: .5em;
-  margin: 1em;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  z-index: 2;
-  padding: .25em;
-} */
 
 .comic-grid div::before {
   content: "";
@@ -320,12 +304,7 @@ img {
 }
 
 .comic-grid .half {
-  width: calc(50% - .125em);
-  margin-right: .25em;
-}
-
-.comic-grid .half.last {
-  margin-right: 0;
+  width: 50%;
 }
 
 .comic-grid .text {
@@ -476,12 +455,11 @@ img {
 
 @media screen and (max-width: 580px) {
   .comic-grid {
-    max-width: 94%;
+    max-width: 100%;
   }
 
   .comic-grid .half {
     width: 100%;
-    margin: 0 0 .25em;
   }
 }
 

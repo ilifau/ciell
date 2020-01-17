@@ -160,6 +160,7 @@ export default {
     width: calc(33% - 1em);
     float: left;
     z-index: 1;
+    border-radius: 4px;
   }
 
   .answer-title {
@@ -169,14 +170,15 @@ export default {
   /* On mouse-over, add a grey background color */
   .answer img {
     transition: all .3s linear;
-    border: 10px solid #eee;
-    background-color: #eee;
+    border: 6px solid #fff;
+    background-color: #fff;
   }
 
   /* When the checkbox is checked, add a blue background */
   .answer input:checked + div img {
-    border: 10px solid #219ac2;
+    border: 6px solid #219ac2;
     background-color: #219ac2;
+    border-radius: 6px;
   }
 
   /* Hide the browser's default checkbox */
@@ -190,7 +192,7 @@ export default {
 
   .answer-image {
     width: 100%;
-    border: 10px solid #eee;
+    border: 6px solid #fff;
   }
 
   .check-task {
@@ -252,7 +254,7 @@ export default {
 
   /* When the checkbox is checked, style the answer image */
   .completed input:checked + div img {
-    border: 10px solid #08723d;
+    border: 6px solid #08723d;
     background: #08723d;
   }
 

@@ -16,7 +16,7 @@
       </div>
       <h1 v-if="task.title">{{ task.title }}</h1>
       <div v-if="task.description" v-html="task.description"></div>
-      <draggable v-model="task.items" group="tasks" @start="drag=true" @change="onChange" @end="drag=false">
+      <draggable drag-class="drag" v-model="task.items" group="tasks" @start="drag=true" @change="onChange" @end="drag=false">
         <div class="task-item" v-bind:class="item.class" v-for="item in task.items" :key="item.id">
           <h4 v-if="item.title">{{ item.title }}</h4>
           <img v-if="item.image" :src="require('@/stories/ciell/assets/img/' + item.image)" alt="" />
@@ -99,16 +99,20 @@ export default {
 </script>
 
 <style scoped>
+  .puzzle {
+    position: relative;
+  }
+
   .task-item {
     display: block;
     position: relative;
-    overflow: hidden;
-    background: #ddd;
     height: 0;
-    padding: .6125em .75em 6em;
+    padding: 1em;
     margin: 0 0 1em;
     background: #eedfdd;
     color: #7e170e;
+    overflow: hidden;
+    height: auto;
   }
 
   .task-item.introduction {
@@ -130,13 +134,23 @@ export default {
     margin-top: 0;
   }
 
+  .sortable-chosen img {
+    background: #219ac2;
+    border: 8px solid #219ac2;
+    border-radius: 2px;
+  }
+
+  .sortable-chosen {
+    border-radius: 2px;
+  }
+
+  .sortable-ghost img {
+    box-shadow: 0 0;
+  }
+
   .completed .task-item {
     background: #d1e6db;
     color: #08723d;
-  }
-
-  .task-item img {
-    margin-top: .25em;
   }
 
   .check-task {
@@ -200,11 +214,11 @@ export default {
   .puzzle .task-item {
     background: #fff;
     position: relative;
-    width: calc(33.333% - .7em);
+    width: calc(33.333% - .6125em);
     float: left;
-    margin: 0 .6125em 0 0;
+    margin: 0 .6125em .6125em 0;
     height: 0;
-    padding: 0 0 33%;
+    padding: 0 0 calc(33.333% - .6125em);
   }
 
   .puzzle .task-item:nth-child(3n+3){
@@ -215,7 +229,7 @@ export default {
     .puzzle .task-item {
       width: calc(50% - .4em);
       margin: 0 .75em .25em 0;
-      padding: 0 0 50%;
+      padding: 0 0 calc(50% - .4em);
     }
 
     .puzzle .task-item:nth-child(3n+3) {
@@ -231,7 +245,7 @@ export default {
     .puzzle .task-item {
       width: 100%;
       margin: 0 0 .5em 0;
-      padding: 0 0 102%;
+      padding: 0 0 100%;
     }
 
     .puzzle .task-item:nth-child(3n+3) {

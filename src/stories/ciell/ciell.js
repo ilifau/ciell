@@ -1190,25 +1190,37 @@ let Story = [
               [image|agatha-christie/agatha 01.png|Agatha 1]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 04.png|Agatha 2]
+              [image|agatha-christie/agatha 02.png|Agatha 2]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 05.png|Agatha 3]
+              [image|agatha-christie/agatha 03.png|Agatha 3]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 06.png|Agatha 4]
+              [image|agatha-christie/agatha 04.png|Agatha 4]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 08.png|Agatha 5]
+              [image|agatha-christie/agatha 05.png|Agatha 5]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 09.png|Agatha 6]
+              [image|agatha-christie/agatha 06.png|Agatha 6]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 10.png|Agatha 7]
+              [image|agatha-christie/agatha 07.png|Agatha 7]
             </div>
             <div class="half">
-            [image|agatha-christie/agatha 11.png|Agatha 8]
+              [image|agatha-christie/agatha 08.png|Agatha 8]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 09.png|Agatha 9]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 10.png|Agatha 10]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 11.png|Agatha 11]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 12.png|Agatha 12]
             </div>
           </div>`,
         choices: [
@@ -1226,28 +1238,37 @@ let Story = [
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
-              [image|agatha-christie/agatha 13.png|Agatha 9]
+              [image|agatha-christie/agatha 13.png|Agatha 13]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 14.png|Agatha 10]
+              [image|agatha-christie/agatha 14.png|Agatha 14]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 17.png|Agatha 11]
+              [image|agatha-christie/agatha 15.png|Agatha 15]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 18.png|Agatha 12]
+              [image|agatha-christie/agatha 16.png|Agatha 16]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 19.png|Agatha 13]
+              [image|agatha-christie/agatha 17.png|Agatha 17]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 20.png|Agatha 14]
+              [image|agatha-christie/agatha 18.png|Agatha 18]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 19.png|Agatha 19]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 20.png|Agatha 20]
             </div>
             <div class="half">
               [image|agatha-christie/agatha 21.png|Agatha 15]
             </div>
             <div class="half">
               [image|agatha-christie/agatha 22.png|Agatha 16]
+            </div>
+            <div class="half">
+              [image|agatha-christie/agatha 23.png|Agatha 17]
             </div>
           </div>`,
         choices: [
@@ -1270,9 +1291,6 @@ let Story = [
         title: '',
         content: `
           <div class="comic-grid" style="margin-top:1.5em">
-            <div class="half">
-              [image|agatha-christie/agatha 23.png|Agatha 17]
-            </div>
             <div class="half">
               [image|agatha-christie/agatha 24.png|Agatha 18]
             </div>

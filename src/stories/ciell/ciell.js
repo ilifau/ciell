@@ -178,7 +178,7 @@ let Story = [
         id: 0,
         title: 'The Invisible Girls',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half text info info--introduction">
               <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
             </div>
@@ -215,15 +215,15 @@ let Story = [
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 30
+            'chapterId': 10
           }
         ]
       },
       {
-        id: 30,
+        id: 10,
         title: '',
         content: `
-            <div class="comic-grid" style="margin-top:1.5em">
+            <div class="comic-grid">
             <div class="half text info info--paragraph">
               <h2>Paragraphs</h2><p>The <strong>body</strong> of the essay is the part that addresses the title. It should be organised into <strong>paragraphs</strong>. Each
               paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
@@ -253,6 +253,32 @@ let Story = [
             <div class="half">
               [image|gender-equality/invisible 17.png|Invisible Girls 17]
             </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        content: `
+            <div class="comic-grid">
+            <div class="half text info info--paragraph">
+              <h2>Paragraphs</h2><p>The <strong>body</strong> of the essay is the part that addresses the title. It should be organised into <strong>paragraphs</strong>. Each
+              paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
+              way to those that precede and follow it.</p>
+            </div>
             <div class="half">
               [image|gender-equality/invisible 18.png|Invisible Girls 18]
             </div>
@@ -274,21 +300,21 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 0
+            'chapterId': 10
           },
           {
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 60
+            'chapterId': 30
           }
         ]
       },
       {
-        id: 60,
+        id: 30,
         title: '',
         content: `
-            <div class="comic-grid" style="margin-top:1.5em">
+            <div class="comic-grid">
             <div class="half text info info--conclusion">
             <h2>Conslusion</h2><p>The <strong>conclusion</strong> reminds your readers what the essay was meant to do. It provides an answer to the title. It reminds your readers how you reached that answer. The conclusion should normally occupy just one paragraph. Here’s a simple conclusion to our story.</p>
             </div>
@@ -307,18 +333,18 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 30
+            'chapterId': 20
           },
           {
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 70
+            'chapterId': 40
           }
         ]
       },
       {
-        id: 70,
+        id: 40,
         title: 'Info Graphic: Basic Essay Structure',
         titleClass: 'center',
         content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
@@ -381,18 +407,18 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 60
+            'chapterId': 30
           },
           {
             'text': 'Task',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 80
+            'chapterId': 50
           }
         ]
       },
       {
-        id: 80,
+        id: 50,
         taskId: 30,
         title: 'Task: The Invisible Girls',
         content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Place the following story elements in their correct order (drag &amp; drop) and click the "Check order" button.</p>`,
@@ -401,18 +427,18 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 70
+            'chapterId': 40
           },
           {
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 85
+            'chapterId': 60
           }
         ]
       },
       {
-        id: 85,
+        id: 60,
         taskId: 20,
         title: 'Task: Multiple Choice',
         content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Answer the following questions and click the "Check answers" button.</p>`,
@@ -421,18 +447,18 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 80
+            'chapterId': 50
           },
           {
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 87
+            'chapterId': 70
           }
         ]
       },
       {
-        id: 87,
+        id: 70,
         taskId: 40,
         title: 'Task: Image Choice',
         content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Answer the following questions and click the "Check answers" button.</p>`,
@@ -441,18 +467,18 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 85
+            'chapterId': 60
           },
           {
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 90
+            'chapterId': 80
           }
         ]
       },
       {
-        id: 90,
+        id: 80,
         title: 'Evaluation: The Invisible Girls',
         content: `<p>This chapter will contain the evaluation for this story.</p>`,
         audio: [
@@ -466,7 +492,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 87
+            'chapterId': 70
           },
           {
             'text': 'Restart',
@@ -497,7 +523,7 @@ let Story = [
           }
         ],
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 01.png|Climate Change 1]
             </div>
@@ -529,7 +555,7 @@ let Story = [
       {
         id: 10,
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 07.png|Climate Change 7]
             </div>
@@ -541,6 +567,9 @@ let Story = [
             </div>
             <div class="half">
               [image|climate-change/climate 10.png|Climate Change 10]
+            </div>
+            <div class="half">
+              [image|climate-change/climate 11.png|Climate Change 11]
             </div>
           </div>`,
         choices: [
@@ -561,10 +590,7 @@ let Story = [
       {
         id: 20,
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
-            <div class="half">
-              [image|climate-change/climate 11.png|Climate Change 11]
-            </div>
+          <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 12.png|Climate Change 12]
             </div>
@@ -599,7 +625,7 @@ let Story = [
       {
         id: 30,
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 17.png|Climate Change 17]
             </div>
@@ -617,7 +643,7 @@ let Story = [
           {
             'text': 'Previous',
             'class': 'previous',
-            'iconAfter': 'arrow-left',
+            'iconBefore': 'arrow-left',
             'chapterId': 20
           },
           {
@@ -642,7 +668,7 @@ let Story = [
         id: 0,
         title: 'Nuclear Power',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half text info info--introduction">
               <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
             </div>
@@ -667,16 +693,16 @@ let Story = [
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 20
+            'chapterId': 10
           }
         ]
       },
       {
-        id: 20,
+        id: 10,
         title: '',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
-          <div class="half">
+          <div class="comic-grid">
+            <div class="half">
               [image|nuclear-power/nuclear 06.png|Nuclear Power 6]
             </div>
             <div class="half">
@@ -706,6 +732,27 @@ let Story = [
             <div class="half">
               [image|nuclear-power/nuclear 15.png|Nuclear Power 15]
             </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        content: `
+          <div class="comic-grid">
             <div class="half">
               [image|nuclear-power/nuclear 16.png|Nuclear Power 16]
             </div>
@@ -733,7 +780,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 0
+            'chapterId': 10
           },
           {
             'text': 'Next',
@@ -747,7 +794,7 @@ let Story = [
         id: 30,
         title: '',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half">
               [image|nuclear-power/nuclear 23.png|Nuclear Power 23]
             </div>
@@ -787,7 +834,7 @@ let Story = [
         id: 0,
         title: 'Disability',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half text info info--introduction">
               <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
             </div>
@@ -806,6 +853,9 @@ let Story = [
             <div class="half">
               [image|disability/disability 05.png|Disability 5]
             </div>
+            <div class="half">
+              [image|disability/disability 06.png|Disability 6]
+            </div>
           </div>`,
         choices: [
           {
@@ -820,10 +870,7 @@ let Story = [
         id: 10,
         title: '',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
-          <div class="half">
-              [image|disability/disability 06.png|Disability 6]
-            </div>
+          <div class="comic-grid">
             <div class="half">
               [image|disability/disability 07.png|Disability 7]
             </div>
@@ -842,6 +889,27 @@ let Story = [
             <div class="half">
               [image|disability/disability 12.png|Disability 12]
             </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 15
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: '',
+        content: `
+          <div class="comic-grid">
             <div class="half">
               [image|disability/disability 13.png|Disability 13]
             </div>
@@ -869,7 +937,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 0
+            'chapterId': 10
           },
           {
             'text': 'Next',
@@ -883,7 +951,7 @@ let Story = [
         id: 20,
         title: '',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half">
               [image|disability/disability 20.png|Disability 20]
             </div>
@@ -896,7 +964,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 10
+            'chapterId': 15
           },
           {
             'text': 'Restart',
@@ -920,7 +988,7 @@ let Story = [
         id: 0,
         title: 'Transports',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half">
               [image|transports/transports 01.png|Transports 1]
             </div>
@@ -947,7 +1015,7 @@ let Story = [
         id: 10,
         title: '',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half">
               [image|transports/transports 05.png|Transports 5]
             </div>
@@ -989,7 +1057,7 @@ let Story = [
         id: 20,
         title: '',
         content: `
-        <div class="comic-grid" style="margin-top:1.5em">
+        <div class="comic-grid">
           <div class="half">
             [image|transports/transports 12.png|Transports 12]
           </div>
@@ -1028,7 +1096,7 @@ let Story = [
         id: 30,
         title: '',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half">
               [image|transports/transports 18.png|Transports 18]
             </div>
@@ -1185,7 +1253,7 @@ let Story = [
         id: 0,
         title: 'Agatha Christie',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 01.png|Agatha 1]
             </div>
@@ -1210,6 +1278,21 @@ let Story = [
             <div class="half">
               [image|agatha-christie/agatha 08.png|Agatha 8]
             </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 15
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: 'Agatha Christie',
+        content: `
+          <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 09.png|Agatha 9]
             </div>
@@ -1222,21 +1305,6 @@ let Story = [
             <div class="half">
               [image|agatha-christie/agatha 12.png|Agatha 12]
             </div>
-          </div>`,
-        choices: [
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 20
-          }
-        ]
-      },
-      {
-        id: 20,
-        title: '',
-        content: `
-          <div class="comic-grid" style="margin-top:1.5em">
             <div class="half">
               [image|agatha-christie/agatha 13.png|Agatha 13]
             </div>
@@ -1249,6 +1317,27 @@ let Story = [
             <div class="half">
               [image|agatha-christie/agatha 16.png|Agatha 16]
             </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        content: `
+          <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 17.png|Agatha 17]
             </div>
@@ -1276,7 +1365,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 0
+            'chapterId': 15
           },
           {
             'text': 'Next',
@@ -1290,7 +1379,7 @@ let Story = [
         id: 30,
         title: '',
         content: `
-          <div class="comic-grid" style="margin-top:1.5em">
+          <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 24.png|Agatha 18]
             </div>

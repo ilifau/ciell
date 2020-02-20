@@ -1,19 +1,21 @@
 <template>
   <div>
     <div class="task" v-bind:class="{ puzzle: this.task.type === 'puzzle', completed: this.$store.state.tasksComplete.includes(this.task.id)}">
-      <div class="task-message-wrapper" v-if="showTaskMessage" v-on:click="hideTaskMessage()">
-        <div v-if="showTaskMessage" class="task-message">
-          <div class="close-task-message"><v-icon name="home" /></div>
-          <div v-if="this.$store.state.tasksComplete.includes(this.task.id)">
-            <h3 class="first">Superb, you did it!</h3>
-            <p class="last">You completed this task successfully. Your progress will be saved. Congratulations!</p>
-          </div>
-          <div v-if="!this.$store.state.tasksComplete.includes(this.task.id)">
-            <h3 class="first">Not quite&hellip;</h3>
-            <p class="last">Nope, that doesn't seem to be correct. Try again, you can try as often as you like.</p>
+      <transition name="fade">
+        <div class="task-message-wrapper" v-if="showTaskMessage" v-on:click="hideTaskMessage()">
+          <div v-if="showTaskMessage" class="task-message">
+            <div class="close-task-message"><v-icon name="home" /></div>
+            <div v-if="this.$store.state.tasksComplete.includes(this.task.id)">
+              <h3 class="first">Superb, you did it!</h3>
+              <p class="last">You completed this task successfully. Your progress will be saved. Congratulations!</p>
+            </div>
+            <div v-if="!this.$store.state.tasksComplete.includes(this.task.id)">
+              <h3 class="first">Not quite&hellip;</h3>
+              <p class="last">Nope, that doesn't seem to be correct. Try again, you can try as often as you like.</p>
+            </div>
           </div>
         </div>
-      </div>
+      </transition>
       <h1 v-if="task.title">{{ task.title }}</h1>
       <div v-if="task.description" v-html="task.description"></div>
       <draggable drag-class="drag" v-model="task.items" group="tasks" @start="drag=true" @change="onChange" @end="drag=false">

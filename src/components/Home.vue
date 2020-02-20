@@ -11,7 +11,7 @@
             <span class="title-background" :style="{ backgroundColor: story.color ? story.color : '' }"></span>
           </span>
           <div class="dark"></div>
-          <img :class="{'completed': tasksCompleted(id), badge}" :src="badge(id)" alt="Badge" :title="badgeTitle(id)" />
+          <img v-if="hasBadge(id)" :class="{'completed': tasksCompleted(id), badge}" :src="badge(id)" alt="Badge" :title="badgeTitle(id)" />
         </a>
       </div>
     </div>
@@ -41,10 +41,11 @@ export default {
 
       return checker(this.$store.state.tasksComplete, taskIds)
     },
+    hasBadge (storyId) {
+      return typeof this.$props.stories[storyId].badge !== 'undefined'
+    },
     badge (storyId) {
-      let badge = this.$props.stories[storyId].badge
-      console.log(badge)
-      badge = typeof badge !== 'undefined' ? badge : 'badge-default.png'
+      let badge = typeof this.$props.stories[storyId].badge !== 'undefined' ? this.$props.stories[storyId].badge : 'badge-default.png'
       return require('@/stories/ciell/assets/img/badges/' + badge)
     },
     badgeTitle (storyId) {
@@ -182,17 +183,17 @@ export default {
     background-size: cover;
     width: 10%;
     height: auto;
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    -ms-filter: grayscale(100%);
-    -o-filter: grayscale(100%);
+    -webkit-filter: grayscale(60%);
+    -moz-filter: grayscale(60%);
+    -ms-filter: grayscale(60%);
+    -o-filter: grayscale(60%);
     opacity: .9;
   }
 
   .badge.completed {
-    right: -.875em;
+    right: -.75em;
     top: -.5em;
-    width: 33%;
+    width: 28%;
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     -ms-filter: grayscale(0%);

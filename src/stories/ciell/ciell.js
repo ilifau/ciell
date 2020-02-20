@@ -482,12 +482,6 @@ let Story = [
         id: 80,
         title: 'Evaluation: The Invisible Girls',
         content: `<p>This chapter will contain the evaluation for this story.</p>`,
-        audio: [
-          {
-            filename: 'sine-wave.mp3',
-            label: 'Audio Content'
-          }
-        ],
         choices: [
           {
             'text': 'Previous',
@@ -517,12 +511,6 @@ let Story = [
       {
         id: 0,
         title: 'Climate Change',
-        audio: [
-          {
-            filename: 'sine-wave.mp3',
-            label: 'Audio Content'
-          }
-        ],
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -825,37 +813,37 @@ let Story = [
   },
   {
     id: 50,
-    title: 'Disability',
+    title: 'End Poverty',
     author: 'CIELL Team',
-    description: 'This is an essay on disability.',
-    preview: 'disability/cover.png',
+    description: 'This is an essay on poverty and disability.',
+    preview: 'poverty/cover.png',
     color: 'rgb(166, 53, 52)',
     chapters: [
       {
         id: 0,
-        title: 'Disability',
+        title: 'End Poverty',
         content: `
           <div class="comic-grid">
             <div class="half text info info--introduction">
               <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
             </div>
             <div class="half">
-              [image|disability/disability 01.png|Disability 1]
+              [image|poverty/poverty 01.png|Poverty 1]
             </div>
             <div class="half">
-              [image|disability/disability 02.png|Disability2]
+              [image|poverty/poverty 02.png|Poverty 2]
             </div>
             <div class="half">
-              [image|disability/disability 03.png|Disability 3]
+              [image|poverty/poverty 03.png|Poverty 3]
             </div>
             <div class="half">
-              [image|disability/disability 04.png|Disability 4]
+              [image|poverty/poverty 04.png|Poverty 4]
             </div>
             <div class="half">
-              [image|disability/disability 05.png|Disability 5]
+              [image|poverty/poverty 05.png|Poverty 5]
             </div>
             <div class="half">
-              [image|disability/disability 06.png|Disability 6]
+              [image|poverty/poverty 06.png|Poverty 6]
             </div>
           </div>`,
         choices: [
@@ -873,22 +861,22 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|disability/disability 07.png|Disability 7]
+              [image|poverty/poverty 07.png|Poverty 7]
             </div>
             <div class="half">
-            [image|disability/disability 08.png|Disability 8]
+            [image|poverty/poverty 08.png|Poverty 8]
             </div>
             <div class="half">
-              [image|disability/disability 09.png|Disability 9]
+              [image|poverty/poverty 09.png|Poverty 9]
             </div>
             <div class="half">
-              [image|disability/disability 10.png|Disability 10]
+              [image|poverty/poverty 10.png|Poverty 10]
             </div>
             <div class="half">
-              [image|disability/disability 11.png|Disability 11]
+              [image|poverty/poverty 11.png|Poverty 11]
             </div>
             <div class="half">
-              [image|disability/disability 12.png|Disability 12]
+              [image|poverty/poverty 12.png|Poverty 12]
             </div>
           </div>`,
         choices: [
@@ -912,25 +900,25 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|disability/disability 13.png|Disability 13]
+              [image|poverty/poverty 13.png|Poverty 13]
             </div>
             <div class="half">
-              [image|disability/disability 14.png|Disability 14]
+              [image|poverty/poverty 14.png|Poverty 14]
             </div>
             <div class="half">
-              [image|disability/disability 15.png|Disability 15]
+              [image|poverty/poverty 15.png|Poverty 15]
             </div>
             <div class="half">
-              [image|disability/disability 16.png|Disability 16]
+              [image|poverty/poverty 16.png|Poverty 16]
             </div>
             <div class="half">
-              [image|disability/disability 17.png|Disability 17]
+              [image|poverty/poverty 17.png|Poverty 17]
             </div>
             <div class="half">
-              [image|disability/disability 18.png|Disability 18]
+              [image|poverty/poverty 18.png|Poverty 18]
             </div>
             <div class="half">
-              [image|disability/disability 19.png|Disability 19]
+              [image|poverty/poverty 19.png|Poverty 19]
             </div>
           </div>`,
         choices: [
@@ -954,10 +942,10 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|disability/disability 20.png|Disability 20]
+              [image|poverty/poverty 20.png|Poverty 20]
             </div>
             <div class="half">
-              [image|disability/disability 21.png|Disability21]
+              [image|poverty/poverty 21.png|Poverty 21]
             </div>
           </div>`,
         choices: [
@@ -979,28 +967,34 @@ let Story = [
   },
   {
     id: 60,
-    title: 'Transports',
+    title: 'Transport',
     author: 'CIELL Team',
-    description: 'This is an essay on transports.',
-    preview: 'transports/cover.png',
+    description: 'This is an essay on transport.',
+    preview: 'transport/cover.png',
     color: 'rgb(62, 57, 63)',
     chapters: [
       {
         id: 0,
-        title: 'Transports',
+        title: 'Transport',
+        audio: [
+          {
+            filename: 'transportation-intro.mp3',
+            label: 'Introduction'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|transports/transports 01.png|Transports 1]
+              [image|transport/transport 01.png|Transport 1]
             </div>
             <div class="half">
-              [image|transports/transports 02.png|Transports 2]
+              [image|transport/transport 02.png|Transport 2]
             </div>
             <div class="half">
-              [image|transports/transports 03.png|Transports 3]
+              [image|transport/transport 03.png|Transport 3]
             </div>
             <div class="half">
-              [image|transports/transports 04.png|Transports 4]
+              [image|transport/transport 04.png|Transport 4]
             </div>
           </div>`,
         choices: [
@@ -1015,28 +1009,34 @@ let Story = [
       {
         id: 10,
         title: '',
+        audio: [
+          {
+            filename: 'transportation-part-1.mp3',
+            label: 'Transportation: part 1'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|transports/transports 05.png|Transports 5]
+              [image|transport/transport 05.png|Transport 5]
             </div>
             <div class="half">
-              [image|transports/transports 06.png|Transports 6]
+              [image|transport/transport 06.png|Transport 6]
             </div>
             <div class="half">
-              [image|transports/transports 07.png|Transports 7]
+              [image|transport/transport 07.png|Transport 7]
             </div>
             <div class="half">
-              [image|transports/transports 08.png|Transports 8]
+              [image|transport/transport 08.png|Transport 8]
             </div>
             <div class="half">
-              [image|transports/transports 09.png|Transports 9]
+              [image|transport/transport 09.png|Transport 9]
             </div>
             <div class="half">
-              [image|transports/transports 10.png|Transports 10]
+              [image|transport/transport 10.png|Transport 10]
             </div>
             <div class="half">
-              [image|transports/transports 11.png|Transports 11]
+              [image|transport/transport 11.png|Transport 11]
             </div>
           </div>`,
         choices: [
@@ -1044,7 +1044,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 10
+            'chapterId': 0
           },
           {
             'text': 'Next',
@@ -1057,25 +1057,31 @@ let Story = [
       {
         id: 20,
         title: '',
+        audio: [
+          {
+            filename: 'transportation-part-2.mp3',
+            label: 'Transportation: part 2'
+          }
+        ],
         content: `
         <div class="comic-grid">
           <div class="half">
-            [image|transports/transports 12.png|Transports 12]
+            [image|transport/transport 12.png|Transport 12]
           </div>
           <div class="half">
-            [image|transports/transports 13.png|Transports 13]
+            [image|transport/transport 13.png|Transport 13]
           </div>
           <div class="half">
-            [image|transports/transports 14.png|Transports 14]
+            [image|transport/transport 14.png|Transport 14]
           </div>
           <div class="half">
-            [image|transports/transports 15.png|Transports 15]
+            [image|transport/transport 15.png|Transport 15]
           </div>
           <div class="half">
-            [image|transports/transports 16.png|Transports 16]
+            [image|transport/transport 16.png|Transport 16]
           </div>
           <div class="half">
-            [image|transports/transports 17.png|Transports 17]
+            [image|transport/transport 17.png|Transport 17]
           </div>
         </div>`,
         choices: [
@@ -1096,19 +1102,25 @@ let Story = [
       {
         id: 30,
         title: '',
+        audio: [
+          {
+            filename: 'transportation-conclusion.mp3',
+            label: 'Conclusion'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|transports/transports 18.png|Transports 18]
+              [image|transport/transport 18.png|Transport 18]
             </div>
             <div class="half">
-              [image|transports/transports 19.png|Transports 19]
+              [image|transport/transport 19.png|Transport 19]
             </div>
             <div class="half">
-              [image|transports/transports 20.png|Transports 20]
+              [image|transport/transport 20.png|Transport 20]
             </div>
             <div class="half">
-              [image|transports/transports 21.png|Transports 21]
+              [image|transport/transport 21.png|Transport 21]
             </div>
           </div>`,
         choices: [

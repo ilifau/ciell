@@ -449,8 +449,12 @@ img {
   background: #fff;
   box-shadow: 1px 2px 2em rgba(0,0,0,.5);
   width: 480px;
-  max-width: 92%;
+  max-width: calc(92% - 35%);
   line-height: 1.33;
+}
+
+.message h3 {
+  margin-bottom: .5em;
 }
 
 /* Buttons */
@@ -488,6 +492,12 @@ img {
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+
+@media screen and (orientation: portrait) {
+  .pyro > .before, .pyro > .after {
+    top: 25%;
+  }
 }
 
 .pyro > .before, .pyro > .after {

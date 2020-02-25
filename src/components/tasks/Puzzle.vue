@@ -73,7 +73,7 @@ export default {
       } else {
         message = {
           title: 'D\'oh! 😖',
-          text: 'Hm, not quite (<strong>' + this.correct + ' correct</strong>, <strong>' + this.incorrect + ' incorrect</strong>). Try again, you can try as often as you like.'
+          text: 'Hm, not quite. Try again, you can try as often as you like.'
         }
       }
 

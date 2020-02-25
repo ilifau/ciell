@@ -67,11 +67,12 @@ export default {
       if (this.$store.state.tasksComplete.includes(this.task.id)) {
         message = {
           title: 'Superb, you did it! 😊',
-          text: 'You completed this task successfully. Your progress will be saved. Congratulations!'
+          text: 'You completed this task successfully. Your progress will be saved. Congratulations!',
+          effect: 'fireworks'
         }
       } else {
         message = {
-          title: 'Not quite&hellip; 😖',
+          title: 'D\'oh! 😖',
           text: 'Hm, not quite (<strong>' + this.correct + ' correct</strong>, <strong>' + this.incorrect + ' incorrect</strong>). Try again, you can try as often as you like.'
         }
       }

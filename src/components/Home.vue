@@ -11,7 +11,7 @@
             <span class="title-background" :style="{ backgroundColor: story.color ? story.color : '' }"></span>
           </span>
           <div class="dark"></div>
-          <img v-if="hasBadge(id)" :class="{'completed': tasksCompleted(id), badge}" :src="badge(id)" alt="Badge" :title="badgeTitle(id)" />
+          <div class="badge" v-html="badge(id)"></div>
         </a>
       </div>
     </div>
@@ -41,15 +41,49 @@ export default {
 
       return checker(this.$store.state.tasksComplete, taskIds)
     },
-    hasBadge (storyId) {
-      return typeof this.$props.stories[storyId].badge !== 'undefined'
+    tasksCompletedPercent (storyId) {
+      if (!storyId || !this.$props.stories[storyId].tasks) {
+        return 0
+      }
+
+      const taskIds = this.$props.stories[storyId].tasks.map(function (task) {
+        return task.id
+      })
+
+      if (taskIds.length === 0) {
+        return 0
+      }
+
+      const completed = taskIds.filter(id => this.$store.state.tasksComplete.includes(id))
+      return (completed.length / taskIds.length) * 100
     },
     badge (storyId) {
-      let badge = typeof this.$props.stories[storyId].badge !== 'undefined' ? this.$props.stories[storyId].badge : 'badge-default.png'
-      return require('@/stories/ciell/assets/img/badges/' + badge)
-    },
-    badgeTitle (storyId) {
-      return this.tasksCompleted(storyId) ? 'You successfully completed all tasks in this essay.' : 'Complete all tasks in this essay and earn a badge.'
+      let badge, title, alt
+      let percent = this.tasksCompletedPercent(storyId)
+
+      console.log(percent)
+
+      if (percent === 0) {
+        badge = null
+      } else if (percent > 0 && percent <= 33.34) {
+        badge = require('@/stories/ciell/assets/img/badges/badge-bronze.png')
+        title = 'Fair enough, but you can certainly do better than that!'
+        alt = 'Bronze badge'
+      } else if (percent > 33.34 && percent <= 66.67) {
+        badge = require('@/stories/ciell/assets/img/badges/badge-silver.png')
+        title = 'Good job, you earned a silver medal for this essay!'
+        alt = 'Silver badge'
+      } else if (percent > 66.67) {
+        badge = require('@/stories/ciell/assets/img/badges/badge-gold.png')
+        title = 'Wow, awesome! You earned a gold medal for this essay!'
+        alt = 'Gold badge'
+      }
+
+      if (!badge) {
+        return ''
+      }
+
+      return '<img class="badge" src="' + badge + '" title="' + title + '" alt="' + alt + '" />'
     }
   }
 }
@@ -178,27 +212,11 @@ export default {
 
   .badge {
     position: absolute;
-    right: .25em;
-    top: .5em;
-    background-size: cover;
-    width: 10%;
-    height: auto;
-    -webkit-filter: grayscale(60%);
-    -moz-filter: grayscale(60%);
-    -ms-filter: grayscale(60%);
-    -o-filter: grayscale(60%);
-    opacity: .9;
-  }
-
-  .badge.completed {
     right: -.75em;
     top: -.5em;
     width: 28%;
-    -webkit-filter: grayscale(0%);
-    -moz-filter: grayscale(0%);
-    -ms-filter: grayscale(0%);
-    -o-filter: grayscale(0%);
-    opacity: 1;
+    background-size: cover;
+    height: auto;
   }
 
   @media screen and (min-width: 640px) and (max-width: 800px) {

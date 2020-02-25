@@ -4,7 +4,6 @@
       <transition name="fade">
         <div class="task-message-wrapper" v-if="showTaskMessage" v-on:click="hideTaskMessage()">
           <div v-if="showTaskMessage" class="task-message">
-            <div class="close-task-message"><v-icon name="home" /></div>
             <div v-if="this.$store.state.tasksComplete.includes(this.task.id)">
               <h3 class="first">Superb, you did it!</h3>
               <p class="last">You completed this task successfully. Your progress will be saved. Congratulations!</p>
@@ -203,13 +202,6 @@ export default {
     box-shadow: 1px 2px 2em rgba(0,0,0,.5);
     width: 480px;
     max-width: 92%;
-  }
-
-  .close-task-message {
-    position: absolute;
-    right: .5em;
-    top: .5em;
-    color: red;
   }
 
   /* Puzzle */

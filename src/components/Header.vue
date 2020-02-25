@@ -72,7 +72,7 @@ export default {
   left: 0;
   right: 0;
   padding: .5em .75em;
-  z-index: 10;
+  z-index: 2;
   line-height: 1;
   align-items: flex-start;
 }

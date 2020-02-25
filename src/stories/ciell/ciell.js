@@ -6,7 +6,6 @@ let Story = [
     description: 'This is just a very short demo story. It is pretty much about nothing.',
     preview: 'gender-equality/cover.png',
     color: 'rgb(65, 84, 108)',
-    badge: 'badge-gold.png',
     tasks: [
       {
         id: 20,

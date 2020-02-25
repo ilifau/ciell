@@ -119,6 +119,7 @@ export default {
     color: #7e170e;
     overflow: hidden;
     height: auto;
+    cursor: grab;
   }
 
   .task-item.introduction {

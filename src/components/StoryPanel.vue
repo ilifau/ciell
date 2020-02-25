@@ -17,7 +17,7 @@
     <component :is="dynamicContent" />
 
     <!-- Task Puzzle -->
-    <Task :is="dynamicTaskComponent" v-bind:story="this.$props.story" v-bind:task="getTask(this.getChapter(this.$store.state.currentChapterId).taskId)" />
+    <Task @showMessage="showMessage($event)" :is="dynamicTaskComponent" v-bind:story="this.$props.story" v-bind:task="getTask(this.getChapter(this.$store.state.currentChapterId).taskId)" />
 
     <!-- Choices -->
     <ul class="choices">
@@ -95,6 +95,9 @@ export default {
     },
     hasAudio () {
       return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('audio')
+    },
+    showMessage (message) {
+      this.$emit('showMessage', message)
     }
   },
   computed: {

@@ -1,18 +1,6 @@
 <template>
   <div>
     <div class="task" v-bind:class="{ completed: this.$store.state.tasksComplete.includes(this.task.id)}">
-      <div class="task-message-wrapper" v-if="showTaskMessage" v-on:click="hideTaskMessage()">
-        <div v-if="showTaskMessage" class="task-message">
-          <div v-if="this.$store.state.tasksComplete.includes(this.task.id)">
-            <h3 class="first">Superb, you did it!</h3>
-            <p class="last">You completed this task successfully. Your progress will be saved. Congratulations!</p>
-          </div>
-          <div v-if="!this.$store.state.tasksComplete.includes(this.task.id)">
-            <h3 class="first">Not quite&hellip;</h3>
-            <p class="last">Hm, not quite (<strong>{{ this.correct }} correct</strong>, <strong>{{ this.incorrect }} incorrect</strong>). Try again, you can try as often as you like.</p>
-          </div>
-        </div>
-      </div>
       <h1 v-if="task.title">{{ task.title }}</h1>
       <div v-if="task.description" v-html="task.description"></div>
       <div class="multiple-choice">
@@ -43,7 +31,6 @@ export default {
       selectedAnswers: [],
       isComplete: this.$store.state.tasksComplete.includes(this.task.id),
       checked: false,
-      showTaskMessage: false,
       correct: 0,
       incorrect: 0
     }
@@ -77,6 +64,10 @@ export default {
       let that = this
       let correct = 0
       let incorrect = 0
+      let message = {
+        title: '',
+        text: ''
+      }
 
       this.selectedAnswers.forEach(function (question, questionIndex) {
         // if (typeof that.task.items[questionIndex].singleChoice !== 'undefined') { // Single choice
@@ -111,10 +102,19 @@ export default {
         this.checked = false
       }
 
-      this.showTaskMessage = true
-    },
-    hideTaskMessage () {
-      this.showTaskMessage = false
+      if (this.$store.state.tasksComplete.includes(this.task.id)) {
+        message = {
+          title: 'Superb, you did it! 😊',
+          text: 'You completed this task successfully. Your progress will be saved. Congratulations!'
+        }
+      } else {
+        message = {
+          title: 'Not quite&hellip; 😖',
+          text: 'Hm, not quite (<strong>' + this.correct + ' correct</strong>, <strong>' + this.incorrect + ' incorrect</strong>). Try again, you can try as often as you like.'
+        }
+      }
+
+      this.$emit('showMessage', message)
     }
   }
 }
@@ -242,27 +242,6 @@ export default {
     -moz-box-shadow: 0 .375em 2.125em -.875em rgba(0,0,0,0.57);
     box-shadow: .375em 2.125em -.875em rgba(0,0,0,0.57);
     transition: all .4s ease 0s;
-  }
-
-  .task-message-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    z-index: 10;
-    left: 0;
-    top: -0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,.5);
-  }
-
-  .task-message {
-    padding: 1.25em;
-    background: #fff;
-    box-shadow: 1px 2px 2em rgba(0,0,0,.5);
-    width: 480px;
-    max-width: 92%;
   }
 
   /* When the checkbox is checked, add a blue background */

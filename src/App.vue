@@ -1,5 +1,13 @@
 <template>
   <div id="app">
+    <transition name="slide-fade">
+      <div class="message-wrapper" v-if="hasMessage" v-on:click="hideMessage()">
+        <div class="message">
+          <h3 class="first" v-html="this.message.title"></h3>
+          <p class="last" v-html="this.message.text"></p>
+        </div>
+      </div>
+    </transition>
     <Header
       v-bind:story="this.stories[this.$store.state.currentStoryId]"
       v-bind:stories="this.stories"
@@ -16,6 +24,7 @@
       <router-view
         v-bind:stories="stories"
         @openStory="openStory($event)"
+        @showMessage="showMessage($event)"
       />
     </transition>
     <div id="footer"></div>
@@ -32,7 +41,12 @@ export default {
     return {
       stories: Stories.sort((a, b) => (a.id > b.id) ? 1 : -1),
       transition: this.$route.name === 'home' ? 'slide-left' : 'slide-right',
-      showHeaderBackground: this.$route.name !== 'home'
+      showHeaderBackground: this.$route.name !== 'home',
+      hasMessage: false,
+      message: {
+        title: '',
+        text: ''
+      }
     }
   },
   components: {
@@ -64,6 +78,14 @@ export default {
     afterLeave () {
       document.body.scrollTop = 0
       this.showHeaderBackground = (this.$route.name !== 'home')
+    },
+    showMessage (message) {
+      this.hasMessage = true
+      this.message.title = message.title
+      this.message.text = message.text
+    },
+    hideMessage () {
+      this.hasMessage = false
     }
   }
 }
@@ -361,6 +383,17 @@ img {
   opacity: 0;
 }
 
+.slide-fade-enter-active {
+  transition: all .5s ease;
+}
+.slide-fade-leave-active {
+  transition: all .5s cubic-bezier(1.0, 0.5, 0.5, 0.5);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+  transform: translateY(20px);
+  opacity: 0;
+}
+
 .slide-left-enter-active,
 .slide-left-leave-active,
 .slide-right-enter-active,
@@ -392,6 +425,28 @@ img {
 .msg--success {
   background: #d1e6db;
   color: #08723d;
+}
+
+.message-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 10;
+  left: -25%;
+  top: -30%;
+  width: 150%;
+  height: 150%;
+  background: rgba(0,0,0,.5);
+}
+
+.message {
+  padding: 1.25em;
+  background: #fff;
+  box-shadow: 1px 2px 2em rgba(0,0,0,.5);
+  width: 480px;
+  max-width: 92%;
+  line-height: 1.33;
 }
 
 /* Buttons */

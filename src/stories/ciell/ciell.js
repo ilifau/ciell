@@ -3,6 +3,7 @@ let Story = [
     id: 40,
     title: 'The Invisible Girls',
     author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/gender-equality/',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
     preview: 'gender-equality/cover.png',
     color: 'rgb(65, 84, 108)',
@@ -177,10 +178,11 @@ let Story = [
       {
         id: 0,
         title: 'The Invisible Girls',
+        examQuestion: '<p>Due to different gender roles and poverty, teenagers-boys and girls face different challenges at home and schools especially in developing countries.</p><p class="last">Do you agree with this statement? Give examples to support your views.</p>',
         content: `
           <div class="comic-grid">
             <div class="half text info info--introduction">
-              <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
+              <h2>Introduction</h2><p>The <strong>introduction</strong> is the roadmap for the entire piece. It is an initial paragraph that sets the tone and path for your writing. A good introduction catches attention and engages your readers right from the very start.</p>
             </div>
             <div class="half">
               [image|gender-equality/invisible 00.png|Invisible Girls 0]
@@ -225,7 +227,7 @@ let Story = [
         content: `
             <div class="comic-grid">
             <div class="half text info info--paragraph">
-              <h2>Paragraphs</h2><p>The <strong>body</strong> of the essay is the part that addresses the title. It should be organised into <strong>paragraphs</strong>. Each
+              <h2>Paragraph 1</h2><p>The <strong>body</strong> of the essay is the part that addresses the question. It should be organised into 2-3 <strong>paragraphs</strong>. Each
               paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
               way to those that precede and follow it.</p>
             </div>
@@ -275,9 +277,7 @@ let Story = [
         content: `
             <div class="comic-grid">
             <div class="half text info info--paragraph">
-              <h2>Paragraphs</h2><p>The <strong>body</strong> of the essay is the part that addresses the title. It should be organised into <strong>paragraphs</strong>. Each
-              paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
-              way to those that precede and follow it.</p>
+              <h2>Paragraph 2</h2><p>Each paragraph begins by introducing an aspect of the issue, then explains the issue and gives <strong>examples</strong>.</p>
             </div>
             <div class="half">
               [image|gender-equality/invisible 18.png|Invisible Girls 18]
@@ -316,7 +316,7 @@ let Story = [
         content: `
             <div class="comic-grid">
             <div class="half text info info--conclusion">
-            <h2>Conslusion</h2><p>The <strong>conclusion</strong> reminds your readers what the essay was meant to do. It provides an answer to the title. It reminds your readers how you reached that answer. The conclusion should normally occupy just one paragraph. Here’s a simple conclusion to our story.</p>
+            <h2>Conclusion</h2><p>The <strong>conclusion</strong> provides an answer to the question set out in the introduction and reminds the reader of your reasons.</p>
             </div>
             <div class="half">
               [image|gender-equality/invisible 23.png|Invisible Girls 23]
@@ -345,11 +345,11 @@ let Story = [
       },
       {
         id: 40,
-        title: 'Info Graphic: Basic Essay Structure',
+        title: 'Infographic: Basic Essay Structure',
         titleClass: 'center',
         content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
-        help you write and organize an essay. However, flexibility is important. While keeping this basic essay
-        format in mind, let the topic and specific assignment guide the writing and organization.</p>
+        help you write and organise an essay. However, flexibility is important. While keeping this basic essay
+        format in mind, let the topic and specific assignment guide the writing and organisation.</p>
           <h2 class="separator dotted-border">1. Introduction</h2>
           <div class="comic-grid narrow">
             <div class="half">
@@ -421,7 +421,7 @@ let Story = [
         id: 50,
         taskId: 30,
         title: 'Task: The Invisible Girls',
-        content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Place the following story elements in their correct order (drag &amp; drop) and click the "Check order" button.</p>`,
+        content: `<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order then press "Check order".</p>`,
         choices: [
           {
             'text': 'Previous',
@@ -500,8 +500,9 @@ let Story = [
   },
   {
     id: 30,
-    title: 'Climate Change',
-    description: 'This is a story about climate change.',
+    title: 'Climate Action',
+    description: 'This is a story about climate action.',
+    url: 'https://www.un.org/sustainabledevelopment/climate-change/',
     author: 'CIELL Team',
     preview: 'climate-change/cover.png',
     color: 'rgb(113, 104, 123)',
@@ -509,7 +510,8 @@ let Story = [
     chapters: [
       {
         id: 0,
-        title: 'Climate Change',
+        title: 'Climate Action',
+        examQuestion: '<p>Greta Thunberg is a schoolgirl turned activist who has encouraged millions of young people to join in her school strike for climate change every Friday.</p><p class="last">Do you believe school pupils are right to skip school in order to protest for climate change?</p>',
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -648,6 +650,7 @@ let Story = [
     id: 20,
     title: 'Nuclear Power',
     author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/energy/',
     description: 'This is another empty story.',
     preview: 'nuclear-power/cover.png',
     color: 'rgb(240, 78, 79)',
@@ -655,10 +658,11 @@ let Story = [
       {
         id: 0,
         title: 'Nuclear Power',
+        examQuestion: '<p>The threat of nuclear weapons keeps world peace. Nuclear power supplies cheap and clean energy. The benefits of nuclear technology far outweigh the disadvantages.</p><p>To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your knowledge or experience.</p><p class="last"><strong>Write at least 250 words.</strong></p>',
         content: `
           <div class="comic-grid">
             <div class="half text info info--introduction">
-              <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
+              <h2>Introduction</h2><p>The <strong>introduction</strong> is the roadmap for the entire piece. It is an initial paragraph that sets the tone and path for your writing. A good introduction catches attention and engages your readers right from the very start.</p>
             </div>
             <div class="half">
               [image|nuclear-power/nuclear 01.png|Nuclear Power 1]
@@ -814,6 +818,7 @@ let Story = [
     id: 50,
     title: 'End Poverty',
     author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/poverty/',
     description: 'This is an essay on poverty and disability.',
     preview: 'poverty/cover.png',
     color: 'rgb(166, 53, 52)',
@@ -821,10 +826,11 @@ let Story = [
       {
         id: 0,
         title: 'End Poverty',
+        examQuestion: '<p>Investing in equal access to education, jobs and public services for young people with disabilities or learning difficulties will help to reduce world poverty.</p><p class="last">Do you agree or disagree with this statement? Explain the reasons for your opinion.</p>',
         content: `
           <div class="comic-grid">
             <div class="half text info info--introduction">
-              <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
+            <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
             </div>
             <div class="half">
               [image|poverty/poverty 01.png|Poverty 1]
@@ -968,6 +974,7 @@ let Story = [
     id: 60,
     title: 'Transport',
     author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/cities/',
     description: 'This is an essay on transport.',
     preview: 'transport/cover.png',
     color: 'rgb(62, 57, 63)',
@@ -978,9 +985,10 @@ let Story = [
         audio: [
           {
             filename: 'transportation-intro.mp3',
-            label: 'Introduction'
+            label: 'Play'
           }
         ],
+        examQuestion: '<p>Local government should invest money in public transport to make it free and accessible to everyone, no matter their physical ability, age or wealth, and to contribute to more sustainable cities and communities for the future.</p><p class="last">Do you agree or disagree?</p>',
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -1011,7 +1019,7 @@ let Story = [
         audio: [
           {
             filename: 'transportation-part-1.mp3',
-            label: 'Transportation: part 1'
+            label: 'Play'
           }
         ],
         content: `
@@ -1059,7 +1067,7 @@ let Story = [
         audio: [
           {
             filename: 'transportation-part-2.mp3',
-            label: 'Transportation: part 2'
+            label: 'Play'
           }
         ],
         content: `
@@ -1104,7 +1112,7 @@ let Story = [
         audio: [
           {
             filename: 'transportation-conclusion.mp3',
-            label: 'Conclusion'
+            label: 'Play'
           }
         ],
         content: `
@@ -1143,6 +1151,7 @@ let Story = [
     id: 10,
     title: 'Agatha Christie',
     author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/education/',
     description: 'A story on the issue of gender equality.',
     preview: 'agatha-christie/cover.png',
     color: 'rgb(142, 1, 49)',
@@ -1151,7 +1160,7 @@ let Story = [
         id: 20,
         type: 'puzzle',
         title: '',
-        description: '<p style="margin-bottom:1em"><strong>Instructions:</strong> Place the following story elements in their correct order (drag &amp; drop) and click the "Check order" button.</p>',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order then press "Check order".</p>',
         items: [
           {
             order: 0,
@@ -1264,6 +1273,7 @@ let Story = [
       {
         id: 0,
         title: 'Agatha Christie',
+        examQuestion: '<p>A magazine has asked readers to send in articles on their favourite authors. You decide to write an article in which you describe your favourite author.</p><p class="last">Explain the reason for your choice, and assess the author\'s significance for the wider community.</p>',
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -1302,7 +1312,7 @@ let Story = [
       },
       {
         id: 15,
-        title: 'Agatha Christie',
+        title: '',
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -1428,6 +1438,318 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 30
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 70,
+    title: 'Homeless',
+    author: 'CIELL Team',
+    description: 'A story on the issue of homelessness.',
+    preview: 'homeless/cover.jpg',
+    color: 'rgb(36, 78, 84)',
+    chapters: [
+      {
+        id: 0,
+        title: 'Homelessness',
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|homeless/homeless 01.jpg|Homeless 1]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 02.jpg|Homeless 2]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 03.jpg|Homeless 3]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 04.jpg|Homeless 4]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 05.jpg|Homeless 5]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 06.jpg|Homeless 6]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 07.jpg|Homeless 7]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: '',
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|homeless/homeless 08.jpg|Homeless 8]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 09.jpg|Homeless 9]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 10.jpg|Homeless 10]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|homeless/homeless 11.jpg|Homeless 11]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 12.jpg|Homeless 12]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 13.jpg|Homeless 13]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|homeless/homeless 14.jpg|Homeless 14]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 15.jpg|Homeless 15]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 16.jpg|Homeless 16]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Task',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        titlt: '',
+        content: `<div class="comic-grid">
+            <div class="half">
+              [image|homeless/homeless 17.jpg|Homeless 17]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 18.jpg|Homeless 18]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 80,
+    title: 'Zen Gardens',
+    author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/health/',
+    description: 'A story on the Zen gardens.',
+    preview: 'zen-gardens/cover.jpg',
+    color: 'rgb(187, 4, 93)',
+    chapters: [
+      {
+        id: 0,
+        title: 'Zen Gardens',
+        examQuestion: '<p>A travel magazine has asked readers to send in articles on their favourite travel destination. You decide to write an article in which you describe your favourite place, explain why it is your favourite and assess its significance for the wider community.</p><p class="last"><strong>Write your article.</strong></p>',
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|zen-gardens/zen gardens 01.jpg|HomeZen Gardens 1]
+            </div>            
+            <div class="half">
+              [image|zen-gardens/zen gardens 02.jpg|HomeZen Gardens 2]
+            </div>            
+            <div class="half">
+              [image|zen-gardens/zen gardens 03.jpg|HomeZen Gardens 3]
+            </div>            
+            <div class="half">
+              [image|zen-gardens/zen gardens 04.jpg|HomeZen Gardens 4]
+            </div>            
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: '',
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|zen-gardens/zen gardens 05.jpg|HomeZen Gardens 5]
+            </div> 
+            <div class="half">
+              [image|zen-gardens/zen gardens 06.jpg|HomeZen Gardens 6]
+            </div> 
+            <div class="half">
+              [image|zen-gardens/zen gardens 07.jpg|HomeZen Gardens 7]
+            </div> 
+            <div class="half">
+              [image|zen-gardens/zen gardens 08.jpg|HomeZen Gardens 8]
+            </div> 
+            <div class="half">
+              [image|zen-gardens/zen gardens 09.jpg|HomeZen Gardens 9]
+            </div> 
+            <div class="half">
+              [image|zen-gardens/zen gardens 10.jpg|HomeZen Gardens 10]
+            </div>  
+            <div class="half">
+              [image|zen-gardens/zen gardens 11.jpg|HomeZen Gardens 11]
+            </div>  
+            <div class="half">
+              [image|zen-gardens/zen gardens 12.jpg|HomeZen Gardens 12]
+            </div>  
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|zen-gardens/zen gardens 13.jpg|HomeZen Gardens 13]
+            </div>  
+            <div class="half">
+              [image|zen-gardens/zen gardens 14.jpg|HomeZen Gardens 14]
+            </div>  
+            <div class="half">
+              [image|zen-gardens/zen gardens 15.jpg|HomeZen Gardens 15]
+            </div>  
+            <div class="half">
+              [image|zen-gardens/zen gardens 16.jpg|HomeZen Gardens 16]
+            </div>  
+            <div class="half">
+              [image|zen-gardens/zen gardens 17.jpg|HomeZen Gardens 17]
+            </div>  
+            <div class="half">
+              [image|zen-gardens/zen gardens 18.jpg|HomeZen Gardens 18]
+            </div>  
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|zen-gardens/zen gardens 19.jpg|HomeZen Gardens 19]
+            </div>
+            <div class="half">
+              [image|zen-gardens/zen gardens 20.jpg|HomeZen Gardens 20]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
           },
           {
             'text': 'Restart',

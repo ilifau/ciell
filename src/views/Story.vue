@@ -3,6 +3,7 @@
     <StoryPanel
       v-bind:story="this.$props.stories[this.$store.state.currentStoryId]"
       @showMessage="showMessage($event)"
+      @scrollTop="scrollTop()"
       />
   </div>
 </template>
@@ -22,6 +23,9 @@ export default {
     },
     showMessage (message) {
       this.$emit('showMessage', message)
+    },
+    scrollTop () {
+      this.$emit('scrollTop', true)
     }
   }
 }

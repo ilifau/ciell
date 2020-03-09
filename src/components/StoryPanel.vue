@@ -6,6 +6,12 @@
       <span class="chapter-title-checkmark" v-if="taskDone()"><v-icon name="check" scale="1.5" /></span>{{ title() }}
     </h1>
 
+    <!-- Exam question -->
+    <div v-if="(hasExamQuestion())" class="exam-question">
+      <h2 class="first">Exam question</h2>
+      <div v-html="examQuestion()"></div>
+    </div>
+
     <!-- Audio -->
     <div v-if="hasAudio()" class="audio-wrapper">
       <label v-for="(file, index) in audioSources" :key="index">
@@ -52,6 +58,9 @@ export default {
     title () {
       return this.getChapter(this.$store.state.currentChapterId).title
     },
+    examQuestion () {
+      return this.getChapter(this.$store.state.currentChapterId).examQuestion
+    },
     choices () {
       return this.getChapter(this.$store.state.currentChapterId).choices
     },
@@ -68,8 +77,7 @@ export default {
       if (typeof nextChapter.before === 'function') nextChapter.before()
 
       this.$store.commit('setCurrentChapterId', id)
-
-      window.scrollTo(0, 0)
+      this.$emit('scrollTop')
     },
     finalChapter () {
       return typeof this.getChapter(this.$store.state.currentChapterId).finalChapter !== 'undefined'
@@ -95,6 +103,9 @@ export default {
     },
     hasAudio () {
       return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('audio')
+    },
+    hasExamQuestion () {
+      return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('examQuestion')
     },
     showMessage (message) {
       this.$emit('showMessage', message)
@@ -172,6 +183,10 @@ export default {
 </script>
 
 <style scoped>
+.story-panel {
+  position: relative;
+}
+
 .chapter-title {
   margin-top: 0;
 }
@@ -240,6 +255,15 @@ export default {
 .audio-wrapper {
   display: block;
   margin-bottom: 1em;
+}
+
+@media screen and (min-width: 1366px) {
+  .audio-wrapper {
+    display: inline-block;
+    position: fixed;
+    left: .875em;
+    top: 2.125em;
+  }
 }
 
 .audio-button {

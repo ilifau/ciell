@@ -12,16 +12,17 @@
       </span>
     </div>
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
-    <div class="nav" v-on:click="toggleNav()" v-bind:class="{ active: navIsActive }">
+    <div class="nav" v-bind:class="{ active: navIsActive }">
       <span class="nav-header">NAVIGATION</span>
-      <router-link to="/">Essays</router-link>
+      <router-link to="/" v-on:click.native="closeNav()">Essays</router-link>
       <div v-for="(story, id) in stories" :key="id">
-        <a class="story-link" v-bind:class="{ current: id === $store.state.currentStoryId, placeholder: story.placeholder }" v-on:click="openStory(id)">
+        <a class="story-link" v-bind:class="{ current: id === $store.state.currentStoryId, placeholder: story.placeholder }" v-on:click="openStory(id), closeNav()">
           {{ id + 1 }}. {{ story.title }}
         </a>
       </div>
-      <router-link to="/evaluation">Evaluation</router-link>
-      <router-link to="/about">About CIELL</router-link>
+      <a id="toggleBaseFont" v-on:click="toggleBaseFont()" v-bind:class="baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
+      <router-link to="/evaluation" v-on:click.native="closeNav()">Evaluation</router-link>
+      <router-link to="/about" v-on:click.native="closeNav()">About CIELL</router-link>
     </div>
   </div>
 </template>
@@ -30,7 +31,8 @@
 export default {
   data () {
     return {
-      navIsActive: false
+      navIsActive: false,
+      baseFont: true
     }
   },
   props: ['stories', 'showHeaderBackground'],
@@ -49,9 +51,7 @@ export default {
       this.navIsActive = !this.navIsActive
     },
     closeNav: function () {
-      if (this.navIsActive) {
-        this.navIsActive = false
-      }
+      this.navIsActive = false
     },
     showBacktoStoriesLink: function () {
       let show = ['story', 'about', 'evaluation']
@@ -59,6 +59,10 @@ export default {
     },
     openStory (id) {
       this.$emit('openStory', id)
+    },
+    toggleBaseFont () {
+      this.baseFont = !this.baseFont
+      this.$emit('toggleBaseFont')
     }
   }
 }
@@ -92,13 +96,12 @@ export default {
 } */
 
 .header a {
-  flex-grow: 1;
+  flex-grow: 0;
   font-weight: 600;
 }
 
 .header a.story-title {
   white-space: nowrap;
-  width: 100%;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   padding-right: 2em;
@@ -175,8 +178,10 @@ export default {
 }
 
 .nav a {
+  font-size: .875em;
   transition: all .2s linear;
   font-weight: 400;
+  position: relative;
 }
 
 .nav a:hover,
@@ -215,7 +220,6 @@ export default {
 }
 
 .nav .story-link {
-  font-size: .875em;
   padding-left: 2rem;
 }
 
@@ -225,6 +229,31 @@ export default {
 
 .nav .story-link.placeholder {
   color: rgba(255,255,255,.4);
+}
+
+#toggleBaseFont {
+  position: relative;
+}
+
+#toggleBaseFont::after {
+  display: inline-block;
+  vertical-align: middle;
+  width: .5em;
+  height: .5em;
+  border-radius: 50%;
+  margin-left: .5em;
+  content: '';
+  position: relative;
+  top: -1px;
+}
+
+#toggleBaseFont.active::after {
+  background: #26bb26;
+  box-shadow: 0 0 .25em rgba(0, 255, 0, 0.4);
+}
+
+#toggleBaseFont.inactive::after {
+  background: rgba(206, 38, 28, 0.5);
 }
 
 @media screen and (max-width: 767px) {

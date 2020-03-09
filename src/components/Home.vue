@@ -1,7 +1,7 @@
 <template>
   <div class="container home">
     <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt="CIELL logo" rel="preload"></div>
-    <h2 class="home-subtitle default-font">Visually enhanced learning of writing organization for people with dyslexia.</h2>
+    <h2 class="home-subtitle">Visually enhanced learning of writing structures</h2>
     <div class="stories">
       <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
         <a v-on:click="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
@@ -106,9 +106,8 @@ export default {
   .home-subtitle {
     font-family: 'aka-acidgr-diarygirlmedium';
     text-align: center;
-    font-size: 1.125em;
+    font-size: 1.25em;
     line-height: 1.5;
-    width: 580px;
     max-width: 90%;
     margin: 0 auto 2.5em;
     margin-top: .5em;

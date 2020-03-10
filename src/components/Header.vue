@@ -232,18 +232,17 @@ export default {
 
 #toggleBaseFont {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 #toggleBaseFont::after {
   display: inline-block;
-  vertical-align: middle;
   width: .5em;
   height: .5em;
   border-radius: 50%;
   margin-left: .5em;
   content: '';
-  position: relative;
-  top: -1px;
 }
 
 #toggleBaseFont.active::after {

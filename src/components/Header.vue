@@ -20,7 +20,7 @@
           {{ id + 1 }}. {{ story.title }}
         </a>
       </div>
-      <a id="toggleBaseFont" v-on:click="toggleBaseFont()" v-bind:class="baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
+      <a id="toggleBaseFont" v-on:click="toggleBaseFont()" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
       <router-link to="/evaluation" v-on:click.native="closeNav()">Evaluation</router-link>
       <router-link to="/about" v-on:click.native="closeNav()">About CIELL</router-link>
     </div>
@@ -31,8 +31,7 @@
 export default {
   data () {
     return {
-      navIsActive: false,
-      baseFont: true
+      navIsActive: false
     }
   },
   props: ['stories', 'showHeaderBackground'],
@@ -61,7 +60,6 @@ export default {
       this.$emit('openStory', id)
     },
     toggleBaseFont () {
-      this.baseFont = !this.baseFont
       this.$emit('toggleBaseFont')
     }
   }
@@ -117,6 +115,7 @@ export default {
 
 .nav {
   overflow: hidden;
+  overflow-y: scroll;
   position: fixed;
   z-index: 11;
   top: 0;

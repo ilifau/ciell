@@ -327,7 +327,9 @@ let Story = [
             <div class="half">
               [image|gender-equality/invisible 25.png|Invisible Girls 25]
             </div>
-          </div>`,
+          </div>
+          <h2>Further reading</h2>
+          <p>UN Sustainable Development Goal 5: Achieve gender equality and empower all women and girls</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/gender-equality/" target="_blank">https://www.un.org/sustainabledevelopment/gender-equality/</a></p>`,
         choices: [
           {
             'text': 'Previous',
@@ -628,7 +630,9 @@ let Story = [
             <div class="half">
               [image|climate-change/climate 20.png|Climate Change 20]
             </div>
-          </div>`,
+          </div>
+          <h2>Further reading</h2>
+          <p>UN Sustainable Development Goal 13: Take urgent action to combat climate change and its impacts</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/climate-change/" target="_blank">https://www.un.org/sustainabledevelopment/climate-change/</a></p>`,
         choices: [
           {
             'text': 'Previous',
@@ -796,7 +800,9 @@ let Story = [
             <div class="half">
               [image|nuclear-power/nuclear 25.png|Nuclear Power 25]
             </div>
-          </div>`,
+          </div>
+          <h2>Further reading</h2>
+          <p>UN Sustainable Development Goal 7: Ensure access to affordable, reliable, sustainable and modern energy</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/energy/" target="_blank">https://www.un.org/sustainabledevelopment/energy/</a></p>`,
         choices: [
           {
             'text': 'Previous',
@@ -952,7 +958,10 @@ let Story = [
             <div class="half">
               [image|poverty/poverty 21.png|Poverty 21]
             </div>
-          </div>`,
+          </div>
+          <div class="further-reading">
+            <h2>Further reading</h2>
+            <p>UN Sustainable Development Goal 1: End poverty in all its forms everywhere</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/poverty/" target="_blank">https://www.un.org/sustainabledevelopment/poverty/</a></p>`,
         choices: [
           {
             'text': 'Previous',
@@ -1129,7 +1138,9 @@ let Story = [
             <div class="half">
               [image|transport/transport 21.png|Transport 21]
             </div>
-          </div>`,
+          </div>
+          <h2>Further reading</h2>
+          <p>UN Sustainable Development Goal 11: Make cities inclusive, safe, resilient and sustainable</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/cities/" target="_blank">https://www.un.org/sustainabledevelopment/cities/</a></p>`,
         choices: [
           {
             'text': 'Previous',
@@ -1411,7 +1422,9 @@ let Story = [
             <div class="half">
               [image|agatha-christie/agatha 26.png|Agatha 20]
             </div>
-          </div>`,
+          </div>
+          <h2>Further reading</h2>
+          <p>UN Sustainable Development Goal 11: Education</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/education/" target="_blank">https://www.un.org/sustainabledevelopment/education/</a></p>`,
         choices: [
           {
             'text': 'Previous',
@@ -1453,6 +1466,7 @@ let Story = [
     id: 70,
     title: 'Homeless',
     author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/poverty/',
     description: 'A story on the issue of homelessness.',
     preview: 'homeless/cover.jpg',
     color: 'rgb(36, 78, 84)',
@@ -1593,7 +1607,9 @@ let Story = [
             <div class="half">
               [image|homeless/homeless 18.jpg|Homeless 18]
             </div>
-          </div>`,
+          </div>
+          <h2>Further reading</h2>
+          <p>UN Sustainable Development Goal 1: End poverty in all its forms everywhere</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/poverty/" target="_blank">https://www.un.org/sustainabledevelopment/poverty/</a></p>`,
         choices: [
           {
             'text': 'Previous',
@@ -1743,7 +1759,9 @@ let Story = [
             <div class="half">
               [image|zen-gardens/zen gardens 20.jpg|HomeZen Gardens 20]
             </div>
-          </div>`,
+          </div>
+          <h2>Further reading</h2>
+          <p>UN Sustainable Development Goal 3: Ensure healthy lives and promote well-being for all at all ages</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/health/" target="_blank">https://www.un.org/sustainabledevelopment/health/</a></p>`,
         choices: [
           {
             'text': 'Previous',

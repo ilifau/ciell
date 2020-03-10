@@ -11,6 +11,7 @@ export const store = new Vuex.Store({
     currentChapterId: 0,
     userScore: 0,
     tasksComplete: [],
+    baseFont: true,
     ratings: {
       Design: 1,
       Content: 3,
@@ -55,6 +56,10 @@ export const store = new Vuex.Store({
     },
     setRating (state, payload) {
       state.ratings[payload.prop] = payload.rating
+    },
+    toggleBaseFont (state, baseFont) {
+      state.baseFont = baseFont
+      console.log(baseFont)
     }
   }
 })
@@ -66,7 +71,8 @@ store.subscribe((mutation, state) => {
     currentChapterId: state.currentChapterId, // 0
     userScore: state.userScore,
     tasksComplete: state.tasksComplete,
-    ratings: state.ratings
+    ratings: state.ratings,
+    baseFont: state.baseFont
   }
 
   localStorage.setItem('ciell', JSON.stringify(store))

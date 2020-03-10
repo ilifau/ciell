@@ -1,5 +1,5 @@
 <template>
-  <div id="app" ref="top" v-bind:class="baseFont ? 'opendyslexic' : ''">
+  <div id="app" ref="top" v-bind:class="this.$store.state.baseFont ? 'opendyslexic' : ''">
     <transition name="slide-fade">
       <div class="message-wrapper" v-if="hasMessage" v-on:click="hideMessage()">
         <div v-if="this.message.effect === 'fireworks'" class="pyro">
@@ -50,7 +50,6 @@ export default {
       transition: this.$route.name === 'home' ? 'slide-left' : 'slide-right',
       showHeaderBackground: this.$route.name !== 'home',
       hasMessage: false,
-      baseFont: true,
       message: {
         title: '',
         text: '',
@@ -82,7 +81,7 @@ export default {
       this.$router.push('story')
     },
     toggleBaseFont () {
-      this.baseFont = !this.baseFont
+      this.$store.commit('toggleBaseFont', !this.$store.state.baseFont)
     },
     beforeEnter () {
       this.transition = this.$route.name === 'home' ? 'slide-left' : 'slide-right'
@@ -162,6 +161,7 @@ body {
   min-height: 100%;
   position: relative;
   overflow-x: hidden;
+  word-wrap: break-word;
 }
 
 /* iOS */
@@ -493,6 +493,16 @@ img {
 .exam-question h2 {
   font-size: 1.125em;
   color: #38758a;
+  margin-bottom: .6125em !important;
+}
+
+.further-reading {
+  margin-top: 2em;
+}
+
+.further-reading h2 {
+  font-size: 1.25em;
+  font-weight: 600;
   margin-bottom: .6125em !important;
 }
 

@@ -479,31 +479,30 @@ img {
   margin-bottom: .5em;
 }
 
-.exam-question {
-  margin: 0 0 2em;
+.exam-question, .further-reading {
   padding: 1em;
-  background: #ebf5f9;
-  color: #2c3133;
+  background: #eff7f9;
 }
 
-.exam-question strong {
+.exam-question strong,
+.further-reading strong {
   font-weight: 600;
 }
 
-.exam-question h2 {
+.exam-question h2,
+.further-reading h2 {
   font-size: 1.125em;
-  color: #38758a;
-  margin-bottom: .6125em !important;
+  color: #209ac2;
+  margin-bottom: .6125em;
+  margin-top: 0;
+}
+
+.exam-question {
+  margin-bottom: 1.5em;
 }
 
 .further-reading {
-  margin-top: 2em;
-}
-
-.further-reading h2 {
-  font-size: 1.25em;
-  font-weight: 600;
-  margin-bottom: .6125em !important;
+  margin-top: 1.5em;
 }
 
 /* Buttons */

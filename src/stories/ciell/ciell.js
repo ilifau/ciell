@@ -346,7 +346,7 @@ let Story = [
             'chapterId': 20
           },
           {
-            'text': 'Next',
+            'text': 'Infographic',
             'class': 'next',
             'iconAfter': 'arrow-right',
             'chapterId': 40
@@ -433,7 +433,7 @@ let Story = [
         content: '[tasks]',
         choices: [
           {
-            'text': 'Previous',
+            'text': 'Infographic',
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 40
@@ -827,28 +827,9 @@ let Story = [
             'chapterId': 10
           },
           {
-            'text': 'Tasks',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 25
-          }
-        ]
-      },
-      {
-        id: 25,
-        title: '',
-        content: '[tasks]',
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 20
-          },
-          {
             'text': 'Next',
             'class': 'next',
-            'iconAfter': 'undo',
+            'iconAfter': 'arrow-right',
             'chapterId': 30
           }
         ]
@@ -877,7 +858,100 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 25
+            'chapterId': 20
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 35
+          }
+        ]
+      },
+      {
+        id: 35,
+        title: 'Infographic: Basic Essay Structure',
+        titleClass: 'center',
+        content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
+        help you write and organise an essay. However, flexibility is important. While keeping this basic essay
+        format in mind, let the topic and specific assignment guide the writing and organisation.</p>
+          <h2 class="separator dotted-border">1. Introduction</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
+            </div>
+          </div>
+          <h2 class="separator dotted-border">2. Body</h2>
+          <h3 class="separator">Paragraph 1</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-3.jpg|Basic Essay Structure 3]
+            </div>
+            <div class="half last arrow">
+              [image|info-graphics/basic-essay-structure-4.jpg|Basic Essay Structure 4]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-5.jpg|Basic Essay Structure 5]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 2</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-7.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-8.jpg|Basic Essay Structure 8]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-9.jpg|Basic Essay Structure 9]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 3, 4, 5&hellip;</h3>
+          <p style="text-align:center">Feel free to add more paragraphs!</p>
+          <h2 class="separator dotted-border">3. Conclusion</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-1.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-2.jpg|Basic Essay Structure 8]
+            </div>
+          </div>
+          `,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Infographic',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 35
           },
           {
             'text': 'Restart',
@@ -1547,7 +1621,7 @@ let Story = [
             'chapterId': 20
           },
           {
-            'text': 'Tasks',
+            'text': 'Infographic',
             'class': 'next',
             'iconAfter': 'arrow-right',
             'chapterId': 35
@@ -1556,8 +1630,63 @@ let Story = [
       },
       {
         id: 35,
-        title: '',
-        content: '[tasks]',
+        title: 'Infographic: Basic Essay Structure',
+        titleClass: 'center',
+        content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
+        help you write and organise an essay. However, flexibility is important. While keeping this basic essay
+        format in mind, let the topic and specific assignment guide the writing and organisation.</p>
+          <h2 class="separator dotted-border">1. Introduction</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
+            </div>
+          </div>
+          <h2 class="separator dotted-border">2. Body</h2>
+          <h3 class="separator">Paragraph 1</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-3.jpg|Basic Essay Structure 3]
+            </div>
+            <div class="half last arrow">
+              [image|info-graphics/basic-essay-structure-4.jpg|Basic Essay Structure 4]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-5.jpg|Basic Essay Structure 5]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 2</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-7.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-8.jpg|Basic Essay Structure 8]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-9.jpg|Basic Essay Structure 9]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 3, 4, 5&hellip;</h3>
+          <p style="text-align:center">Feel free to add more paragraphs!</p>
+          <h2 class="separator dotted-border">3. Conclusion</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-1.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-2.jpg|Basic Essay Structure 8]
+            </div>
+          </div>
+          `,
         choices: [
           {
             'text': 'Previous',
@@ -1566,7 +1695,26 @@ let Story = [
             'chapterId': 30
           },
           {
-            'text': 'Next',
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 38
+          }
+        ]
+      },
+      {
+        id: 38,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Infographic',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 35
+          },
+          {
+            'text': 'Tasks',
             'class': 'next',
             'iconAfter': 'arrow-right',
             'chapterId': 40
@@ -1583,7 +1731,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 35
+            'chapterId': 38
           },
           {
             'text': 'Restart',
@@ -1723,7 +1871,7 @@ let Story = [
             'chapterId': 20
           },
           {
-            'text': 'Task',
+            'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
             'chapterId': 40
@@ -1753,6 +1901,80 @@ let Story = [
             'chapterId': 30
           },
           {
+            'text': 'Infographic',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 45
+          }
+        ]
+      },
+      {
+        id: 45,
+        title: 'Infographic: Basic Essay Structure',
+        titleClass: 'center',
+        content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
+        help you write and organise an essay. However, flexibility is important. While keeping this basic essay
+        format in mind, let the topic and specific assignment guide the writing and organisation.</p>
+          <h2 class="separator dotted-border">1. Introduction</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
+            </div>
+          </div>
+          <h2 class="separator dotted-border">2. Body</h2>
+          <h3 class="separator">Paragraph 1</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-3.jpg|Basic Essay Structure 3]
+            </div>
+            <div class="half last arrow">
+              [image|info-graphics/basic-essay-structure-4.jpg|Basic Essay Structure 4]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-5.jpg|Basic Essay Structure 5]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 2</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-7.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-8.jpg|Basic Essay Structure 8]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-9.jpg|Basic Essay Structure 9]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 3, 4, 5&hellip;</h3>
+          <p style="text-align:center">Feel free to add more paragraphs!</p>
+          <h2 class="separator dotted-border">3. Conclusion</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-1.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-2.jpg|Basic Essay Structure 8]
+            </div>
+          </div>
+          `,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
             'text': 'Tasks',
             'class': 'next',
             'iconAfter': 'arrow-right',
@@ -1766,10 +1988,10 @@ let Story = [
         content: '[tasks]',
         choices: [
           {
-            'text': 'Previous',
+            'text': 'Infographic',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 40
+            'chapterId': 45
           },
           {
             'text': 'Restart',
@@ -1926,6 +2148,80 @@ let Story = [
             'chapterId': 20
           },
           {
+            'text': 'Infographic',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 35
+          }
+        ]
+      },
+      {
+        id: 35,
+        title: 'Infographic: Basic Essay Structure',
+        titleClass: 'center',
+        content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
+        help you write and organise an essay. However, flexibility is important. While keeping this basic essay
+        format in mind, let the topic and specific assignment guide the writing and organisation.</p>
+          <h2 class="separator dotted-border">1. Introduction</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
+            </div>
+          </div>
+          <h2 class="separator dotted-border">2. Body</h2>
+          <h3 class="separator">Paragraph 1</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-3.jpg|Basic Essay Structure 3]
+            </div>
+            <div class="half last arrow">
+              [image|info-graphics/basic-essay-structure-4.jpg|Basic Essay Structure 4]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-5.jpg|Basic Essay Structure 5]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 2</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-7.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-8.jpg|Basic Essay Structure 8]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-9.jpg|Basic Essay Structure 9]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 3, 4, 5&hellip;</h3>
+          <p style="text-align:center">Feel free to add more paragraphs!</p>
+          <h2 class="separator dotted-border">3. Conclusion</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-1.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-2.jpg|Basic Essay Structure 8]
+            </div>
+          </div>
+          `,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 35
+          },
+          {
             'text': 'Tasks',
             'class': 'next',
             'iconAfter': 'arrow-right',
@@ -1939,7 +2235,7 @@ let Story = [
         content: '[tasks]',
         choices: [
           {
-            'text': 'Previous',
+            'text': 'Infographic',
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 30

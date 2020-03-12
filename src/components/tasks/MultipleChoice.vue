@@ -105,7 +105,7 @@ export default {
       if (this.$store.state.tasksComplete.includes(this.task.id)) {
         message = {
           title: 'Hooray! 😊',
-          text: 'You completed this task successfully. Your progress will be saved.',
+          text: 'You completed this task successfully. Your progress will be saved. Have you earned any medals yet?',
           effect: 'fireworks'
         }
       } else {

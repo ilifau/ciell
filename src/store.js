@@ -59,7 +59,6 @@ export const store = new Vuex.Store({
     },
     toggleBaseFont (state, baseFont) {
       state.baseFont = baseFont
-      console.log(baseFont)
     }
   }
 })

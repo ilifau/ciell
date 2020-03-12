@@ -79,7 +79,6 @@ export default {
       }, {
         headers: {'Content-Type': 'application/x-www-form-urlencoded'}
       }).then(function (response) {
-        console.log(response)
         if (response.data === 'New record created successfully') {
           that.submitError = ''
           let d = Date.now()

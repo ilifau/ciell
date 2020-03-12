@@ -61,8 +61,6 @@ export default {
       let badge, title, alt
       let percent = this.tasksCompletedPercent(storyId)
 
-      console.log(percent)
-
       if (percent === 0) {
         badge = null
       } else if (percent > 0 && percent <= 33.34) {

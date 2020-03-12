@@ -495,6 +495,7 @@ img {
   color: #209ac2;
   margin-bottom: .6125em;
   margin-top: 0;
+  font-weight: 600;
 }
 
 .exam-question {

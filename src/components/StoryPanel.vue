@@ -47,11 +47,13 @@ import Puzzle from '@/components/tasks/Puzzle.vue'
 import MultipleChoice from '@/components/tasks/MultipleChoice.vue'
 import ImageChoice from '@/components/tasks/ImageChoice.vue'
 import AudioButton from '@/components/AudioButton.vue'
+import TaskList from '@/components/TaskList.vue'
 
 export default {
   components: {
     Puzzle,
-    AudioButton
+    AudioButton,
+    TaskList
   },
   props: ['story'],
   methods: {
@@ -153,7 +155,7 @@ export default {
       // Content types (images, decorators)
       let content = this.getChapter(this.$store.state.currentChapterId).content.replace(/\[.+?\]/g, function (template) {
         let params = template.split('|')
-        let type = params[0].replace('[', '')
+        let type = params[0].replace('[', '').replace(']', '')
 
         switch (type) {
           case 'image':
@@ -166,11 +168,20 @@ export default {
             let text = params[1]
             let chapterId = params[2].replace(']', '')
             return `<a v-on:click="processDecorator(${chapterId})">${text}</a>`
+
+          case 'tasks':
+            return '<TaskList />'
+
+          default:
+            return ''
         }
       })
 
       return {
         template: `<div>${content}</div>`,
+        components: {
+          'TaskList': TaskList
+        },
         methods: {
           processDecorator (id) {
             _this.openChapter(id)

@@ -9,8 +9,45 @@ let Story = [
     color: 'rgb(65, 84, 108)',
     tasks: [
       {
+        id: 30,
+        name: 'Sort the items',
+        type: 'sort',
+        typeName: 'Sorting',
+        title: '',
+        description: '',
+        items: [
+          {
+            order: 10,
+            title: 'Introduction',
+            class: 'introduction'
+          },
+          {
+            order: 20,
+            title: 'Paragraph 1',
+            class: 'paragraph'
+          },
+          {
+            order: 30,
+            title: 'Paragraph 2',
+            class: 'paragraph'
+          },
+          {
+            order: 40,
+            title: 'Paragraph 3',
+            class: 'paragraph'
+          },
+          {
+            order: 50,
+            title: 'Conclusion',
+            class: 'conclusion'
+          }
+        ]
+      },
+      {
         id: 20,
+        name: 'A single choice quiz',
         type: 'multiple-choice',
+        typeName: 'Single Choice',
         title: '',
         description: '',
         items: [
@@ -91,41 +128,10 @@ let Story = [
         ]
       },
       {
-        id: 30,
-        type: 'sort',
-        title: '',
-        description: '',
-        items: [
-          {
-            order: 10,
-            title: 'Introduction',
-            class: 'introduction'
-          },
-          {
-            order: 20,
-            title: 'Paragraph 1',
-            class: 'paragraph'
-          },
-          {
-            order: 30,
-            title: 'Paragraph 2',
-            class: 'paragraph'
-          },
-          {
-            order: 40,
-            title: 'Paragraph 3',
-            class: 'paragraph'
-          },
-          {
-            order: 50,
-            title: 'Conclusion',
-            class: 'conclusion'
-          }
-        ]
-      },
-      {
         id: 40,
+        name: 'Select some images',
         type: 'image-choice',
+        typeName: 'Image Choice',
         title: '',
         description: '',
         items: [
@@ -414,7 +420,26 @@ let Story = [
             'chapterId': 30
           },
           {
-            'text': 'Task',
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 45
+          }
+        ]
+      },
+      {
+        id: 45,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
             'chapterId': 50
@@ -431,7 +456,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 40
+            'chapterId': 45
           },
           {
             'text': 'Next',
@@ -645,6 +670,25 @@ let Story = [
             'chapterId': 20
           },
           {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
             'text': 'Restart',
             'class': 'next',
             'iconAfter': 'undo',
@@ -783,9 +827,28 @@ let Story = [
             'chapterId': 10
           },
           {
-            'text': 'Next',
+            'text': 'Tasks',
             'class': 'next',
             'iconAfter': 'arrow-right',
+            'chapterId': 25
+          }
+        ]
+      },
+      {
+        id: 25,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'undo',
             'chapterId': 30
           }
         ]
@@ -814,7 +877,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 20
+            'chapterId': 25
           },
           {
             'text': 'Restart',
@@ -975,6 +1038,25 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 15
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
           },
           {
             'text': 'Restart',
@@ -1155,7 +1237,26 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 20
+            'chapterId': 30
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
           },
           {
             'text': 'Restart',
@@ -1178,7 +1279,9 @@ let Story = [
     tasks: [
       {
         id: 20,
+        name: 'A puzzle task',
         type: 'puzzle',
+        typeName: 'Puzzle',
         title: '',
         description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order then press "Check order".</p>',
         items: [
@@ -1444,7 +1547,26 @@ let Story = [
             'chapterId': 20
           },
           {
-            'text': 'Task',
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 35
+          }
+        ]
+      },
+      {
+        id: 35,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
             'chapterId': 40
@@ -1461,7 +1583,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 30
+            'chapterId': 35
           },
           {
             'text': 'Restart',
@@ -1631,6 +1753,25 @@ let Story = [
             'chapterId': 30
           },
           {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
             'text': 'Restart',
             'class': 'next',
             'iconAfter': 'undo',
@@ -1783,6 +1924,25 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 20
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
           },
           {
             'text': 'Restart',

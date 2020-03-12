@@ -142,8 +142,8 @@ export default {
   }
 
   .sortable-chosen img {
-    background: #219ac2;
-    border: 8px solid #219ac2;
+    /* background: #219ac2; */
+    border: 6px solid #219ac2;
     border-radius: 2px;
   }
 
@@ -153,6 +153,7 @@ export default {
 
   .sortable-ghost img {
     box-shadow: 0 0;
+    border: 6px dashed #219ac2;
   }
 
   .completed .task-item {

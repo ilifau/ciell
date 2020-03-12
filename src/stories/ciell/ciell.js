@@ -5,7 +5,7 @@ let Story = [
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/gender-equality/',
     description: 'This is just a very short demo story. It is pretty much about nothing.',
-    preview: 'gender-equality/cover.png',
+    preview: 'gender-equality/cover.jpg',
     color: 'rgb(65, 84, 108)',
     tasks: [
       {
@@ -141,16 +141,16 @@ let Story = [
             answers: [
               {
                 text: 'A feather',
-                image: 'gender-equality/invisible 08.png'
+                image: 'gender-equality/invisible 08.jpg'
               },
               {
                 text: 'A spaceship',
-                image: 'gender-equality/invisible 09.png',
+                image: 'gender-equality/invisible 09.jpg',
                 correct: true
               },
               {
                 text: 'A car',
-                image: 'gender-equality/invisible 10.png'
+                image: 'gender-equality/invisible 10.jpg'
               }
             ]
           },
@@ -159,20 +159,20 @@ let Story = [
             answers: [
               {
                 text: 'Green',
-                image: 'gender-equality/invisible 03.png'
+                image: 'gender-equality/invisible 03.jpg'
               },
               {
                 text: 'Red',
-                image: 'gender-equality/invisible 04.png',
+                image: 'gender-equality/invisible 04.jpg',
                 correct: true
               },
               {
                 text: 'I don\'t know...',
-                image: 'gender-equality/invisible 05.png'
+                image: 'gender-equality/invisible 05.jpg'
               },
               {
                 text: 'Red again, also true!',
-                image: 'gender-equality/invisible 06.png',
+                image: 'gender-equality/invisible 06 b.jpg',
                 correct: true
               }
             ]
@@ -191,31 +191,31 @@ let Story = [
               <h2>Introduction</h2><p>The <strong>introduction</strong> is the roadmap for the entire piece. It is an initial paragraph that sets the tone and path for your writing. A good introduction catches attention and engages your readers right from the very start.</p>
             </div>
             <div class="half">
-              [image|gender-equality/invisible 00.png|Invisible Girls 0]
+              [image|gender-equality/invisible 00.jpg|Invisible Girls 0]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 02.png|Invisible Girls 2]
+              [image|gender-equality/invisible 02.jpg|Invisible Girls 2]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 03.png|Invisible Girls 3]
+              [image|gender-equality/invisible 03.jpg|Invisible Girls 3]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 04.png|Invisible Girls 4]
+              [image|gender-equality/invisible 04.jpg|Invisible Girls 4]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 05.png|Invisible Girls 5]
+              [image|gender-equality/invisible 05.jpg|Invisible Girls 5]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 06.png|Invisible Girls 6]
+              [image|gender-equality/invisible 06 b.jpg|Invisible Girls 6]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 07.png|Invisible Girls 7]
+              [image|gender-equality/invisible 07.jpg|Invisible Girls 7]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 08.png|Invisible Girls 8]
+              [image|gender-equality/invisible 08.jpg|Invisible Girls 8]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 09.png|Invisible Girls 9]
+              [image|gender-equality/invisible 09.jpg|Invisible Girls 9]
             </div>
           </div>`,
         choices: [
@@ -238,28 +238,28 @@ let Story = [
               way to those that precede and follow it.</p>
             </div>
             <div class="half">
-              [image|gender-equality/invisible 10.png|Invisible Girls 10]
+              [image|gender-equality/invisible 10.jpg|Invisible Girls 10]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 11.png|Invisible Girls 11]
+              [image|gender-equality/invisible 11.jpg|Invisible Girls 11]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 12.png|Invisible Girls 12]
+              [image|gender-equality/invisible 12.jpg|Invisible Girls 12]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 13.png|Invisible Girls 13]
+              [image|gender-equality/invisible 13.jpg|Invisible Girls 13]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 14.png|Invisible Girls 14]
+              [image|gender-equality/invisible 14.jpg|Invisible Girls 14]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 15.png|Invisible Girls 15]
+              [image|gender-equality/invisible 15.jpg|Invisible Girls 15]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 16.png|Invisible Girls 16]
+              [image|gender-equality/invisible 16.jpg|Invisible Girls 16]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 17.png|Invisible Girls 17]
+              [image|gender-equality/invisible 17.jpg|Invisible Girls 17]
             </div>
           </div>`,
         choices: [
@@ -286,19 +286,19 @@ let Story = [
               <h2>Paragraph 2</h2><p>Each paragraph begins by introducing an aspect of the issue, then explains the issue and gives <strong>examples</strong>.</p>
             </div>
             <div class="half">
-              [image|gender-equality/invisible 18.png|Invisible Girls 18]
+              [image|gender-equality/invisible 18.jpg|Invisible Girls 18]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 19.png|Invisible Girls 19]
+              [image|gender-equality/invisible 19.jpg|Invisible Girls 19]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 20.png|Invisible Girls 20]
+              [image|gender-equality/invisible 20.jpg|Invisible Girls 20]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 21.png|Invisible Girls 21]
+              [image|gender-equality/invisible 21.jpg|Invisible Girls 21]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 22.png|Invisible Girls 22]
+              [image|gender-equality/invisible 22.jpg|Invisible Girls 22]
             </div>
           </div>`,
         choices: [
@@ -325,13 +325,13 @@ let Story = [
             <h2>Conclusion</h2><p>The <strong>conclusion</strong> provides an answer to the question set out in the introduction and reminds the reader of your reasons.</p>
             </div>
             <div class="half">
-              [image|gender-equality/invisible 23.png|Invisible Girls 23]
+              [image|gender-equality/invisible 23.jpg|Invisible Girls 23]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 24.png|Invisible Girls 24]
+              [image|gender-equality/invisible 24.jpg|Invisible Girls 24]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 25.png|Invisible Girls 25]
+              [image|gender-equality/invisible 25.jpg|Invisible Girls 25]
             </div>
           </div>
           <div class="further-reading">
@@ -533,7 +533,7 @@ let Story = [
     description: 'This is a story about climate action.',
     url: 'https://www.un.org/sustainabledevelopment/climate-change/',
     author: 'CIELL Team',
-    preview: 'climate-change/cover.png',
+    preview: 'climate-change/cover.jpg',
     color: 'rgb(113, 104, 123)',
     tasks: null,
     chapters: [
@@ -544,22 +544,22 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|climate-change/climate 01.png|Climate Change 1]
+              [image|climate-change/climate 01.jpg|Climate Change 1]
             </div>
             <div class="half">
-              [image|climate-change/climate 02.png|Climate Change 2]
+              [image|climate-change/climate 02.jpg|Climate Change 2]
             </div>
             <div class="half">
-              [image|climate-change/climate 03.png|Climate Change 3]
+              [image|climate-change/climate 03.jpg|Climate Change 3]
             </div>
             <div class="half">
-              [image|climate-change/climate 04.png|Climate Change 4]
+              [image|climate-change/climate 04.jpg|Climate Change 4]
             </div>
             <div class="half">
-              [image|climate-change/climate 05.png|Climate Change 5]
+              [image|climate-change/climate 05.jpg|Climate Change 5]
             </div>
             <div class="half">
-              [image|climate-change/climate 06.png|Climate Change 6]
+              [image|climate-change/climate 06.jpg|Climate Change 6]
             </div>
           </div>`,
         choices: [
@@ -576,19 +576,19 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|climate-change/climate 07.png|Climate Change 7]
+              [image|climate-change/climate 07.jpg|Climate Change 7]
             </div>
             <div class="half">
-              [image|climate-change/climate 08.png|Climate Change 8]
+              [image|climate-change/climate 08.jpg|Climate Change 8]
             </div>
             <div class="half">
-              [image|climate-change/climate 09.png|Climate Change 9]
+              [image|climate-change/climate 09.jpg|Climate Change 9]
             </div>
             <div class="half">
-              [image|climate-change/climate 10.png|Climate Change 10]
+              [image|climate-change/climate 10.jpg|Climate Change 10]
             </div>
             <div class="half">
-              [image|climate-change/climate 11.png|Climate Change 11]
+              [image|climate-change/climate 11.jpg|Climate Change 11]
             </div>
           </div>`,
         choices: [
@@ -611,19 +611,19 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|climate-change/climate 12.png|Climate Change 12]
+              [image|climate-change/climate 12.jpg|Climate Change 12]
             </div>
             <div class="half">
-              [image|climate-change/climate 13.png|Climate Change 13]
+              [image|climate-change/climate 13.jpg|Climate Change 13]
             </div>
             <div class="half">
-              [image|climate-change/climate 14.png|Climate Change 14]
+              [image|climate-change/climate 14.jpg|Climate Change 14]
             </div>
             <div class="half">
-              [image|climate-change/climate 15.png|Climate Change 15]
+              [image|climate-change/climate 15.jpg|Climate Change 15]
             </div>
             <div class="half">
-              [image|climate-change/climate 16.png|Climate Change 16]
+              [image|climate-change/climate 16.jpg|Climate Change 16]
             </div>
           </div>`,
         choices: [
@@ -646,16 +646,16 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|climate-change/climate 17.png|Climate Change 17]
+              [image|climate-change/climate 17.jpg|Climate Change 17]
             </div>
             <div class="half">
-              [image|climate-change/climate 18.png|Climate Change 18]
+              [image|climate-change/climate 18.jpg|Climate Change 18]
             </div>
             <div class="half">
-              [image|climate-change/climate 19.png|Climate Change 19]
+              [image|climate-change/climate 19.jpg|Climate Change 19]
             </div>
             <div class="half">
-              [image|climate-change/climate 20.png|Climate Change 20]
+              [image|climate-change/climate 20.jpg|Climate Change 20]
             </div>
           </div>
           <div class="further-reading">
@@ -704,7 +704,7 @@ let Story = [
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/energy/',
     description: 'This is another empty story.',
-    preview: 'nuclear-power/cover.png',
+    preview: 'nuclear-power/cover.jpg',
     color: 'rgb(240, 78, 79)',
     chapters: [
       {
@@ -717,19 +717,19 @@ let Story = [
               <h2>Introduction</h2><p>The <strong>introduction</strong> is the roadmap for the entire piece. It is an initial paragraph that sets the tone and path for your writing. A good introduction catches attention and engages your readers right from the very start.</p>
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 01.png|Nuclear Power 1]
+              [image|nuclear-power/nuclear 01.jpg|Nuclear Power 1]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 02.png|Nuclear Power 2]
+              [image|nuclear-power/nuclear 02.jpg|Nuclear Power 2]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 03.png|Nuclear Power 3]
+              [image|nuclear-power/nuclear 03.jpg|Nuclear Power 3]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 04.png|Nuclear Power 4]
+              [image|nuclear-power/nuclear 04.jpg|Nuclear Power 4]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 05.png|Nuclear Power 5]
+              [image|nuclear-power/nuclear 05.jpg|Nuclear Power 5]
             </div>
           </div>`,
         choices: [
@@ -747,34 +747,34 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|nuclear-power/nuclear 06.png|Nuclear Power 6]
+              [image|nuclear-power/nuclear 06.jpg|Nuclear Power 6]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 07.png|Nuclear Power 7]
+              [image|nuclear-power/nuclear 07.jpg|Nuclear Power 7]
             </div>
             <div class="half">
-            [image|nuclear-power/nuclear 08.png|Nuclear Power 8]
+            [image|nuclear-power/nuclear 08.jpg|Nuclear Power 8]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 09.png|Nuclear Power 9]
+              [image|nuclear-power/nuclear 09.jpg|Nuclear Power 9]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 10.png|Nuclear Power 10]
+              [image|nuclear-power/nuclear 10.jpg|Nuclear Power 10]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 11.png|Nuclear Power 11]
+              [image|nuclear-power/nuclear 11.jpg|Nuclear Power 11]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 12.png|Nuclear Power 12]
+              [image|nuclear-power/nuclear 12.jpg|Nuclear Power 12]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 13.png|Nuclear Power 13]
+              [image|nuclear-power/nuclear 13.jpg|Nuclear Power 13]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 14.png|Nuclear Power 14]
+              [image|nuclear-power/nuclear 14.jpg|Nuclear Power 14]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 15.png|Nuclear Power 15]
+              [image|nuclear-power/nuclear 15.jpg|Nuclear Power 15]
             </div>
           </div>`,
         choices: [
@@ -798,25 +798,25 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|nuclear-power/nuclear 16.png|Nuclear Power 16]
+              [image|nuclear-power/nuclear 16.jpg|Nuclear Power 16]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 17.png|Nuclear Power 17]
+              [image|nuclear-power/nuclear 17.jpg|Nuclear Power 17]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 18.png|Nuclear Power 18]
+              [image|nuclear-power/nuclear 18.jpg|Nuclear Power 18]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 19.png|Nuclear Power 19]
+              [image|nuclear-power/nuclear 19.jpg|Nuclear Power 19]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 20.png|Nuclear Power 20]
+              [image|nuclear-power/nuclear 20.jpg|Nuclear Power 20]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 21.png|Nuclear Power 21]
+              [image|nuclear-power/nuclear 21.jpg|Nuclear Power 21]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 22.png|Nuclear Power 22]
+              [image|nuclear-power/nuclear 22.jpg|Nuclear Power 22]
             </div>
           </div>`,
         choices: [
@@ -840,13 +840,13 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|nuclear-power/nuclear 23.png|Nuclear Power 23]
+              [image|nuclear-power/nuclear 23.jpg|Nuclear Power 23]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 24.png|Nuclear Power 24]
+              [image|nuclear-power/nuclear 24.jpg|Nuclear Power 24]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 25.png|Nuclear Power 25]
+              [image|nuclear-power/nuclear 25.jpg|Nuclear Power 25]
             </div>
           </div>
           <div class="further-reading">
@@ -969,7 +969,7 @@ let Story = [
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/poverty/',
     description: 'This is an essay on poverty and disability.',
-    preview: 'poverty/cover.png',
+    preview: 'poverty/cover.jpg',
     color: 'rgb(166, 53, 52)',
     chapters: [
       {
@@ -982,22 +982,22 @@ let Story = [
             <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
             </div>
             <div class="half">
-              [image|poverty/poverty 01.png|Poverty 1]
+              [image|poverty/poverty 01.jpg|Poverty 1]
             </div>
             <div class="half">
-              [image|poverty/poverty 02.png|Poverty 2]
+              [image|poverty/poverty 02.jpg|Poverty 2]
             </div>
             <div class="half">
-              [image|poverty/poverty 03.png|Poverty 3]
+              [image|poverty/poverty 03.jpg|Poverty 3]
             </div>
             <div class="half">
-              [image|poverty/poverty 04.png|Poverty 4]
+              [image|poverty/poverty 04.jpg|Poverty 4]
             </div>
             <div class="half">
-              [image|poverty/poverty 05.png|Poverty 5]
+              [image|poverty/poverty 05.jpg|Poverty 5]
             </div>
             <div class="half">
-              [image|poverty/poverty 06.png|Poverty 6]
+              [image|poverty/poverty 06.jpg|Poverty 6]
             </div>
           </div>`,
         choices: [
@@ -1015,22 +1015,22 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|poverty/poverty 07.png|Poverty 7]
+              [image|poverty/poverty 07.jpg|Poverty 7]
             </div>
             <div class="half">
-            [image|poverty/poverty 08.png|Poverty 8]
+            [image|poverty/poverty 08.jpg|Poverty 8]
             </div>
             <div class="half">
-              [image|poverty/poverty 09.png|Poverty 9]
+              [image|poverty/poverty 09.jpg|Poverty 9]
             </div>
             <div class="half">
-              [image|poverty/poverty 10.png|Poverty 10]
+              [image|poverty/poverty 10.jpg|Poverty 10]
             </div>
             <div class="half">
-              [image|poverty/poverty 11.png|Poverty 11]
+              [image|poverty/poverty 11.jpg|Poverty 11]
             </div>
             <div class="half">
-              [image|poverty/poverty 12.png|Poverty 12]
+              [image|poverty/poverty 12.jpg|Poverty 12]
             </div>
           </div>`,
         choices: [
@@ -1054,25 +1054,25 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|poverty/poverty 13.png|Poverty 13]
+              [image|poverty/poverty 13.jpg|Poverty 13]
             </div>
             <div class="half">
-              [image|poverty/poverty 14.png|Poverty 14]
+              [image|poverty/poverty 14.jpg|Poverty 14]
             </div>
             <div class="half">
-              [image|poverty/poverty 15.png|Poverty 15]
+              [image|poverty/poverty 15.jpg|Poverty 15]
             </div>
             <div class="half">
-              [image|poverty/poverty 16.png|Poverty 16]
+              [image|poverty/poverty 16.jpg|Poverty 16]
             </div>
             <div class="half">
-              [image|poverty/poverty 17.png|Poverty 17]
+              [image|poverty/poverty 17.jpg|Poverty 17]
             </div>
             <div class="half">
-              [image|poverty/poverty 18.png|Poverty 18]
+              [image|poverty/poverty 18.jpg|Poverty 18]
             </div>
             <div class="half">
-              [image|poverty/poverty 19.png|Poverty 19]
+              [image|poverty/poverty 19.jpg|Poverty 19]
             </div>
           </div>`,
         choices: [
@@ -1096,10 +1096,10 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|poverty/poverty 20.png|Poverty 20]
+              [image|poverty/poverty 20.jpg|Poverty 20]
             </div>
             <div class="half">
-              [image|poverty/poverty 21.png|Poverty 21]
+              [image|poverty/poverty 21.jpg|Poverty 21]
             </div>
           </div>
           <div class="further-reading">
@@ -1148,7 +1148,7 @@ let Story = [
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/cities/',
     description: 'This is an essay on transport.',
-    preview: 'transport/cover.png',
+    preview: 'transports/cover.jpg',
     color: 'rgb(62, 57, 63)',
     chapters: [
       {
@@ -1164,16 +1164,16 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|transport/transport 01.png|Transport 1]
+              [image|transports/transports 01.jpg|Transport 1]
             </div>
             <div class="half">
-              [image|transport/transport 02.png|Transport 2]
+              [image|transports/transports 02.jpg|Transport 2]
             </div>
             <div class="half">
-              [image|transport/transport 03.png|Transport 3]
+              [image|transports/transports 03.jpg|Transport 3]
             </div>
             <div class="half">
-              [image|transport/transport 04.png|Transport 4]
+              [image|transports/transports 04.jpg|Transport 4]
             </div>
           </div>`,
         choices: [
@@ -1197,25 +1197,25 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|transport/transport 05.png|Transport 5]
+              [image|transports/transports 05.jpg|Transport 5]
             </div>
             <div class="half">
-              [image|transport/transport 06.png|Transport 6]
+              [image|transports/transports 06.jpg|Transport 6]
             </div>
             <div class="half">
-              [image|transport/transport 07.png|Transport 7]
+              [image|transports/transports 07.jpg|Transport 7]
             </div>
             <div class="half">
-              [image|transport/transport 08.png|Transport 8]
+              [image|transports/transports 08.jpg|Transport 8]
             </div>
             <div class="half">
-              [image|transport/transport 09.png|Transport 9]
+              [image|transports/transports 09.jpg|Transport 9]
             </div>
             <div class="half">
-              [image|transport/transport 10.png|Transport 10]
+              [image|transports/transports 10.jpg|Transport 10]
             </div>
             <div class="half">
-              [image|transport/transport 11.png|Transport 11]
+              [image|transports/transports 11.jpg|Transport 11]
             </div>
           </div>`,
         choices: [
@@ -1245,22 +1245,22 @@ let Story = [
         content: `
         <div class="comic-grid">
           <div class="half">
-            [image|transport/transport 12.png|Transport 12]
+            [image|transports/transports 12.jpg|Transport 12]
           </div>
           <div class="half">
-            [image|transport/transport 13.png|Transport 13]
+            [image|transports/transports 13.jpg|Transport 13]
           </div>
           <div class="half">
-            [image|transport/transport 14.png|Transport 14]
+            [image|transports/transports 14.jpg|Transport 14]
           </div>
           <div class="half">
-            [image|transport/transport 15.png|Transport 15]
+            [image|transports/transports 15.jpg|Transport 15]
           </div>
           <div class="half">
-            [image|transport/transport 16.png|Transport 16]
+            [image|transports/transports 16.jpg|Transport 16]
           </div>
           <div class="half">
-            [image|transport/transport 17.png|Transport 17]
+            [image|transports/transports 17.jpg|Transport 17]
           </div>
         </div>`,
         choices: [
@@ -1290,16 +1290,16 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|transport/transport 18.png|Transport 18]
+              [image|transports/transports 18.jpg|Transport 18]
             </div>
             <div class="half">
-              [image|transport/transport 19.png|Transport 19]
+              [image|transports/transports 19.jpg|Transport 19]
             </div>
             <div class="half">
-              [image|transport/transport 20.png|Transport 20]
+              [image|transports/transports 20.jpg|Transport 20]
             </div>
             <div class="half">
-              [image|transport/transport 21.png|Transport 21]
+              [image|transports/transports 21.jpg|Transport 21]
             </div>
           </div>
           <div class="further-reading">
@@ -1348,7 +1348,7 @@ let Story = [
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/education/',
     description: 'A story on the issue of gender equality.',
-    preview: 'agatha-christie/cover.png',
+    preview: 'agatha-christie/cover.jpg',
     color: 'rgb(142, 1, 49)',
     tasks: [
       {
@@ -1361,107 +1361,107 @@ let Story = [
         items: [
           {
             order: 0,
-            image: 'agatha-christie/agatha 01.png'
+            image: 'agatha-christie/agatha 01.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 02.png'
+            image: 'agatha-christie/agatha 02.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 03.png'
+            image: 'agatha-christie/agatha 03.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 04.png'
+            image: 'agatha-christie/agatha 04.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 05.png'
+            image: 'agatha-christie/agatha 05.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 06.png'
+            image: 'agatha-christie/agatha 06.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 07.png'
+            image: 'agatha-christie/agatha 07.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 08.png'
+            image: 'agatha-christie/agatha 08.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 09.png'
+            image: 'agatha-christie/agatha 09.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 10.png'
+            image: 'agatha-christie/agatha 10.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 11.png'
+            image: 'agatha-christie/agatha 11.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 12.png'
+            image: 'agatha-christie/agatha 12.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 13.png'
+            image: 'agatha-christie/agatha 13.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 14.png'
+            image: 'agatha-christie/agatha 14.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 15.png'
+            image: 'agatha-christie/agatha 15.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 16.png'
+            image: 'agatha-christie/agatha 16.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 17.png'
+            image: 'agatha-christie/agatha 17.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 18.png'
+            image: 'agatha-christie/agatha 18.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 19.png'
+            image: 'agatha-christie/agatha 19.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 20.png'
+            image: 'agatha-christie/agatha 20.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 21.png'
+            image: 'agatha-christie/agatha 21.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 22.png'
+            image: 'agatha-christie/agatha 22.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 23.png'
+            image: 'agatha-christie/agatha 23.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 24.png'
+            image: 'agatha-christie/agatha 24.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 25.png'
+            image: 'agatha-christie/agatha 25.jpg'
           },
           {
             order: 1,
-            image: 'agatha-christie/agatha 26.png'
+            image: 'agatha-christie/agatha 26.jpg'
           }
         ]
       }
@@ -1474,28 +1474,28 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|agatha-christie/agatha 01.png|Agatha 1]
+              [image|agatha-christie/agatha 01.jpg|Agatha 1]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 02.png|Agatha 2]
+              [image|agatha-christie/agatha 02.jpg|Agatha 2]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 03.png|Agatha 3]
+              [image|agatha-christie/agatha 03.jpg|Agatha 3]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 04.png|Agatha 4]
+              [image|agatha-christie/agatha 04.jpg|Agatha 4]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 05.png|Agatha 5]
+              [image|agatha-christie/agatha 05.jpg|Agatha 5]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 06.png|Agatha 6]
+              [image|agatha-christie/agatha 06.jpg|Agatha 6]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 07.png|Agatha 7]
+              [image|agatha-christie/agatha 07.jpg|Agatha 7]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 08.png|Agatha 8]
+              [image|agatha-christie/agatha 08.jpg|Agatha 8]
             </div>
           </div>`,
         choices: [
@@ -1513,28 +1513,28 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|agatha-christie/agatha 09.png|Agatha 9]
+              [image|agatha-christie/agatha 09.jpg|Agatha 9]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 10.png|Agatha 10]
+              [image|agatha-christie/agatha 10.jpg|Agatha 10]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 11.png|Agatha 11]
+              [image|agatha-christie/agatha 11.jpg|Agatha 11]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 12.png|Agatha 12]
+              [image|agatha-christie/agatha 12.jpg|Agatha 12]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 13.png|Agatha 13]
+              [image|agatha-christie/agatha 13.jpg|Agatha 13]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 14.png|Agatha 14]
+              [image|agatha-christie/agatha 14.jpg|Agatha 14]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 15.png|Agatha 15]
+              [image|agatha-christie/agatha 15.jpg|Agatha 15]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 16.png|Agatha 16]
+              [image|agatha-christie/agatha 16.jpg|Agatha 16]
             </div>
           </div>`,
         choices: [
@@ -1558,25 +1558,25 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|agatha-christie/agatha 17.png|Agatha 17]
+              [image|agatha-christie/agatha 17.jpg|Agatha 17]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 18.png|Agatha 18]
+              [image|agatha-christie/agatha 18.jpg|Agatha 18]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 19.png|Agatha 19]
+              [image|agatha-christie/agatha 19.jpg|Agatha 19]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 20.png|Agatha 20]
+              [image|agatha-christie/agatha 20.jpg|Agatha 20]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 21.png|Agatha 15]
+              [image|agatha-christie/agatha 21.jpg|Agatha 15]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 22.png|Agatha 16]
+              [image|agatha-christie/agatha 22.jpg|Agatha 16]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 23.png|Agatha 17]
+              [image|agatha-christie/agatha 23.jpg|Agatha 17]
             </div>
           </div>`,
         choices: [
@@ -1600,13 +1600,13 @@ let Story = [
         content: `
           <div class="comic-grid">
             <div class="half">
-              [image|agatha-christie/agatha 24.png|Agatha 18]
+              [image|agatha-christie/agatha 24.jpg|Agatha 18]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 25.png|Agatha 19]
+              [image|agatha-christie/agatha 25.jpg|Agatha 19]
             </div>
             <div class="half">
-              [image|agatha-christie/agatha 26.png|Agatha 20]
+              [image|agatha-christie/agatha 26.jpg|Agatha 20]
             </div>
           </div>
           <div class="further-reading">

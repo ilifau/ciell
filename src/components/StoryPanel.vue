@@ -237,7 +237,7 @@ export default {
 .choices a.previous,
 .choices a.next {
   display: inline-block;
-  width: 25%;
+  width: 33%;
 }
 
 .choices a.previous {
@@ -286,10 +286,11 @@ label {
 }
 
 @media screen and (max-width: 640px) {
+  .choices a,
   .choices a.previous,
   .choices a.next {
-    display: inline-block;
-    width: 49%;
+    display: block;
+    width: 100%;
   }
 }
 </style>

@@ -1,15 +1,21 @@
 <template>
   <div class="header-wrapper">
-    <div class="header" v-bind:class="{ showHeaderBackground: showHeaderBackground }">
+    <!-- <div class="header" v-bind:class="{ showHeaderBackground: showHeaderBackground }"> -->
+    <div class="header showHeaderBackground">
       <router-link class="story-title" to="/">
         <div v-if="showBacktoStoriesLink()"><v-icon name="arrow-left" v-if="showBacktoStoriesLink()" scale="0.75" /> {{ storyTitle }}</div>
         <div v-else>&nbsp;</div>
       </router-link>
-      <span class="nav-toggle" v-bind:class="{ active: navIsActive, story: showBacktoStoriesLink() }">
-        <a v-on:click="toggleNav()">
-          <span class="nav-circle"></span><span class="nav-circle"></span><span class="nav-circle"></span>
+      <div class="toggle-wrapper">
+        <a class="toggle-font" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'" v-on:click="toggleBaseFont()">
+          Abc
         </a>
-      </span>
+        <span class="nav-toggle" v-bind:class="{ active: navIsActive, story: showBacktoStoriesLink() }">
+          <a v-on:click="toggleNav()">
+            <span class="nav-circle"></span><span class="nav-circle"></span><span class="nav-circle"></span>
+          </a>
+        </span>
+        </div>
     </div>
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-bind:class="{ active: navIsActive }">
@@ -136,6 +142,30 @@ export default {
     }
 } */
 
+.toggle-font {
+  position: absolute;
+  right: 4.5em;
+  top: .475em;
+  font-weight: 400;
+  font-size: .875em;
+}
+
+.toggle-font {
+  font-family: 'opendyslexic';
+}
+
+.toggle-font.active {
+  font-family: -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Oxygen-Sans,
+                Ubuntu,
+                Cantarell,
+                "Helvetica Neue",
+                sans-serif;
+}
+
 .nav-toggle a {
   display: flex;
   position: absolute;
@@ -255,6 +285,11 @@ export default {
 }
 
 @media screen and (max-width: 767px) {
+  .toggle-font {  
+    right: 4em;
+    top: .45em;
+  }
+
   .nav-circle {
     width: 8px;
     height: 8px;

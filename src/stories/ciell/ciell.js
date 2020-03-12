@@ -1352,7 +1352,7 @@ let Story = [
     color: 'rgb(142, 1, 49)',
     tasks: [
       {
-        id: 20,
+        id: 10,
         name: 'A puzzle task',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -1368,100 +1368,32 @@ let Story = [
             image: 'agatha-christie/agatha 02.jpg'
           },
           {
-            order: 1,
+            order: 2,
             image: 'agatha-christie/agatha 03.jpg'
           },
           {
-            order: 1,
+            order: 3,
             image: 'agatha-christie/agatha 04.jpg'
           },
           {
-            order: 1,
+            order: 4,
             image: 'agatha-christie/agatha 05.jpg'
           },
           {
-            order: 1,
+            order: 5,
             image: 'agatha-christie/agatha 06.jpg'
           },
           {
-            order: 1,
+            order: 6,
             image: 'agatha-christie/agatha 07.jpg'
           },
           {
-            order: 1,
+            order: 7,
             image: 'agatha-christie/agatha 08.jpg'
           },
           {
-            order: 1,
+            order: 8,
             image: 'agatha-christie/agatha 09.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 10.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 11.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 12.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 13.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 14.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 15.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 16.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 17.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 18.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 19.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 20.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 21.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 22.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 23.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 24.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 25.jpg'
-          },
-          {
-            order: 1,
-            image: 'agatha-christie/agatha 26.jpg'
           }
         ]
       }
@@ -1723,7 +1655,7 @@ let Story = [
       },
       {
         id: 40,
-        taskId: 20,
+        taskId: 10,
         title: 'Task: Agatha Christie',
         content: '',
         choices: [

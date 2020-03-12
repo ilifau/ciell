@@ -2,18 +2,19 @@
   <div class="task-list">
     <h1>Tasks in this essay</h1>
     <div v-if="getTasks() && getTasks().length > 0">
-      <ul class="task-list">
+      <ol class="task-list">
         <li v-for="(task, id) in getTasks()" :key="id">
           <div>
             <span>
-              <span class="task-name" v-bind:class="{ 'complete' : taskDone(task.id) }">{{ task.name }}</span> ({{ task.typeName }})
-            </span>
-            <span class="task-checkmark" v-if="taskDone(task.id)">
-              <v-icon name="check" scale="1.5" />
+              <span class="task-name" v-bind:class="{ 'complete' : taskDone(task.id) }">{{ task.name }}</span>
+                <span class="task-checkmark" v-if="taskDone(task.id)">
+                  <v-icon name="check" scale="1" />
+                </span>
+                ({{ task.typeName }})
             </span>
           </div>
         </li>
-      </ul>
+      </ol>
       <div class="badge" v-html="badge(this.$store.state.currentStoryId)"></div>
     </div>
     <p v-else>This essay does not contain any tasks yet.</p>
@@ -34,7 +35,7 @@ export default {
       return this.$store.state.tasksComplete.includes(id)
     },
     tasksCompletedPercent (storyId) {
-      if (!storyId || !Stories[storyId].tasks) {
+      if (typeof Stories[storyId].tasks === 'undefined') {
         return 0
       }
 
@@ -55,18 +56,18 @@ export default {
 
       if (percent === 0) {
         badge = null
-        title = '<p>As soon as you complete the tasks in this essay, you will be rewarded with a medal (bronze, silver, gold). Open the next chapter to begin working on the tasks.</p><p>Good luck!</p>'
+        title = '<p>As soon as you complete the tasks in this essay, <strong>you will be rewarded with a medal</strong> (bronze, silver, gold). Open the next chapter to begin working on the tasks.</p><p>Good luck!</p>'
       } else if (percent > 0 && percent <= 33.34) {
         badge = require('@/stories/ciell/assets/img/badges/badge-bronze.png')
-        title = '<p>Fair enough, you earned yourself a bronze medal. But you can certainly do better than that!</p>'
+        title = '<p>Fair enough, you earned yourself a <strong>bronze medal</strong>. But you can certainly do better than that!</p>'
         alt = 'Bronze badge'
       } else if (percent > 33.34 && percent <= 66.67) {
         badge = require('@/stories/ciell/assets/img/badges/badge-silver.png')
-        title = '<p>Good job, you earned yourself a silver medal for this essay! Can you get the gold medal?</p>'
+        title = '<p>Good job, you earned yourself a <strong>silver medal</strong> for this essay! Can you get the gold medal?</p>'
         alt = 'Silver badge'
       } else if (percent > 66.67) {
         badge = require('@/stories/ciell/assets/img/badges/badge-gold.png')
-        title = '<p>Wow, awesome! You completed all tasks successfully and earned yourself a gold medal for this essay. Keep up the good work!</p>'
+        title = '<p>Wow, awesome! You completed all tasks successfully and earned yourself a <strong>gold medal</strong> for this essay. Keep up the good work!</p>'
         alt = 'Gold badge'
       }
 
@@ -103,8 +104,5 @@ export default {
   .task-checkmark {
     color: #08723d;
     display: inline-block;
-    position: relative;
-    margin-left: .2em;
-    top: .175em;
   }
 </style>

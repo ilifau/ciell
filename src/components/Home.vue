@@ -29,7 +29,7 @@ export default {
       return this.$props.stories[this.$store.state.currentStoryId].preview
     },
     tasksCompleted (storyId) {
-      if (!storyId || !this.$props.stories[storyId].tasks) {
+      if (typeof this.$props.stories[storyId].tasks === 'undefined') {
         return false
       }
 
@@ -42,7 +42,7 @@ export default {
       return checker(this.$store.state.tasksComplete, taskIds)
     },
     tasksCompletedPercent (storyId) {
-      if (!storyId || !this.$props.stories[storyId].tasks) {
+      if (!this.$props.stories[storyId].tasks) {
         return 0
       }
 

@@ -101,11 +101,11 @@ let Story = [
           },
           {
             order: 4,
-            image: 'info-graphics/basic-essay-structure-conclusion-1.jpg'
+            image: 'info-graphics/basic-essay-structure-6.jpg'
           },
           {
             order: 5,
-            image: 'info-graphics/basic-essay-structure-6.jpg'
+            image: 'info-graphics/basic-essay-structure-conclusion-1.jpg'
           }
         ]
       },

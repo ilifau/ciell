@@ -34,20 +34,12 @@ export default {
     }
   },
   created () {
-    // Shuffle task items if task has not been completed
-    if (this.isComplete) {
-      return
+    this.shuffle()
+  },
+  watch: {
+    task: function () {
+      this.shuffle()
     }
-
-    let items = this.task.items
-    for (var i = items.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1))
-      var temp = items[i]
-      items[i] = items[j]
-      items[j] = temp
-    }
-
-    this.task.items = items
   },
   methods: {
     checkTask () {
@@ -99,6 +91,21 @@ export default {
     },
     hideTaskMessage () {
       this.showTaskMessage = false
+    },
+    shuffle () {
+      if (this.isComplete) {
+        return
+      }
+
+      let items = this.task.items
+      for (var i = items.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1))
+        var temp = items[i]
+        items[i] = items[j]
+        items[j] = temp
+      }
+
+      this.task.items = items
     }
   }
 }

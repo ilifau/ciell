@@ -1,6 +1,6 @@
 let Story = [
   {
-    id: 0,
+    id: 40,
     title: 'The Invisible Girls',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/gender-equality/',
@@ -9,8 +9,127 @@ let Story = [
     color: 'rgb(65, 84, 108)',
     tasks: [
       {
-        id: 10,
-        name: 'Choose the correct image',
+        id: 30,
+        name: 'Sort the items',
+        type: 'sort',
+        typeName: 'Sorting',
+        title: '',
+        description: '',
+        items: [
+          {
+            order: 10,
+            title: 'Introduction',
+            class: 'introduction'
+          },
+          {
+            order: 20,
+            title: 'Paragraph 1',
+            class: 'paragraph'
+          },
+          {
+            order: 30,
+            title: 'Paragraph 2',
+            class: 'paragraph'
+          },
+          {
+            order: 40,
+            title: 'Paragraph 3',
+            class: 'paragraph'
+          },
+          {
+            order: 50,
+            title: 'Conclusion',
+            class: 'conclusion'
+          }
+        ]
+      },
+      {
+        id: 20,
+        name: 'A single choice quiz',
+        type: 'multiple-choice',
+        typeName: 'Single Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Which object is the heaviest?',
+            answers: [
+              {
+                text: 'A feather'
+              },
+              {
+                text: 'A spaceship',
+                correct: true
+              },
+              {
+                text: 'A car'
+              }
+            ]
+          },
+          {
+            question: 'What is the color of a ripe tomato?',
+            answers: [
+              {
+                text: 'Green'
+              },
+              {
+                text: 'Red',
+                correct: true
+              },
+              {
+                text: 'I don\'t know...'
+              },
+              {
+                text: 'Red again, also true!',
+                correct: true
+              }
+            ]
+          },
+          {
+            question: 'How many sides has a rectangle?',
+            singleChoice: true,
+            answers: [
+              {
+                text: 'One'
+              },
+              {
+                text: 'Two'
+              },
+              {
+                text: 'Three'
+              },
+              {
+                text: 'Four',
+                correct: true
+              }
+            ]
+          },
+          {
+            question: 'Select all words that contain the letter "E"',
+            answers: [
+              {
+                text: 'Elephant',
+                correct: true
+              },
+              {
+                text: 'Piano'
+              },
+              {
+                text: 'General',
+                correct: true
+              },
+              {
+                text: 'Bruce Lee',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 40,
+        name: 'Select some images',
         type: 'image-choice',
         typeName: 'Image Choice',
         title: '',
@@ -18,152 +137,45 @@ let Story = [
         items: [
           {
             singleChoice: true,
-            question: 'Choose the image that does not belong in the introduction',
+            question: 'Which object is the heaviest?',
             answers: [
               {
-                text: 'Examples',
-                image: 'info-graphics/basic-essay-structure-9.jpg',
+                text: 'A feather',
+                image: 'gender-equality/invisible 08.jpg'
+              },
+              {
+                text: 'A spaceship',
+                image: 'gender-equality/invisible 09.jpg',
                 correct: true
               },
               {
-                text: 'Rephrase Topic',
-                image: 'info-graphics/basic-essay-structure-1.jpg'
-              },
-              {
-                text: 'Answer the Question',
-                image: 'info-graphics/basic-essay-structure-2.jpg'
+                text: 'A car',
+                image: 'gender-equality/invisible 10.jpg'
               }
             ]
           },
           {
-            singleChoice: true,
-            question: 'Choose the image that does not belong in the main body paragraph',
+            question: 'What is the color of a ripe tomato?',
             answers: [
               {
-                text: 'Topic Sentence',
-                image: 'info-graphics/basic-essay-structure-3.jpg'
+                text: 'Green',
+                image: 'gender-equality/invisible 03.jpg'
               },
               {
-                text: 'Examples',
-                image: 'info-graphics/basic-essay-structure-5.jpg'
-              },
-              {
-                text: 'Rephrase Topic',
-                image: 'info-graphics/basic-essay-structure-1.jpg',
-                correct: true
-              }
-            ]
-          },
-          {
-            singleChoice: true,
-            question: 'Choose the image that does not belong in the conclusion',
-            answers: [
-              {
-                text: 'Summary',
-                image: 'info-graphics/basic-essay-structure-conclusion-2.jpg'
-              },
-              {
-                text: 'Explanations',
-                image: 'info-graphics/basic-essay-structure-8.jpg',
+                text: 'Red',
+                image: 'gender-equality/invisible 04.jpg',
                 correct: true
               },
               {
-                text: 'Conclusion',
-                image: 'info-graphics/basic-essay-structure-conclusion-1.jpg'
+                text: 'I don\'t know...',
+                image: 'gender-equality/invisible 05.jpg'
+              },
+              {
+                text: 'Red again, also true!',
+                image: 'gender-equality/invisible 06 b.jpg',
+                correct: true
               }
             ]
-          }
-        ]
-      },
-      {
-        id: 20,
-        name: 'Reorder the infographic panels',
-        type: 'puzzle',
-        typeName: 'Puzzle',
-        title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order, then press "Check order".</p>',
-        items: [
-          {
-            order: 0,
-            image: 'info-graphics/basic-essay-structure-1.jpg'
-          },
-          {
-            order: 1,
-            image: 'info-graphics/basic-essay-structure-3.jpg'
-          },
-          {
-            order: 2,
-            image: 'info-graphics/basic-essay-structure-4.jpg'
-          },
-          {
-            order: 3,
-            image: 'info-graphics/basic-essay-structure-5.jpg'
-          },
-          {
-            order: 4,
-            image: 'info-graphics/basic-essay-structure-conclusion-1.jpg'
-          },
-          {
-            order: 5,
-            image: 'info-graphics/basic-essay-structure-6.jpg'
-          }
-        ]
-      },
-      {
-        id: 30,
-        name: 'Reorder the comic panels',
-        type: 'puzzle',
-        typeName: 'Puzzle',
-        title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order, then press "Check order".</p>',
-        items: [
-          {
-            order: 10,
-            image: 'gender-equality/invisible 00.jpg'
-          },
-          {
-            order: 20,
-            image: 'gender-equality/invisible 06 b.jpg'
-          },
-          {
-            order: 30,
-            image: 'gender-equality/invisible 09.jpg'
-          },
-          {
-            order: 40,
-            image: 'gender-equality/invisible 10.jpg'
-          },
-          {
-            order: 45,
-            image: 'gender-equality/invisible 11.jpg'
-          },
-          {
-            order: 50,
-            image: 'gender-equality/invisible 12.jpg'
-          },
-          {
-            order: 60,
-            image: 'gender-equality/invisible 18.jpg'
-          },
-          {
-            order: 70,
-            image: 'gender-equality/invisible 20.jpg'
-          },
-          {
-            order: 80,
-            image: 'gender-equality/invisible 22.jpg'
-          },
-          {
-            order: 90,
-            image: 'gender-equality/invisible 23.jpg'
-          },
-          {
-            order: 100,
-            image: 'gender-equality/invisible 24.jpg'
-          },
-          {
-            order: 110,
-            image: 'gender-equality/invisible 25.jpg'
           }
         ]
       }
@@ -308,9 +320,9 @@ let Story = [
         id: 30,
         title: '',
         content: `
-          <div class="comic-grid">
+            <div class="comic-grid">
             <div class="half text info info--conclusion">
-              <h2>Conclusion</h2><p>The <strong>conclusion</strong> provides an answer to the question set out in the introduction and reminds the reader of your reasons.</p>
+            <h2>Conclusion</h2><p>The <strong>conclusion</strong> provides an answer to the question set out in the introduction and reminds the reader of your reasons.</p>
             </div>
             <div class="half">
               [image|gender-equality/invisible 23.jpg|Invisible Girls 23]
@@ -411,12 +423,12 @@ let Story = [
             'text': 'Tasks',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 50
+            'chapterId': 45
           }
         ]
       },
       {
-        id: 50,
+        id: 45,
         title: '',
         content: '[tasks]',
         choices: [
@@ -430,15 +442,35 @@ let Story = [
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        taskId: 30,
+        title: 'Task: The Invisible Girls',
+        content: `<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order, then press "Check order".</p>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 45
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
             'chapterId': 60
           }
         ]
       },
       {
         id: 60,
-        taskId: 10,
-        title: 'Task: Image Choice',
-        content: '',
+        taskId: 20,
+        title: 'Task: Multiple Choice',
+        content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Answer the following questions and click the "Check answers" button.</p>`,
         choices: [
           {
             'text': 'Previous',
@@ -456,9 +488,9 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 20,
-        title: 'Task: Puzzle',
-        content: '',
+        taskId: 40,
+        title: 'Task: Image Choice',
+        content: `<p style="margin-bottom:1em"><strong>Instructions:</strong> Answer the following questions and click the "Check answers" button.</p>`,
         choices: [
           {
             'text': 'Previous',
@@ -476,9 +508,8 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 30,
-        title: 'Task: Puzzle',
-        content: '',
+        title: 'Evaluation: The Invisible Girls',
+        content: `<p>This chapter will contain the evaluation for this story.</p>`,
         choices: [
           {
             'text': 'Previous',
@@ -497,13 +528,14 @@ let Story = [
     ]
   },
   {
-    id: 100,
+    id: 30,
     title: 'Climate Action',
     description: 'This is a story about climate action.',
     url: 'https://www.un.org/sustainabledevelopment/climate-change/',
     author: 'CIELL Team',
     preview: 'climate-change/cover.jpg',
     color: 'rgb(113, 104, 123)',
+    tasks: null,
     chapters: [
       {
         id: 0,
@@ -667,165 +699,13 @@ let Story = [
     ]
   },
   {
-    id: 10,
+    id: 20,
     title: 'Nuclear Power',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/energy/',
     description: 'This is another empty story.',
     preview: 'nuclear-power/cover.jpg',
     color: 'rgb(240, 78, 79)',
-    tasks: [
-      {
-        id: 40,
-        name: 'Choose the correct image',
-        type: 'image-choice',
-        typeName: 'Image Choice',
-        title: '',
-        description: '',
-        items: [
-          {
-            singleChoice: false,
-            question: 'Choose the images that do not belong in the introduction.',
-            answers: [
-              {
-                text: 'Examples',
-                image: 'info-graphics/basic-essay-structure-9.jpg',
-                correct: true
-              },
-              {
-                text: 'Rephrase Topic',
-                image: 'info-graphics/basic-essay-structure-1.jpg'
-              },
-              {
-                text: 'Summary',
-                image: 'info-graphics/basic-essay-structure-conclusion-2.jpg',
-                correct: true
-              }
-            ]
-          },
-          {
-            singleChoice: false,
-            question: 'Choose the images that do not belong in the main body paragraph',
-            answers: [
-              {
-                text: 'Answer the Question',
-                image: 'info-graphics/basic-essay-structure-2.jpg',
-                correct: true
-              },
-              {
-                text: 'Summary',
-                image: 'info-graphics/basic-essay-structure-conclusion-2.jpg',
-                correct: true
-              },
-              {
-                text: 'Topic Sentence',
-                image: 'info-graphics/basic-essay-structure-7.jpg'
-              }
-            ]
-          },
-          {
-            singleChoice: false,
-            question: 'Choose the images that do not belong in the conclusion',
-            answers: [
-              {
-                text: 'Concluding Sentence',
-                image: 'info-graphics/basic-essay-structure-10.jpg',
-                correct: true
-              },
-              {
-                text: 'Conclusion',
-                image: 'info-graphics/basic-essay-structure-conclusion-1.jpg'
-              },
-              {
-                text: 'Explanations',
-                image: 'info-graphics/basic-essay-structure-8.jpg',
-                correct: true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 50,
-        name: 'Reorder the comic panels',
-        type: 'puzzle',
-        typeName: 'Puzzle',
-        title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels of the introduction of this essay into the correct order, then press "Check order".</p>',
-        items: [
-          {
-            order: 0,
-            image: 'nuclear-power/nuclear 01.jpg'
-          },
-          {
-            order: 1,
-            image: 'nuclear-power/nuclear 02.jpg'
-          },
-          {
-            order: 2,
-            image: 'nuclear-power/nuclear 03.jpg'
-          },
-          {
-            order: 3,
-            image: 'nuclear-power/nuclear 04.jpg'
-          },
-          {
-            order: 4,
-            image: 'nuclear-power/nuclear 05.jpg'
-          }
-        ]
-      },
-      {
-        id: 60,
-        name: 'Reorder the comic panels',
-        type: 'puzzle',
-        typeName: 'Puzzle',
-        title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels of this essay paragraph into the correct order, then press "Check order".</p>',
-        items: [
-          {
-            order: 0,
-            image: 'nuclear-power/nuclear 06.jpg'
-          },
-          {
-            order: 1,
-            image: 'nuclear-power/nuclear 07.jpg'
-          },
-          {
-            order: 2,
-            image: 'nuclear-power/nuclear 08.jpg'
-          },
-          {
-            order: 3,
-            image: 'nuclear-power/nuclear 09.jpg'
-          },
-          {
-            order: 4,
-            image: 'nuclear-power/nuclear 10.jpg'
-          },
-          {
-            order: 5,
-            image: 'nuclear-power/nuclear 11.jpg'
-          },
-          {
-            order: 6,
-            image: 'nuclear-power/nuclear 12.jpg'
-          },
-          {
-            order: 7,
-            image: 'nuclear-power/nuclear 13.jpg'
-          },
-          {
-            order: 8,
-            image: 'nuclear-power/nuclear 14.jpg'
-          },
-          {
-            order: 9,
-            image: 'nuclear-power/nuclear 15.jpg'
-          }
-        ]
-      }
-    ],
     chapters: [
       {
         id: 0,
@@ -866,11 +746,6 @@ let Story = [
         title: '',
         content: `
           <div class="comic-grid">
-            <div class="half text info info--paragraph">
-              <h2>Paragraph 1</h2><p>The <strong>body</strong> of the essay is the part that addresses the question. It should be organised into 2-3 <strong>paragraphs</strong>. Each
-              paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
-              way to those that precede and follow it.</p>
-            </div>
             <div class="half">
               [image|nuclear-power/nuclear 06.jpg|Nuclear Power 6]
             </div>
@@ -922,9 +797,6 @@ let Story = [
         title: '',
         content: `
           <div class="comic-grid">
-            <div class="half text info info--paragraph">
-              <h2>Paragraph 2</h2><p>Each paragraph begins by introducing an aspect of the issue, then explains the issue and gives <strong>examples</strong>.</p>
-            </div>
             <div class="half">
               [image|nuclear-power/nuclear 16.jpg|Nuclear Power 16]
             </div>
@@ -967,9 +839,6 @@ let Story = [
         title: '',
         content: `
           <div class="comic-grid">
-            <div class="half text info info--conclusion">
-              <h2>Conclusion</h2><p>The <strong>conclusion</strong> provides an answer to the question set out in the introduction and reminds the reader of your reasons.</p>
-            </div>
             <div class="half">
               [image|nuclear-power/nuclear 23.jpg|Nuclear Power 23]
             </div>
@@ -992,15 +861,15 @@ let Story = [
             'chapterId': 20
           },
           {
-            'text': 'Infographic',
+            'text': 'Tasks',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 40
+            'chapterId': 35
           }
         ]
       },
       {
-        id: 40,
+        id: 35,
         title: 'Infographic: Basic Essay Structure',
         titleClass: 'center',
         content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
@@ -1069,12 +938,12 @@ let Story = [
             'text': 'Tasks',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 50
+            'chapterId': 40
           }
         ]
       },
       {
-        id: 50,
+        id: 40,
         title: '',
         content: '[tasks]',
         choices: [
@@ -1082,67 +951,7 @@ let Story = [
             'text': 'Infographic',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 40
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 60
-          }
-        ]
-      },
-      {
-        id: 60,
-        taskId: 40,
-        title: 'Task: Image Choice',
-        content: '',
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 50
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 70
-          }
-        ]
-      },
-      {
-        id: 70,
-        taskId: 50,
-        title: 'Task: Puzzle',
-        content: '',
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 60
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 80
-          }
-        ]
-      },
-      {
-        id: 80,
-        taskId: 60,
-        title: 'Task: Puzzle',
-        content: '',
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 70
+            'chapterId': 35
           },
           {
             'text': 'Restart',
@@ -1168,8 +977,10 @@ let Story = [
         title: 'End Poverty',
         examQuestion: '<p>Investing in equal access to education, jobs and public services for young people with disabilities or learning difficulties will help to reduce world poverty.</p><p class="last">Do you agree or disagree with this statement? Explain the reasons for your opinion.</p>',
         content: `
-          <h2>Introduction</h2>
           <div class="comic-grid">
+            <div class="half text info info--introduction">
+            <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
+            </div>
             <div class="half">
               [image|poverty/poverty 01.jpg|Poverty 1]
             </div>
@@ -1200,7 +1011,7 @@ let Story = [
       },
       {
         id: 10,
-        title: 'Paragraph 1',
+        title: '',
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -1239,7 +1050,7 @@ let Story = [
       },
       {
         id: 15,
-        title: 'Paragraph 2',
+        title: '',
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -1281,7 +1092,7 @@ let Story = [
       },
       {
         id: 20,
-        title: 'Conclusion',
+        title: '',
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -1332,7 +1143,7 @@ let Story = [
     ]
   },
   {
-    id: 50,
+    id: 60,
     title: 'Transport',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/cities/',
@@ -1500,7 +1311,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 20
+            'chapterId': 30
           },
           {
             'text': 'Tasks',
@@ -1532,13 +1343,61 @@ let Story = [
     ]
   },
   {
-    id: 55,
+    id: 10,
     title: 'Agatha Christie',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/education/',
     description: 'A story on the issue of gender equality.',
     preview: 'agatha-christie/cover.jpg',
     color: 'rgb(142, 1, 49)',
+    tasks: [
+      {
+        id: 10,
+        name: 'A puzzle task',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order, then press "Check order".</p>',
+        items: [
+          {
+            order: 0,
+            image: 'agatha-christie/agatha 01.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 02.jpg'
+          },
+          {
+            order: 2,
+            image: 'agatha-christie/agatha 03.jpg'
+          },
+          {
+            order: 3,
+            image: 'agatha-christie/agatha 04.jpg'
+          },
+          {
+            order: 4,
+            image: 'agatha-christie/agatha 05.jpg'
+          },
+          {
+            order: 5,
+            image: 'agatha-christie/agatha 06.jpg'
+          },
+          {
+            order: 6,
+            image: 'agatha-christie/agatha 07.jpg'
+          },
+          {
+            order: 7,
+            image: 'agatha-christie/agatha 08.jpg'
+          },
+          {
+            order: 8,
+            image: 'agatha-christie/agatha 09.jpg'
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -1576,12 +1435,12 @@ let Story = [
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 10
+            'chapterId': 15
           }
         ]
       },
       {
-        id: 10,
+        id: 15,
         title: '',
         content: `
           <div class="comic-grid">
@@ -1615,7 +1474,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 0
+            'chapterId': 10
           },
           {
             'text': 'Next',
@@ -1657,7 +1516,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 10
+            'chapterId': 15
           },
           {
             'text': 'Next',
@@ -1697,12 +1556,12 @@ let Story = [
             'text': 'Infographic',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 40
+            'chapterId': 35
           }
         ]
       },
       {
-        id: 40,
+        id: 35,
         title: 'Infographic: Basic Essay Structure',
         titleClass: 'center',
         content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
@@ -1771,12 +1630,12 @@ let Story = [
             'text': 'Tasks',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 50
+            'chapterId': 38
           }
         ]
       },
       {
-        id: 50,
+        id: 38,
         title: '',
         content: '[tasks]',
         choices: [
@@ -1784,7 +1643,27 @@ let Story = [
             'text': 'Infographic',
             'class': 'previous',
             'iconBefore': 'arrow-left',
+            'chapterId': 35
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
             'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        taskId: 10,
+        title: 'Task: Agatha Christie',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 38
           },
           {
             'text': 'Restart',
@@ -1797,7 +1676,7 @@ let Story = [
     ]
   },
   {
-    id: 25,
+    id: 70,
     title: 'Homeless',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/poverty/',
@@ -1810,9 +1689,6 @@ let Story = [
         title: 'Homelessness',
         content: `
           <div class="comic-grid">
-            <div class="half text info info--introduction">
-              <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
-            </div>
             <div class="half">
               [image|homeless/homeless 01.jpg|Homeless 1]
             </div>
@@ -1849,11 +1725,6 @@ let Story = [
         title: '',
         content: `
           <div class="comic-grid">
-            <div class="half text info info--paragraph">
-              <h2>Paragraph 1</h2><p>The <strong>body</strong> of the essay is the part that addresses the question. It should be organised into 2-3 <strong>paragraphs</strong>. Each
-              paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
-              way to those that precede and follow it.</p>
-            </div>
             <div class="half">
               [image|homeless/homeless 08.jpg|Homeless 8]
             </div>
@@ -1884,9 +1755,6 @@ let Story = [
         title: '',
         content: `
           <div class="comic-grid">
-            <div class="half text info info--paragraph">
-              <h2>Paragraph 2</h2><p>Each paragraph begins by introducing an aspect of the issue, then explains the issue and gives <strong>examples</strong>.</p>
-            </div>
             <div class="half">
               [image|homeless/homeless 11.jpg|Homeless 11]
             </div>
@@ -1895,15 +1763,6 @@ let Story = [
             </div>
             <div class="half">
               [image|homeless/homeless 13.jpg|Homeless 13]
-            </div>
-            <div class="half">
-              [image|homeless/homeless 14.jpg|Homeless 14]
-            </div>
-            <div class="half">
-              [image|homeless/homeless 15.jpg|Homeless 15]
-            </div>
-            <div class="half">
-              [image|homeless/homeless 16.jpg|Homeless 16]
             </div>
           </div>`,
         choices: [
@@ -1923,7 +1782,37 @@ let Story = [
       },
       {
         id: 30,
-        title: 'Conclusion',
+        title: '',
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|homeless/homeless 14.jpg|Homeless 14]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 15.jpg|Homeless 15]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 16.jpg|Homeless 16]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        titlt: '',
         content: `<div class="comic-grid">
             <div class="half">
               [image|homeless/homeless 17.jpg|Homeless 17]
@@ -1941,18 +1830,18 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 20
+            'chapterId': 30
           },
           {
             'text': 'Infographic',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 40
+            'chapterId': 45
           }
         ]
       },
       {
-        id: 40,
+        id: 45,
         title: 'Infographic: Basic Essay Structure',
         titleClass: 'center',
         content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
@@ -2015,7 +1904,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 30
+            'chapterId': 40
           },
           {
             'text': 'Tasks',
@@ -2034,7 +1923,7 @@ let Story = [
             'text': 'Infographic',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 40
+            'chapterId': 45
           },
           {
             'text': 'Restart',
@@ -2047,7 +1936,7 @@ let Story = [
     ]
   },
   {
-    id: 28,
+    id: 80,
     title: 'Zen Gardens',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/health/',
@@ -2060,7 +1949,6 @@ let Story = [
         title: 'Zen Gardens',
         examQuestion: '<p>A travel magazine has asked readers to send in articles on their favourite travel destination. You decide to write an article in which you describe your favourite place, explain why it is your favourite and assess its significance for the wider community.</p><p class="last"><strong>Write your article.</strong></p>',
         content: `
-          <h2>Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|zen-gardens/zen gardens 01.jpg|HomeZen Gardens 1]
@@ -2086,7 +1974,7 @@ let Story = [
       },
       {
         id: 10,
-        title: 'Paragraph 1',
+        title: '',
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -2131,7 +2019,7 @@ let Story = [
       },
       {
         id: 20,
-        title: 'Paragraph 2',
+        title: '',
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -2170,7 +2058,7 @@ let Story = [
       },
       {
         id: 30,
-        title: 'Conclusion',
+        title: '',
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -2195,12 +2083,12 @@ let Story = [
             'text': 'Infographic',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 40
+            'chapterId': 35
           }
         ]
       },
       {
-        id: 40,
+        id: 35,
         title: 'Infographic: Basic Essay Structure',
         titleClass: 'center',
         content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
@@ -2263,18 +2151,18 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 30
+            'chapterId': 35
           },
           {
             'text': 'Tasks',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 50
+            'chapterId': 40
           }
         ]
       },
       {
-        id: 50,
+        id: 40,
         title: '',
         content: '[tasks]',
         choices: [
@@ -2282,7 +2170,7 @@ let Story = [
             'text': 'Infographic',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 40
+            'chapterId': 30
           },
           {
             'text': 'Restart',

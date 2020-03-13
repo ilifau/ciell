@@ -285,7 +285,7 @@ export default {
 }
 
 @media screen and (max-width: 767px) {
-  .toggle-font {  
+  .toggle-font {
     right: 4em;
     top: .45em;
   }

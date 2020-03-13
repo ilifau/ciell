@@ -18,7 +18,7 @@
         <div class="clearfix"></div>
       </div>
     </div>
-    <a class="check-task" slot="footer" v-on:click="checkTask">Check results </a>
+    <a class="check-task" slot="footer" v-on:click="checkTask">Check answers </a>
   </div>
 </template>
 
@@ -113,7 +113,8 @@ export default {
       } else {
         message = {
           title: 'D\'oh! 😖',
-          text: 'Hm, not quite (<strong>' + this.correct + ' correct</strong>, <strong>' + this.incorrect + ' incorrect</strong>). Try again, you can try as often as you like.'
+          text: 'Hm, that doesn\'t seem to be quite right yet. Try again, you can try as often as you like.'
+          // text: 'Hm, not quite (<strong>' + this.correct + ' correct</strong>, <strong>' + this.incorrect + ' incorrect</strong>). Try again, you can try as often as you like.'
         }
       }
 
@@ -165,11 +166,12 @@ export default {
 
   .answer-title {
     clear: both;
+    font-size: 1.25em;
   }
 
   /* On mouse-over, add a grey background color */
   .answer img {
-    transition: all .3s linear;
+    transition: all .1s linear;
     border: 0 solid #fff;
     background-color: #fff;
   }

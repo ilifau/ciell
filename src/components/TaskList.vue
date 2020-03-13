@@ -56,10 +56,18 @@ export default {
 
       if (percent === 0) {
         badge = null
-        title = '<p>As soon as you complete the tasks in this essay, <strong>you will be rewarded with a medal</strong> (bronze, silver, gold). Open the next chapter to begin working on the tasks.</p><p>Good luck!</p>'
+        title = `
+          <p>As soon as you complete the tasks in this essay, <strong>you will be rewarded with a medal</strong> (bronze, silver, gold). Open the next chapter to begin working on the tasks.</p>
+          <div style="display:block;padding:1em 0">
+            <img style="width:180px;max-width:25%;margin-right:.75em" src="${require('@/stories/ciell/assets/img/badges/badge-bronze.png')}" alt="Bronze medal" />
+            <img style="width:180px;max-width:25%;margin-right:.75em" src="${require('@/stories/ciell/assets/img/badges/badge-silver.png')}" alt="Bronze medal" />
+            <img style="width:180px;max-width:25%;" src="${require('@/stories/ciell/assets/img/badges/badge-gold.png')}" alt="Bronze medal" />
+          </div>
+          <p>Good luck!</p>
+        `
       } else if (percent > 0 && percent <= 33.34) {
         badge = require('@/stories/ciell/assets/img/badges/badge-bronze.png')
-        title = '<p>Fair enough, you earned yourself a <strong>bronze medal</strong>. But you can certainly do better than that!</p>'
+        title = '<p>Fair enough, you earned yourself a <strong>bronze medal</strong> for this essay. But you can certainly do better than that!</p>'
         alt = 'Bronze badge'
       } else if (percent > 33.34 && percent <= 66.67) {
         badge = require('@/stories/ciell/assets/img/badges/badge-silver.png')
@@ -67,7 +75,7 @@ export default {
         alt = 'Silver badge'
       } else if (percent > 66.67) {
         badge = require('@/stories/ciell/assets/img/badges/badge-gold.png')
-        title = '<p>Wow, awesome! You completed all tasks successfully and earned yourself a <strong>gold medal</strong> for this essay. Keep up the good work!</p>'
+        title = '<p>Wow, awesome! You completed all tasks for this essay successfully and earned yourself a <strong>gold medal</strong> for this essay. Keep up the good work!</p>'
         alt = 'Gold badge'
       }
 

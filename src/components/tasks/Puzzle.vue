@@ -112,7 +112,6 @@ export default {
   .task-item {
     display: block;
     position: relative;
-    height: 0;
     padding: 1em;
     margin: 0 0 1em;
     background: #eedfdd;

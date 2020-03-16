@@ -29,7 +29,6 @@ export default {
   data () {
     return {
       isComplete: this.$store.state.tasksComplete.includes(this.task.id),
-      checked: false,
       showTaskMessage: false
     }
   },
@@ -37,11 +36,31 @@ export default {
     this.shuffle()
   },
   watch: {
-    task: function () {
-      this.shuffle()
+    task: {
+      immediate: false,
+      handler (taskBefore, taskAfter) {
+        if (taskBefore.id !== taskAfter.id) {
+          this.shuffle()
+        }
+      }
     }
   },
   methods: {
+    shuffle () {
+      if (this.isComplete) {
+        return
+      }
+
+      let items = this.task.items
+      for (var i = items.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1))
+        var temp = items[i]
+        items[i] = items[j]
+        items[j] = temp
+      }
+
+      this.task.items = items
+    },
     checkTask () {
       let message = {
         title: '',
@@ -50,10 +69,8 @@ export default {
 
       if (this.isComplete) {
         this.$store.commit('setTaskComplete', this.task.id)
-        this.checked = true
       } else {
         this.$store.commit('removeTaskComplete', this.task.id)
-        this.checked = false
       }
 
       if (this.$store.state.tasksComplete.includes(this.task.id)) {
@@ -72,7 +89,6 @@ export default {
       this.$emit('showMessage', message)
     },
     onChange () {
-      this.checked = false
       this.isComplete = false
       this.$store.commit('removeTaskComplete', this.task.id)
 
@@ -84,28 +100,12 @@ export default {
           this.isComplete = true
         } else {
           this.isComplete = false
-          this.checked = false
           break
         }
       }
     },
     hideTaskMessage () {
       this.showTaskMessage = false
-    },
-    shuffle () {
-      if (this.isComplete) {
-        return
-      }
-
-      let items = this.task.items
-      for (var i = items.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1))
-        var temp = items[i]
-        items[i] = items[j]
-        items[j] = temp
-      }
-
-      this.task.items = items
     }
   }
 }

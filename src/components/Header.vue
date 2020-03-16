@@ -144,10 +144,11 @@ export default {
 
 .toggle-font {
   position: absolute;
-  right: 4.5em;
+  right: 5.5em;
   top: .475em;
   font-weight: 400;
   font-size: .875em;
+  line-height: 1;
 }
 
 .toggle-font {
@@ -286,7 +287,7 @@ export default {
 
 @media screen and (max-width: 767px) {
   .toggle-font {
-    right: 4em;
+    right: 5em;
     top: .45em;
   }
 

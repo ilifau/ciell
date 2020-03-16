@@ -196,8 +196,8 @@ export default {
 
   .badge {
     position: absolute;
-    right: -.75em;
-    top: -.5em;
+    right: .125em;
+    top: .25em;
     width: 28%;
     background-size: cover;
     height: auto;

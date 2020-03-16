@@ -184,7 +184,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
-  font-family: 'aka-acidgr-diarygirlmedium';
+  /* font-family: 'aka-acidgr-diarygirlmedium'; */
   font-weight: 400;
 }
 

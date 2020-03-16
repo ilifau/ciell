@@ -107,9 +107,7 @@ export default {
     font-size: 1.25em;
     line-height: 1.5;
     max-width: 90%;
-    margin: 0 auto 2.5em;
-    margin-top: .5em;
-    margin-bottom: 1.6125em;
+    margin: .5em auto;
     font-weight: 600;
     letter-spacing: .75px;
   }
@@ -117,7 +115,7 @@ export default {
   .stories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     position: relative;
     font-size: 1em;
@@ -126,14 +124,9 @@ export default {
   .story {
     display: block;
     position: relative;
-    /* border-radius: 100%; */
-    width: calc(50% - 2em);
-    /* overflow: hidden; */
-    margin: 0 1em 1.75em;
+    width: 50%;
+    margin: 0 0 1em;
     transition: box-shadow .3s linear, border-color .3s linear;
-    /* border: .25em solid #219ac2; */
-    /* box-shadow: 0 1px 3px rgba(0,0,0,.2); */
-    mix-blend-mode: multiply;
   }
 
   .story::after {
@@ -143,17 +136,12 @@ export default {
   }
 
   .story:hover {
-    /* box-shadow: 0 3px 10px rgba(0,0,0,.6); */
     border-color: #fff386;
   }
 
   .story a {
     position: absolute;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
+    display: block;
     align-items: center;
     justify-content: center;
     height: 100%;
@@ -168,12 +156,11 @@ export default {
   }
 
   .story a .title {
-    /* display: none !important; */
     z-index: 2;
     position: absolute;
-    bottom: -.6125em;
+    bottom: -.125em;
     padding: .75em 1em;
-    left: -.6125em;
+    left: -.125em;
     transition: all .3s linear;
   }
 

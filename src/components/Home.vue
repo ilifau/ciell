@@ -158,9 +158,9 @@ export default {
   .story a .title {
     z-index: 2;
     position: absolute;
-    bottom: -.125em;
+    left: 0;
+    bottom: 0;
     padding: .75em 1em;
-    left: -.125em;
     transition: all .3s linear;
   }
 

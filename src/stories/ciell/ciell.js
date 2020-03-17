@@ -11,6 +11,7 @@ let Story = [
       {
         id: 0,
         title: 'Homelessness',
+        examQuestion: '<p>Homelessness is a serious issue in every part of the world. How could we resolve the issue in big cities?</p>',
         content: `
           <div class="comic-grid">
             <div class="half text info info--introduction">

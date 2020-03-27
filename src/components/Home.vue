@@ -15,6 +15,9 @@
         </a>
       </div>
     </div>
+    <div class="evaluation-link">
+      <p class="last"><router-link to="/evaluation">Submit your feedback</router-link></p>
+    </div>
   </div>
 </template>
 
@@ -201,6 +204,18 @@ export default {
     width: 28%;
     background-size: cover;
     height: auto;
+  }
+
+  .evaluation-link {
+    display: block;
+    padding: 3em 0 0;
+    margin: 0 auto;
+    text-align: center;
+    max-width: 90%;
+  }
+
+  .evaluation-link a {
+    font-weight: 400;
   }
 
   @media screen and (min-width: 640px) and (max-width: 800px) {

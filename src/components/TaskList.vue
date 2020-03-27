@@ -1,6 +1,6 @@
 <template>
   <div class="task-list">
-    <h1>Tasks in this essay</h1>
+    <h1>Tasks</h1>
     <div v-if="getTasks() && getTasks().length > 0">
       <ol class="task-list">
         <li v-for="(task, id) in getTasks()" :key="id">

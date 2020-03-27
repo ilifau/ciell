@@ -1,7 +1,7 @@
 let Story = [
   {
     id: 10,
-    title: 'Homeless',
+    title: 'Homelessness',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/poverty/',
     description: 'A story on the issue of homelessness.',
@@ -137,8 +137,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <h2>Further reading</h2>
-            <p>UN Sustainable Development Goal 1: End poverty in all its forms everywhere</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/poverty/" target="_blank">https://www.un.org/sustainabledevelopment/poverty/</a></p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=uDpIAcT3mqU" target="_blank">UN Sustainable Development Goal 1</a>.</p>
           </div>`,
         choices: [
           {
@@ -252,16 +251,16 @@ let Story = [
   },
   {
     id: 15,
-    title: 'End Poverty',
+    title: 'Reduce Inequality',
     author: 'CIELL Team',
-    url: 'https://www.un.org/sustainabledevelopment/poverty/',
-    description: 'This is an essay on poverty and disability.',
+    url: 'https://www.un.org/sustainabledevelopment/inequality/',
+    description: 'This is an essay on inequality.',
     preview: 'poverty/cover.jpg',
     color: 'rgb(217, 85, 14)',
     chapters: [
       {
         id: 0,
-        title: 'End Poverty',
+        title: 'Reduce Inequality',
         examQuestion: '<p>Investing in equal access to education, jobs and public services for young people with disabilities or learning difficulties will help to reduce world poverty.</p><p class="last">Do you agree or disagree with this statement? Explain the reasons for your opinion.</p>',
         content: `
           <h2>Introduction</h2>
@@ -388,8 +387,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <h2>Further reading</h2>
-            <p>UN Sustainable Development Goal 1: End poverty in all its forms everywhere</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/poverty/" target="_blank">https://www.un.org/sustainabledevelopment/poverty/</a></p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=IELvwDvbtmo" target="_blank">UN Sustainable Development Goal 10</a>.</p>
           </div>`,
         choices: [
           {
@@ -439,7 +437,7 @@ let Story = [
       {
         id: 0,
         title: 'Zen Gardens',
-        examQuestion: '<p>A travel magazine has asked readers to send in articles on their favourite travel destination. You decide to write an article in which you describe your favourite place, explain why it is your favourite and assess its significance for the wider community.</p><p class="last"><strong>Write your article.</strong></p>',
+        examQuestion: '<p class="last">A travel magazine has asked readers to send in articles on their favourite travel destination. You decide to write an article in which you describe your favourite place, explain why it is your favourite and assess its significance for the wider community.</p>',
         content: `
           <h2>Introduction</h2>
           <div class="comic-grid">
@@ -562,8 +560,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <h2>Further reading</h2>
-            <p>UN Sustainable Development Goal 3: Ensure healthy lives and promote well-being for all at all ages</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/health/" target="_blank">https://www.un.org/sustainabledevelopment/health/</a></p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=0klcaICeJA4" target="_blank">UN Sustainable Development Goal 3</a>.</p>
           </div>`,
         choices: [
           {
@@ -827,8 +824,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <h2>Further reading</h2>
-            <p>UN Sustainable Development Goal 11: Education</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/education/" target="_blank">https://www.un.org/sustainabledevelopment/education/</a></p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=V24JzUPlR44" target="_blank">UN Sustainable Development Goal 4</a>.</p>
           </div>`,
         choices: [
           {
@@ -1022,7 +1018,7 @@ let Story = [
         type: 'puzzle',
         typeName: 'Puzzle',
         title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order, then press "Check order".</p>',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
         items: [
           {
             order: 0,
@@ -1056,7 +1052,7 @@ let Story = [
         type: 'puzzle',
         typeName: 'Puzzle',
         title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order, then press "Check order".</p>',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
         items: [
           {
             order: 10,
@@ -1264,8 +1260,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <h2>Further reading</h2>
-            <p>UN Sustainable Development Goal 5: Achieve gender equality and empower all women and girls</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/gender-equality/" target="_blank">https://www.un.org/sustainabledevelopment/gender-equality/</a></p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=NZB9Kh0za7E" target="_blank">UN Sustainable Development Goal 5</a>.</p>
           </div>`,
         choices: [
           {
@@ -1522,7 +1517,7 @@ let Story = [
         type: 'puzzle',
         typeName: 'Puzzle',
         title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels of the introduction of this essay into the correct order, then press "Check order".</p>',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels of the introduction of this essay into the correct order.</p>',
         items: [
           {
             order: 0,
@@ -1552,7 +1547,7 @@ let Story = [
         type: 'puzzle',
         typeName: 'Puzzle',
         title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels of this essay paragraph into the correct order, then press "Check order".</p>',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels of this essay paragraph into the correct order.</p>',
         items: [
           {
             order: 0,
@@ -1601,7 +1596,7 @@ let Story = [
       {
         id: 0,
         title: 'Nuclear Power',
-        examQuestion: '<p>The threat of nuclear weapons keeps world peace. Nuclear power supplies cheap and clean energy. The benefits of nuclear technology far outweigh the disadvantages.</p><p>To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your knowledge or experience.</p><p class="last"><strong>Write at least 250 words.</strong></p>',
+        examQuestion: '<p class="last">The threat of nuclear weapons keeps world peace. Nuclear power supplies cheap and clean energy. The benefits of nuclear technology far outweigh the disadvantages.</p><p>To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your knowledge or experience.</p>',
         content: `
           <div class="comic-grid">
             <div class="half text info info--introduction">
@@ -1752,8 +1747,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <h2>Further reading</h2>
-            <p>UN Sustainable Development Goal 7: Ensure access to affordable, reliable, sustainable and modern energy</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/energy/" target="_blank">https://www.un.org/sustainabledevelopment/energy/</a></p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=mmSbX1Rg2L0" target="_blank">UN Sustainable Development Goal 7</a>.</p>
           </div>`,
         choices: [
           {
@@ -2086,8 +2080,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <h2>Further reading</h2>
-            <p>UN Sustainable Development Goal 11: Make cities inclusive, safe, resilient and sustainable</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/cities/" target="_blank">https://www.un.org/sustainabledevelopment/cities/</a></p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=-4iGPnF0Wzw" target="_blank">UN Sustainable Development Goal 11</a>.</p>
           </div>`,
         choices: [
           {
@@ -2256,8 +2249,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <h2>Further reading</h2>
-            <p>UN Sustainable Development Goal 13: Take urgent action to combat climate change and its impacts</p><p class="last"><a href="https://www.un.org/sustainabledevelopment/climate-change/" target="_blank">https://www.un.org/sustainabledevelopment/climate-change/</a></p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=xivQ8zjqaRo" target="_blank">UN Sustainable Development Goal 13</a>.</p>
           </div>`,
         choices: [
           {

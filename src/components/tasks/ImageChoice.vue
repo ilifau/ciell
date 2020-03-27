@@ -11,7 +11,7 @@
             <input v-else v-on:click="onChange()" v-model="selectedAnswers[questionIndex][answerIndex]" v-bind:value="answer.correct" type="checkbox">
             <div>
               <img :src="require('@/stories/ciell/assets/img/' + answer.image)" alt="answer.text" class="answer-image" rel="preload" />
-              <p>{{ answer.text }}</p>
+              <!-- <p>{{ answer.text }}</p> -->
             </div>
           </label>
         </div>
@@ -127,7 +127,12 @@ export default {
 <style scoped>
   .task-item {
     position: relative;
-    padding-bottom: 1em;
+  }
+
+  .task-item::after {
+    content: '';
+    clear: both;
+    display: block;
   }
 
   .task-item h2 {

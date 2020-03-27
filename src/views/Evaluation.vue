@@ -29,7 +29,7 @@ export default {
   props: ['stories', 'showHeaderBackground'],
   data () {
     return {
-      timerDuration: 15000,
+      timerDuration: 60000,
       submitTimer: 0,
       refreshTimer: '',
       submitError: '',
@@ -136,7 +136,7 @@ h2 {
 .error {
   display: block;
   color: rgb(122, 10, 10);
-  background: rgb(245, 192, 192);
+  background: rgb(255, 233, 233);
   padding: .5em;
 }
 </style>

@@ -19,13 +19,8 @@
 </template>
 
 <script>
-import Header from '@/components/Header.vue'
-
 export default {
   name: 'home',
-  components: {
-    Header
-  },
   props: ['stories', 'showHeaderBackground'],
   data () {
     return {
@@ -47,7 +42,7 @@ export default {
       return this.$store.state.ratings
     },
     rate (index, rating) {
-      this.$store.commit('setRating', {prop: index, rating: rating})
+      this.$store.commit('setRating', { prop: index, rating: rating })
     },
     canSubmit () {
       let d = Date.now()
@@ -77,7 +72,7 @@ export default {
       this.axios.post('https://sebastianhonert.com/ciell/ciell-mysql.php', {
         ratings: JSON.stringify(this.$store.state.ratings)
       }, {
-        headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
       }).then(function (response) {
         if (response.data === 'New record created successfully') {
           that.submitError = ''

@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import {version} from '../package.json'
+import { version } from '../package.json'
 
 Vue.use(Vuex)
 
@@ -21,7 +21,7 @@ export const store = new Vuex.Store({
   mutations: {
     initialiseStore (state) {
       if (localStorage.getItem('ciell')) {
-        let store = JSON.parse(localStorage.getItem('ciell'))
+        const store = JSON.parse(localStorage.getItem('ciell'))
 
         if (store.version === version) {
           this.replaceState(Object.assign(state, store))
@@ -49,7 +49,7 @@ export const store = new Vuex.Store({
       }
     },
     removeTaskComplete (state, id) {
-      let index = state.tasksComplete.indexOf(id)
+      const index = state.tasksComplete.indexOf(id)
       if (index > -1) {
         state.tasksComplete.splice(index, 1)
       }
@@ -64,7 +64,7 @@ export const store = new Vuex.Store({
 })
 
 store.subscribe((mutation, state) => {
-  let store = {
+  const store = {
     version: state.version,
     currentStoryId: state.currentStoryId, // 0
     currentChapterId: state.currentChapterId, // 0

@@ -85,7 +85,8 @@ export default {
       return typeof this.getChapter(this.$store.state.currentChapterId).finalChapter !== 'undefined'
     },
     hasTask () {
-      return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('taskId')
+      // return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('taskId')
+      return Object.prototype.hasOwnProperty.call(this.getChapter, 'taskId')
     },
     getTask (id) {
       if (typeof this.$props.story.tasks === 'undefined') {
@@ -104,10 +105,12 @@ export default {
       return typeof this.getChapter(this.$store.state.currentChapterId).taskId !== 'undefined' && this.$store.state.tasksComplete.includes(this.getChapter(this.$store.state.currentChapterId).taskId)
     },
     hasAudio () {
-      return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('audio')
+      // return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('audio')
+      return Object.prototype.hasOwnProperty.call(this.$store.state.currentChapterId, 'audio')
     },
     hasExamQuestion () {
-      return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('examQuestion')
+      // return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('examQuestion')
+      return Object.prototype.hasOwnProperty.call(this.$store.state.currentChapterId, 'examQuestion')
     },
     showMessage (message) {
       this.$emit('showMessage', message)
@@ -137,16 +140,21 @@ export default {
       }
 
       switch (task.type) {
-        case 'puzzle':
+        case 'puzzle': {
           return Puzzle
-        case 'sort':
+        }
+        case 'sort': {
           return Puzzle
-        case 'multiple-choice':
+        }
+        case 'multiple-choice': {
           return MultipleChoice
-        case 'image-choice':
+        }
+        case 'image-choice': {
           return ImageChoice
-        default:
+        }
+        default: {
           return false
+        }
       }
     },
     dynamicContent () {
@@ -158,22 +166,23 @@ export default {
         let type = params[0].replace('[', '').replace(']', '')
 
         switch (type) {
-          case 'image':
+          case 'image': {
             let src = params[1]
             let alt = params[2]
             let img = require('@/stories/ciell/assets/img/' + src)
             return '<img src="' + img + '" alt="' + alt + '" rel="preload" />'
-
-          case 'decorator':
+          }
+          case 'decorator': {
             let text = params[1]
             let chapterId = params[2].replace(']', '')
             return `<a v-on:click="processDecorator(${chapterId})">${text}</a>`
-
-          case 'tasks':
+          }
+          case 'tasks': {
             return '<TaskList />'
-
-          default:
+          }
+          default: {
             return ''
+          }
         }
       })
 

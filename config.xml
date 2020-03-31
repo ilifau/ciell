@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.sebastianhonert.vyoa" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>VYOA</name>
+    <name>CIELL</name>
     <description>
-        A "Create Your Own Adventure (CYOA)" app made with VueJS.
+        Comics for Inclusive English Language Learning
     </description>
     <author email="me@sebastianhonert.com" href="https://sebastianhonert.com">
         Sebastian Honert

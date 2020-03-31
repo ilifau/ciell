@@ -1,6 +1,5 @@
 <template>
   <div class="header-wrapper">
-    <!-- <div class="header" v-bind:class="{ showHeaderBackground: showHeaderBackground }"> -->
     <div class="header showHeaderBackground">
       <router-link class="story-title" to="/">
         <div v-if="showBacktoStoriesLink()"><v-icon name="arrow-left" v-if="showBacktoStoriesLink()" scale="0.75" /> {{ storyTitle }}</div>

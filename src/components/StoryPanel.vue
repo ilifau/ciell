@@ -85,8 +85,8 @@ export default {
       return typeof this.getChapter(this.$store.state.currentChapterId).finalChapter !== 'undefined'
     },
     hasTask () {
-      // return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('taskId')
-      return Object.prototype.hasOwnProperty.call(this.getChapter, 'taskId')
+      let chapter = this.getChapter(this.$store.state.currentChapterId)
+      return Object.prototype.hasOwnProperty.call(chapter, 'taskId')
     },
     getTask (id) {
       if (typeof this.$props.story.tasks === 'undefined') {
@@ -105,12 +105,12 @@ export default {
       return typeof this.getChapter(this.$store.state.currentChapterId).taskId !== 'undefined' && this.$store.state.tasksComplete.includes(this.getChapter(this.$store.state.currentChapterId).taskId)
     },
     hasAudio () {
-      // return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('audio')
-      return Object.prototype.hasOwnProperty.call(this.$store.state.currentChapterId, 'audio')
+      let chapter = this.getChapter(this.$store.state.currentChapterId)
+      return Object.prototype.hasOwnProperty.call(chapter, 'audio')
     },
     hasExamQuestion () {
-      // return this.getChapter(this.$store.state.currentChapterId).hasOwnProperty('examQuestion')
-      return Object.prototype.hasOwnProperty.call(this.$store.state.currentChapterId, 'examQuestion')
+      let chapter = this.getChapter(this.$store.state.currentChapterId)
+      return Object.prototype.hasOwnProperty.call(chapter, 'examQuestion')
     },
     showMessage (message) {
       this.$emit('showMessage', message)

@@ -118,7 +118,6 @@ export default {
   .stories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     position: relative;
     font-size: 1em;
@@ -230,6 +229,7 @@ export default {
       margin: 0 auto;
       width: 360px;
       max-width: 86%;
+      justify-content: center;
     }
 
     .story {

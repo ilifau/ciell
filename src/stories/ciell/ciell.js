@@ -261,6 +261,12 @@ let Story = [
       {
         id: 0,
         title: 'Reduce Inequality',
+        audio: [
+          {
+            filename: 'reduce-inequality/intro.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p>Investing in equal access to education, jobs and public services for young people with disabilities or learning difficulties will help to reduce world poverty.</p><p class="last">Do you agree or disagree with this statement? Explain the reasons for your opinion.</p>',
         content: `
           <h2>Introduction</h2>
@@ -296,6 +302,12 @@ let Story = [
       {
         id: 10,
         title: 'Paragraph 1',
+        audio: [
+          {
+            filename: 'reduce-inequality/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -335,6 +347,12 @@ let Story = [
       {
         id: 15,
         title: 'Paragraph 2',
+        audio: [
+          {
+            filename: 'reduce-inequality/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -377,6 +395,12 @@ let Story = [
       {
         id: 20,
         title: 'Conclusion',
+        audio: [
+          {
+            filename: 'reduce-inequality/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -941,7 +965,6 @@ let Story = [
     title: 'The Invisible Girls',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/gender-equality/',
-    description: 'This is just a very short demo story. It is pretty much about nothing.',
     preview: 'gender-equality/cover.jpg',
     color: 'rgb(139, 87, 46)',
     tasks: [
@@ -1205,6 +1228,12 @@ let Story = [
       {
         id: 20,
         title: '',
+        audio: [
+          {
+            filename: 'invisible-girls/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
             <div class="comic-grid">
             <div class="half text info info--paragraph">
@@ -1244,6 +1273,12 @@ let Story = [
       {
         id: 30,
         title: '',
+        audio: [
+          {
+            filename: 'invisible-girls/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half text info info--conclusion">
@@ -1597,6 +1632,12 @@ let Story = [
         id: 0,
         title: 'Nuclear Power',
         examQuestion: '<p class="last">The threat of nuclear weapons keeps world peace. Nuclear power supplies cheap and clean energy. The benefits of nuclear technology far outweigh the disadvantages.</p><p>To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your knowledge or experience.</p>',
+        audio: [
+          {
+            filename: 'affordable-energy/intro.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half text info info--introduction">
@@ -1630,6 +1671,12 @@ let Story = [
       {
         id: 10,
         title: '',
+        audio: [
+          {
+            filename: 'affordable-energy/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half text info info--paragraph">
@@ -1731,6 +1778,12 @@ let Story = [
       {
         id: 30,
         title: '',
+        audio: [
+          {
+            filename: 'affordable-energy/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half text info info--conclusion">
@@ -1933,7 +1986,7 @@ let Story = [
         title: 'Transport',
         audio: [
           {
-            filename: 'transportation-intro.mp3',
+            filename: 'transport/intro.mp3',
             label: 'Play'
           }
         ],
@@ -1967,7 +2020,7 @@ let Story = [
         title: '',
         audio: [
           {
-            filename: 'transportation-part-1.mp3',
+            filename: 'transport/paragraph-1.mp3',
             label: 'Play'
           }
         ],
@@ -2015,7 +2068,7 @@ let Story = [
         title: '',
         audio: [
           {
-            filename: 'transportation-part-2.mp3',
+            filename: 'transport/paragraph-2.mp3',
             label: 'Play'
           }
         ],
@@ -2060,7 +2113,7 @@ let Story = [
         title: '',
         audio: [
           {
-            filename: 'transportation-conclusion.mp3',
+            filename: 'transport/conclusion.mp3',
             label: 'Play'
           }
         ],
@@ -2250,6 +2303,169 @@ let Story = [
           </div>
           <div class="further-reading">
             <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=xivQ8zjqaRo" target="_blank">UN Sustainable Development Goal 13</a>.</p>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 160,
+    title: 'Cipta',
+    description: 'This is a story about a girl named Cipta.',
+    url: 'https://www.un.org/sustainabledevelopment/peace-justice/',
+    author: 'CIELL Team',
+    preview: 'cipta/cover.jpg',
+    color: 'rgb(143, 178, 196)',
+    chapters: [
+      {
+        id: 0,
+        title: 'Cipta',
+        examQuestion: '<p>You belong to an English-language reading group which recently read a book in a book contest. You have agreed to write a review of the book for the group’s website. In your review you should give your opinion of the format used for the book and say whether you think a book contest could be used to enhance students\' interest, in general.</p><p><strong>Write your review.</strong></p>',
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|cipta/Cipta 01.jpg|Cipta 1]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 02.jpg|Cipta 2]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 03.jpg|Cipta 3]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 04.jpg|Cipta 4]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 05.jpg|Cipta 5]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 06.jpg|Cipta 6]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 07.jpg|Cipta 7]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 08.jpg|Cipta 8]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|cipta/Cipta 09.jpg|Cipta 9]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 10.jpg|Cipta 10]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 11.jpg|Cipta 11]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 12.jpg|Cipta 12]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|cipta/Cipta 13.jpg|Cipta 13]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 14.jpg|Cipta 14]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 15.jpg|Cipta 15]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 16.jpg|Cipta 16]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        content: `
+          <div class="comic-grid">
+            <div class="half">
+              [image|cipta/Cipta 17.jpg|Cipta 17]
+            </div>
+            <div class="half">
+              [image|cipta/Cipta 18.jpg|Cipta 18]
+            </div>
+          </div>
+          <div class="further-reading">
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=Ww_B0mvGiYc" target="_blank">UN Sustainable Development Goal 16</a>.</p>
           </div>`,
         choices: [
           {

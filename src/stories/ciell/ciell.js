@@ -11,6 +11,12 @@ let Story = [
       {
         id: 0,
         title: 'Homelessness',
+        audio: [
+          {
+            filename: 'homelessness/introduction.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p>Homelessness is a serious issue in every part of the world. How could we resolve the issue in big cities?</p>',
         content: `
           <div class="comic-grid">
@@ -29,15 +35,6 @@ let Story = [
             <div class="half">
               [image|homeless/homeless 04.jpg|Homeless 4]
             </div>
-            <div class="half">
-              [image|homeless/homeless 05.jpg|Homeless 5]
-            </div>
-            <div class="half">
-              [image|homeless/homeless 06.jpg|Homeless 6]
-            </div>
-            <div class="half">
-              [image|homeless/homeless 07.jpg|Homeless 7]
-            </div>
           </div>`,
         choices: [
           {
@@ -51,12 +48,27 @@ let Story = [
       {
         id: 10,
         title: '',
+        audio: [
+          {
+            filename: 'homelessness/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half text info info--paragraph">
               <h2>Paragraph 1</h2><p>The <strong>body</strong> of the essay is the part that addresses the question. It should be organised into 2-3 <strong>paragraphs</strong>. Each
               paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
               way to those that precede and follow it.</p>
+            </div>
+            <div class="half">
+              [image|homeless/homeless 05.jpg|Homeless 5]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 06.jpg|Homeless 6]
+            </div>
+            <div class="half">
+              [image|homeless/homeless 07.jpg|Homeless 7]
             </div>
             <div class="half">
               [image|homeless/homeless 08.jpg|Homeless 8]
@@ -86,6 +98,12 @@ let Story = [
       {
         id: 20,
         title: '',
+        audio: [
+          {
+            filename: 'homelessness/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half text info info--paragraph">
@@ -128,6 +146,12 @@ let Story = [
       {
         id: 30,
         title: 'Conclusion',
+        audio: [
+          {
+            filename: 'homelessness/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<div class="comic-grid">
             <div class="half">
               [image|homeless/homeless 17.jpg|Homeless 17]
@@ -461,6 +485,12 @@ let Story = [
       {
         id: 0,
         title: 'Zen Gardens',
+        audio: [
+          {
+            filename: 'zen-gardens/introduction.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p class="last">A travel magazine has asked readers to send in articles on their favourite travel destination. You decide to write an article in which you describe your favourite place, explain why it is your favourite and assess its significance for the wider community.</p>',
         content: `
           <h2>Introduction</h2>
@@ -490,6 +520,12 @@ let Story = [
       {
         id: 10,
         title: 'Paragraph 1',
+        audio: [
+          {
+            filename: 'zen-gardens/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -535,6 +571,12 @@ let Story = [
       {
         id: 20,
         title: 'Paragraph 2',
+        audio: [
+          {
+            filename: 'zen-gardens/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -574,6 +616,12 @@ let Story = [
       {
         id: 30,
         title: 'Conclusion',
+        audio: [
+          {
+            filename: 'zen-gardens/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -1132,6 +1180,12 @@ let Story = [
       {
         id: 0,
         title: 'The Invisible Girls',
+        audio: [
+          {
+            filename: 'invisible-girls/introduction.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p>Due to different gender roles and poverty, teenagers-boys and girls face different challenges at home and schools especially in developing countries.</p><p class="last">Do you agree with this statement? Give examples to support your views.</p>',
         content: `
           <div class="comic-grid">
@@ -1178,6 +1232,12 @@ let Story = [
       {
         id: 10,
         title: '',
+        audio: [
+          {
+            filename: 'invisible-girls/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
             <div class="comic-grid">
             <div class="half text info info--paragraph">
@@ -1634,7 +1694,7 @@ let Story = [
         examQuestion: '<p class="last">The threat of nuclear weapons keeps world peace. Nuclear power supplies cheap and clean energy. The benefits of nuclear technology far outweigh the disadvantages.</p><p>To what extent do you agree or disagree? Give reasons for your answer and include any relevant examples from your knowledge or experience.</p>',
         audio: [
           {
-            filename: 'affordable-energy/intro.mp3',
+            filename: 'affordable-energy/introduction.mp3',
             label: 'Play'
           }
         ],
@@ -1733,6 +1793,12 @@ let Story = [
       {
         id: 20,
         title: '',
+        audio: [
+          {
+            filename: 'affordable-energy/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half text info info--paragraph">
@@ -2183,6 +2249,12 @@ let Story = [
       {
         id: 0,
         title: 'Climate Action',
+        audio: [
+          {
+            filename: 'climate-action/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p>Greta Thunberg is a schoolgirl turned activist who has encouraged millions of young people to join in her school strike for climate change every Friday.</p><p class="last">Do you believe school pupils are right to skip school in order to protest for climate change?</p>',
         content: `
           <div class="comic-grid">
@@ -2216,6 +2288,12 @@ let Story = [
       },
       {
         id: 10,
+        audio: [
+          {
+            filename: 'climate-action/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -2251,6 +2329,12 @@ let Story = [
       },
       {
         id: 20,
+        audio: [
+          {
+            filename: 'climate-action/paragraph-3.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">
@@ -2286,6 +2370,12 @@ let Story = [
       },
       {
         id: 30,
+        audio: [
+          {
+            filename: 'climate-action/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `
           <div class="comic-grid">
             <div class="half">

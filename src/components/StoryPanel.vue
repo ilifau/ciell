@@ -274,17 +274,7 @@ export default {
 
 .audio-wrapper {
   display: block;
-  margin-bottom: 1em;
 }
-
-/* @media screen and (min-width: 1366px) {
-  .audio-wrapper {
-    display: inline-block;
-    position: fixed;
-    left: .875em;
-    top: 2.125em;
-  }
-} */
 
 label {
   display: block;

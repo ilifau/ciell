@@ -243,7 +243,7 @@ a {
 }
 
 div.info {
-  padding: 1em;
+  padding: 0 1em 1em 1em;
   border: .375em solid white;
   font-size: .93875em;
 }
@@ -314,7 +314,7 @@ img {
   flex-wrap: wrap;
   overflow: hidden;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 1.5em auto 0 auto;
 }
 
 .comic-grid.narrow {
@@ -357,6 +357,11 @@ img {
 
 .comic-grid .text {
   background: #fff;
+  width: 100%;
+}
+
+.comic-grid .text h2 {
+  margin-top: 0;
 }
 
 .comic-grid .arrow {
@@ -775,7 +780,6 @@ img {
   .comic-grid .half.text {
     clear: both;
     width: 100%;
-    padding: 0;
     border: 0;
   }
 }

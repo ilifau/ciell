@@ -110,7 +110,7 @@ export default {
     font-size: 1.25em;
     line-height: 1.5;
     max-width: 90%;
-    margin: .5em auto;
+    margin: .5em auto .75em;
     font-weight: 600;
     letter-spacing: .75px;
   }

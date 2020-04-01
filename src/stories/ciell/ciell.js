@@ -145,7 +145,7 @@ let Story = [
       },
       {
         id: 30,
-        title: 'Conclusion',
+        title: '',
         audio: [
           {
             filename: 'homelessness/conclusion.mp3',
@@ -153,6 +153,9 @@ let Story = [
           }
         ],
         content: `<div class="comic-grid">
+            <div class="half text info info--conclusion">
+              <h2>Conclusion</h2><p>The <strong>conclusion</strong> provides an answer to the question set out in the introduction and reminds the reader of your reasons.</p>
+            </div>
             <div class="half">
               [image|homeless/homeless 17.jpg|Homeless 17]
             </div>
@@ -161,7 +164,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=uDpIAcT3mqU" target="_blank">UN Sustainable Development Goal 1</a>.</p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=uDpIAcT3mqU" target="_blank">UN Sustainable Development Goal&nbsp;1</a>.</p>
           </div>`,
         choices: [
           {
@@ -435,7 +438,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=IELvwDvbtmo" target="_blank">UN Sustainable Development Goal 10</a>.</p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=IELvwDvbtmo" target="_blank">UN Sustainable Development Goal&nbsp;10</a>.</p>
           </div>`,
         choices: [
           {
@@ -632,7 +635,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=0klcaICeJA4" target="_blank">UN Sustainable Development Goal 3</a>.</p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=0klcaICeJA4" target="_blank">UN Sustainable Development Goal&nbsp;3</a>.</p>
           </div>`,
         choices: [
           {
@@ -896,7 +899,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=V24JzUPlR44" target="_blank">UN Sustainable Development Goal 4</a>.</p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=V24JzUPlR44" target="_blank">UN Sustainable Development Goal&nbsp;4</a>.</p>
           </div>`,
         choices: [
           {
@@ -1355,7 +1358,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=NZB9Kh0za7E" target="_blank">UN Sustainable Development Goal 5</a>.</p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=NZB9Kh0za7E" target="_blank">UN Sustainable Development Goal&nbsp;5</a>.</p>
           </div>`,
         choices: [
           {
@@ -1866,7 +1869,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=mmSbX1Rg2L0" target="_blank">UN Sustainable Development Goal 7</a>.</p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=mmSbX1Rg2L0" target="_blank">UN Sustainable Development Goal&nbsp;7</a>.</p>
           </div>`,
         choices: [
           {
@@ -2199,7 +2202,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=-4iGPnF0Wzw" target="_blank">UN Sustainable Development Goal 11</a>.</p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=-4iGPnF0Wzw" target="_blank">UN Sustainable Development Goal&nbsp;11</a>.</p>
           </div>`,
         choices: [
           {
@@ -2392,7 +2395,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=xivQ8zjqaRo" target="_blank">UN Sustainable Development Goal 13</a>.</p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=xivQ8zjqaRo" target="_blank">UN Sustainable Development Goal&nbsp;13</a>.</p>
           </div>`,
         choices: [
           {
@@ -2555,7 +2558,7 @@ let Story = [
             </div>
           </div>
           <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=Ww_B0mvGiYc" target="_blank">UN Sustainable Development Goal 16</a>.</p>
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=Ww_B0mvGiYc" target="_blank">UN Sustainable Development Goal&nbsp;16</a>.</p>
           </div>`,
         choices: [
           {

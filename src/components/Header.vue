@@ -26,7 +26,7 @@
         </a>
       </div>
       <a id="toggleBaseFont" v-on:click="toggleBaseFont()" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
-      <router-link to="/evaluation" v-on:click.native="closeNav()">Evaluation</router-link>
+      <router-link to="/evaluation" v-on:click.native="closeNav()">Rate this App</router-link>
       <router-link to="/about" v-on:click.native="closeNav()">About CIELL</router-link>
     </div>
   </div>
@@ -119,8 +119,9 @@ export default {
 }
 
 .nav {
-  overflow: hidden;
+  overflow-x: hidden;
   overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
   position: fixed;
   z-index: 11;
   top: 0;

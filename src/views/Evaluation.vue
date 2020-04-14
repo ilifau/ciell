@@ -1,7 +1,6 @@
 <template>
   <div class="container about">
-    <h1>Evalution</h1>
-    <p>Please take a few seconds to provide some feedback for our app. Simply choose a number of stars for each feedback category and then click the "Submit your rating" button.</p>
+    <h1>Rate this App</h1>
     <div class="ratings">
       <label v-for="(rating, index) in ratings()" :key="index">
         <div class="rating-wrapper">
@@ -12,8 +11,8 @@
     </div>
     <p>
       <span class="error" v-if="this.submitError"><strong>Ooops!</strong> {{ this.submitError }}</span>
-      <a v-if="canSubmit() || this.submitting" class="btn" v-on:click="submitRating()"><v-icon v-if="this.submitting" name="spinner" spin /> Submit your ratings</a>
-      <a v-if="!canSubmit() && !this.submitting" class="btn btn--wait" v-on:click="submitRating()">Thank you for your feedback!</a>
+      <a v-if="canSubmit() || this.submitting" class="btn" v-on:click="submitRating()"><v-icon v-if="this.submitting" name="spinner" spin /> Submit</a>
+      <a v-if="!canSubmit() && !this.submitting" class="btn btn--wait" v-on:click="submitRating()">Thank you!</a>
     </p>
   </div>
 </template>

@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="evaluation-link">
-      <p class="last"><router-link to="/evaluation">Submit your feedback</router-link></p>
+      <p class="last"><router-link to="/evaluation">Rate this App<img src="@/assets/img/star-rating.png" alt=""></router-link></p>
     </div>
   </div>
 </template>
@@ -215,6 +215,16 @@ export default {
 
   .evaluation-link a {
     font-weight: 400;
+  }
+
+  .evaluation-link a img {
+    height: .93875em;
+    width: .93875em;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    top: -2px;
+    margin-left: .25em;
   }
 
   @media screen and (min-width: 640px) and (max-width: 800px) {

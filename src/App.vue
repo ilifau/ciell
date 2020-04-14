@@ -139,6 +139,7 @@ html {
 
 body {
   margin: 0;
+  -webkit-text-size-adjust: 100%;
 }
 
 #app {

@@ -59,9 +59,9 @@ export default {
         title = `
           <p>As soon as you complete the tasks in this essay, <strong>you will be rewarded with a medal</strong> (bronze, silver, gold). Open the next chapter to begin working on the tasks.</p>
           <div style="display:block;padding:1em 0">
-            <img style="width:180px;max-width:25%;margin-right:.75em" src="${require('@/stories/ciell/assets/img/badges/badge-bronze.png')}" alt="Bronze medal" />
-            <img style="width:180px;max-width:25%;margin-right:.75em" src="${require('@/stories/ciell/assets/img/badges/badge-silver.png')}" alt="Bronze medal" />
-            <img style="width:180px;max-width:25%;" src="${require('@/stories/ciell/assets/img/badges/badge-gold.png')}" alt="Bronze medal" />
+            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-bronze.png')}" alt="Bronze medal" />
+            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-silver.png')}" alt="Bronze medal" />
+            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-gold.png')}" alt="Bronze medal" />
           </div>
           <p>Good luck!</p>
         `
@@ -83,7 +83,7 @@ export default {
         return title
       }
 
-      return '<p>' + title + '</p><img style="margin-top:1em" src="' + badge + '" alt="' + alt + '" />'
+      return '<p>' + title + '</p><img class="badge-image" style="margin-top:1em" src="' + badge + '" alt="' + alt + '" />'
     }
   }
 }
@@ -112,5 +112,11 @@ export default {
   .task-checkmark {
     color: #08723d;
     display: inline-block;
+  }
+
+  .badge >>> .badge-image {
+    width:69px;
+    max-width:25%;
+    margin-right:.75em;
   }
 </style>

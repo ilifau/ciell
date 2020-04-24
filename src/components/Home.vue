@@ -164,7 +164,7 @@ export default {
     z-index: 2;
     position: absolute;
     left: 0;
-    bottom: -1em;
+    bottom: -.875em;
     padding: 0 0 0 2em;
     transition: all .3s linear;
     /* border: 1px solid red; */
@@ -193,7 +193,7 @@ export default {
     position: relative;
     display: block;
     overflow: hidden;
-    padding: .5em;
+    padding: .6em .5em .5em;
     color: #fff;
   }
 

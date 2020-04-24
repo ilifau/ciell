@@ -6,7 +6,7 @@ let Story = [
     url: 'https://www.un.org/sustainabledevelopment/poverty/',
     description: 'A story on the issue of homelessness.',
     preview: 'homeless/cover.jpg',
-    color: 'rgb(59, 64, 63)',
+    color: 'rgb(0, 98, 103)',
     chapters: [
       {
         id: 0,
@@ -283,7 +283,7 @@ let Story = [
     url: 'https://www.un.org/sustainabledevelopment/inequality/',
     description: 'This is an essay on inequality.',
     preview: 'poverty/cover.jpg',
-    color: 'rgb(217, 85, 14)',
+    color: 'rgb(175, 31, 35)',
     chapters: [
       {
         id: 0,
@@ -483,7 +483,7 @@ let Story = [
     url: 'https://www.un.org/sustainabledevelopment/health/',
     description: 'A story on the Zen gardens.',
     preview: 'zen-gardens/cover.jpg',
-    color: 'rgb(170, 172, 73)',
+    color: 'rgb(234, 149, 34)',
     chapters: [
       {
         id: 0,
@@ -754,7 +754,7 @@ let Story = [
     url: 'https://www.un.org/sustainabledevelopment/education/',
     description: 'A story on the issue of gender equality.',
     preview: 'agatha-christie/cover.jpg',
-    color: 'rgb(142, 1, 49)',
+    color: 'rgb(235, 0, 135)',
     chapters: [
       {
         id: 0,
@@ -1017,7 +1017,7 @@ let Story = [
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/gender-equality/',
     preview: 'gender-equality/cover.jpg',
-    color: 'rgb(139, 87, 46)',
+    color: 'rgb(72, 119, 82)',
     tasks: [
       {
         id: 10,
@@ -1537,7 +1537,7 @@ let Story = [
     url: 'https://www.un.org/sustainabledevelopment/energy/',
     description: 'This is another empty story.',
     preview: 'nuclear-power/cover.jpg',
-    color: 'rgb(238, 78, 78)',
+    color: 'rgb(255, 209, 0)',
     tasks: [
       {
         id: 40,
@@ -2048,7 +2048,7 @@ let Story = [
     url: 'https://www.un.org/sustainabledevelopment/cities/',
     description: 'This is an essay on transport.',
     preview: 'transports/cover.jpg',
-    color: 'rgb(67, 62, 69)',
+    color: 'rgb(198, 32, 39)',
     chapters: [
       {
         id: 0,
@@ -2247,7 +2247,7 @@ let Story = [
     url: 'https://www.un.org/sustainabledevelopment/climate-change/',
     author: 'CIELL Team',
     preview: 'climate-change/cover.jpg',
-    color: 'rgb(81, 99, 109)',
+    color: 'rgb(213, 212, 36)',
     chapters: [
       {
         id: 0,
@@ -2440,7 +2440,7 @@ let Story = [
     url: 'https://www.un.org/sustainabledevelopment/peace-justice/',
     author: 'CIELL Team',
     preview: 'cipta/cover.jpg',
-    color: 'rgb(143, 178, 196)',
+    color: 'rgb(193, 116, 174)',
     chapters: [
       {
         id: 0,

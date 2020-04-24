@@ -29,9 +29,14 @@
     <ul class="choices">
       <li v-for="choice in choices()" :key="choice.chapterId">
         <a v-on:click="openChapter(choice.chapterId)" :class="choice.class">
-          <span v-if="choice.iconBefore"><v-icon :name="choice.iconBefore" scale="0.875"/></span>
-          {{ choice.text }}
-          <span v-if="choice.iconAfter"><v-icon :name="choice.iconAfter" scale="0.875" /></span>
+          <span v-if="choice.class === 'previous'">
+            <img :src="require('@/stories/ciell/assets/img/arrow-right.png')" />
+            {{choice.text}}
+          </span>
+          <span v-if="choice.class === 'next'">
+            {{choice.text}}
+            <img :src="require('@/stories/ciell/assets/img/arrow-right.png')" />
+          </span>
         </a>
       </li>
       <li v-if="finalChapter()">
@@ -223,30 +228,38 @@ export default {
 
 .choices {
   list-style-type: none;
-  margin: 2.5em 0 0;
+  margin: 3em 0 1em;
   padding: 0;
   overflow: hidden;
   clear: both;
 }
 
 .choices a {
-  font-size: 1em;
-  display: block;
-  text-align: center;
-  padding: .375em .75em;
-  color: #fff;
-  background: #219ac2;
-  margin-bottom: .375em;
-  transition: background .15s linear;
-  position: relative;
-  z-index: 6;
-  border-radius: 3px;
+  color: #2d383b;
+  font-weight: 400;
+  font-family: 'aka-acidgr-diarygirlmedium';
 }
 
-.choices a.previous,
-.choices a.next {
-  display: inline-block;
-  width: 33%;
+.choices a span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.choices a.previous img,
+.choices a.next img {
+  width: 2.375em;
+  position: relative;
+}
+
+.choices a.previous img {
+  transform: rotateY(180deg);
+  margin-right: .5em;
+}
+
+.choices a.next img {
+  margin-left: .5em;
 }
 
 .choices a.previous {
@@ -266,12 +279,6 @@ export default {
   margin-bottom: 0;
 }
 
-.choices a:hover,
-.choices a:active {
-  color: #fff;
-  background: #1c85a8;
-}
-
 .audio-wrapper {
   display: block;
 }
@@ -284,8 +291,15 @@ label {
   .choices a,
   .choices a.previous,
   .choices a.next {
-    display: block;
-    width: 100%;
+    font-size: .875em;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .choices a,
+  .choices a.previous,
+  .choices a.next {
+    font-size: .75em;
   }
 }
 </style>

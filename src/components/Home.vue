@@ -6,12 +6,12 @@
       <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
         <a v-on:click="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
-            <span class="number">#{{ id + 1 }}</span>
+            <span class="number" :style="{ backgroundColor: story.color }">
+              <span class="content">#{{ id + 1 }}</span>
+              <span class="badge" v-html="badge(id)"></span>
+            </span>
             {{ story.title }}
-            <span class="title-background" :style="{ backgroundColor: story.color ? story.color : '' }"></span>
           </span>
-          <div class="dark"></div>
-          <div class="badge" v-html="badge(id)"></div>
         </a>
       </div>
     </div>
@@ -61,20 +61,24 @@ export default {
       return (completed.length / taskIds.length) * 100
     },
     badge (storyId) {
-      let badge, title, alt
+      let badge, badgeClass, title, alt
       let percent = this.tasksCompletedPercent(storyId)
 
       if (percent === 0) {
         badge = null
+        badgeClass = ''
       } else if (percent > 0 && percent <= 33.34) {
+        badgeClass = 'bronze'
         badge = require('@/stories/ciell/assets/img/badges/badge-bronze.png')
         title = 'Fair enough, but you can certainly do better than that!'
         alt = 'Bronze badge'
       } else if (percent > 33.34 && percent <= 66.67) {
+        badgeClass = 'silver'
         badge = require('@/stories/ciell/assets/img/badges/badge-silver.png')
         title = 'Good job, you earned a silver medal for this essay!'
         alt = 'Silver badge'
       } else if (percent > 66.67) {
+        badgeClass = 'gold'
         badge = require('@/stories/ciell/assets/img/badges/badge-gold.png')
         title = 'Wow, awesome! You earned a gold medal for this essay!'
         alt = 'Gold badge'
@@ -84,7 +88,7 @@ export default {
         return ''
       }
 
-      return '<img class="badge" src="' + badge + '" title="' + title + '" alt="' + alt + '" />'
+      return '<span class="' + badgeClass + '"><img src="' + badge + '" title="' + title + '" alt="' + alt + '" /></span>'
     }
   }
 }
@@ -127,7 +131,7 @@ export default {
     display: block;
     position: relative;
     width: 50%;
-    margin: 0 0 1em;
+    margin: 0 0 3em;
     transition: box-shadow .3s linear, border-color .3s linear;
   }
 
@@ -148,11 +152,10 @@ export default {
     justify-content: center;
     height: 100%;
     width: 100%;
-    text-align: left;
+    text-align: center;
     background-size: cover;
-    color: #fff;
-    font-size: 1.25em;
-    text-shadow: 1px 1px 0 rgba(0,0,0,.6);
+    color: #6c6d70;
+    font-size: .93875em;
     font-family: 'aka-acidgr-diarygirlmedium';
     font-weight: 400;
   }
@@ -161,19 +164,40 @@ export default {
     z-index: 2;
     position: absolute;
     left: 0;
-    bottom: 0;
-    padding: .75em 1em;
+    bottom: -1em;
+    padding: 0 0 0 2em;
     transition: all .3s linear;
+    /* border: 1px solid red; */
+    width: 90%;
+    left: 5%;
+    text-align: left;
+    font-size: 1.06125em;
   }
 
   .story a .title span.number {
-    display: block;
-    text-align: left;
-    font-size: .6125em;
-    line-height: 1.2;
+    display: inline-block;
+    text-align: center;
+    font-size: .93875em;
+    background: red;
+    position: relative;
+    padding: 2.25em .0625em 0;
+    line-height: 1;
+    /* overflow: hidden; */
+    bottom: -.6125em;
+    left: 0;
+    margin-right: .25em;
+    width: auto;
   }
 
-  .story a .title span.title-background {
+  .story a .title span.number .content {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: .5em;
+    color: #fff;
+  }
+
+  /* .story a .title span.title-background {
     content: '';
     z-index: -1;
     position: absolute;
@@ -186,7 +210,7 @@ export default {
     transform: rotate(-2deg);
     transition: all .3s ease-in-out;
     border-radius: 2px;
-  }
+  } */
 
   /* .story a:hover .title {
     transform: scale(1.06125);
@@ -196,13 +220,30 @@ export default {
     opacity: .95;
   }
 
-  .badge {
+  .badge >>> span {
     position: absolute;
-    right: .125em;
-    top: .25em;
-    width: 28%;
+    left: 0;
+    width: 100%;
     background-size: cover;
     height: auto;
+  }
+
+  .badge >>> .bronze {
+    top: -2.125em;
+  }
+
+  .badge >>> .silver {
+    top: -3.75em;
+  }
+
+  .badge >>> .gold {
+    top: -5.1em;
+  }
+
+  .badge img {
+    display: none !important;
+    position: relative;
+    max-width: 1em;
   }
 
   .evaluation-link {
@@ -227,9 +268,9 @@ export default {
     margin-left: .25em;
   }
 
-  @media screen and (min-width: 640px) and (max-width: 800px) {
-    .story a {
-      font-size: 1.125em;
+  @media screen and (max-width: 800px) {
+    .story a .title {
+      font-size: .85em;
     }
   }
 
@@ -242,6 +283,15 @@ export default {
       justify-content: center;
     }
 
+    .story a .title {
+      font-size: 1.06125em;
+    }
+
+    .story a .title {
+      left: 0;
+      width: 95%;
+    }
+
     .story {
       width: 100%;
       margin: 0 0 2em;
@@ -249,9 +299,15 @@ export default {
     }
   }
 
-  @media screen and (max-width: 420px) {
-    .story a {
-      font-size: 1.25em;
+  @media screen and (max-width: 400px) {
+    .story a .title {
+      font-size: .875em;
+    }
+  }
+
+  @media screen and (max-width: 359px) {
+    .story a .title {
+      font-size: .75em;
     }
   }
 </style>

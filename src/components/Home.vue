@@ -6,7 +6,7 @@
       <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
         <a v-on:click="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
-            <span class="number" :style="{ backgroundColor: story.color }">
+            <span class="number" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
               <span class="content">#{{ id + 1 }}</span>
               <span class="badge" v-html="badge(id)"></span>
             </span>
@@ -178,22 +178,23 @@ export default {
     display: inline-block;
     text-align: center;
     font-size: .93875em;
-    background: red;
     position: relative;
     padding: 2.25em .0625em 0;
     line-height: 1;
     /* overflow: hidden; */
-    bottom: -.6125em;
+    bottom: -.6em;
     left: 0;
     margin-right: .25em;
     width: auto;
+    background-size: cover;
+    background-position: center center;
   }
 
   .story a .title span.number .content {
     position: relative;
     display: block;
     overflow: hidden;
-    padding: .6em .5em .5em;
+    padding: .6125em .5em .5em;
     color: #fff;
   }
 

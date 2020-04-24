@@ -7,6 +7,7 @@ let Story = [
     description: 'A story on the issue of homelessness.',
     preview: 'homeless/cover.jpg',
     color: 'rgb(0, 98, 103)',
+    numberImage: 'homeless/number.png',
     chapters: [
       {
         id: 0,
@@ -284,6 +285,7 @@ let Story = [
     description: 'This is an essay on inequality.',
     preview: 'poverty/cover.jpg',
     color: 'rgb(175, 31, 35)',
+    numberImage: 'poverty/number.png',
     chapters: [
       {
         id: 0,
@@ -484,6 +486,7 @@ let Story = [
     description: 'A story on the Zen gardens.',
     preview: 'zen-gardens/cover.jpg',
     color: 'rgb(234, 149, 34)',
+    numberImage: 'zen-gardens/number.png',
     chapters: [
       {
         id: 0,
@@ -755,6 +758,7 @@ let Story = [
     description: 'A story on the issue of gender equality.',
     preview: 'agatha-christie/cover.jpg',
     color: 'rgb(235, 0, 135)',
+    numberImage: 'agatha-christie/number.png',
     chapters: [
       {
         id: 0,
@@ -1018,6 +1022,7 @@ let Story = [
     url: 'https://www.un.org/sustainabledevelopment/gender-equality/',
     preview: 'gender-equality/cover.jpg',
     color: 'rgb(72, 119, 82)',
+    numberImage: 'gender-equality/number.png',
     tasks: [
       {
         id: 10,
@@ -1538,6 +1543,7 @@ let Story = [
     description: 'This is another empty story.',
     preview: 'nuclear-power/cover.jpg',
     color: 'rgb(255, 209, 0)',
+    numberImage: 'nuclear-power/number.png',
     tasks: [
       {
         id: 40,
@@ -2049,6 +2055,7 @@ let Story = [
     description: 'This is an essay on transport.',
     preview: 'transports/cover.jpg',
     color: 'rgb(198, 32, 39)',
+    numberImage: 'transports/number.png',
     chapters: [
       {
         id: 0,
@@ -2248,6 +2255,7 @@ let Story = [
     author: 'CIELL Team',
     preview: 'climate-change/cover.jpg',
     color: 'rgb(213, 212, 36)',
+    numberImage: 'climate-change/number.png',
     chapters: [
       {
         id: 0,
@@ -2441,6 +2449,7 @@ let Story = [
     author: 'CIELL Team',
     preview: 'cipta/cover.jpg',
     color: 'rgb(193, 116, 174)',
+    numberImage: 'cipta/number.png',
     chapters: [
       {
         id: 0,

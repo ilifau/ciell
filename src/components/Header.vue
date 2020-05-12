@@ -19,15 +19,15 @@
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-bind:class="{ active: navIsActive }">
       <span class="nav-header">NAVIGATION</span>
-      <router-link to="/" v-on:click.native="closeNav()">Essays</router-link>
+      <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Essays</router-link>
       <div v-for="(story, id) in stories" :key="id">
-        <a class="story-link" v-bind:class="{ current: id === $store.state.currentStoryId, placeholder: story.placeholder }" v-on:click="openStory(id), closeNav()">
+        <a class="story-link" v-bind:class="{ current: id === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }" v-on:click="openStory(id), closeNav()">
           {{ id + 1 }}. {{ story.title }}
         </a>
       </div>
       <a id="toggleBaseFont" v-on:click="toggleBaseFont()" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
-      <router-link to="/evaluation" v-on:click.native="closeNav()">Rate this App</router-link>
-      <router-link to="/about" v-on:click.native="closeNav()">About CIELL</router-link>
+      <router-link to="/evaluation" v-bind:class="{ current: $route.name === 'evaluation' }" v-on:click.native="closeNav()">Rate this App</router-link>
+      <router-link to="/about" v-bind:class="{ current: $route.name === 'about' }" v-on:click.native="closeNav()">About CIELL</router-link>
     </div>
   </div>
 </template>
@@ -61,10 +61,10 @@ export default {
       let show = ['story', 'about', 'evaluation']
       return show.includes(this.$route.name)
     },
-    openStory (id) {
+    openStory: function (id) {
       this.$emit('openStory', id)
     },
-    toggleBaseFont () {
+    toggleBaseFont: function () {
       this.$emit('toggleBaseFont')
     }
   }
@@ -125,10 +125,10 @@ export default {
   position: fixed;
   z-index: 11;
   top: 0;
-  left: -280px;
-  width: 280px;
+  left: -300px;
+  width: 300px;
   height: 125%;
-  max-width: 280px;
+  max-width: 300px;
   background: #20323e;
   transition: all .25s ease;
 }
@@ -253,11 +253,11 @@ export default {
   padding-left: 2rem;
 }
 
-.nav .story-link.current {
+.nav a.current {
   background: rgba(0,0,0,.2);
 }
 
-.nav .story-link.placeholder {
+.nav .placeholder {
   color: rgba(255,255,255,.4);
 }
 

@@ -18,8 +18,8 @@ export default {
   },
   props: ['stories'],
   methods: {
-    openStory (id) {
-      this.$emit('openStory', id)
+    openStory (id, taskPage) {
+      this.$emit('openStory', id, taskPage)
     },
     showMessage (message) {
       this.$emit('showMessage', message)

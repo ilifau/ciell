@@ -34,7 +34,9 @@ export default {
   props: ['stories', 'showHeaderBackground'],
   methods: {
     openStory (id) {
-      this.$emit('openStory', id)
+      this.$emit('openStory', {
+        id
+      })
     }
   }
 }

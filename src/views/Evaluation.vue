@@ -35,7 +35,9 @@ export default {
   },
   methods: {
     openStory (id) {
-      this.$emit('openStory', id)
+      this.$emit('openStory', {
+        id
+      })
     },
     ratings () {
       return this.$store.state.ratings
@@ -111,6 +113,7 @@ label {
   clear: left;
   width: 100%;
 }
+
 .star {
   display: inline-block;
   margin-right: .5em;
@@ -132,5 +135,17 @@ h2 {
   color: rgb(122, 10, 10);
   background: rgb(255, 233, 233);
   padding: .5em;
+}
+
+@media screen and (max-width: 380px) {
+  .star {
+    width: 48px;
+  }
+}
+
+@media screen and (max-width: 359px) {
+  .star {
+    width: 42px;
+  }
 }
 </style>

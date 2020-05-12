@@ -6,7 +6,7 @@
       <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
         <a v-on:click="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
-            <span class="number" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
+            <span class="number" v-on:click="openStory(id, true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
               <span class="content">#{{ id + 1 }}</span>
               <span class="badge" v-html="badge(id)"></span>
             </span>
@@ -25,8 +25,10 @@
 export default {
   props: ['stories'],
   methods: {
-    openStory (id) {
-      this.$emit('openStory', id)
+    openStory (id, taskPage = false) {
+      this.$emit('openStory', {
+        id, taskPage
+      })
     },
     storyBackgroundImage () {
       return this.$props.stories[this.$store.state.currentStoryId].preview
@@ -230,15 +232,15 @@ export default {
   }
 
   .badge >>> .bronze {
-    top: -2.125em;
+    top: -2.1em;
   }
 
   .badge >>> .silver {
-    top: -3.75em;
+    top: -3.7em;
   }
 
   .badge >>> .gold {
-    top: -5.1em;
+    top: -5em;
   }
 
   .badge img {

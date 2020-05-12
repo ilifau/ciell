@@ -21,13 +21,16 @@
       <span class="nav-header">NAVIGATION</span>
       <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Essays</router-link>
       <div v-for="(story, id) in stories" :key="id">
-        <a class="story-link" v-bind:class="{ current: id === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }" v-on:click="openStory(id), closeNav()">
-          {{ id + 1 }}. {{ story.title }}
-        </a>
+        <div class="story-link-wrapper" v-bind:class="{ current: id === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
+          <a class="story-link" v-on:click="openStory(id), closeNav()">
+            {{ story.title }}
+          </a>
+          <a class="task-link" v-bind:class="badgeClass(id)" v-on:click="openStory(id, true), closeNav()"></a>
+        </div>
       </div>
-      <a id="toggleBaseFont" v-on:click="toggleBaseFont()" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
       <router-link to="/evaluation" v-bind:class="{ current: $route.name === 'evaluation' }" v-on:click.native="closeNav()">Rate this App</router-link>
       <router-link to="/about" v-bind:class="{ current: $route.name === 'about' }" v-on:click.native="closeNav()">About CIELL</router-link>
+      <a id="toggleBaseFont" v-on:click="toggleBaseFont()" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
     </div>
   </div>
 </template>
@@ -61,11 +64,35 @@ export default {
       let show = ['story', 'about', 'evaluation']
       return show.includes(this.$route.name)
     },
-    openStory: function (id) {
-      this.$emit('openStory', id)
+    openStory: function (id, taskPage = false) {
+      this.$emit('openStory', {
+        id, taskPage
+      })
     },
     toggleBaseFont: function () {
       this.$emit('toggleBaseFont')
+    },
+    badgeClass: function (id) {
+      if (typeof this.$props.stories[id].tasks === 'undefined') {
+        return {}
+      }
+
+      const taskIds = this.$props.stories[id].tasks.map(function (task) {
+        return task.id
+      })
+
+      if (taskIds.length === 0) {
+        return {}
+      }
+
+      const completed = taskIds.filter(id => this.$store.state.tasksComplete.includes(id))
+      let percent = (completed.length / taskIds.length) * 100
+
+      return {
+        bronze: percent > 0 && percent <= 33.34,
+        silver: percent > 33.34 && percent <= 66.67,
+        gold: percent > 66.67
+      }
     }
   }
 }
@@ -202,21 +229,38 @@ export default {
 .nav a,
 .nav .nav-header {
   display: block;
-  padding: .5rem 1rem;
+  padding: .5rem .75rem;
   color: #fff;
   border-bottom: 1px solid rgba(255,255,255,.1);
 }
 
 .nav a {
   font-size: .875em;
-  transition: all .2s linear;
+  /* transition: background .2s linear; */
   font-weight: 400;
   position: relative;
 }
 
-.nav a:hover,
-.nav a:focus {
+.nav a:not(.task-link):hover,
+.nav a:not(.task-link):focus,
+.nav .story-link-wrapper:hover,
+.nav .story-link-wrapper:focus {
   background: rgba(0,0,0,.2);
+}
+
+.nav .story-link-wrapper:hover a:not(.task-link),
+.nav .story-link-wrapper:focus a:not(.task-link) {
+  background: none;
+}
+
+.nav .story-link-wrapper {
+  transition: background .2s linear;
+}
+
+.nav .story-link-wrapper,
+.nav .story-link,
+.nav .task-link {
+  cursor: pointer;
 }
 
 .nav .nav-header {
@@ -249,16 +293,67 @@ export default {
   background: rgba(0,0,0,.4)
 }
 
-.nav .story-link {
-  padding-left: 2rem;
+.nav .story-link-wrapper {
+  display: table;
+  align-items: center;
+  width: 100%;
+  font-size: .93875em;
 }
 
+.nav .story-link {
+  display: table-cell;
+  width: 88%;
+}
+
+.nav .task-link {
+  display: table-cell;
+  width: 12%;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  padding: 0 0;
+}
+
+.nav .story-link {
+  padding-left: 1.5rem;
+}
+
+.nav .story-link-wrapper.current,
 .nav a.current {
   background: rgba(0,0,0,.2);
 }
 
 .nav .placeholder {
   color: rgba(255,255,255,.4);
+}
+
+.nav .task-link {
+  background-size: auto 40%;
+  background-position: center 46%;
+  background-repeat: no-repeat;
+  z-index: 10;
+  position: relative;
+}
+
+.nav .task-link {
+  background-image: url('~@/stories/ciell/assets/img/badges/star-none.png');
+}
+
+.nav .task-link.gold {
+  background-image: url('~@/stories/ciell/assets/img/badges/star-gold.png');
+}
+
+.nav .task-link.silver {
+  background-image: url('~@/stories/ciell/assets/img/badges/star-silver.png');
+}
+
+.nav .task-link.bronze {
+  background-image: url('~@/stories/ciell/assets/img/badges/star-bronze.png');
+}
+
+.nav .story-link-wrapper:hover .task-link {
+  background-size: auto 56%;
+  background-position: center 44%;
 }
 
 #toggleBaseFont {

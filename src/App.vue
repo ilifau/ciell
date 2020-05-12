@@ -61,7 +61,10 @@ export default {
     Header
   },
   methods: {
-    openStory (id, scroll = false) {
+    openStory (params) {
+      let id = params.id
+      let taskPage = params.taskPage
+
       if (typeof this.stories[id].placeholder !== 'undefined') {
         this.$modal.show('dialog', {
           title: 'Please Note',
@@ -76,7 +79,22 @@ export default {
         return
       }
 
-      this.$store.commit('setCurrentChapterId', 0)
+      // Open first chapter or chapter that contains the task page
+      let chapterId = 0
+
+      if (taskPage) {
+        let chapter = this.stories[id].chapters.filter(chapter => {
+          return chapter.content === '[tasks]'
+        })
+
+        if (typeof chapter[0].id === 'undefined' || !chapter[0].id) {
+          chapterId = 0
+        } else {
+          chapterId = chapter[0].id
+        }
+      }
+
+      this.$store.commit('setCurrentChapterId', chapterId)
       this.$store.commit('setCurrentStoryId', id)
       this.$router.push('story')
     },

@@ -21,8 +21,13 @@ export default {
     'currentStoryId'
   ],
   methods: {
-    openStory (id) {
-      this.$emit('openStory', id)
+    openStory (params) {
+      let id = params.id
+      let taskPage = params.taskPage
+      this.$emit('openStory', {
+        id,
+        taskPage
+      })
     }
   }
 }

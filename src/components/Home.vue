@@ -67,8 +67,10 @@ export default {
       let percent = this.tasksCompletedPercent(storyId)
 
       if (percent === 0) {
-        badge = null
-        badgeClass = ''
+        badgeClass = 'none'
+        // badge = require('@/stories/ciell/assets/img/badges/star-silver.png')
+        // title = 'You can earn stars by completing essay tasks.'
+        // alt = 'Badges'
       } else if (percent > 0 && percent <= 33.34) {
         badgeClass = 'bronze'
         badge = require('@/stories/ciell/assets/img/badges/badge-bronze.png')
@@ -225,6 +227,7 @@ export default {
 
   .badge >>> span {
     position: absolute;
+    z-index: -1;
     left: 0;
     width: 100%;
     background-size: cover;
@@ -232,7 +235,7 @@ export default {
   }
 
   .badge >>> .bronze {
-    top: -2.1em;
+    top: -2.2em;
   }
 
   .badge >>> .silver {
@@ -241,6 +244,12 @@ export default {
 
   .badge >>> .gold {
     top: -5em;
+  }
+
+  .badge >>> .none {
+    top: -.6125em;
+    width: 50%;
+    left: 25%;
   }
 
   .badge img {

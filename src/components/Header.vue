@@ -19,7 +19,7 @@
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-bind:class="{ active: navIsActive }">
       <span class="nav-header">NAVIGATION</span>
-      <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Essays</router-link>
+      <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Essays and Tasks</router-link>
       <div v-for="(story, id) in stories" :key="id">
         <div class="story-link-wrapper" v-bind:class="{ current: id === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
           <a class="story-link" v-on:click="openStory(id), closeNav()">
@@ -158,6 +158,10 @@ export default {
   max-width: 300px;
   background: #20323e;
   transition: all .25s ease;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
 }
 
 /* @supports(padding: max(0px)) {

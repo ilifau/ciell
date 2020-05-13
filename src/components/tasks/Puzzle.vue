@@ -76,7 +76,7 @@ export default {
       if (this.$store.state.tasksComplete.includes(this.task.id)) {
         message = {
           title: 'Hooray! 😊',
-          text: 'You completed this task successfully. Your progress will be saved. Have you earned any medals yet?',
+          text: 'You completed this task successfully. Your progress will be saved.',
           effect: 'fireworks'
         }
       } else {
@@ -89,8 +89,8 @@ export default {
       this.$emit('showMessage', message)
     },
     onChange () {
-      this.isComplete = false
-      this.$store.commit('removeTaskComplete', this.task.id)
+      // this.isComplete = false
+      // this.$store.commit('removeTaskComplete', this.task.id)
 
       let items = this.task.items
       for (let i = 0; i < items.length - 1; i++) {
@@ -148,7 +148,6 @@ export default {
   }
 
   .sortable-chosen img {
-    /* background: #219ac2; */
     border: 6px solid #219ac2;
     border-radius: 2px;
   }
@@ -211,31 +210,15 @@ export default {
     margin-right: 0;
   }
 
-  @media screen and (max-width: 1023px) {
+  @media screen and (max-width: 767px) {
     .puzzle .task-item {
-      width: calc(50% - .4em);
-      margin: 0 .75em .25em 0;
-      padding: 0 0 calc(50% - .4em);
+      width: calc(50% - .2em);
+      margin: 0 .4em .25em 0;
+      padding: 0 0 calc(50% - .2em);
     }
 
     .puzzle .task-item:nth-child(3n+3) {
-      margin-right: .75em;
-    }
-
-    .puzzle .task-item:nth-child(2n+2) {
-      margin-right: 0;
-    }
-  }
-
-  @media screen and (max-width: 580px) {
-    .puzzle .task-item {
-      width: 100%;
-      margin: 0 0 .5em 0;
-      padding: 0 0 100%;
-    }
-
-    .puzzle .task-item:nth-child(3n+3) {
-      margin-right: 0;
+      margin-right: .4em;
     }
 
     .puzzle .task-item:nth-child(2n+2) {

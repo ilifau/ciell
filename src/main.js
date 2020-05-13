@@ -13,6 +13,37 @@ Vue.use(VModal, { dialog: true })
 Vue.use(VueAxios, axios)
 Vue.config.productionTip = false
 
+Vue.mixin({
+  methods: {
+    badgeClass: function (story, tasksComplete) {
+      if (typeof story.tasks === 'undefined') {
+        return ''
+      }
+
+      const taskIds = story.tasks.map(function (task) {
+        return task.id
+      })
+
+      if (taskIds.length === 0) {
+        return ''
+      }
+
+      const completed = taskIds.filter(id => tasksComplete.includes(id))
+      let percent = (completed.length / taskIds.length) * 100
+
+      if (percent > 0 && percent <= 33.34) {
+        return 'bronze'
+      } else if (percent > 33.34 && percent <= 66.67) {
+        return 'silver'
+      } else if (percent > 66.67) {
+        return 'gold'
+      } else {
+        return ''
+      }
+    }
+  }
+})
+
 new Vue({
   store,
   router,

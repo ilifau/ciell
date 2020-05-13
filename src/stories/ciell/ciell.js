@@ -1025,6 +1025,48 @@ let Story = [
     numberImage: 'gender-equality/number.png',
     tasks: [
       {
+        id: 0,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'gender-equality/invisible 00.jpg'
+          },
+          {
+            order: 1,
+            image: 'gender-equality/invisible 02.jpg'
+          },
+          {
+            order: 2,
+            image: 'gender-equality/invisible 03.jpg'
+          },
+          {
+            order: 3,
+            image: 'gender-equality/invisible 04.jpg'
+          },
+          {
+            order: 4,
+            image: 'gender-equality/invisible 05.jpg'
+          },
+          {
+            order: 5,
+            image: 'gender-equality/invisible 06 b.jpg'
+          },
+          {
+            order: 6,
+            image: 'gender-equality/invisible 07.jpg'
+          },
+          {
+            order: 7,
+            image: 'gender-equality/invisible 08.jpg'
+          }
+        ]
+      },
+      {
         id: 10,
         name: 'Choose the correct image',
         type: 'image-choice',
@@ -1469,6 +1511,26 @@ let Story = [
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
+            'chapterId': 55
+          }
+        ]
+      },
+      {
+        id: 55,
+        taskId: 0,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
             'chapterId': 60
           }
         ]
@@ -1483,7 +1545,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 50
+            'chapterId': 55
           },
           {
             'text': 'Next',

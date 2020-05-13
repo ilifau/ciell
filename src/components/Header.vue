@@ -25,7 +25,7 @@
           <a class="story-link" v-on:click="openStory(id), closeNav()">
             {{ story.title }}
           </a>
-          <a class="task-link" v-bind:class="badgeClass(id)" v-on:click="openStory(id, true), closeNav()"></a>
+          <a class="task-link" v-bind:class="badgeClass($props.stories[id], $store.state.tasksComplete)" v-on:click="openStory(id, true), closeNav()"></a>
         </div>
       </div>
       <router-link to="/evaluation" v-bind:class="{ current: $route.name === 'evaluation' }" v-on:click.native="closeNav()">Rate this App</router-link>
@@ -71,28 +71,6 @@ export default {
     },
     toggleBaseFont: function () {
       this.$emit('toggleBaseFont')
-    },
-    badgeClass: function (id) {
-      if (typeof this.$props.stories[id].tasks === 'undefined') {
-        return {}
-      }
-
-      const taskIds = this.$props.stories[id].tasks.map(function (task) {
-        return task.id
-      })
-
-      if (taskIds.length === 0) {
-        return {}
-      }
-
-      const completed = taskIds.filter(id => this.$store.state.tasksComplete.includes(id))
-      let percent = (completed.length / taskIds.length) * 100
-
-      return {
-        bronze: percent > 0 && percent <= 33.34,
-        silver: percent > 33.34 && percent <= 66.67,
-        gold: percent > 66.67
-      }
     }
   }
 }

@@ -2,11 +2,11 @@
   <div class="task-list">
     <h1>Tasks</h1>
     <div v-if="getTasks() && getTasks().length > 0">
-      <ol class="task-list">
-        <li v-for="(task, id) in getTasks()" :key="id">
+      <ol>
+        <li v-for="(task, id) in getTasks()" :key="id" v-bind:class="{ 'complete' : taskDone(task.id) }">
           <div>
             <span>
-              <span class="task-name" v-bind:class="{ 'complete' : taskDone(task.id) }">{{ task.name }}</span>
+              <span class="task-name">{{ task.name }}</span>
                 <span class="task-checkmark" v-if="taskDone(task.id)">
                   <v-icon name="check" scale="1" />
                 </span>
@@ -62,9 +62,7 @@ export default {
             <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-bronze.png')}" alt="Bronze medal" />
             <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-silver.png')}" alt="Bronze medal" />
             <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-gold.png')}" alt="Bronze medal" />
-          </div>
-          <p>Good luck!</p>
-        `
+          </div>`
       } else if (percent > 0 && percent <= 33.34) {
         badge = require('@/stories/ciell/assets/img/badges/badge-bronze.png')
         title = '<p>Fair enough, you earned yourself a <strong>bronze medal</strong> for this essay. But you can certainly do better than that!</p>'
@@ -90,21 +88,16 @@ export default {
 </script>
 
 <style scoped>
-  ul.task-list li {
+  .task-list ol li {
     line-height: 1.75;
     font-size: 1.125em;
-  }
-
-  ul.task-list li > div {
-    display: flex;
-    align-items: center;
   }
 
   .task-name {
     font-weight: 600;
   }
 
-  .task-name.complete {
+  .complete .task-name {
     color: #08723d;
     font-weight: 700;
   }
@@ -115,8 +108,8 @@ export default {
   }
 
   .badge >>> .badge-image {
-    width:69px;
-    max-width:25%;
-    margin-right:.75em;
+    width: 69px;
+    max-width: 25%;
+    margin-right: .75em;
   }
 </style>

@@ -46,53 +46,38 @@ export default {
 
       return checker(this.$store.state.tasksComplete, taskIds)
     },
-    tasksCompletedPercent (storyId) {
-      if (!this.$props.stories[storyId].tasks) {
-        return 0
-      }
-
-      const taskIds = this.$props.stories[storyId].tasks.map(function (task) {
-        return task.id
-      })
-
-      if (taskIds.length === 0) {
-        return 0
-      }
-
-      const completed = taskIds.filter(id => this.$store.state.tasksComplete.includes(id))
-      return (completed.length / taskIds.length) * 100
-    },
     badge (storyId) {
-      let badge, badgeClass, title, alt
-      let percent = this.tasksCompletedPercent(storyId)
+      let badge = this.badgeClass(this.$props.stories[storyId], this.$store.state.tasksComplete)
+      let badgeImage, badgeClass, title, alt
 
-      if (percent === 0) {
+      if (typeof badge === 'undefined' || !badge) {
         badgeClass = 'none'
-        // badge = require('@/stories/ciell/assets/img/badges/star-silver.png')
-        // title = 'You can earn stars by completing essay tasks.'
-        // alt = 'Badges'
-      } else if (percent > 0 && percent <= 33.34) {
+      } else if (badge === 'bronze') {
         badgeClass = 'bronze'
-        badge = require('@/stories/ciell/assets/img/badges/badge-bronze.png')
+        badgeImage = require('@/stories/ciell/assets/img/badges/badge-bronze.png')
         title = 'Fair enough, but you can certainly do better than that!'
         alt = 'Bronze badge'
-      } else if (percent > 33.34 && percent <= 66.67) {
+      } else if (badge === 'silver') {
         badgeClass = 'silver'
-        badge = require('@/stories/ciell/assets/img/badges/badge-silver.png')
+        badgeImage = require('@/stories/ciell/assets/img/badges/badge-silver.png')
         title = 'Good job, you earned a silver medal for this essay!'
         alt = 'Silver badge'
-      } else if (percent > 66.67) {
+      } else if (badge === 'gold') {
         badgeClass = 'gold'
-        badge = require('@/stories/ciell/assets/img/badges/badge-gold.png')
+        badgeImage = require('@/stories/ciell/assets/img/badges/badge-gold.png')
         title = 'Wow, awesome! You earned a gold medal for this essay!'
         alt = 'Gold badge'
       }
 
-      if (!badge) {
-        return ''
+      let html = '<span class="' + badgeClass + '">'
+
+      if (typeof badgeImage !== 'undefined') {
+        html += '<img src="' + badgeImage + '" title="' + title + '" alt="' + alt + '" />'
       }
 
-      return '<span class="' + badgeClass + '"><img src="' + badge + '" title="' + title + '" alt="' + alt + '" /></span>'
+      html += '</span>'
+
+      return html
     }
   }
 }
@@ -290,7 +275,7 @@ export default {
     .stories {
       display: block;
       margin: 0 auto;
-      width: 360px;
+      width: 440px;
       max-width: 86%;
       justify-content: center;
     }

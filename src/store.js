@@ -11,7 +11,7 @@ export const store = new Vuex.Store({
     currentChapterId: 0,
     userScore: 0,
     tasksComplete: [],
-    baseFont: true,
+    baseFont: false,
     ratings: {
       Useful: 0,
       Fun: 0,

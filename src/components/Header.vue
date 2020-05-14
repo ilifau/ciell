@@ -19,7 +19,7 @@
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-bind:class="{ active: navIsActive }">
       <span class="nav-header">NAVIGATION</span>
-      <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Essays and Tasks</router-link>
+      <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Essays</router-link>
       <div v-for="(story, id) in stories" :key="id">
         <div class="story-link-wrapper" v-bind:class="{ current: id === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
           <a class="story-link" v-on:click="openStory(id), closeNav()">
@@ -28,6 +28,7 @@
           <a class="task-link" v-bind:class="badgeClass($props.stories[id], $store.state.tasksComplete)" v-on:click="openStory(id, true), closeNav()"></a>
         </div>
       </div>
+      <router-link to="/tasks" v-bind:class="{ current: $route.name === 'tasks' }" v-on:click.native="closeNav()">Stars<span class="tasks-num">{{ $store.state.tasksComplete.length }} / {{ numTasks(stories) }}<span class="tasks-completed-star" v-html="starCompleted()"></span></span></router-link>
       <router-link to="/evaluation" v-bind:class="{ current: $route.name === 'evaluation' }" v-on:click.native="closeNav()">Rate this App</router-link>
       <router-link to="/about" v-bind:class="{ current: $route.name === 'about' }" v-on:click.native="closeNav()">About CIELL</router-link>
       <a id="toggleBaseFont" v-on:click="toggleBaseFont()" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
@@ -45,7 +46,7 @@ export default {
   props: ['stories', 'showHeaderBackground'],
   computed: {
     storyTitle: function () {
-      let show = ['story', 'about', 'home', 'evaluation']
+      let show = ['story', 'tasks', 'about', 'home', 'evaluation']
       if (show.includes(this.$route.name)) {
         return 'Essays'
       } else {
@@ -61,8 +62,11 @@ export default {
       this.navIsActive = false
     },
     showBacktoStoriesLink: function () {
-      let show = ['story', 'about', 'evaluation']
+      let show = ['story', 'tasks', 'about', 'evaluation']
       return show.includes(this.$route.name)
+    },
+    starCompleted: function () {
+      return ''
     },
     openStory: function (id, taskPage = false) {
       this.$emit('openStory', {
@@ -336,6 +340,14 @@ export default {
 .nav .story-link-wrapper:hover .task-link {
   background-size: auto 56%;
   background-position: center 44%;
+}
+
+.nav .tasks-num {
+  float: right;
+  font-size: .75em;
+  position: relative;
+  top: .081em;
+  opacity: .25;
 }
 
 #toggleBaseFont {

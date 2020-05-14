@@ -139,6 +139,10 @@ export default {
     margin-bottom: 1em;
   }
 
+  label > div {
+    line-height: 0;
+  }
+
   label div p {
     display: flex;
     justify-content: center;
@@ -167,6 +171,12 @@ export default {
     float: left;
     z-index: 1;
     border-radius: 4px;
+    transition: box-shadow .2s linear;
+    box-shadow: none;
+  }
+
+  .answer:hover {
+    box-shadow: 1px 2px 1em rgba(0,0,0,.2);
   }
 
   .answer-title {

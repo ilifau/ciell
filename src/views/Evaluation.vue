@@ -20,7 +20,7 @@
 <script>
 export default {
   name: 'home',
-  props: ['stories', 'showHeaderBackground'],
+  props: ['stories'],
   data () {
     return {
       timerDuration: 60000,

@@ -31,7 +31,7 @@
 <script>
 export default {
   name: 'home',
-  props: ['stories', 'showHeaderBackground'],
+  props: ['stories'],
   methods: {
     openStory (id) {
       this.$emit('openStory', {

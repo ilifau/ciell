@@ -1135,7 +1135,7 @@ let Story = [
       },
       {
         id: 20,
-        name: 'Reorder the infographic panels',
+        name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
         title: '',
@@ -1169,7 +1169,7 @@ let Story = [
       },
       {
         id: 30,
-        name: 'Reorder the comic panels',
+        name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
         title: '',
@@ -1679,7 +1679,7 @@ let Story = [
       },
       {
         id: 50,
-        name: 'Reorder the comic panels',
+        name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
         title: '',
@@ -1709,7 +1709,7 @@ let Story = [
       },
       {
         id: 60,
-        name: 'Reorder the comic panels',
+        name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
         title: '',

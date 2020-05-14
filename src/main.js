@@ -15,6 +15,13 @@ Vue.config.productionTip = false
 
 Vue.mixin({
   methods: {
+    numTasks: function (stories) {
+      let numTasks = 0
+      stories.map(function (story) {
+        numTasks += typeof story.tasks !== 'undefined' ? story.tasks.length : 0
+      })
+      return numTasks
+    },
     badgeClass: function (story, tasksComplete) {
       if (typeof story.tasks === 'undefined') {
         return ''
@@ -31,11 +38,11 @@ Vue.mixin({
       const completed = taskIds.filter(id => tasksComplete.includes(id))
       let percent = (completed.length / taskIds.length) * 100
 
-      if (percent > 0 && percent <= 33.34) {
+      if (percent > 0 && percent <= 33.33) {
         return 'bronze'
-      } else if (percent > 33.34 && percent <= 66.67) {
+      } else if (percent > 33.33 && percent <= 80) {
         return 'silver'
-      } else if (percent > 66.67) {
+      } else if (percent > 80) {
         return 'gold'
       } else {
         return ''

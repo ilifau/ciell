@@ -60,12 +60,12 @@ export default {
       } else if (badge === 'silver') {
         badgeClass = 'silver'
         badgeImage = require('@/stories/ciell/assets/img/badges/badge-silver.png')
-        title = 'Good job, you earned a silver medal for this essay!'
+        title = 'Good job, you earned a silver star for this essay!'
         alt = 'Silver badge'
       } else if (badge === 'gold') {
         badgeClass = 'gold'
         badgeImage = require('@/stories/ciell/assets/img/badges/badge-gold.png')
-        title = 'Wow, awesome! You earned a gold medal for this essay!'
+        title = 'Wow, awesome! You earned a gold star for this essay!'
         alt = 'Gold badge'
       }
 
@@ -228,7 +228,7 @@ export default {
   }
 
   .badge >>> .gold {
-    top: -5em;
+    top: -4.9em;
   }
 
   .badge >>> .none {

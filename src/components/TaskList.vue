@@ -1,20 +1,20 @@
 <template>
   <div class="task-list">
-    <h1>Tasks</h1>
+    <h1 v-if="$route.name !== 'tasks'">Tasks</h1>
     <div v-if="getTasks() && getTasks().length > 0">
-      <ol>
+      <ul>
         <li v-for="(task, id) in getTasks()" :key="id" v-bind:class="{ 'complete' : taskDone(task.id) }">
           <div>
             <span>
-              <span class="task-name">{{ task.name }}</span>
-                <span class="task-checkmark" v-if="taskDone(task.id)">
-                  <v-icon name="check" scale="1" />
-                </span>
-                ({{ task.typeName }})
+              <span class="task-name">Task {{ id+1 }}: {{ task.name }}</span>
+              <span class="task-checkmark" v-if="taskDone(task.id)">
+                <v-icon name="check" scale="1" />
+              </span>
+              <!-- ({{ task.typeName }}) -->
             </span>
           </div>
         </li>
-      </ol>
+      </ul>
       <div class="badge" v-html="badge(this.$store.state.currentStoryId)"></div>
     </div>
     <p v-else>This essay does not contain any tasks yet.</p>
@@ -28,18 +28,37 @@ export default {
   props: ['story'],
   methods: {
     getTasks () {
-      let tasks = Stories[this.$store.state.currentStoryId].tasks
+      let tasks, story
+
+      switch (this.$route.name) {
+        case 'tasks':
+          story = Stories.find(story => story.id === this.$props.story.id)
+          tasks = story.tasks
+          break
+        default:
+          tasks = Stories[this.$store.state.currentStoryId].tasks
+          break
+      }
+
       return typeof tasks !== 'undefined' ? tasks : []
     },
     taskDone (id) {
       return this.$store.state.tasksComplete.includes(id)
     },
     tasksCompletedPercent (storyId) {
-      if (typeof Stories[storyId].tasks === 'undefined') {
+      let story
+
+      if (this.$route.name === 'tasks') {
+        story = Stories.find(story => story.id === this.$props.story.id)
+      } else {
+        story = Stories[storyId]
+      }
+
+      if (typeof story.tasks === 'undefined') {
         return 0
       }
 
-      const taskIds = Stories[storyId].tasks.map(function (task) {
+      const taskIds = story.tasks.map(function (task) {
         return task.id
       })
 
@@ -54,26 +73,27 @@ export default {
       let badge, title, alt
       let percent = this.tasksCompletedPercent(storyId)
 
-      if (percent === 0) {
+      if (percent === 0 && this.$route.name !== 'tasks') {
         badge = null
         title = `
-          <p>As soon as you complete the tasks in this essay, <strong>you will be rewarded with a medal</strong> (bronze, silver, gold). Open the next chapter to begin working on the tasks.</p>
           <div style="display:block;padding:1em 0">
-            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-bronze.png')}" alt="Bronze medal" />
-            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-silver.png')}" alt="Bronze medal" />
-            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-gold.png')}" alt="Bronze medal" />
-          </div>`
-      } else if (percent > 0 && percent <= 33.34) {
+            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-bronze.png')}" alt="Bronze star" />
+            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-silver.png')}" alt="Bronze star" />
+            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-gold.png')}" alt="Bronze star" />
+          </div>
+          <p>You can earn stars by completing the tasks in this essay. Open the next chapter to begin working on the tasks.</p>
+          `
+      } else if (percent > 0 && percent <= 33) {
         badge = require('@/stories/ciell/assets/img/badges/badge-bronze.png')
-        title = '<p>Fair enough, you earned yourself a <strong>bronze medal</strong> for this essay. But you can certainly do better than that!</p>'
+        title = '<p>Fair enough, you earned yourself a <strong>bronze star</strong> for this essay.</p>'
         alt = 'Bronze badge'
-      } else if (percent > 33.34 && percent <= 66.67) {
+      } else if (percent > 33 && percent < 80) {
         badge = require('@/stories/ciell/assets/img/badges/badge-silver.png')
-        title = '<p>Good job, you earned yourself a <strong>silver medal</strong> for this essay! Can you get the gold medal?</p>'
+        title = '<p>Good job, you earned yourself a <strong>silver star</strong> for this essay!</p>'
         alt = 'Silver badge'
-      } else if (percent > 66.67) {
+      } else if (percent >= 80) {
         badge = require('@/stories/ciell/assets/img/badges/badge-gold.png')
-        title = '<p>Wow, awesome! You completed all tasks for this essay successfully and earned yourself a <strong>gold medal</strong>. Keep up the good work!</p>'
+        title = '<p>Wow, awesome! You completed all tasks for this essay and earned yourself a <strong>gold star</strong>!</p>'
         alt = 'Gold badge'
       }
 
@@ -81,14 +101,22 @@ export default {
         return title
       }
 
-      return '<p>' + title + '</p><img class="badge-image" style="margin-top:1em" src="' + badge + '" alt="' + alt + '" />'
+      let titleHtml = title && this.$route.name !== 'tasks' ? '<p>' + title + '</p>' : ''
+
+      return '<img class="badge-image" src="' + badge + '" alt="' + alt + '" />' + titleHtml
     }
   }
 }
 </script>
 
 <style scoped>
-  .task-list ol li {
+  .task-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 1em;
+  }
+
+  .task-list ul li {
     line-height: 1.75;
     font-size: 1.125em;
   }
@@ -108,7 +136,7 @@ export default {
   }
 
   .badge >>> .badge-image {
-    width: 69px;
+    width: 48px;
     max-width: 25%;
     margin-right: .75em;
   }

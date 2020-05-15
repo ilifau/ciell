@@ -86,6 +86,7 @@ export default {
 <style scoped>
   .container.home {
     padding-top: 0;
+    padding-bottom: 0;
   }
 
   .ciell-logo {

@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="task" v-bind:class="{ puzzle: this.task.type === 'puzzle', completed: this.$store.state.tasksComplete.includes(this.task.id)}">
+  <div v-bind:class="{ completed: this.$store.state.tasksComplete.includes(this.task.id)}">
+    <div class="task" v-bind:class="{ puzzle: this.task.type === 'puzzle'}">
       <h1 v-if="task.title">{{ task.title }}</h1>
       <div v-if="task.description" v-html="task.description"></div>
       <draggable drag-class="drag" v-model="task.items" group="tasks" @start="drag=true" @change="onChange" @end="drag=false">
@@ -170,7 +170,7 @@ export default {
     color: #fff !important;
     text-decoration: none;
     text-align: center;
-    background: #08723d;
+    background: #219ac2;
     padding: .75em;
     border-radius: 3px;
     display: block;
@@ -182,17 +182,25 @@ export default {
     line-height: 1;
   }
 
-  .check-task::before {
-    content: '✓';
-    margin-right: .25em;
-  }
-
   .check-task:hover {
-    background: #185d3a;
+    background: #1d8aaf;
     -webkit-box-shadow: 0 .375em 2.125em -.875em rgba(0,0,0,0.57);
     -moz-box-shadow: 0 .375em 2.125em -.875em rgba(0,0,0,0.57);
     box-shadow: .375em 2.125em -.875em rgba(0,0,0,0.57);
     transition: all .4s ease 0s;
+  }
+
+  .completed .check-task {
+    background: #08723d;
+  }
+
+  .completed .check-task:hover {
+    background: #185d3a;
+  }
+
+  .completed .check-task::before {
+    content: '✓';
+    margin-right: .25em;
   }
 
   /* Puzzle */

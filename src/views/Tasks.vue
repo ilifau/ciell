@@ -1,19 +1,20 @@
 <template>
   <div class="container tasks">
-    <h1>Stars</h1>
-    <p>Each comic in this app contains several tasks. You can earn stars by successively completing tasks. Tapping/clicking the star related to an essay in the main navigation is a shortcut to the tasks inside this comic.</p>
-    <h2>Stars earned</h2>
+    <h1>Stars earned</h1>
     <div class="stars-wrapper">
       <div v-html="getStar()"></div>
       <div>
-        <span class="stars" v-text="stars"></span>&nbsp;/&nbsp;<span class="stars-total">{{this.starsTotal}}</span>
+        <span class="stars" v-text="stars"></span>&nbsp;/&nbsp;<span class="stars-total">{{this.starsTotal}} {{ starName() }}</span>
       </div>
     </div>
     <p>&nbsp;</p>
     <h2>Essays</h2>
     <div class="stories">
       <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
-        <h3 class="story-title" v-on:click="openStory(id)">{{story.title}}</h3>
+        <h3 class="story-title" v-on:click="openStory(id)">
+          <span v-html="singleStar(story)"></span>
+          {{story.title}}
+        </h3>
         <TaskList
           @openStory="openStory($event)"
           v-bind:story="story"
@@ -55,14 +56,43 @@ export default {
       this.interval = setInterval(this.tick, this.time)
     },
     getStar: function () {
+      if (this.$store.state.tasksComplete.length === 0) {
+        return ''
+      }
+
       let percent = this.$store.state.tasksComplete.length / this.starsTotal * 100
 
-      if (percent < 33.33) {
+      if (percent <= 49) {
         return `<img class="star" src="${require('@/stories/ciell/assets/img/badges/star-bronze.png')}" alt="Bronze star" />`
-      } else if (percent > 33.33 && percent < 80) {
+      } else if (percent > 49 && percent <= 80) {
         return `<img class="star" src="${require('@/stories/ciell/assets/img/badges/star-silver.png')}" alt="Silver star" />`
-      } else if (percent > 80) {
+      } else if (percent > 80 && percent < 100) {
         return `<img class="star" src="${require('@/stories/ciell/assets/img/badges/star-gold.png')}" alt="Gold star" />`
+      } else if (percent >= 100) {
+        return '<img class="star" src="' + require('@/stories/ciell/assets/img/badges/star-platinum.png') + '" alt="Platinum star" />'
+      }
+    },
+    singleStar: function (story) {
+      let badgeClass = this.badgeClass(story, this.$store.state.tasksComplete)
+      if (badgeClass) {
+        return `<img class="star" src="${require('@/stories/ciell/assets/img/badges/star-' + badgeClass + '.png')}" alt="Gold star" />`
+      }
+    },
+    starName: function () {
+      if (this.$store.state.tasksComplete.length === 0) {
+        return ''
+      }
+
+      let percent = this.$store.state.tasksComplete.length / this.starsTotal * 100
+
+      if (percent <= 49) {
+        return '(Bronze)'
+      } else if (percent > 49 && percent <= 80) {
+        return '(Silver)'
+      } else if (percent > 80 && percent < 100) {
+        return '(Gold)'
+      } else if (percent >= 100) {
+        return '(Platinum)'
       }
     },
     openStory (params) {
@@ -103,6 +133,13 @@ export default {
     margin-top: 0;
     padding-top: 0;
     cursor: pointer;
+  }
+
+  h3 >>> .star {
+    width: .9em;
+    height: auto;
+    position: relative;
+    top: 2px;
   }
 
   .story >>> p {

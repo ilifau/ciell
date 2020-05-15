@@ -20,7 +20,7 @@
           </div>
         </li>
       </ul>
-      <div class="badge" v-html="badge(this.$store.state.currentStoryId)"></div>
+      <div v-if="$route.name !== 'tasks'" class="badge" v-html="badge(this.$store.state.currentStoryId)"></div>
     </div>
     <p v-else>This essay does not contain any tasks yet.</p>
   </div>
@@ -88,16 +88,16 @@ export default {
           </div>
           <p>You can earn stars by completing the tasks in this essay. Open the next chapter to begin working on the tasks.</p>
           `
-      } else if (percent > 0 && percent <= 33) {
-        badge = require('@/stories/ciell/assets/img/badges/badge-bronze.png')
+      } else if (percent > 0 && percent <= 34) {
+        badge = require('@/stories/ciell/assets/img/badges/star-bronze.png')
         title = '<p>Fair enough, you earned yourself a <strong>bronze star</strong> for this essay.</p>'
         alt = 'Bronze badge'
-      } else if (percent > 33 && percent < 80) {
-        badge = require('@/stories/ciell/assets/img/badges/badge-silver.png')
+      } else if (percent > 34 && percent < 99) {
+        badge = require('@/stories/ciell/assets/img/badges/star-silver.png')
         title = '<p>Good job, you earned yourself a <strong>silver star</strong> for this essay!</p>'
         alt = 'Silver badge'
-      } else if (percent >= 80) {
-        badge = require('@/stories/ciell/assets/img/badges/badge-gold.png')
+      } else if (percent >= 99) {
+        badge = require('@/stories/ciell/assets/img/badges/star-gold.png')
         title = '<p>Wow, awesome! You completed all tasks for this essay and earned yourself a <strong>gold star</strong>!</p>'
         alt = 'Gold badge'
       }
@@ -138,6 +138,10 @@ export default {
 
       let storyKey = this.getStoryKey()
       let tasks = Stories[storyKey].tasks
+
+      if (typeof tasks === 'undefined' || tasks.length === 0) {
+        return false
+      }
 
       let _this = this
       tasks.forEach(function (task) {

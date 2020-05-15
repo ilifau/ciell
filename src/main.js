@@ -38,11 +38,11 @@ Vue.mixin({
       const completed = taskIds.filter(id => tasksComplete.includes(id))
       let percent = (completed.length / taskIds.length) * 100
 
-      if (percent > 0 && percent <= 33.33) {
+      if (percent > 0 && percent <= 34) {
         return 'bronze'
-      } else if (percent > 33.33 && percent <= 80) {
+      } else if (percent > 34 && percent <= 99) {
         return 'silver'
-      } else if (percent > 80) {
+      } else if (percent > 99) {
         return 'gold'
       } else {
         return ''

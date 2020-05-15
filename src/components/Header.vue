@@ -28,7 +28,7 @@
           <a class="task-link" v-bind:class="badgeClass($props.stories[id], $store.state.tasksComplete)" v-on:click="openStory(id, true), closeNav()"></a>
         </div>
       </div>
-      <router-link to="/tasks" v-bind:class="{ current: $route.name === 'tasks' }" v-on:click.native="closeNav()">Stars<span class="tasks-num">{{ $store.state.tasksComplete.length }} / {{ numTasks(stories) }}<span class="tasks-completed-star" v-html="starCompleted()"></span></span></router-link>
+      <router-link to="/tasks" v-bind:class="{ current: $route.name === 'tasks' }" v-on:click.native="closeNav()">Stars earned<span class="tasks-num"><span v-html="starsTotal()"></span><span class="of">{{ $store.state.tasksComplete.length }} / {{ numTasks(stories) }}</span></span></router-link>
       <router-link to="/evaluation" v-bind:class="{ current: $route.name === 'evaluation' }" v-on:click.native="closeNav()">Rate this App</router-link>
       <router-link to="/about" v-bind:class="{ current: $route.name === 'about' }" v-on:click.native="closeNav()">About CIELL</router-link>
       <a id="toggleBaseFont" v-on:click="toggleBaseFont()" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
@@ -46,9 +46,11 @@ export default {
   props: ['stories', 'showHeaderBackground'],
   computed: {
     storyTitle: function () {
-      let show = ['story', 'tasks', 'about', 'home', 'evaluation']
+      let show = ['tasks', 'about', 'home', 'evaluation']
       if (show.includes(this.$route.name)) {
         return 'Essays'
+      } else if (this.$route.name === 'story') {
+        return this.$props.stories[this.$store.state.currentStoryId].title
       } else {
         return ''
       }
@@ -65,8 +67,22 @@ export default {
       let show = ['story', 'tasks', 'about', 'evaluation']
       return show.includes(this.$route.name)
     },
-    starCompleted: function () {
-      return ''
+    starsTotal: function () {
+      if (this.$store.state.tasksComplete.length === 0) {
+        return ''
+      }
+
+      let percent = Math.ceil(this.$store.state.tasksComplete.length / this.numTasks(this.$props.stories) * 100)
+
+      if (percent > 0 && percent <= 49) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-bronze.png') + '" alt="Bronze star" />'
+      } else if (percent > 49 && percent <= 80) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-silver.png') + '" alt="Silver star" />'
+      } else if (percent > 80 && percent < 100) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-gold.png') + '" alt="Gold star" />'
+      } else if (percent >= 100) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-platinum.png') + '" alt="Platinum star" />'
+      }
     },
     openStory: function (id, taskPage = false) {
       this.$emit('openStory', {
@@ -93,7 +109,7 @@ export default {
   align-items: flex-start;
 }
 
-@media screen and (max-width: 1279px) {
+@media screen and (max-width: 1365px) {
   .header.showHeaderBackground {
     background: rgb(255, 255, 255, .9);
   }
@@ -120,7 +136,7 @@ export default {
   font-size: .75em;
   color: #1c85a8;
   overflow: hidden;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .ciell-logo img {
@@ -342,12 +358,22 @@ export default {
   background-position: center 44%;
 }
 
+.nav .of {
+  opacity: .6;
+}
+
+.nav >>> .stars-total {
+  width: .93875em;
+  position: relative;
+  top: 1px;
+  margin-right: .25em;
+}
+
 .nav .tasks-num {
   float: right;
   font-size: .75em;
   position: relative;
   top: .081em;
-  opacity: .25;
 }
 
 #toggleBaseFont {

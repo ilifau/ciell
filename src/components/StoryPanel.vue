@@ -232,7 +232,6 @@ export default {
 <style scoped>
 .story-panel {
   position: relative;
-  margin-bottom: 3em;
 }
 
 .chapter-title {
@@ -248,14 +247,6 @@ export default {
 .chapter-title.center {
   text-align: center;
 }
-
-/* .choices {
-  list-style-type: none;
-  margin: 3em 0 1em;
-  padding: 0;
-  overflow: hidden;
-  clear: both;
-} */
 
 .choices {
   list-style-type: none;

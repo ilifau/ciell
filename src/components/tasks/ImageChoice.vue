@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="task" v-bind:class="{ completed: this.$store.state.tasksComplete.includes(this.task.id)}">
+  <div v-bind:class="{ completed: this.$store.state.tasksComplete.includes(this.task.id)}">
+    <div class="task">
       <h1 v-if="task.title">{{ task.title }}</h1>
       <div v-if="task.description" v-html="task.description"></div>
       <div class="image-choice">
@@ -216,7 +216,7 @@ export default {
     color: #fff !important;
     text-decoration: none;
     text-align: center;
-    background: #08723d;
+    background: #219ac2;
     padding: .75em;
     border-radius: 3px;
     display: block;
@@ -228,20 +228,27 @@ export default {
     line-height: 1;
   }
 
-  .check-task::before {
-    content: '✓';
-    margin-right: .25em;
-  }
-
   .check-task:hover {
-    background: #185d3a;
+    background: #1d8aaf;
     -webkit-box-shadow: 0 .375em 2.125em -.875em rgba(0,0,0,0.57);
     -moz-box-shadow: 0 .375em 2.125em -.875em rgba(0,0,0,0.57);
     box-shadow: .375em 2.125em -.875em rgba(0,0,0,0.57);
     transition: all .4s ease 0s;
   }
 
-  /* When the checkbox is checked, style the answer image */
+  .completed .check-task {
+    background: #08723d;
+  }
+
+  .completed .check-task:hover {
+    background: #185d3a;
+  }
+
+  .completed .check-task::before {
+    content: '✓';
+    margin-right: .25em;
+  }
+
   .completed input:checked + div img {
     border: 8px solid #08723d;
     background: #08723d;

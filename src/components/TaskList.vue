@@ -172,7 +172,6 @@ export default {
 
   .complete .task-name {
     color: #08723d;
-    font-weight: 700;
   }
 
   .complete .task-name:hover {

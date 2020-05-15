@@ -250,6 +250,7 @@ export default {
 
 .choices {
   list-style-type: none;
+  z-index: 10;
   position: fixed;
   bottom: 0;
   left: 0;

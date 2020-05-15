@@ -1,6 +1,6 @@
 <template>
   <div class="header-wrapper">
-    <div class="header showHeaderBackground">
+    <div class="header">
       <router-link class="story-title" to="/">
         <div v-if="showBacktoStoriesLink()"><v-icon name="arrow-left" v-if="showBacktoStoriesLink()" scale="0.75" /> {{ storyTitle }}</div>
         <div v-else>&nbsp;</div>
@@ -43,7 +43,7 @@ export default {
       navIsActive: false
     }
   },
-  props: ['stories', 'showHeaderBackground'],
+  props: ['stories'],
   computed: {
     storyTitle: function () {
       let show = ['tasks', 'about', 'home', 'evaluation']
@@ -110,7 +110,7 @@ export default {
 }
 
 @media screen and (max-width: 1365px) {
-  .header.showHeaderBackground {
+  .header {
     background: rgb(255, 255, 255, .9);
   }
 }

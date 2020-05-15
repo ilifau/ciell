@@ -1,5 +1,6 @@
 <template>
-  <div id="app" ref="top" v-bind:class="this.$store.state.baseFont ? 'opendyslexic' : ''">
+  <div
+    id="app" ref="top" v-bind:class="[this.$store.state.baseFont ? 'opendyslexic' : '', isAnimating ? 'is-animating' : '']">
     <transition name="slide-fade">
       <div class="message-wrapper" v-if="hasMessage" v-on:click="hideMessage()">
         <div class="message">
@@ -11,7 +12,6 @@
     <Header
       v-bind:story="this.stories[this.$store.state.currentStoryId]"
       v-bind:stories="this.stories"
-      v-bind:showHeaderBackground="this.showHeaderBackground"
       @openStory="openStory($event)"
       @toggleBaseFont="toggleBaseFont()"
       @scrollTop="scrollTop()"
@@ -20,8 +20,10 @@
     <transition
       :name="this.transition"
       mode="out-in"
-      v-on:before-enter="beforeEnter()"
+      v-on:before-leave="beforeLeave()"
       v-on:after-leave="afterLeave()"
+      v-on:before-enter="beforeEnter()"
+      v-on:after-enter="afterEnter()"
     >
       <router-view
         v-bind:stories="stories"
@@ -44,8 +46,8 @@ export default {
     return {
       stories: Stories.sort((a, b) => (a.id > b.id) ? 1 : -1),
       transition: this.$route.name === 'home' ? 'slide-left' : 'slide-right',
-      showHeaderBackground: this.$route.name !== 'home',
       hasMessage: false,
+      isAnimating: false,
       message: {
         title: '',
         text: '',
@@ -96,12 +98,17 @@ export default {
     toggleBaseFont () {
       this.$store.commit('toggleBaseFont', !this.$store.state.baseFont)
     },
-    beforeEnter () {
-      this.transition = this.$route.name === 'home' ? 'slide-left' : 'slide-right'
+    beforeLeave () {
+      this.isAnimating = true
     },
     afterLeave () {
       this.scrollTop()
-      this.showHeaderBackground = (this.$route.name !== 'home')
+    },
+    beforeEnter () {
+      this.transition = this.$route.name === 'home' ? 'slide-left' : 'slide-right'
+    },
+    afterEnter () {
+      this.isAnimating = false
     },
     showMessage (message) {
       this.hasMessage = true
@@ -177,6 +184,10 @@ body {
   overflow-x: hidden;
   word-wrap: break-word;
   padding-bottom: 2em;
+}
+
+#app.is-animating .choices {
+  display: none;
 }
 
 /* iOS */

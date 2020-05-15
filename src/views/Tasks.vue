@@ -11,7 +11,7 @@
     <h2>Essays</h2>
     <div class="stories">
       <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
-        <h3 class="story-title" v-on:click="openStory(id)">
+        <h3 class="story-title" v-on:click="openStoryByTitle(id, true)">
           <span v-html="singleStar(story)"></span>
           {{story.title}}
         </h3>
@@ -97,6 +97,11 @@ export default {
     },
     openStory (params) {
       this.$emit('openStory', params)
+    },
+    openStoryByTitle (id, taskPage = false) {
+      this.$emit('openStory', {
+        id, taskPage
+      })
     }
   },
   mounted () {

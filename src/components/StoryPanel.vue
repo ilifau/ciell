@@ -32,7 +32,7 @@
     />
 
     <!-- Choices -->
-    <ul class="choices" v-if="loaded">
+    <ul class="choices">
       <li v-for="choice in choices()" :key="choice.chapterId">
         <a v-on:click="openChapter(choice.chapterId)" :class="choice.class">
           <span v-if="choice.class === 'previous'">
@@ -49,7 +49,6 @@
         <a v-on:click="$router.push('/')">Choose another Story</a>
       </li>
     </ul>
-
   </div>
 </template>
 
@@ -67,14 +66,6 @@ export default {
     TaskList
   },
   props: ['story'],
-  data () {
-    return {
-      loaded: false
-    }
-  },
-  mounted: function () {
-    this.loaded = true
-  },
   methods: {
     title () {
       return this.getChapter(this.$store.state.currentChapterId).title
@@ -250,8 +241,8 @@ export default {
 
 .choices {
   list-style-type: none;
-  z-index: 10;
   position: fixed;
+  z-index: 10;
   bottom: 0;
   left: 0;
   width: 100%;

@@ -64,8 +64,10 @@ export default {
     openStory (params) {
       let id = params.id
       let taskPage = params.taskPage
+      let chapterId = typeof params.chapterId !== 'undefined' ? params.chapterId : 0
+      let story = Stories[id]
 
-      if (typeof this.stories[id].placeholder !== 'undefined') {
+      if (typeof story.placeholder !== 'undefined') {
         this.$modal.show('dialog', {
           title: 'Please Note',
           text: 'This story will be available soon.',
@@ -79,11 +81,8 @@ export default {
         return
       }
 
-      // Open first chapter or chapter that contains the task page
-      let chapterId = 0
-
       if (taskPage) {
-        let chapter = this.stories[id].chapters.filter(chapter => {
+        let chapter = story.chapters.filter(chapter => {
           return chapter.content === '[tasks]'
         })
 

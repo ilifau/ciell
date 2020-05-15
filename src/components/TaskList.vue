@@ -1,12 +1,17 @@
 <template>
   <div class="task-list">
-    <h1 v-if="$route.name !== 'tasks'">Tasks</h1>
+    <h1 v-if="$route.name !== 'tasks'">
+      Tasks
+      <span class="task-checkmark" v-if="allTasksDone()">
+        <v-icon name="check" scale="1.5" />
+      </span>
+    </h1>
     <div v-if="getTasks() && getTasks().length > 0">
       <ul>
         <li v-for="(task, id) in getTasks()" :key="id" v-bind:class="{ 'complete' : taskDone(task.id) }">
           <div>
             <span>
-              <span class="task-name">Task {{ id+1 }}: {{ task.name }}</span>
+              <a class="task-name" v-on:click="openStory(task.id)">Task {{ id+1 }}: {{ task.name }}</a>
               <span class="task-checkmark" v-if="taskDone(task.id)">
                 <v-icon name="check" scale="1" />
               </span>
@@ -104,6 +109,44 @@ export default {
       let titleHtml = title && this.$route.name !== 'tasks' ? '<p>' + title + '</p>' : ''
 
       return '<img class="badge-image" src="' + badge + '" alt="' + alt + '" />' + titleHtml
+    },
+    openStory: function (taskId) {
+      let storyKey = this.getStoryKey()
+      let story = Stories[storyKey]
+      let chapter = story.chapters.find(chapter => chapter.taskId === taskId)
+      let chapterId = chapter.id
+      let taskPage = false
+      let id = storyKey
+
+      this.$emit('openStory', {
+        id,
+        taskPage,
+        chapterId
+      })
+    },
+    getStoryKey: function () {
+      if (this.$route.name !== 'tasks') {
+        return this.$store.state.currentStoryId
+      } else {
+        return Stories.findIndex(story => story.id === this.$props.story.id)
+      }
+    },
+    allTasksDone: function () {
+      if (this.$route.name === 'tasks') {
+        return false
+      }
+
+      let storyKey = this.getStoryKey()
+      let tasks = Stories[storyKey].tasks
+
+      let _this = this
+      tasks.forEach(function (task) {
+        if (!_this.$store.state.tasksComplete.includes(task.id)) {
+          return false
+        }
+      })
+
+      return true
     }
   }
 }
@@ -119,15 +162,21 @@ export default {
   .task-list ul li {
     line-height: 1.75;
     font-size: 1.125em;
+    border-bottom: 1px solid #f3f3f3;
   }
 
   .task-name {
     font-weight: 600;
+    transition: color .2s linear;
   }
 
   .complete .task-name {
     color: #08723d;
     font-weight: 700;
+  }
+
+  .complete .task-name:hover {
+    color: #065e32;
   }
 
   .task-checkmark {

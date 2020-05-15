@@ -3,7 +3,7 @@
 
     <!-- Title -->
     <h1 :class="'chapter-title ' + this.getChapter(this.$store.state.currentChapterId).titleClass" v-if="title()">
-      <span class="chapter-title-checkmark" v-if="taskDone()"><v-icon name="check" scale="1.5" /></span>{{ title() }}
+      {{ title() }} <span class="chapter-title-checkmark" v-if="taskDone()"><v-icon name="check" scale="1.5" /></span>
     </h1>
 
     <!-- Exam question -->
@@ -23,10 +23,16 @@
     <component :is="dynamicContent" />
 
     <!-- Task Puzzle -->
-    <Task @showMessage="showMessage($event)" :is="dynamicTaskComponent" v-bind:story="this.$props.story" v-bind:task="getTask(this.getChapter(this.$store.state.currentChapterId).taskId)" />
+    <Task
+      @showMessage="showMessage($event)"
+      @openStory="openStory($event)"
+      :is="dynamicTaskComponent"
+      v-bind:story="this.$props.story"
+      v-bind:task="getTask(this.getChapter(this.$store.state.currentChapterId).taskId)"
+    />
 
     <!-- Choices -->
-    <ul class="choices">
+    <ul class="choices" v-if="loaded">
       <li v-for="choice in choices()" :key="choice.chapterId">
         <a v-on:click="openChapter(choice.chapterId)" :class="choice.class">
           <span v-if="choice.class === 'previous'">
@@ -61,6 +67,14 @@ export default {
     TaskList
   },
   props: ['story'],
+  data () {
+    return {
+      loaded: false
+    }
+  },
+  mounted: function () {
+    this.loaded = true
+  },
   methods: {
     title () {
       return this.getChapter(this.$store.state.currentChapterId).title
@@ -75,6 +89,11 @@ export default {
       let chapterId = id || this.$store.state.currentChapterId
       let chapter = this.$props.story.chapters.find(c => c.id === chapterId)
       return chapter
+    },
+    openStory (id, taskPage, chapterId) {
+      this.$emit('openStory', {
+        id, taskPage, chapterId
+      })
     },
     openChapter (id) {
       let currentChapter = this.getChapter()
@@ -183,7 +202,7 @@ export default {
             return `<a v-on:click="processDecorator(${chapterId})">${text}</a>`
           }
           case 'tasks': {
-            return '<TaskList />'
+            return '<TaskList @openStory="openStory($event)" />'
           }
           default: {
             return ''
@@ -199,6 +218,9 @@ export default {
         methods: {
           processDecorator (id) {
             _this.openChapter(id)
+          },
+          openStory (params) {
+            _this.openStory(params.id, params.taskPage, params.chapterId)
           }
         }
       }
@@ -210,6 +232,7 @@ export default {
 <style scoped>
 .story-panel {
   position: relative;
+  margin-bottom: 3em;
 }
 
 .chapter-title {
@@ -226,12 +249,29 @@ export default {
   text-align: center;
 }
 
-.choices {
+/* .choices {
   list-style-type: none;
   margin: 3em 0 1em;
   padding: 0;
   overflow: hidden;
   clear: both;
+} */
+
+.choices {
+  list-style-type: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.125em;
+  margin: 0 0;
+  font-size: .875em;
+}
+
+@media screen and (max-width: 1365px) {
+  .choices {
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 80%);
+  }
 }
 
 .choices a {

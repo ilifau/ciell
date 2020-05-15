@@ -14,7 +14,10 @@
     <div class="stories">
       <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
         <h3 class="story-title" v-on:click="openStory(id)">{{story.title}}</h3>
-        <TaskList v-bind:story="story" />
+        <TaskList
+          @openStory="openStory($event)"
+          v-bind:story="story"
+        />
       </div>
     </div>
   </div>
@@ -62,10 +65,8 @@ export default {
         return `<img class="star" src="${require('@/stories/ciell/assets/img/badges/star-gold.png')}" alt="Gold star" />`
       }
     },
-    openStory (id) {
-      this.$emit('openStory', {
-        id
-      })
+    openStory (params) {
+      this.$emit('openStory', params)
     }
   },
   mounted () {

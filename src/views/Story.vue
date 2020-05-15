@@ -4,6 +4,7 @@
       v-bind:story="this.$props.stories[this.$store.state.currentStoryId]"
       @showMessage="showMessage($event)"
       @scrollTop="scrollTop()"
+      @openStory="openStory($event)"
       />
   </div>
 </template>
@@ -18,7 +19,7 @@ export default {
   },
   props: ['stories'],
   methods: {
-    openStory (id, taskPage) {
+    openStory (id, taskPage, chapterId) {
       this.$emit('openStory', id, taskPage)
     },
     showMessage (message) {

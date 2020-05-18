@@ -205,11 +205,11 @@ export default {
   }
 
   .badge >>> .silver {
-    top: -3.7em;
+    top: -3.5em;
   }
 
   .badge >>> .gold {
-    top: -4.9em;
+    top: -4.7em;
   }
 
   .badge >>> .none {

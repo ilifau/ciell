@@ -182,10 +182,10 @@ export default {
 
 .toggle-font {
   position: absolute;
-  right: 5.5em;
-  top: .475em;
+  right: 5.75em;
+  top: .62em;
   font-weight: 400;
-  font-size: .875em;
+  font-size: .75em;
   line-height: 1;
 }
 

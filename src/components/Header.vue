@@ -9,12 +9,12 @@
         <a class="toggle-font" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'" v-on:click="toggleBaseFont()">
           Abc
         </a>
-        <span class="nav-toggle" v-bind:class="{ active: navIsActive, story: showBacktoStoriesLink() }">
-          <a v-on:click="toggleNav()">
-            <span class="nav-circle"></span><span class="nav-circle"></span><span class="nav-circle"></span>
-          </a>
-        </span>
-        </div>
+      </div>
+      <span class="nav-toggle" v-bind:class="{ active: navIsActive, story: showBacktoStoriesLink() }">
+        <a v-on:click="toggleNav()">
+          <span class="nav-circle"></span><span class="nav-circle"></span><span class="nav-circle"></span>
+        </a>
+      </span>
     </div>
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-bind:class="{ active: navIsActive }">
@@ -109,13 +109,14 @@ export default {
 .header {
   display: flex;
   position: fixed;
+  align-items: center;
   top: 0;
   left: 0;
   right: 0;
   padding: .5em .75em;
   z-index: 2;
   line-height: 1;
-  align-items: flex-start;
+  flex-direction: row;
 }
 
 @media screen and (max-width: 1365px) {
@@ -133,7 +134,7 @@ export default {
 } */
 
 .header a {
-  flex-grow: 0;
+  flex-grow: 1;
   font-weight: 600;
 }
 
@@ -144,7 +145,7 @@ export default {
   padding-right: 2em;
   font-size: .75em;
   color: #1c85a8;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* text-transform: uppercase; */
 }
 
@@ -180,13 +181,16 @@ export default {
     }
 } */
 
-.toggle-font {
-  position: absolute;
-  right: 5.75em;
-  top: .62em;
+.toggle-wrapper {
+  position: relative;
   font-weight: 400;
   font-size: .75em;
   line-height: 1;
+  margin-left: auto;
+}
+
+.toggle-wrapper a {
+  padding: .25em;
 }
 
 .toggle-font {
@@ -205,16 +209,17 @@ export default {
                 sans-serif;
 }
 
+.nav-toggle {
+  margin-left: auto;
+}
+
 .nav-toggle a {
-  display: flex;
-  position: absolute;
-  top: -.3em;
-  padding: 1em;
-  right: 0;
+  position: relative;
+  padding: .5em;
+  left: .5em;
 }
 
 .nav-circle {
-  display: flex-item;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -223,6 +228,8 @@ export default {
   margin-left: 6px;
   position: relative;
   left: 0;
+  top: -2px;
+  display: inline-block;
 }
 
 .nav-toggle:hover .nav-circle:first-of-type,
@@ -415,6 +422,12 @@ export default {
   .nav-toggle.active .nav-circle:last-of-type {
     position: relative;
     left: 2px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .toggle-wrapper {
+    font-size: .7em;
   }
 }
 </style>

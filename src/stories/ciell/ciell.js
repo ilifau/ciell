@@ -8,6 +8,123 @@ let Story = [
     preview: 'homeless/cover.jpg',
     color: 'rgb(0, 98, 103)',
     numberImage: 'homeless/number.png',
+    tasks: [
+      {
+        id: 1000,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'homeless/homeless 01.jpg'
+          },
+          {
+            order: 1,
+            image: 'homeless/homeless 02.jpg'
+          },
+          {
+            order: 2,
+            image: 'homeless/homeless 03.jpg'
+          },
+          {
+            order: 3,
+            image: 'homeless/homeless 04.jpg'
+          }
+        ]
+      },
+      {
+        id: 1010,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'homeless/homeless 11.jpg'
+          },
+          {
+            order: 1,
+            image: 'homeless/homeless 12.jpg'
+          },
+          {
+            order: 2,
+            image: 'homeless/homeless 13.jpg'
+          },
+          {
+            order: 3,
+            image: 'homeless/homeless 14.jpg'
+          },
+          {
+            order: 4,
+            image: 'homeless/homeless 15.jpg'
+          },
+          {
+            order: 5,
+            image: 'homeless/homeless 16.jpg'
+          }
+        ]
+      },
+      {
+        id: 1020,
+        name: 'Choose the correct image',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the image that does not belong in the introduction',
+            answers: [
+              {
+                text: 'Rephrase Topic',
+                image: 'info-graphics/basic-essay-structure-1.jpg'
+              },
+              {
+                text: 'Answer the Question',
+                image: 'info-graphics/basic-essay-structure-7.jpg',
+                correct: true
+              }
+            ]
+          },
+          {
+            singleChoice: true,
+            question: 'Choose the image that does not belong in the main body paragraph',
+            answers: [
+              {
+                text: 'Rephrase Topic',
+                image: 'info-graphics/basic-essay-structure-1.jpg',
+                correct: true
+              },
+              {
+                text: 'Examples',
+                image: 'info-graphics/basic-essay-structure-5.jpg'
+              }
+            ]
+          },
+          {
+            singleChoice: true,
+            question: 'Choose the image that does not belong in the conclusion',
+            answers: [
+              {
+                text: 'Explanations',
+                image: 'info-graphics/basic-essay-structure-8.jpg',
+                correct: true
+              },
+              {
+                text: 'Summary',
+                image: 'info-graphics/basic-essay-structure-conclusion-2.jpg'
+              }
+            ]
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -266,6 +383,66 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 40
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 1000,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 1010,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 1020,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
           },
           {
             'text': 'Restart',
@@ -1025,7 +1202,7 @@ let Story = [
     numberImage: 'gender-equality/number.png',
     tasks: [
       {
-        id: 0,
+        id: 5000,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -1067,7 +1244,7 @@ let Story = [
         ]
       },
       {
-        id: 10,
+        id: 5010,
         name: 'Choose the correct image',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -1134,7 +1311,7 @@ let Story = [
         ]
       },
       {
-        id: 20,
+        id: 5020,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -1168,7 +1345,7 @@ let Story = [
         ]
       },
       {
-        id: 30,
+        id: 5030,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -1517,7 +1694,7 @@ let Story = [
       },
       {
         id: 55,
-        taskId: 0,
+        taskId: 5000,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -1537,7 +1714,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 10,
+        taskId: 5010,
         title: 'Task: Image Choice',
         content: '',
         choices: [
@@ -1557,7 +1734,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 20,
+        taskId: 5020,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -1577,7 +1754,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 30,
+        taskId: 5030,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -1608,7 +1785,7 @@ let Story = [
     numberImage: 'nuclear-power/number.png',
     tasks: [
       {
-        id: 40,
+        id: 7000,
         name: 'Choose the correct image',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -1678,7 +1855,7 @@ let Story = [
         ]
       },
       {
-        id: 50,
+        id: 7010,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -1708,7 +1885,7 @@ let Story = [
         ]
       },
       {
-        id: 60,
+        id: 7020,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -2049,7 +2226,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 40,
+        taskId: 7000,
         title: 'Task: Image Choice',
         content: '',
         choices: [
@@ -2069,7 +2246,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 50,
+        taskId: 7010,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -2089,7 +2266,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 60,
+        taskId: 7020,
         title: 'Task: Puzzle',
         content: '',
         choices: [

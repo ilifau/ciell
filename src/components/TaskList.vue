@@ -11,10 +11,10 @@
         <li v-for="(task, id) in getTasks()" :key="id" v-bind:class="{ 'complete' : taskDone(task.id) }">
           <div>
             <span>
-              <a class="task-name" v-on:click="openStory(task.id)">Task {{ id+1 }}: {{ task.name }}</a>
-              <span class="task-checkmark" v-if="taskDone(task.id)">
+              <!-- <span class="task-checkmark" v-if="taskDone(task.id)">
                 <v-icon name="check" scale="1" />
-              </span>
+              </span> -->
+              <a class="task-name" v-on:click="openStory(task.id)">Task {{ id+1 }}: {{ task.name }}</a>
               <!-- ({{ task.typeName }}) -->
             </span>
           </div>

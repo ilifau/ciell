@@ -1,6 +1,7 @@
 <template>
   <div
     id="app" ref="top" v-bind:class="[this.$store.state.baseFont ? 'opendyslexic' : '', isAnimating ? 'is-animating' : '']">
+    <!-- Transition -->
     <transition name="slide-fade">
       <div class="message-wrapper" v-if="hasMessage" v-on:click="hideMessage()">
         <div class="message">
@@ -9,6 +10,7 @@
         </div>
       </div>
     </transition>
+    <!-- Header -->
     <Header
       v-bind:story="this.stories[this.$store.state.currentStoryId]"
       v-bind:stories="this.stories"
@@ -16,7 +18,9 @@
       @toggleBaseFont="toggleBaseFont()"
       @scrollTop="scrollTop()"
     />
+    <!-- Close navigation -->
     <div id="close-nav" @click="$emit('closeNav')"></div>
+    <!-- Transitions -->
     <transition
       :name="this.transition"
       mode="out-in"
@@ -32,8 +36,15 @@
         @scrollTop="scrollTop()"
       />
     </transition>
+    <!-- Footer -->
     <div id="footer"></div>
+    <!-- Dialog -->
     <v-dialog />
+    <!-- Loading screen -->
+    <div id="loading-wrapper" v-if="!hasLoaded">
+      <div id="loading-text">Loading&hellip;</div>
+      <div id="loading-content"></div>
+    </div>
   </div>
 </template>
 
@@ -48,6 +59,7 @@ export default {
       transition: this.$route.name === 'home' ? 'slide-left' : 'slide-right',
       hasMessage: false,
       isAnimating: false,
+      hasLoaded: false,
       message: {
         title: '',
         text: '',
@@ -123,6 +135,11 @@ export default {
         document.body.scrollTop = 0
       }
     }
+  },
+  mounted () {
+    window.addEventListener('load', () => {
+      this.hasLoaded = true
+    })
   }
 }
 </script>
@@ -188,6 +205,63 @@ body {
 
 #app.is-animating .choices {
   display: none;
+}
+
+#loading-wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 99;
+}
+
+#loading-text {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 30px;
+  margin: -7px 0 0 -45px;
+  text-align: center;
+  font-size: 20px;
+}
+
+#loading-content {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 170px;
+  height: 170px;
+  margin: -85px 0 0 -85px;
+}
+
+#loading-content {
+  border: 3px solid transparent;
+  border-top-color: #219ac2;
+  border-bottom-color: #219ac2;
+  border-radius: 50%;
+  -webkit-animation: loader 2s linear infinite;
+  -moz-animation: loader 2s linear infinite;
+  -o-animation: loader 2s linear infinite;
+  animation: loader 2s linear infinite;
+}
+
+@keyframes loader {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
 }
 
 /* iOS */
@@ -384,7 +458,7 @@ img {
   width: 4em;
   height: 1.75em;
   position: absolute;
-  background: url(./stories/ciell/assets/img/info-graphics/arrow.png) center center no-repeat;
+  background: url('./stories/ciell/assets/img/info-graphics/arrow.png') center center no-repeat;
   background-size: cover !important;
   z-index: 999;
   right: -2.8em;
@@ -532,7 +606,7 @@ img {
   border-radius: .25em;
   display: inline-block;
   border: 0;
-  transition: all .4s ease;
+  transition: background-color .4s ease;
   margin-top: 1em;
   cursor: pointer;
 }

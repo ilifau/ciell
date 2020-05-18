@@ -83,7 +83,7 @@ export default {
 
       let percent = Math.ceil(this.$store.state.tasksComplete.length / this.numTasks(this.$props.stories) * 100)
 
-      if (percent > 0 && percent <= 49) {
+      if (percent > 10 && percent <= 49) {
         return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-bronze.png') + '" alt="Bronze star" />'
       } else if (percent > 49 && percent <= 80) {
         return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-silver.png') + '" alt="Silver star" />'

@@ -47,6 +47,33 @@ Vue.mixin({
       } else {
         return ''
       }
+    },
+    playSound: function (type) {
+      if (!type) {
+        return
+      }
+
+      let sound = null
+      const fail = new Audio(require('@/stories/ciell/assets/audio/fail.mp3'))
+      const success = new Audio(require('@/stories/ciell/assets/audio/success.mp3'))
+
+      switch (type) {
+        case 'success':
+          sound = success
+          break
+        case 'fail':
+          sound = fail
+          break
+        default:
+          sound = fail
+          break
+      }
+
+      console.log(sound)
+
+      sound.pause()
+      sound.currentTime = 0
+      sound.play()
     }
   }
 })

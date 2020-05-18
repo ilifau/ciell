@@ -54,6 +54,9 @@ export const store = new Vuex.Store({
         state.tasksComplete.splice(index, 1)
       }
     },
+    removeAllCompletedTasks (state) {
+      state.tasksComplete = []
+    },
     setRating (state, payload) {
       state.ratings[payload.prop] = payload.rating
     },

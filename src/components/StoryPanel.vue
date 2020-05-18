@@ -183,9 +183,9 @@ export default {
         switch (type) {
           case 'image': {
             let src = params[1]
-            let alt = params[2]
+            // let alt = params[2].replace(']', '')
             let img = require('@/stories/ciell/assets/img/' + src)
-            return '<img src="' + img + '" alt="' + alt + '" rel="preload" />'
+            return '<img class="comic-panel" src="' + img + '" alt="" style="background-image:url(' + require('@/stories/ciell/assets/img/panel-placeholder.png') + ')" rel="preload" />'
           }
           case 'decorator': {
             let text = params[1]
@@ -237,6 +237,13 @@ export default {
 
 .chapter-title.center {
   text-align: center;
+}
+
+.story-panel >>> .comic-panel {
+  background: none;
+  background-size: cover;
+  background-position: center center;
+  border: none;
 }
 
 .choices {

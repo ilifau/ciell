@@ -108,11 +108,13 @@ export default {
           text: 'You completed this task successfully and earned yourself a star. Your progress will be saved.',
           effect: 'fireworks'
         }
+        this.playSound('success')
       } else {
         message = {
           title: 'D\'oh! 😖',
           text: 'Hm, not quite (<strong>' + this.correct + ' correct</strong>, <strong>' + this.incorrect + ' incorrect</strong>). Try again, you can try as often as you like.'
         }
+        this.playSound('fail')
       }
 
       this.$emit('showMessage', message)

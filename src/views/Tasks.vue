@@ -21,6 +21,9 @@
         />
       </div>
     </div>
+    <a class="btn reset-learning-progress" v-on:click="resetLearningProgress()">
+      <v-icon name="undo" scale="1" />
+      Reset your learning progress</a>
   </div>
 </template>
 
@@ -102,6 +105,36 @@ export default {
       this.$emit('openStory', {
         id, taskPage
       })
+    },
+    resetLearningProgress () {
+      let _this = this
+      this.$modal.show('dialog', {
+        title: 'Are you sure?',
+        text: 'All the stars you collected will be removed.',
+        buttons: [
+          {
+            title: 'Cancel'
+          },
+          {
+            title: 'Remove my stars',
+            handler: () => {
+              _this.$store.commit('removeAllCompletedTasks')
+              _this.stars = 0
+              _this.starsTotal = 0
+              _this.$modal.hide('dialog')
+              _this.$modal.show('dialog', {
+                title: 'Done',
+                text: 'All your stars have been removed.',
+                buttons: [
+                  {
+                    title: 'OK'
+                  }
+                ]
+              })
+            }
+          }
+        ]
+      })
     }
   },
   mounted () {
@@ -150,5 +183,13 @@ export default {
   .story >>> p {
     padding: 0;
     margin: 0;
+  }
+
+  .btn {
+    transition: background-color .4s ease;
+  }
+
+  .btn:hover {
+    background-color: #1c81a3;
   }
 </style>

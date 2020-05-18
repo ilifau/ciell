@@ -25,7 +25,7 @@
           <a class="story-link" v-on:click="openStory(id), closeNav()">
             {{ story.title }}
           </a>
-          <a class="task-link" v-bind:class="badgeClass($props.stories[id], $store.state.tasksComplete)" v-on:click="openStory(id, true), closeNav()"></a>
+          <a class="task-link" v-bind:class="badgeClass($props.stories[id], $store.state.tasksComplete)" v-on:click="openStory(id, true), closeNav()" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/badges/star-' + getBadgeClass($props.stories[id], $store.state.tasksComplete) + '.png') + ')' }"></a>
         </div>
       </div>
       <router-link to="/tasks" v-bind:class="{ current: $route.name === 'tasks' }" v-on:click.native="closeNav()">Stars earned<span class="tasks-num"><span v-html="starsTotal()"></span><span class="of">{{ $store.state.tasksComplete.length }} / {{ numTasks(stories) }}</span></span></router-link>
@@ -66,6 +66,15 @@ export default {
     showBacktoStoriesLink: function () {
       let show = ['story', 'tasks', 'about', 'evaluation']
       return show.includes(this.$route.name)
+    },
+    getBadgeClass: function (id, tasks) {
+      let badgeClass = this.badgeClass(id, tasks)
+
+      if (badgeClass === '') {
+        badgeClass = 'none'
+      }
+
+      return badgeClass
     },
     starsTotal: function () {
       if (this.$store.state.tasksComplete.length === 0) {
@@ -335,22 +344,6 @@ export default {
   background-repeat: no-repeat;
   z-index: 10;
   position: relative;
-}
-
-.nav .task-link {
-  background-image: url('~@/stories/ciell/assets/img/badges/star-none.png');
-}
-
-.nav .task-link.gold {
-  background-image: url('~@/stories/ciell/assets/img/badges/star-gold.png');
-}
-
-.nav .task-link.silver {
-  background-image: url('~@/stories/ciell/assets/img/badges/star-silver.png');
-}
-
-.nav .task-link.bronze {
-  background-image: url('~@/stories/ciell/assets/img/badges/star-bronze.png');
 }
 
 .nav .story-link-wrapper:hover .task-link {

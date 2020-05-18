@@ -156,7 +156,6 @@ export default {
     left: 0;
     bottom: -.875em;
     padding: 0 0 0 2em;
-    transition: all .3s linear;
     /* border: 1px solid red; */
     width: 90%;
     left: 5%;
@@ -187,25 +186,6 @@ export default {
     padding: .6125em .5em .5em;
     color: #fff;
   }
-
-  /* .story a .title span.title-background {
-    content: '';
-    z-index: -1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    background: #092d3a;
-    opacity: .8;
-    transform: rotate(-2deg);
-    transition: all .3s ease-in-out;
-    border-radius: 2px;
-  } */
-
-  /* .story a:hover .title {
-    transform: scale(1.06125);
-  } */
 
   .story a:hover .title span.title-background {
     opacity: .95;

@@ -137,10 +137,8 @@ let Story = [
         ],
         examQuestion: '<p>Homelessness is a serious issue in every part of the world. How could we resolve the issue in big cities?</p>',
         content: `
+          <h2>Introduction</h2>
           <div class="comic-grid">
-            <div class="half text info info--introduction">
-              <h2>Introduction</h2><p>Essay <strong>introduction</strong> is your roadmap for the entire essay. It is a beginning paragraph that sets tone and path for the entire paper you are going to present to your reader. A good introduction to essay catches attention and makes your reader engaged right from the very start.</p>
-            </div>
             <div class="half">
               [image|homeless/homeless 01.jpg|Homeless 1]
             </div>
@@ -173,12 +171,8 @@ let Story = [
           }
         ],
         content: `
+          <h2>Paragraph 1</h2>
           <div class="comic-grid">
-            <div class="half text info info--paragraph">
-              <h2>Paragraph 1</h2><p>The <strong>body</strong> of the essay is the part that addresses the question. It should be organised into 2-3 <strong>paragraphs</strong>. Each
-              paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
-              way to those that precede and follow it.</p>
-            </div>
             <div class="half">
               [image|homeless/homeless 05.jpg|Homeless 5]
             </div>
@@ -223,10 +217,8 @@ let Story = [
           }
         ],
         content: `
+          <h2>Paragraph 2</h2>
           <div class="comic-grid">
-            <div class="half text info info--paragraph">
-              <h2>Paragraph 2</h2><p>Each paragraph begins by introducing an aspect of the issue, then explains the issue and gives <strong>examples</strong>.</p>
-            </div>
             <div class="half">
               [image|homeless/homeless 11.jpg|Homeless 11]
             </div>
@@ -270,10 +262,8 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<div class="comic-grid">
-            <div class="half text info info--conclusion">
-              <h2>Conclusion</h2><p>The <strong>conclusion</strong> provides an answer to the question set out in the introduction and reminds the reader of your reasons.</p>
-            </div>
+        content: `<h2>Conclusion</h2>
+        <div class="comic-grid">
             <div class="half">
               [image|homeless/homeless 17.jpg|Homeless 17]
             </div>
@@ -303,10 +293,7 @@ let Story = [
         id: 40,
         title: 'Infographic: Basic Essay Structure',
         titleClass: 'center',
-        content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
-        help you write and organise an essay. However, flexibility is important. While keeping this basic essay
-        format in mind, let the topic and specific assignment guide the writing and organisation.</p>
-          <h2 class="separator dotted-border">1. Introduction</h2>
+        content: `<h2 class="separator dotted-border">1. Introduction</h2>
           <div class="comic-grid narrow">
             <div class="half">
               [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
@@ -507,7 +494,7 @@ let Story = [
       },
       {
         id: 10,
-        title: 'Paragraph 1',
+        title: '',
         audio: [
           {
             filename: 'reduce-inequality/paragraph-1.mp3',
@@ -515,6 +502,7 @@ let Story = [
           }
         ],
         content: `
+          <h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|poverty/poverty 07.jpg|Poverty 7]
@@ -552,7 +540,7 @@ let Story = [
       },
       {
         id: 15,
-        title: 'Paragraph 2',
+        title: '',
         audio: [
           {
             filename: 'reduce-inequality/paragraph-2.mp3',
@@ -560,6 +548,7 @@ let Story = [
           }
         ],
         content: `
+          <h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|poverty/poverty 13.jpg|Poverty 13]
@@ -600,7 +589,7 @@ let Story = [
       },
       {
         id: 20,
-        title: 'Conclusion',
+        title: '',
         audio: [
           {
             filename: 'reduce-inequality/conclusion.mp3',
@@ -608,6 +597,7 @@ let Story = [
           }
         ],
         content: `
+          <h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|poverty/poverty 20.jpg|Poverty 20]
@@ -702,7 +692,7 @@ let Story = [
       },
       {
         id: 10,
-        title: 'Paragraph 1',
+        title: '',
         audio: [
           {
             filename: 'zen-gardens/paragraph-1.mp3',
@@ -710,6 +700,7 @@ let Story = [
           }
         ],
         content: `
+          <h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|zen-gardens/zen gardens 05.jpg|HomeZen Gardens 5]
@@ -753,7 +744,7 @@ let Story = [
       },
       {
         id: 20,
-        title: 'Paragraph 2',
+        title: '',
         audio: [
           {
             filename: 'zen-gardens/paragraph-2.mp3',
@@ -761,6 +752,7 @@ let Story = [
           }
         ],
         content: `
+          <h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|zen-gardens/zen gardens 13.jpg|HomeZen Gardens 13]
@@ -798,7 +790,7 @@ let Story = [
       },
       {
         id: 30,
-        title: 'Conclusion',
+        title: '',
         audio: [
           {
             filename: 'zen-gardens/conclusion.mp3',
@@ -806,6 +798,7 @@ let Story = [
           }
         ],
         content: `
+          <h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|zen-gardens/zen gardens 19.jpg|HomeZen Gardens 19]
@@ -836,10 +829,7 @@ let Story = [
         id: 40,
         title: 'Infographic: Basic Essay Structure',
         titleClass: 'center',
-        content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
-        help you write and organise an essay. However, flexibility is important. While keeping this basic essay
-        format in mind, let the topic and specific assignment guide the writing and organisation.</p>
-          <h2 class="separator dotted-border">1. Introduction</h2>
+        content: `<h2 class="separator dotted-border">1. Introduction</h2>
           <div class="comic-grid narrow">
             <div class="half">
               [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
@@ -941,7 +931,7 @@ let Story = [
         id: 0,
         title: 'Agatha Christie',
         examQuestion: '<p>A magazine has asked readers to send in articles on their favourite authors. You decide to write an article in which you describe your favourite author.</p><p class="last">Explain the reason for your choice, and assess the author\'s significance for the wider community.</p>',
-        content: `
+        content: `<h2>Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 01.jpg|Agatha 1]
@@ -980,7 +970,7 @@ let Story = [
       {
         id: 10,
         title: '',
-        content: `
+        content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 09.jpg|Agatha 9]
@@ -1025,7 +1015,7 @@ let Story = [
       {
         id: 20,
         title: '',
-        content: `
+        content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 17.jpg|Agatha 17]
@@ -1067,7 +1057,7 @@ let Story = [
       {
         id: 30,
         title: '',
-        content: `
+        content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 24.jpg|Agatha 18]
@@ -1101,10 +1091,7 @@ let Story = [
         id: 40,
         title: 'Infographic: Basic Essay Structure',
         titleClass: 'center',
-        content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
-        help you write and organise an essay. However, flexibility is important. While keeping this basic essay
-        format in mind, let the topic and specific assignment guide the writing and organisation.</p>
-          <h2 class="separator dotted-border">1. Introduction</h2>
+        content: `<h2 class="separator dotted-border">1. Introduction</h2>
           <div class="comic-grid narrow">
             <div class="half">
               [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
@@ -1414,11 +1401,8 @@ let Story = [
           }
         ],
         examQuestion: '<p>Due to different gender roles and poverty, teenagers-boys and girls face different challenges at home and schools especially in developing countries.</p><p class="last">Do you agree with this statement? Give examples to support your views.</p>',
-        content: `
+        content: `<h2>Introduction</h2>
           <div class="comic-grid">
-            <div class="half text info info--introduction">
-              <h2>Introduction</h2><p>The <strong>introduction</strong> is the roadmap for the entire piece. It is an initial paragraph that sets the tone and path for your writing. A good introduction catches attention and engages your readers right from the very start.</p>
-            </div>
             <div class="half">
               [image|gender-equality/invisible 00.jpg|Invisible Girls 0]
             </div>
@@ -1465,13 +1449,8 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Paragraph 1</h2>
             <div class="comic-grid">
-            <div class="half text info info--paragraph">
-              <h2>Paragraph 1</h2><p>The <strong>body</strong> of the essay is the part that addresses the question. It should be organised into 2-3 <strong>paragraphs</strong>. Each
-              paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
-              way to those that precede and follow it.</p>
-            </div>
             <div class="half">
               [image|gender-equality/invisible 10.jpg|Invisible Girls 10]
             </div>
@@ -1521,11 +1500,8 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Paragraph 2</h2>
             <div class="comic-grid">
-            <div class="half text info info--paragraph">
-              <h2>Paragraph 2</h2><p>Each paragraph begins by introducing an aspect of the issue, then explains the issue and gives <strong>examples</strong>.</p>
-            </div>
             <div class="half">
               [image|gender-equality/invisible 18.jpg|Invisible Girls 18]
             </div>
@@ -1566,11 +1542,8 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Conclusion</h2>
           <div class="comic-grid">
-            <div class="half text info info--conclusion">
-              <h2>Conclusion</h2><p>The <strong>conclusion</strong> provides an answer to the question set out in the introduction and reminds the reader of your reasons.</p>
-            </div>
             <div class="half">
               [image|gender-equality/invisible 23.jpg|Invisible Girls 23]
             </div>
@@ -1603,10 +1576,7 @@ let Story = [
         id: 40,
         title: 'Infographic: Basic Essay Structure',
         titleClass: 'center',
-        content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
-        help you write and organise an essay. However, flexibility is important. While keeping this basic essay
-        format in mind, let the topic and specific assignment guide the writing and organisation.</p>
-          <h2 class="separator dotted-border">1. Introduction</h2>
+        content: `<h2 class="separator dotted-border">1. Introduction</h2>
           <div class="comic-grid narrow">
             <div class="half">
               [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
@@ -1946,11 +1916,8 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Introduction</h2>
           <div class="comic-grid">
-            <div class="half text info info--introduction">
-              <h2>Introduction</h2><p>The <strong>introduction</strong> is the roadmap for the entire piece. It is an initial paragraph that sets the tone and path for your writing. A good introduction catches attention and engages your readers right from the very start.</p>
-            </div>
             <div class="half">
               [image|nuclear-power/nuclear 01.jpg|Nuclear Power 1]
             </div>
@@ -1985,13 +1952,8 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
-            <div class="half text info info--paragraph">
-              <h2>Paragraph 1</h2><p>The <strong>body</strong> of the essay is the part that addresses the question. It should be organised into 2-3 <strong>paragraphs</strong>. Each
-              paragraph should deal with a different aspect of the issue, but each paragraph should also link in some
-              way to those that precede and follow it.</p>
-            </div>
             <div class="half">
               [image|nuclear-power/nuclear 06.jpg|Nuclear Power 6]
             </div>
@@ -2047,11 +2009,8 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
-            <div class="half text info info--paragraph">
-              <h2>Paragraph 2</h2><p>Each paragraph begins by introducing an aspect of the issue, then explains the issue and gives <strong>examples</strong>.</p>
-            </div>
             <div class="half">
               [image|nuclear-power/nuclear 16.jpg|Nuclear Power 16]
             </div>
@@ -2098,11 +2057,8 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Conclusion</h2>
           <div class="comic-grid">
-            <div class="half text info info--conclusion">
-              <h2>Conclusion</h2><p>The <strong>conclusion</strong> provides an answer to the question set out in the introduction and reminds the reader of your reasons.</p>
-            </div>
             <div class="half">
               [image|nuclear-power/nuclear 23.jpg|Nuclear Power 23]
             </div>
@@ -2135,10 +2091,7 @@ let Story = [
         id: 40,
         title: 'Infographic: Basic Essay Structure',
         titleClass: 'center',
-        content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
-        help you write and organise an essay. However, flexibility is important. While keeping this basic essay
-        format in mind, let the topic and specific assignment guide the writing and organisation.</p>
-          <h2 class="separator dotted-border">1. Introduction</h2>
+        content: `<h2 class="separator dotted-border">1. Introduction</h2>
           <div class="comic-grid narrow">
             <div class="half">
               [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
@@ -2306,7 +2259,7 @@ let Story = [
           }
         ],
         examQuestion: '<p>Local government should invest money in public transport to make it free and accessible to everyone, no matter their physical ability, age or wealth, and to contribute to more sustainable cities and communities for the future.</p><p class="last">Do you agree or disagree?</p>',
-        content: `
+        content: `<h2>Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|transports/transports 01.jpg|Transport 1]
@@ -2339,7 +2292,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|transports/transports 05.jpg|Transport 5]
@@ -2387,7 +2340,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Paragraph 2</h2>
         <div class="comic-grid">
           <div class="half">
             [image|transports/transports 12.jpg|Transport 12]
@@ -2432,7 +2385,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|transports/transports 18.jpg|Transport 18]
@@ -2506,7 +2459,7 @@ let Story = [
           }
         ],
         examQuestion: '<p>Greta Thunberg is a schoolgirl turned activist who has encouraged millions of young people to join in her school strike for climate change every Friday.</p><p class="last">Do you believe school pupils are right to skip school in order to protest for climate change?</p>',
-        content: `
+        content: `<h2>Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 01.jpg|Climate Change 1]
@@ -2544,7 +2497,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 07.jpg|Climate Change 7]
@@ -2585,7 +2538,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 12.jpg|Climate Change 12]
@@ -2626,7 +2579,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `
+        content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 17.jpg|Climate Change 17]
@@ -2694,7 +2647,7 @@ let Story = [
         id: 0,
         title: 'Cipta',
         examQuestion: '<p>You belong to an English-language reading group which recently read a book in a book contest. You have agreed to write a review of the book for the group’s website. In your review you should give your opinion of the format used for the book and say whether you think a book contest could be used to enhance students\' interest, in general.</p>',
-        content: `
+        content: `<h2>Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|cipta/Cipta 01.jpg|Cipta 1]
@@ -2732,7 +2685,7 @@ let Story = [
       },
       {
         id: 10,
-        content: `
+        content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|cipta/Cipta 09.jpg|Cipta 9]
@@ -2764,7 +2717,7 @@ let Story = [
       },
       {
         id: 20,
-        content: `
+        content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|cipta/Cipta 13.jpg|Cipta 13]
@@ -2796,7 +2749,7 @@ let Story = [
       },
       {
         id: 30,
-        content: `
+        content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|cipta/Cipta 17.jpg|Cipta 17]
@@ -2827,10 +2780,7 @@ let Story = [
         id: 40,
         title: 'Infographic: Basic Essay Structure',
         titleClass: 'center',
-        content: `<p>A basic essay consists of three main parts: <span style="display:inline-block;background:#c2f4f1;padding:0 2px;"><strong>introduction</strong></span>, <span style="display:inline-block;background:#fdb413;padding:0 2px;"><strong>body</strong></span>, and <span style="display:inline-block;background:#d4f0a5;padding:0 2px;"><strong>conclusion</strong></span>. Following this format will
-        help you write and organise an essay. However, flexibility is important. While keeping this basic essay
-        format in mind, let the topic and specific assignment guide the writing and organisation.</p>
-          <h2 class="separator dotted-border">1. Introduction</h2>
+        content: `<h2 class="separator dotted-border">1. Introduction</h2>
           <div class="comic-grid narrow">
             <div class="half">
               [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]

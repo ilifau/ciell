@@ -311,7 +311,6 @@ h5 { font-size: 1.125em; }
 h6 { font-size: .875em; }
 
 .separator {
-  font-weight: 500;
   text-align: center;
   padding: .5em 0 0;
 }
@@ -574,8 +573,16 @@ img {
   /* background: #eff7f9; */
 }
 
+.exam-question {
+  padding-bottom: 2em;
+}
+
+.exam-question p {
+  margin: 0 0;
+}
+
 .audio-wrapper {
-  padding: 1em;
+  padding: 1em 1em 1em 0;
 }
 
 .exam-question strong,

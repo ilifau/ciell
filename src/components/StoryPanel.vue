@@ -256,6 +256,11 @@ export default {
   padding: 1.125em;
   margin: 0 0;
   font-size: .875em;
+  pointer-events: none;
+}
+
+.choices li {
+  pointer-events: all;
 }
 
 @media screen and (max-width: 1365px) {

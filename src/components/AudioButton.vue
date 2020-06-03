@@ -32,7 +32,7 @@ export default {
   text-decoration: none;
   background: #219ac2;
   padding: .6125em .75em;
-  /* border-radius: .25em; */
+  border-radius: 3px;
   display: inline-block;
   border: 0;
   transition: all .4s ease;

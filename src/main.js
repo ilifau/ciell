@@ -69,8 +69,6 @@ Vue.mixin({
           break
       }
 
-      console.log(sound)
-
       sound.pause()
       sound.currentTime = 0
       sound.play()

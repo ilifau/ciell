@@ -207,6 +207,21 @@ body {
   display: none;
 }
 
+@supports(padding: max(0px)) {
+  @media screen and (orientation: portrait) {
+    #app {
+        padding-top: max(1em, env(safe-area-inset-top));
+    }
+  }
+
+  @media screen and (orientation: landscape) {
+    #app {
+      padding-left: max(1em, env(safe-area-inset-left));
+      padding-right: max(1em, env(safe-area-inset-right));
+    }
+  }
+}
+
 #loading-wrapper {
   position: fixed;
   width: 100%;
@@ -265,14 +280,12 @@ body {
 }
 
 /* iOS */
-/* @supports(padding: max(0px)) {
-    #app {
-        padding-top: max(1em, env(safe-area-inset-top));
-        padding-left: max(1em, env(safe-area-inset-left));
-        padding-right: max(1em, env(safe-area-inset-right));
-        padding-bottom: max(1em, env(safe-area-inset-bottom));
+@supports(padding: max(0px)) {
+    body {
+        padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+        padding-top: env(safe-area-inset-top); /* iOS 11.2 */
     }
-} */
+}
 
 #nav-close {
   position: fixed;

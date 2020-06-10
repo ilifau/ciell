@@ -16,7 +16,7 @@
         <div class="clearfix"></div>
       </div>
     </div>
-    <a class="check-task" slot="footer" v-on:click="checkTask">Check answers </a>
+    <a class="check-task" slot="footer" v-on:click="checkTask">Check your answer<span v-if="task.items.length > 1">s</span></a>
   </div>
 </template>
 

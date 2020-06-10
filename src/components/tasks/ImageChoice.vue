@@ -5,7 +5,13 @@
       <div v-if="task.description" v-html="task.description"></div>
       <div class="image-choice">
         <div class="task-item" v-for="(item, questionIndex) in task.items" :key="'question-' + questionIndex">
-          <h2 class="answer-title" v-if="item.question">{{ questionIndex + 1 }}. {{ item.question }}</h2>
+          <h2 class="question-title" v-if="item.question">{{ questionIndex + 1 }}. {{ item.question }}</h2>
+          <div class="task-images">
+            <div v-for="(image, imageIndex) in item.images" :key="'image-' + imageIndex">
+              <img class="task-image" :src="require('@/stories/ciell/assets/img/' + image)" alt="" />
+            </div>
+          </div>
+          <h2 class="answer-title" v-if="item.answerTitle">{{ item.answerTitle }}</h2>
           <label class="answer" v-for="(answer, answerIndex) in item.answers" :key="'answer-' + answerIndex">
             <input v-if="item.singleChoice" v-on:click="onChange(questionIndex)" v-model="selectedAnswers[questionIndex][answerIndex]" v-bind:value="answer.correct === true ? true : answerIndex" type="radio" :name="'radio-' + (questionIndex)">
             <input v-else v-on:click="onChange()" v-model="selectedAnswers[questionIndex][answerIndex]" v-bind:value="answer.correct" type="checkbox">
@@ -18,7 +24,7 @@
         <div class="clearfix"></div>
       </div>
     </div>
-    <a class="check-task" slot="footer" v-on:click="checkTask">Check answers </a>
+    <a class="check-task" slot="footer" v-on:click="checkTask">Check your answer<span v-if="task.items.length > 1">s</span></a>
   </div>
 </template>
 
@@ -141,6 +147,18 @@ export default {
     margin-bottom: 1em;
   }
 
+  .task-images {
+    display: block;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+
+  .task-image {
+    width: 11.25em;
+    margin: 0 0 0 .5em;
+    max-width: calc(50% - 1.5em);
+  }
+
   label > div {
     line-height: 0;
   }
@@ -181,9 +199,15 @@ export default {
     box-shadow: 1px 2px 1em rgba(0,0,0,.2);
   }
 
+  .question-title,
   .answer-title {
     clear: both;
     font-size: 1.25em;
+  }
+
+  h2.answer-title {
+    font-size: 1.125em;
+    margin-bottom: .75em;
   }
 
   /* On mouse-over, add a grey background color */

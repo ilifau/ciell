@@ -19,7 +19,7 @@
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-bind:class="{ active: navIsActive }">
       <span class="nav-header">NAVIGATION</span>
-      <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Essays</router-link>
+      <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Comics</router-link>
       <div v-for="(story, id) in stories" :key="id">
         <div class="story-link-wrapper" v-bind:class="{ current: id === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
           <a class="story-link" v-on:click="openStory(id), closeNav()">
@@ -48,7 +48,7 @@ export default {
     storyTitle: function () {
       let show = ['tasks', 'about', 'home', 'evaluation']
       if (show.includes(this.$route.name)) {
-        return 'Essays'
+        return 'Comics'
       } else if (this.$route.name === 'story') {
         return this.$props.stories[this.$store.state.currentStoryId].title
       } else {
@@ -125,13 +125,13 @@ export default {
   }
 }
 
-/* @supports(padding: max(0px)) {
+@supports(padding: max(0px)) {
+  @media screen and (orientation: portrait) {
     .header {
-        top: max(1em, env(safe-area-inset-top));
-        padding-left: max(1em, env(safe-area-inset-left));
-        padding-right: max(1em, env(safe-area-inset-right));
+        padding-top: max(1em, env(safe-area-inset-top));
     }
-} */
+  }
+}
 
 .header a {
   flex-grow: 1;
@@ -172,14 +172,13 @@ export default {
   -webkit-perspective: 1000;
 }
 
-/* @supports(padding: max(0px)) {
+@supports(padding: max(0px)) {
+  @media screen and (orientation: portrait) {
     .nav {
         padding-top: max(1em, env(safe-area-inset-top));
-        padding-left: max(1em, env(safe-area-inset-left));
-        padding-right: max(1em, env(safe-area-inset-right));
-        padding-bottom: max(1em, env(safe-area-inset-bottom));
     }
-} */
+  }
+}
 
 .toggle-wrapper {
   position: relative;

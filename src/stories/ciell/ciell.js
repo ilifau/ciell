@@ -123,6 +123,40 @@ let Story = [
             ]
           }
         ]
+      },
+      {
+        id: 1030,
+        name: 'Choose the matching panel',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches the following image',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-conclusion-1.jpg'
+            ],
+            answers: [
+              {
+                title: 'lorem',
+                text: 'BNIobee',
+                image: 'homeless/homeless 01.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 04.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 17.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
       }
     ],
     chapters: [
@@ -430,6 +464,26 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 70
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 1030,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
           },
           {
             'text': 'Restart',

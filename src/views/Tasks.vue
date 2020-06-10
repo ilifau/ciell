@@ -8,7 +8,7 @@
       </div>
     </div>
     <p>&nbsp;</p>
-    <h2>Essays</h2>
+    <h2>Comics</h2>
     <div class="stories">
       <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
         <h3 class="story-title" v-on:click="openStoryByTitle(id, true)">

@@ -6,7 +6,7 @@
       <div class="image-choice">
         <div class="task-item" v-for="(item, questionIndex) in task.items" :key="'question-' + questionIndex">
           <h2 class="question-title" v-if="item.question">{{ questionIndex + 1 }}. {{ item.question }}</h2>
-          <div class="task-images">
+          <div v-if="item.images" class="task-images">
             <div v-for="(image, imageIndex) in item.images" :key="'image-' + imageIndex">
               <img class="task-image" :src="require('@/stories/ciell/assets/img/' + image)" alt="" />
             </div>
@@ -156,7 +156,7 @@ export default {
   .task-image {
     width: 11.25em;
     margin: 0 0 0 .5em;
-    max-width: calc(50% - 1.5em);
+    max-width: calc(50% - 1.75em);
   }
 
   label > div {

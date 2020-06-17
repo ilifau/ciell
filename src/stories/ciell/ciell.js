@@ -126,7 +126,7 @@ let Story = [
       },
       {
         id: 1030,
-        name: 'Choose the matching panel',
+        name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
         title: '',
@@ -134,24 +134,122 @@ let Story = [
         items: [
           {
             singleChoice: true,
-            question: 'Choose the panel that matches the following image',
+            question: 'Choose the panel that matches',
             answerTitle: 'Choose one of the following panels',
             images: [
-              'info-graphics/basic-essay-structure-conclusion-1.jpg'
+              'info-graphics/basic-essay-structure-7.jpg'
             ],
             answers: [
               {
-                title: 'lorem',
-                text: 'BNIobee',
-                image: 'homeless/homeless 01.jpg'
+                text: '',
+                image: 'homeless/homeless 05.jpg'
               },
               {
                 text: '',
-                image: 'homeless/homeless 04.jpg'
+                image: 'homeless/homeless 09.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 16.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 1040,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-8.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'homeless/homeless 06.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 16.jpg'
               },
               {
                 text: '',
                 image: 'homeless/homeless 17.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 1050,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-9.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'homeless/homeless 10.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 09.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 16.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 1060,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-6.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'homeless/homeless 08.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 10.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 09.jpg',
                 correct: true
               }
             ]
@@ -486,6 +584,66 @@ let Story = [
             'chapterId': 80
           },
           {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 100
+          }
+        ]
+      },
+      {
+        id: 100,
+        taskId: 1040,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 90
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 110
+          }
+        ]
+      },
+      {
+        id: 110,
+        taskId: 1050,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 100
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 120
+          }
+        ]
+      },
+      {
+        id: 120,
+        taskId: 1060,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 110
+          },
+          {
             'text': 'Restart',
             'class': 'next',
             'iconAfter': 'undo',
@@ -708,6 +866,107 @@ let Story = [
     preview: 'zen-gardens/cover.jpg',
     color: 'rgb(234, 149, 34)',
     numberImage: 'zen-gardens/number.png',
+    tasks: [
+      {
+        id: 3000,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                title: 'lorem',
+                image: 'zen-gardens/zen gardens 13.jpg'
+              },
+              {
+                text: '',
+                image: 'zen-gardens/zen gardens 14.jpg'
+              },
+              {
+                text: '',
+                image: 'zen-gardens/zen gardens 19.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 3010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-4.jpg'
+            ],
+            answers: [
+              {
+                title: 'lorem',
+                image: 'zen-gardens/zen gardens 14.jpg'
+              },
+              {
+                text: '',
+                image: 'zen-gardens/zen gardens 15.jpg'
+              },
+              {
+                text: '',
+                image: 'zen-gardens/zen gardens 16.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 3020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-5.jpg'
+            ],
+            answers: [
+              {
+                title: 'lorem',
+                image: 'zen-gardens/zen gardens 09.jpg'
+              },
+              {
+                text: '',
+                image: 'zen-gardens/zen gardens 12.jpg'
+              },
+              {
+                text: '',
+                image: 'zen-gardens/zen gardens 04.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -962,6 +1221,66 @@ let Story = [
             'chapterId': 40
           },
           {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 3000,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 3010,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 3020,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
             'text': 'Restart',
             'class': 'next',
             'iconAfter': 'undo',
@@ -980,6 +1299,107 @@ let Story = [
     preview: 'agatha-christie/cover.jpg',
     color: 'rgb(235, 0, 135)',
     numberImage: 'agatha-christie/number.png',
+    tasks: [
+      {
+        id: 4000,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-7.jpg'
+            ],
+            answers: [
+              {
+                title: 'lorem',
+                image: 'agatha-christie/agatha 17.jpg'
+              },
+              {
+                text: '',
+                image: 'agatha-christie/agatha 19.jpg'
+              },
+              {
+                text: '',
+                image: 'agatha-christie/agatha 18.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 4010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-8.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'agatha-christie/agatha 19.jpg'
+              },
+              {
+                text: '',
+                image: 'agatha-christie/agatha 18.jpg'
+              },
+              {
+                text: '',
+                image: 'agatha-christie/agatha 01.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 4020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-9.jpg'
+            ],
+            answers: [
+              {
+                title: 'lorem',
+                image: 'agatha-christie/agatha 17.jpg'
+              },
+              {
+                text: '',
+                image: 'agatha-christie/agatha 19.jpg'
+              },
+              {
+                text: '',
+                image: 'agatha-christie/agatha 18.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -1224,6 +1644,66 @@ let Story = [
             'chapterId': 40
           },
           {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 4000,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 4010,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 4020,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
             'text': 'Restart',
             'class': 'next',
             'iconAfter': 'undo',
@@ -1440,6 +1920,138 @@ let Story = [
           {
             order: 110,
             image: 'gender-equality/invisible 25.jpg'
+          }
+        ]
+      },
+      {
+        id: 5040,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'gender-equality/invisible 10.jpg'
+              },
+              {
+                text: '',
+                image: 'gender-equality/invisible 17.jpg'
+              },
+              {
+                text: '',
+                image: 'gender-equality/invisible 22.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 5050,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-4.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'gender-equality/invisible 20.jpg'
+              },
+              {
+                text: '',
+                image: 'gender-equality/invisible 10.jpg'
+              },
+              {
+                text: '',
+                image: 'gender-equality/invisible 17.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 5060,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-5.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'gender-equality/invisible 21.jpg'
+              },
+              {
+                text: '',
+                image: 'gender-equality/invisible 10.jpg'
+              },
+              {
+                text: '',
+                image: 'gender-equality/invisible 17.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 5070,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-6.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'gender-equality/invisible 22.jpg'
+              },
+              {
+                text: '',
+                image: 'gender-equality/invisible 10.jpg'
+              },
+              {
+                text: '',
+                image: 'gender-equality/invisible 21.jpg',
+                correct: true
+              }
+            ]
           }
         ]
       }
@@ -1789,6 +2401,86 @@ let Story = [
             'chapterId': 70
           },
           {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 5040,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 100
+          }
+        ]
+      },
+      {
+        id: 100,
+        taskId: 5050,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 90
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 110
+          }
+        ]
+      },
+      {
+        id: 110,
+        taskId: 5060,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 100
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 120
+          }
+        ]
+      },
+      {
+        id: 120,
+        taskId: 5070,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 110
+          },
+          {
             'text': 'Restart',
             'class': 'next',
             'iconAfter': 'undo',
@@ -1955,6 +2647,105 @@ let Story = [
           {
             order: 9,
             image: 'nuclear-power/nuclear 15.jpg'
+          }
+        ]
+      },
+      {
+        id: 7030,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-9.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 20.jpg'
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 23.jpg'
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 24.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 7040,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-6.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 22.jpg'
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 05.jpg'
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 20.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 7050,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 16.jpg'
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 20.jpg'
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 21.jpg',
+                correct: true
+              }
+            ]
           }
         ]
       }
@@ -2282,6 +3073,66 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 7030,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 100
+          }
+        ]
+      },
+      {
+        id: 100,
+        taskId: 7040,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 90
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 110
+          }
+        ]
+      },
+      {
+        id: 110,
+        taskId: 7050,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 100
           },
           {
             'text': 'Restart',
@@ -2696,6 +3547,140 @@ let Story = [
     preview: 'cipta/cover.jpg',
     color: 'rgb(193, 116, 174)',
     numberImage: 'cipta/number.png',
+    tasks: [
+      {
+        id: 16000,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'cipta/Cipta 10.jpg'
+              },
+              {
+                text: '',
+                image: 'cipta/Cipta 13.jpg'
+              },
+              {
+                text: '',
+                image: 'cipta/Cipta 15.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 16010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-4.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'cipta/Cipta 13.jpg'
+              },
+              {
+                text: '',
+                image: 'cipta/Cipta 15.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'cipta/Cipta 10.jpg',
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 16020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-5.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'cipta/Cipta 12.jpg'
+              },
+              {
+                text: '',
+                image: 'cipta/Cipta 11.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'cipta/Cipta 13.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 16030,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-6.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'cipta/Cipta 13.jpg'
+              },
+              {
+                text: '',
+                image: 'cipta/Cipta 10.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'cipta/Cipta 12.jpg'
+              }
+            ]
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -2911,6 +3896,86 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 40
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 16000,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 16010,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 16020,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 16030,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
           },
           {
             'text': 'Restart',

@@ -142,7 +142,8 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'homeless/homeless 05.jpg'
+                image: 'homeless/homeless 05.jpg',
+                correct: true
               },
               {
                 text: '',
@@ -150,8 +151,7 @@ let Story = [
               },
               {
                 text: '',
-                image: 'homeless/homeless 16.jpg',
-                correct: true
+                image: 'homeless/homeless 16.jpg'
               }
             ]
           }
@@ -175,15 +175,15 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'homeless/homeless 06.jpg'
-              },
-              {
-                text: '',
                 image: 'homeless/homeless 16.jpg'
               },
               {
                 text: '',
-                image: 'homeless/homeless 17.jpg',
+                image: 'homeless/homeless 17.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 06.jpg',
                 correct: true
               }
             ]
@@ -212,12 +212,12 @@ let Story = [
               },
               {
                 text: '',
-                image: 'homeless/homeless 09.jpg'
+                image: 'homeless/homeless 09.jpg',
+                correct: true
               },
               {
                 text: '',
-                image: 'homeless/homeless 16.jpg',
-                correct: true
+                image: 'homeless/homeless 16.jpg'
               }
             ]
           }
@@ -245,12 +245,12 @@ let Story = [
               },
               {
                 text: '',
-                image: 'homeless/homeless 10.jpg'
+                image: 'homeless/homeless 10.jpg',
+                correct: true
               },
               {
                 text: '',
-                image: 'homeless/homeless 09.jpg',
-                correct: true
+                image: 'homeless/homeless 09.jpg'
               }
             ]
           }
@@ -885,7 +885,8 @@ let Story = [
             answers: [
               {
                 title: 'lorem',
-                image: 'zen-gardens/zen gardens 13.jpg'
+                image: 'zen-gardens/zen gardens 13.jpg',
+                correct: true
               },
               {
                 text: '',
@@ -893,8 +894,7 @@ let Story = [
               },
               {
                 text: '',
-                image: 'zen-gardens/zen gardens 19.jpg',
-                correct: true
+                image: 'zen-gardens/zen gardens 19.jpg'
               }
             ]
           }
@@ -917,17 +917,17 @@ let Story = [
             ],
             answers: [
               {
-                title: 'lorem',
-                image: 'zen-gardens/zen gardens 14.jpg'
-              },
-              {
                 text: '',
                 image: 'zen-gardens/zen gardens 15.jpg'
               },
               {
-                text: '',
-                image: 'zen-gardens/zen gardens 16.jpg',
+                title: 'lorem',
+                image: 'zen-gardens/zen gardens 14.jpg',
                 correct: true
+              },
+              {
+                text: '',
+                image: 'zen-gardens/zen gardens 16.jpg'
               }
             ]
           }
@@ -951,7 +951,8 @@ let Story = [
             answers: [
               {
                 title: 'lorem',
-                image: 'zen-gardens/zen gardens 09.jpg'
+                image: 'zen-gardens/zen gardens 09.jpg',
+                correct: true
               },
               {
                 text: '',
@@ -959,8 +960,7 @@ let Story = [
               },
               {
                 text: '',
-                image: 'zen-gardens/zen gardens 04.jpg',
-                correct: true
+                image: 'zen-gardens/zen gardens 04.jpg'
               }
             ]
           }
@@ -1317,16 +1317,16 @@ let Story = [
             ],
             answers: [
               {
-                title: 'lorem',
-                image: 'agatha-christie/agatha 17.jpg'
-              },
-              {
                 text: '',
                 image: 'agatha-christie/agatha 19.jpg'
               },
               {
                 text: '',
-                image: 'agatha-christie/agatha 18.jpg',
+                image: 'agatha-christie/agatha 18.jpg'
+              },
+              {
+                title: 'lorem',
+                image: 'agatha-christie/agatha 17.jpg',
                 correct: true
               }
             ]
@@ -1355,12 +1355,12 @@ let Story = [
               },
               {
                 text: '',
-                image: 'agatha-christie/agatha 18.jpg'
+                image: 'agatha-christie/agatha 18.jpg',
+                correct: true
               },
               {
                 text: '',
-                image: 'agatha-christie/agatha 01.jpg',
-                correct: true
+                image: 'agatha-christie/agatha 01.jpg'
               }
             ]
           }
@@ -1388,12 +1388,12 @@ let Story = [
               },
               {
                 text: '',
-                image: 'agatha-christie/agatha 19.jpg'
+                image: 'agatha-christie/agatha 19.jpg',
+                correct: true
               },
               {
                 text: '',
-                image: 'agatha-christie/agatha 18.jpg',
-                correct: true
+                image: 'agatha-christie/agatha 18.jpg'
               }
             ]
           }
@@ -1941,15 +1941,15 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'gender-equality/invisible 10.jpg'
-              },
-              {
-                text: '',
                 image: 'gender-equality/invisible 17.jpg'
               },
               {
                 text: '',
-                image: 'gender-equality/invisible 22.jpg',
+                image: 'gender-equality/invisible 22.jpg'
+              },
+              {
+                text: '',
+                image: 'gender-equality/invisible 10.jpg',
                 correct: true
               }
             ]
@@ -1974,7 +1974,8 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'gender-equality/invisible 20.jpg'
+                image: 'gender-equality/invisible 20.jpg',
+                correct: true
               },
               {
                 text: '',
@@ -1982,8 +1983,7 @@ let Story = [
               },
               {
                 text: '',
-                image: 'gender-equality/invisible 17.jpg',
-                correct: true
+                image: 'gender-equality/invisible 17.jpg'
               }
             ]
           }
@@ -2007,16 +2007,16 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'gender-equality/invisible 21.jpg'
-              },
-              {
-                text: '',
                 image: 'gender-equality/invisible 10.jpg'
               },
               {
                 text: '',
-                image: 'gender-equality/invisible 17.jpg',
+                image: 'gender-equality/invisible 21.jpg',
                 correct: true
+              },
+              {
+                text: '',
+                image: 'gender-equality/invisible 17.jpg'
               }
             ]
           }
@@ -2040,7 +2040,8 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'gender-equality/invisible 22.jpg'
+                image: 'gender-equality/invisible 22.jpg',
+                correct: true
               },
               {
                 text: '',
@@ -2048,8 +2049,7 @@ let Story = [
               },
               {
                 text: '',
-                image: 'gender-equality/invisible 21.jpg',
-                correct: true
+                image: 'gender-equality/invisible 21.jpg'
               }
             ]
           }
@@ -2668,7 +2668,8 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'nuclear-power/nuclear 20.jpg'
+                image: 'nuclear-power/nuclear 20.jpg',
+                correct: true
               },
               {
                 text: '',
@@ -2676,8 +2677,7 @@ let Story = [
               },
               {
                 text: '',
-                image: 'nuclear-power/nuclear 24.jpg',
-                correct: true
+                image: 'nuclear-power/nuclear 24.jpg'
               }
             ]
           }
@@ -2701,16 +2701,16 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'nuclear-power/nuclear 22.jpg'
-              },
-              {
-                text: '',
                 image: 'nuclear-power/nuclear 05.jpg'
               },
               {
                 text: '',
-                image: 'nuclear-power/nuclear 20.jpg',
+                image: 'nuclear-power/nuclear 22.jpg',
                 correct: true
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 20.jpg'
               }
             ]
           }
@@ -2734,7 +2734,8 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'nuclear-power/nuclear 16.jpg'
+                image: 'nuclear-power/nuclear 16.jpg',
+                correct: true
               },
               {
                 text: '',
@@ -2742,8 +2743,7 @@ let Story = [
               },
               {
                 text: '',
-                image: 'nuclear-power/nuclear 21.jpg',
-                correct: true
+                image: 'nuclear-power/nuclear 21.jpg'
               }
             ]
           }
@@ -3153,6 +3153,107 @@ let Story = [
     preview: 'transports/cover.jpg',
     color: 'rgb(198, 32, 39)',
     numberImage: 'transports/number.png',
+    tasks: [
+      {
+        id: 1100,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-2.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'transports/transports 04.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'transports/transports 09.jpg'
+              },
+              {
+                text: '',
+                image: 'transports/transports 10.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 1110,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-conclusion-1.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'transports/transports 07.jpg'
+              },
+              {
+                text: '',
+                image: 'transports/transports 13.jpg'
+              },
+              {
+                text: '',
+                image: 'transports/transports 21.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 1120,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-9.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'transports/transports 04.jpg'
+              },
+              {
+                text: '',
+                image: 'transports/transports 07.jpg'
+              },
+              {
+                text: '',
+                image: 'transports/transports 14.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -3335,6 +3436,66 @@ let Story = [
             'chapterId': 30
           },
           {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        taskId: 1100,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 1110,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 1120,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
             'text': 'Restart',
             'class': 'next',
             'iconAfter': 'undo',
@@ -3353,6 +3514,107 @@ let Story = [
     preview: 'climate-change/cover.jpg',
     color: 'rgb(213, 212, 36)',
     numberImage: 'climate-change/number.png',
+    tasks: [
+      {
+        id: 1300,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-2.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'climate-change/climate 06.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'climate-change/climate 11.jpg'
+              },
+              {
+                text: '',
+                image: 'climate-change/climate 13.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 1310,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-conclusion-1.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'climate-change/climate 08.jpg'
+              },
+              {
+                text: '',
+                image: 'climate-change/climate 17.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'climate-change/climate 11.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 1320,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-4.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'climate-change/climate 01.jpg'
+              },
+              {
+                text: '',
+                image: 'climate-change/climate 04.jpg'
+              },
+              {
+                text: '',
+                image: 'climate-change/climate 11.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -3529,6 +3791,66 @@ let Story = [
             'chapterId': 30
           },
           {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        taskId: 1300,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 1310,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 1320,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
             'text': 'Restart',
             'class': 'next',
             'iconAfter': 'undo',
@@ -3570,12 +3892,12 @@ let Story = [
               },
               {
                 text: '',
-                image: 'cipta/Cipta 13.jpg'
+                image: 'cipta/Cipta 13.jpg',
+                correct: true
               },
               {
                 text: '',
-                image: 'cipta/Cipta 15.jpg',
-                correct: true
+                image: 'cipta/Cipta 15.jpg'
               }
             ]
           }
@@ -3603,12 +3925,12 @@ let Story = [
               },
               {
                 text: '',
-                image: 'cipta/Cipta 15.jpg',
-                correct: true
+                image: 'cipta/Cipta 15.jpg'
               },
               {
                 text: '',
                 image: 'cipta/Cipta 10.jpg',
+                correct: true
               }
             ]
           }
@@ -3669,12 +3991,12 @@ let Story = [
               },
               {
                 text: '',
-                image: 'cipta/Cipta 10.jpg',
-                correct: true
+                image: 'cipta/Cipta 10.jpg'
               },
               {
                 text: '',
-                image: 'cipta/Cipta 12.jpg'
+                image: 'cipta/Cipta 12.jpg',
+                correct: true
               }
             ]
           }

@@ -174,7 +174,7 @@ export default {
     bottom: -.6em;
     left: 0;
     margin-right: .25em;
-    width: auto;
+    width: 2.5em;
     background-size: cover;
     background-position: center center;
   }
@@ -205,11 +205,11 @@ export default {
   }
 
   .badge >>> .silver {
-    top: -3.5em;
+    top: -3.7em;
   }
 
   .badge >>> .gold {
-    top: -4.7em;
+    top: -5em;
   }
 
   .badge >>> .none {

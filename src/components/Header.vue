@@ -113,7 +113,8 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  padding: .5em .75em;
+  padding: 0 .75em;
+  height: 2em;
   z-index: 2;
   line-height: 1;
   flex-direction: row;
@@ -128,7 +129,7 @@ export default {
 @supports(padding: max(0px)) {
   @media screen and (orientation: portrait) {
     .header {
-        padding-top: max(1em, env(safe-area-inset-top));
+        padding-top: max(0px, env(safe-area-inset-top));
     }
   }
 }
@@ -175,7 +176,7 @@ export default {
 @supports(padding: max(0px)) {
   @media screen and (orientation: portrait) {
     .nav {
-        padding-top: max(1em, env(safe-area-inset-top));
+        padding-top: max(0px, env(safe-area-inset-top));
     }
   }
 }
@@ -402,7 +403,7 @@ export default {
 @media screen and (max-width: 767px) {
   .toggle-font {
     right: 5em;
-    top: .45em;
+    /* top: .45em; */
   }
 
   .nav-circle {

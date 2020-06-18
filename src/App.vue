@@ -210,7 +210,7 @@ body {
 @supports(padding: max(0px)) {
   @media screen and (orientation: portrait) {
     #app {
-        padding-top: max(1em, env(safe-area-inset-top));
+        padding-top: max(0px, env(safe-area-inset-top));
     }
   }
 
@@ -664,7 +664,6 @@ img {
 @media screen and (max-width: 640px) {
   #app {
     font-size: 21px;
-    padding-top: 0;
   }
 
   .v--modal {

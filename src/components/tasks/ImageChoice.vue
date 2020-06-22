@@ -101,13 +101,13 @@ export default {
       this.selectedAnswers.forEach(function (question, questionIndex) {
         question.forEach(function (answer, answerIndex) {
           if (answer) { // checked items
-            if (that.task.items[questionIndex].answers[answerIndex].correct) {
+            if (task.items[questionIndex].answers[answerIndex].correct) {
               correct++
             } else {
               incorrect++
             }
           } else { // unchecked items
-            if (typeof that.task.items[questionIndex].answers[answerIndex].correct === 'undefined') {
+            if (typeof task.items[questionIndex].answers[answerIndex].correct === 'undefined') {
               correct++
             } else {
               incorrect++
@@ -121,20 +121,20 @@ export default {
 
       if (this.incorrect === 0) {
         if (commit) {
-          this.$store.commit('setTaskComplete', this.task.id)
+          this.$store.commit('setTaskComplete', task.id)
         }
 
         this.checked = true
       } else {
         if (commit) {
-          this.$store.commit('removeTaskComplete', this.task.id)
+          this.$store.commit('removeTaskComplete', task.id)
         }
 
         this.checked = false
       }
 
       if (feedback) {
-        if (this.$store.state.tasksComplete.includes(this.task.id)) {
+        if (this.$store.state.tasksComplete.includes(task.id)) {
           message = {
             title: 'Hooray! ⭐',
             text: 'You completed this task successfully and earned yourself a star. Your progress will be saved.',

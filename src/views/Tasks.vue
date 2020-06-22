@@ -53,7 +53,7 @@ export default {
       }
 
       this.stars += 1
-      this.time = 100 + Math.ceil((this.starsTotal - this.stars) / 1.25)
+      this.time = 25 + Math.ceil((this.starsTotal - this.stars) / 1.25)
 
       clearInterval(this.interval)
       this.interval = setInterval(this.tick, this.time)

@@ -2552,7 +2552,7 @@ let Story = [
       {
         id: 80,
         taskId: 5030,
-        title: 'Task: Puzzle',
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -2592,7 +2592,7 @@ let Story = [
       {
         id: 100,
         taskId: 5050,
-        title: 'Task: Puzzle',
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -2612,7 +2612,7 @@ let Story = [
       {
         id: 110,
         taskId: 5060,
-        title: 'Task: Puzzle',
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -2632,7 +2632,7 @@ let Story = [
       {
         id: 120,
         taskId: 5070,
-        title: 'Task: Puzzle',
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -3294,6 +3294,455 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 100
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 80,
+    title: 'Decent Work',
+    author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/economic-growth/',
+    description: 'Sustained and inclusive economic growth can drive progress, create decent jobs for all and improve living standards.',
+    preview: 'decent-work/cover.jpg',
+    color: 'rgb(226, 10, 127)',
+    numberImage: 'decent-work/number.png',
+    tasks: [
+      {
+        id: 8000,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-1.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'decent-work/decent-work-01.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'decent-work/decent-work-12.jpg'
+              },
+              {
+                text: '',
+                image: 'decent-work/decent-work-13.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 8010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-2.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'decent-work/decent-work-16.jpg'
+              },
+              {
+                text: '',
+                image: 'decent-work/decent-work-05.jpg'
+              },
+              {
+                text: '',
+                image: 'decent-work/decent-work-02.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 8020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-9.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'decent-work/decent-work-07.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'decent-work/decent-work-18.jpg'
+              },
+              {
+                text: '',
+                image: 'decent-work/decent-work-15.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 8030,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-conclusion-1.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'decent-work/decent-work-05.jpg'
+              },
+              {
+                text: '',
+                image: 'decent-work/decent-work-17.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'decent-work/decent-work-15.jpg'
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    chapters: [
+      {
+        id: 0,
+        title: 'Decent Work',
+        examQuestion: '<p>Local government should invest money in public transport to make it free and accessible to everyone, no matter their physical ability, age or wealth, and to contribute to more sustainable cities and communities for the future.</p><p class="last">Do you agree or disagree?</p>',
+        content: `<h2>Introduction</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|decent-work/decent-work-01.jpg|Decent Work 1]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-02.jpg|Decent Work 2]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: '',
+        content: `<h2>Paragraph 1</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|decent-work/decent-work-03.jpg|Decent Work 3]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-04.jpg|Decent Work 4]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-05.jpg|Decent Work 5]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-06.jpg|Decent Work 6]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-07.jpg|Decent Work 7]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-08.jpg|Decent Work 8]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        content: `<h2>Paragraph 2</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|decent-work/decent-work-09.jpg|Decent Work 9]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-10.jpg|Decent Work 10]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-11.jpg|Decent Work 11]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-12.jpg|Decent Work 12]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-13.jpg|Decent Work 13]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-14.jpg|Decent Work 14]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-15.jpg|Decent Work 15]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-16.jpg|Decent Work 16]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        content: `<h2>Conclusion</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|decent-work/decent-work-17.jpg|Decent Work 17]
+            </div>
+            <div class="half">
+              [image|decent-work/decent-work-18.jpg|Decent Work 18]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: 'Infographic: Basic Essay Structure',
+        titleClass: 'center',
+        content: `<h2 class="separator dotted-border">1. Introduction</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
+            </div>
+          </div>
+          <h2 class="separator dotted-border">2. Body</h2>
+          <h3 class="separator">Paragraph 1</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-3.jpg|Basic Essay Structure 3]
+            </div>
+            <div class="half last arrow">
+              [image|info-graphics/basic-essay-structure-4.jpg|Basic Essay Structure 4]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-5.jpg|Basic Essay Structure 5]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 2</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-7.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-8.jpg|Basic Essay Structure 8]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-9.jpg|Basic Essay Structure 9]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 3, 4, 5&hellip;</h3>
+          <p style="text-align:center">Feel free to add more paragraphs!</p>
+          <h2 class="separator dotted-border">3. Conclusion</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-1.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-2.jpg|Basic Essay Structure 8]
+            </div>
+          </div>
+          `,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        title: '',
+        content: '[tasks]',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 8000,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 8010,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 8020,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 8030,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
           },
           {
             'text': 'Restart',

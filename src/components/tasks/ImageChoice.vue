@@ -34,6 +34,16 @@ export default {
     'story',
     'task'
   ],
+  watch: {
+    task: {
+      handler: function (newTask, oldTask) {
+        this.selectedAnswers = []
+        this.isComplete = this.$store.state.tasksComplete.includes(newTask.id)
+        this.createAnswers(newTask)
+        this.checkTask(newTask, false, false)
+      }
+    }
+  },
   data () {
     return {
       selectedAnswers: [],
@@ -44,19 +54,26 @@ export default {
     }
   },
   created () {
-    let that = this
-    this.task.items.forEach(function (question, index) {
-      that.selectedAnswers.push([])
-      question.answers.forEach(function (answer) {
-        if (!that.isComplete) {
-          that.selectedAnswers[index].push(false)
-        } else {
-          that.selectedAnswers[index].push(answer.correct)
-        }
-      })
-    })
+    this.createAnswers(this.task)
   },
   methods: {
+    createAnswers (task) {
+      if (!task) {
+        task = this.task
+      }
+
+      let that = this
+      task.items.forEach(function (question, index) {
+        that.selectedAnswers.push([])
+        question.answers.forEach(function (answer) {
+          if (!that.isComplete) {
+            that.selectedAnswers[index].push(false)
+          } else {
+            that.selectedAnswers[index].push(answer.correct)
+          }
+        })
+      })
+    },
     onChange (questionIndex = null) {
       this.checked = false
       this.isComplete = this.incorrect === 0
@@ -68,7 +85,11 @@ export default {
         })
       }
     },
-    checkTask () {
+    checkTask (task, commit = true, feedback = true) {
+      if (!task) {
+        task = this.task
+      }
+
       let that = this
       let correct = 0
       let incorrect = 0
@@ -78,10 +99,6 @@ export default {
       }
 
       this.selectedAnswers.forEach(function (question, questionIndex) {
-        // if (typeof that.task.items[questionIndex].singleChoice !== 'undefined') { // Single choice
-        //   if ()
-        // }
-
         question.forEach(function (answer, answerIndex) {
           if (answer) { // checked items
             if (that.task.items[questionIndex].answers[answerIndex].correct) {
@@ -103,30 +120,37 @@ export default {
       this.incorrect = incorrect
 
       if (this.incorrect === 0) {
-        this.$store.commit('setTaskComplete', this.task.id)
+        if (commit) {
+          this.$store.commit('setTaskComplete', this.task.id)
+        }
+
         this.checked = true
       } else {
-        this.$store.commit('removeTaskComplete', this.task.id)
+        if (commit) {
+          this.$store.commit('removeTaskComplete', this.task.id)
+        }
+
         this.checked = false
       }
 
-      if (this.$store.state.tasksComplete.includes(this.task.id)) {
-        message = {
-          title: 'Hooray! ⭐',
-          text: 'You completed this task successfully and earned yourself a star. Your progress will be saved.',
-          effect: 'fireworks'
+      if (feedback) {
+        if (this.$store.state.tasksComplete.includes(this.task.id)) {
+          message = {
+            title: 'Hooray! ⭐',
+            text: 'You completed this task successfully and earned yourself a star. Your progress will be saved.',
+            effect: 'fireworks'
+          }
+          this.playSound('success')
+        } else {
+          message = {
+            title: 'D\'oh! 😖',
+            text: 'Hm, that doesn\'t seem to be quite right yet. Try again, you can try as often as you like.'
+          }
+          this.playSound('fail')
         }
-        this.playSound('success')
-      } else {
-        message = {
-          title: 'D\'oh! 😖',
-          text: 'Hm, that doesn\'t seem to be quite right yet. Try again, you can try as often as you like.'
-          // text: 'Hm, not quite (<strong>' + this.correct + ' correct</strong>, <strong>' + this.incorrect + ' incorrect</strong>). Try again, you can try as often as you like.'
-        }
-        this.playSound('fail')
-      }
 
-      this.$emit('showMessage', message)
+        this.$emit('showMessage', message)
+      }
     }
   }
 }

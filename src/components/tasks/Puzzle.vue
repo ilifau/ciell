@@ -26,6 +26,13 @@ export default {
     'story',
     'task'
   ],
+  watch: {
+    task: function (newTask, oldTask) {
+      if (!this.$store.state.tasksComplete.includes(newTask.id)) {
+        this.shuffle()
+      }
+    }
+  },
   data () {
     return {
       isComplete: this.$store.state.tasksComplete.includes(this.task.id),
@@ -34,16 +41,6 @@ export default {
   },
   created () {
     this.shuffle()
-  },
-  watch: {
-    task: {
-      immediate: false,
-      handler (taskBefore, taskAfter) {
-        if (taskBefore.id !== taskAfter.id) {
-          this.shuffle()
-        }
-      }
-    }
   },
   methods: {
     shuffle () {
@@ -60,6 +57,7 @@ export default {
       }
 
       this.task.items = items
+      this.$forceUpdate()
     },
     checkTask () {
       let message = {

@@ -183,7 +183,7 @@ export default {
     position: relative;
     display: block;
     overflow: hidden;
-    padding: .6125em .5em .5em;
+    padding: .6125em 0 .5em;
     color: #fff;
   }
 

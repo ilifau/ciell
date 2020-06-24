@@ -5,7 +5,7 @@
       <div v-if="task.description" v-html="task.description"></div>
       <div class="image-choice">
         <div class="task-item" v-for="(item, questionIndex) in task.items" :key="'question-' + questionIndex">
-          <h2 class="question-title" v-if="item.question">{{ questionIndex + 1 }}. {{ item.question }}</h2>
+          <h2 class="question-title" v-if="item.question">{{ item.question }}</h2>
           <div v-if="item.images" class="task-images">
             <div v-for="(image, imageIndex) in item.images" :key="'image-' + imageIndex">
               <img class="task-image" :src="require('@/stories/ciell/assets/img/' + image)" alt="" />
@@ -39,8 +39,52 @@ export default {
       handler: function (newTask, oldTask) {
         this.selectedAnswers = []
         this.isComplete = this.$store.state.tasksComplete.includes(newTask.id)
-        this.createAnswers(newTask)
-        this.checkTask(newTask, false, false)
+
+        let that = this
+        newTask.items.forEach(function (question, index) {
+          that.selectedAnswers.push([])
+          question.answers.forEach(function (answer) {
+            if (!that.isComplete) {
+              that.selectedAnswers[index].push(false)
+            } else {
+              that.selectedAnswers[index].push(answer.correct)
+            }
+          })
+        })
+
+        let correct = 0
+        let incorrect = 0
+        let message = {
+          title: '',
+          text: ''
+        }
+
+        this.selectedAnswers.forEach(function (question, questionIndex) {
+          question.forEach(function (answer, answerIndex) {
+            if (answer) { // checked items
+              if (newTask.items[questionIndex].answers[answerIndex].correct) {
+                correct++
+              } else {
+                incorrect++
+              }
+            } else { // unchecked items
+              if (typeof newTask.items[questionIndex].answers[answerIndex].correct === 'undefined') {
+                correct++
+              } else {
+                incorrect++
+              }
+            }
+          })
+        })
+
+        this.correct = correct
+        this.incorrect = incorrect
+
+        if (this.incorrect === 0) {
+          this.checked = true
+        } else {
+          this.checked = false
+        }
       }
     }
   },
@@ -54,26 +98,19 @@ export default {
     }
   },
   created () {
-    this.createAnswers(this.task)
+    let that = this
+    this.task.items.forEach(function (question, index) {
+      that.selectedAnswers.push([])
+      question.answers.forEach(function (answer) {
+        if (!that.isComplete) {
+          that.selectedAnswers[index].push(false)
+        } else {
+          that.selectedAnswers[index].push(answer.correct)
+        }
+      })
+    })
   },
   methods: {
-    createAnswers (task) {
-      if (!task) {
-        task = this.task
-      }
-
-      let that = this
-      task.items.forEach(function (question, index) {
-        that.selectedAnswers.push([])
-        question.answers.forEach(function (answer) {
-          if (!that.isComplete) {
-            that.selectedAnswers[index].push(false)
-          } else {
-            that.selectedAnswers[index].push(answer.correct)
-          }
-        })
-      })
-    },
     onChange (questionIndex = null) {
       this.checked = false
       this.isComplete = this.incorrect === 0
@@ -85,11 +122,7 @@ export default {
         })
       }
     },
-    checkTask (task, commit = true, feedback = true) {
-      if (!task) {
-        task = this.task
-      }
-
+    checkTask () {
       let that = this
       let correct = 0
       let incorrect = 0
@@ -101,13 +134,13 @@ export default {
       this.selectedAnswers.forEach(function (question, questionIndex) {
         question.forEach(function (answer, answerIndex) {
           if (answer) { // checked items
-            if (task.items[questionIndex].answers[answerIndex].correct) {
+            if (that.task.items[questionIndex].answers[answerIndex].correct) {
               correct++
             } else {
               incorrect++
             }
           } else { // unchecked items
-            if (typeof task.items[questionIndex].answers[answerIndex].correct === 'undefined') {
+            if (typeof that.task.items[questionIndex].answers[answerIndex].correct === 'undefined') {
               correct++
             } else {
               incorrect++
@@ -120,37 +153,29 @@ export default {
       this.incorrect = incorrect
 
       if (this.incorrect === 0) {
-        if (commit) {
-          this.$store.commit('setTaskComplete', task.id)
-        }
-
+        this.$store.commit('setTaskComplete', this.task.id)
         this.checked = true
       } else {
-        if (commit) {
-          this.$store.commit('removeTaskComplete', task.id)
-        }
-
+        this.$store.commit('removeTaskComplete', this.task.id)
         this.checked = false
       }
 
-      if (feedback) {
-        if (this.$store.state.tasksComplete.includes(task.id)) {
-          message = {
-            title: 'Hooray! ⭐',
-            text: 'You completed this task successfully and earned yourself a star. Your progress will be saved.',
-            effect: 'fireworks'
-          }
-          this.playSound('success')
-        } else {
-          message = {
-            title: 'D\'oh! 😖',
-            text: 'Hm, that doesn\'t seem to be quite right yet. Try again, you can try as often as you like.'
-          }
-          this.playSound('fail')
+      if (this.$store.state.tasksComplete.includes(this.task.id)) {
+        message = {
+          title: 'Hooray! ⭐',
+          text: 'You completed this task successfully and earned yourself a star. Your progress will be saved.',
+          effect: 'fireworks'
         }
-
-        this.$emit('showMessage', message)
+        this.playSound('success')
+      } else {
+        message = {
+          title: 'D\'oh! 😖',
+          text: 'Hm, that doesn\'t seem to be quite right yet. Try again, you can try as often as you like.'
+        }
+        this.playSound('fail')
       }
+
+      this.$emit('showMessage', message)
     }
   }
 }

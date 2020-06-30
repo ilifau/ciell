@@ -5,14 +5,14 @@
       <label v-for="(rating, index) in ratings()" :key="index">
         <div class="rating-wrapper">
           <h2>{{ index }} ({{ rating }}/5)</h2>
-          <img v-on:click="rate(index, i)" v-for="i in rating" :key="'checked' + i" class="star" src="@/assets/img/star-rating.png" alt=""><img v-on:click="rate(index, i + rating)" v-for="i in (5 - rating)" :key="'unchecked' + i" class="star" src="@/assets/img/star-rating-unchecked.png" alt="">
+          <a tabindex="0" v-on:click="rate(index, i)" @keyup.enter="rate(index, i)" v-for="i in rating" :key="'checked' + i"><img class="star" src="@/assets/img/star-rating.png" alt=""></a><a tabindex="0" v-on:click="rate(index, i + rating)" @keyup.enter="rate(index, i + rating)" v-for="i in (5 - rating)" :key="'unchecked' + i"><img class="star" src="@/assets/img/star-rating-unchecked.png" alt=""></a>
         </div>
       </label>
     </div>
     <p>
       <span class="error" v-if="this.submitError"><strong>Ooops!</strong> {{ this.submitError }}</span>
-      <a v-if="canSubmit() || this.submitting" class="btn" v-on:click="submitRating()"><v-icon v-if="this.submitting" name="spinner" spin /> Submit</a>
-      <a v-if="!canSubmit() && !this.submitting" class="btn btn--wait" v-on:click="submitRating()">Thank you!</a>
+      <a tabindex="0" v-if="canSubmit() || this.submitting" class="btn" v-on:click="submitRating()" @keyup.enter="submitRating()"><v-icon v-if="this.submitting" name="spinner" spin /> Submit</a>
+      <a tabindex="0" v-if="!canSubmit() && !this.submitting" class="btn btn--wait" v-on:click="submitRating()" @keyup.enter="submitRating()">Thank you!</a>
     </p>
   </div>
 </template>
@@ -104,9 +104,15 @@ export default {
 .ratings,
 .rating-wrapper {
   display: block;
-  overflow: hidden;
   padding-bottom: 1em;
 }
+
+.ratings a {
+  margin-right: .25em;
+  position: relative;
+  left: 2px;
+}
+
 label {
   display: block;
   overflow: hidden;
@@ -116,7 +122,6 @@ label {
 
 .star {
   display: inline-block;
-  margin-right: .5em;
   width: 64px;
   max-width: 16.67%;
 }
@@ -124,6 +129,15 @@ label {
 h2 {
   line-height: 1;
   margin-bottom: .5em;
+}
+
+.btn {
+  transition: background-color .2s linear, outline .2s linear;
+}
+
+.btn:focus {
+  outline: none;
+  box-shadow: 0 0 .5em #219ac2;
 }
 
 .btn--wait {

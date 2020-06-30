@@ -34,7 +34,7 @@
     <!-- Choices -->
     <ul class="choices">
       <li v-for="choice in choices()" :key="choice.chapterId">
-        <a v-on:click="openChapter(choice.chapterId)" :class="choice.class">
+        <a tabindex="0" v-on:click="openChapter(choice.chapterId)" @keyup.enter="openChapter(choice.chapterId)" :class="choice.class">
           <span v-if="choice.class === 'previous'">
             <img :src="require('@/stories/ciell/assets/img/arrow-right.png')" />
             {{choice.text}}

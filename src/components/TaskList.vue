@@ -14,7 +14,7 @@
               <!-- <span class="task-checkmark" v-if="taskDone(task.id)">
                 <v-icon name="check" scale="1" />
               </span> -->
-              <a class="task-name" v-on:click="openStory(task.id)">Task {{ id+1 }}: {{ task.name }}</a>
+              <a tabindex="0" class="task-name" v-on:click="openStory(task.id)" @keyup.enter="openStory(task.id)">Task {{ id+1 }}: {{ task.name }}</a>
               <!-- ({{ task.typeName }}) -->
             </span>
           </div>

@@ -1,12 +1,12 @@
 <template>
   <div class="audio-group">
     <div class="audio-buttons">
-      <a class="play" @click="togglePlayback">
+      <a tabindex="0" class="play" @click="togglePlayback" @keyup.enter="togglePlayback">
         <span v-if="playing"><v-icon name="pause" scale=".75" /></span>
         <span v-if="!playing"><v-icon name="play" scale=".75" /></span>
         {{ playing ? this.$props.label : this.$props.label }}
       </a>
-      <a class="stop" @click="stop"><v-icon name="stop" scale=".75" /> Stop</a>
+      <a tabindex="0" class="stop" @click="stop" @keyup.enter="stop"><v-icon name="stop" scale=".75" /> Stop</a>
     </div>
   </div>
 </template>
@@ -35,7 +35,7 @@ export default {
   border-radius: 3px;
   display: inline-block;
   border: 0;
-  transition: all .4s ease;
+  transition: background-color .4s ease;
   cursor: pointer;
 }
 
@@ -45,5 +45,17 @@ export default {
 
 .audio-buttons a.play:hover {
   background: #185d3a;
+}
+
+.audio-buttons a:focus {
+  outline: none;
+}
+
+.audio-buttons a.play:focus {
+  box-shadow: 0 0 .5em #08723d;
+}
+
+.audio-buttons a.stop:focus {
+  box-shadow: 0 0 .5em #219ac2;
 }
 </style>

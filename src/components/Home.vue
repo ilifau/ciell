@@ -4,13 +4,13 @@
     <h2 class="home-subtitle">Visually enhanced learning of writing structures</h2>
     <div class="stories">
       <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
-        <a v-on:click="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
+        <a tabindex="0" v-on:click="openStory(id)" @keyup.enter="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
             <span class="number" v-on:click="openStory(id, true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
               <span class="content">#{{ id + 1 }}</span>
               <span class="badge" v-html="badge(id)"></span>
             </span>
-            {{ story.title }}
+            <span class="story-title">{{ story.title }}</span>
           </span>
         </a>
       </div>
@@ -150,6 +150,13 @@ export default {
     font-weight: 400;
   }
 
+  .story a:focus {
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 0 2px #219ac2;
+    z-index: 9;
+  }
+
   .story a .title {
     z-index: 2;
     position: absolute;
@@ -222,6 +229,11 @@ export default {
     display: none !important;
     position: relative;
     max-width: 1em;
+  }
+
+  .story-title {
+    background: #fff;
+    padding: 0 .375em
   }
 
   .evaluation-link {

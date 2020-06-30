@@ -54,10 +54,6 @@ export default {
 
         let correct = 0
         let incorrect = 0
-        let message = {
-          title: '',
-          text: ''
-        }
 
         this.selectedAnswers.forEach(function (question, questionIndex) {
           question.forEach(function (answer, answerIndex) {

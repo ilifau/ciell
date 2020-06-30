@@ -165,6 +165,15 @@ export default {
   -webkit-tap-highlight-color: transparent;
 }
 
+*:focus {
+  outline: 2px solid #219ac2;
+  box-shadow: none;
+}
+
+.visibility-hidden {
+  visibility: hidden;
+}
+
 html, body {
   min-height: 100%;
   background: #fff;
@@ -631,7 +640,8 @@ img {
   cursor: pointer;
 }
 
-.btn:hover {
+.btn:hover,
+.btn:focus {
   background-color: #1c81a3;
 }
 
@@ -639,7 +649,8 @@ img {
   background-color: #08723d;
 }
 
-.btn.btn--success {
+.btn.btn--success:hover,
+.btn.btn--success:focus {
   background-color: #185d3a;
 }
 

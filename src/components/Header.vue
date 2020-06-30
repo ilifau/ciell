@@ -1,28 +1,27 @@
 <template>
   <div class="header-wrapper">
     <div class="header">
-      <router-link class="story-title" to="/">
-        <div v-if="showBacktoStoriesLink()"><v-icon name="arrow-left" v-if="showBacktoStoriesLink()" scale="0.75" /> {{ storyTitle }}</div>
-        <div v-else>&nbsp;</div>
+      <router-link v-bind:class="showBacktoStoriesLink() ? '' : 'visibility-hidden'" class="story-title" to="/">
+        <div><span class="story-title-outline"><v-icon name="arrow-left" v-if="showBacktoStoriesLink()" scale="0.75" /> {{ storyTitle }}</span></div>
       </router-link>
       <div class="toggle-wrapper">
-        <a class="toggle-font" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'" v-on:click="toggleBaseFont()">
+        <a class="toggle-font" tabindex="0" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'" v-on:click="toggleBaseFont()" @keyup.enter="toggleBaseFont()">
           Abc
         </a>
       </div>
       <span class="nav-toggle" v-bind:class="{ active: navIsActive, story: showBacktoStoriesLink() }">
-        <a v-on:click="toggleNav()">
+        <a tabindex="0" v-on:click="toggleNav()" @keyup.enter="toggleNav()" @keydown.esc="toggleNav()">
           <span class="nav-circle"></span><span class="nav-circle"></span><span class="nav-circle"></span>
         </a>
       </span>
     </div>
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
-    <div class="nav" v-bind:class="{ active: navIsActive }">
+    <div class="nav" v-bind:class="{ active: navIsActive }" @keydown.esc="toggleNav()">
       <span class="nav-header">NAVIGATION</span>
-      <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Comics</router-link>
+      <!-- <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Comics</router-link> -->
       <div v-for="(story, id) in stories" :key="id">
         <div class="story-link-wrapper" v-bind:class="{ current: id === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
-          <a class="story-link" v-on:click="openStory(id), closeNav()">
+          <a class="story-link" v-on:click="openStory(id), closeNav()" @keyup.enter="openStory(id, true), closeNav()" tabindex="0">
             {{ story.title }}
           </a>
           <a class="task-link" v-bind:class="badgeClass($props.stories[id], $store.state.tasksComplete)" v-on:click="openStory(id, true), closeNav()" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/badges/star-' + getBadgeClass($props.stories[id], $store.state.tasksComplete) + '.png') + ')' }"></a>
@@ -31,7 +30,8 @@
       <router-link to="/tasks" v-bind:class="{ current: $route.name === 'tasks' }" v-on:click.native="closeNav()">Stars earned<span class="tasks-num"><span v-html="starsTotal()"></span><span class="of">{{ $store.state.tasksComplete.length }} / {{ numTasks(stories) }}</span></span></router-link>
       <router-link to="/evaluation" v-bind:class="{ current: $route.name === 'evaluation' }" v-on:click.native="closeNav()">Rate this App</router-link>
       <router-link to="/about" v-bind:class="{ current: $route.name === 'about' }" v-on:click.native="closeNav()">About CIELL</router-link>
-      <a id="toggleBaseFont" v-on:click="toggleBaseFont()" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
+      <a id="toggleBaseFont" tabindex="0" v-on:click="toggleBaseFont()" @keyup.enter="toggleBaseFont()" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
+      <a tabindex="0" v-on:click="toggleNav()" @keyup.enter="toggleNav()">&times; Close navigation</a>
     </div>
   </div>
 </template>
@@ -143,11 +143,21 @@ export default {
   white-space: nowrap;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
-  padding-right: 2em;
   font-size: .75em;
   color: #1c85a8;
   /* overflow: hidden; */
   /* text-transform: uppercase; */
+  margin-right: auto;
+}
+
+.header a.story-title:focus {
+  outline: none;
+  border: none;
+}
+
+.header a.story-title:focus .story-title-outline {
+  outline: 2px solid #219ac2;
+  padding: 10px 0;
 }
 
 .ciell-logo img {
@@ -209,13 +219,17 @@ export default {
                 sans-serif;
 }
 
+.nav {
+  visibility: hidden;
+}
+
 .nav-toggle {
   margin-left: auto;
 }
 
 .nav-toggle a {
   position: relative;
-  padding: .5em;
+  padding: .27em .5em;
   left: .5em;
 }
 
@@ -230,6 +244,10 @@ export default {
   left: 0;
   top: -2px;
   display: inline-block;
+}
+
+.nav-circle:first-of-type {
+  margin-left: 0;
 }
 
 .nav-toggle:hover .nav-circle:first-of-type,
@@ -291,6 +309,7 @@ export default {
 }
 
 .nav.active {
+  visibility: visible;
   left: 0;
 }
 
@@ -353,6 +372,9 @@ export default {
   position: relative;
 }
 
+.nav .story-link:focus {
+  left: 2px;
+}
 .nav .story-link-wrapper:hover .task-link {
   background-size: auto 56%;
   background-position: center 44%;

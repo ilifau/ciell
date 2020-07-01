@@ -4,6 +4,7 @@ let Story = [
     title: 'Homelessness',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/poverty/',
+    UNGoalImage: 'un-goals/E-Goal-01-1024x1024.png',
     description: 'A story on the issue of homelessness.',
     preview: 'homeless/cover.jpg',
     color: 'rgb(0, 98, 103)',
@@ -402,9 +403,6 @@ let Story = [
             <div class="half">
               [image|homeless/homeless 18.jpg|Homeless 18]
             </div>
-          </div>
-          <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=uDpIAcT3mqU" target="_blank">UN Sustainable Development Goal&nbsp;1</a>.</p>
           </div>`,
         choices: [
           {
@@ -495,7 +493,11 @@ let Story = [
       {
         id: 50,
         title: '',
-        content: '[tasks]',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=uDpIAcT3mqU" target="_blank">UN Sustainable Development Goal&nbsp;1</a>.</p>
+          </div>`,
         choices: [
           {
             'text': 'Infographic',
@@ -658,6 +660,7 @@ let Story = [
     title: 'Reduce Inequality',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/inequality/',
+    UNGoalImage: 'un-goals/E-Goal-10-1024x1024.png',
     description: 'This is an essay on inequality.',
     preview: 'poverty/cover.jpg',
     color: 'rgb(175, 31, 35)',
@@ -918,9 +921,6 @@ let Story = [
             <div class="half">
               [image|poverty/poverty 21.jpg|Poverty 21]
             </div>
-          </div>
-          <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=IELvwDvbtmo" target="_blank">UN Sustainable Development Goal&nbsp;10</a>.</p>
           </div>`,
         choices: [
           {
@@ -940,7 +940,11 @@ let Story = [
       {
         id: 30,
         title: '',
-        content: '[tasks]',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=IELvwDvbtmo" target="_blank">UN Sustainable Development Goal&nbsp;10</a>.</p>
+          </div>`,
         choices: [
           {
             'text': 'Previous',
@@ -1023,6 +1027,7 @@ let Story = [
     title: 'Zen Gardens',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/health/',
+    UNGoalImage: 'un-goals/E-Goal-03-1024x1024.png',
     description: 'A story on the Zen gardens.',
     preview: 'zen-gardens/cover.jpg',
     color: 'rgb(234, 149, 34)',
@@ -1280,9 +1285,6 @@ let Story = [
             <div class="half">
               [image|zen-gardens/zen gardens 20.jpg|HomeZen Gardens 20]
             </div>
-          </div>
-          <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=0klcaICeJA4" target="_blank">UN Sustainable Development Goal&nbsp;3</a>.</p>
           </div>`,
         choices: [
           {
@@ -1373,7 +1375,11 @@ let Story = [
       {
         id: 50,
         title: '',
-        content: '[tasks]',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=0klcaICeJA4" target="_blank">UN Sustainable Development Goal&nbsp;3</a>.</p>
+          </div>`,
         choices: [
           {
             'text': 'Infographic',
@@ -1456,7 +1462,8 @@ let Story = [
     title: 'Agatha Christie',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/education/',
-    description: 'A story on the issue of gender equality.',
+    UNGoalImage: 'un-goals/E-Goal-04-1024x1024.png',
+    description: 'A story on the issue of quality education.',
     preview: 'agatha-christie/cover.jpg',
     color: 'rgb(235, 0, 135)',
     numberImage: 'agatha-christie/number.png',
@@ -1703,9 +1710,6 @@ let Story = [
             <div class="half">
               [image|agatha-christie/agatha 26.jpg|Agatha 20]
             </div>
-          </div>
-          <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=V24JzUPlR44" target="_blank">UN Sustainable Development Goal&nbsp;4</a>.</p>
           </div>`,
         choices: [
           {
@@ -1796,7 +1800,11 @@ let Story = [
       {
         id: 50,
         title: '',
-        content: '[tasks]',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=V24JzUPlR44" target="_blank">UN Sustainable Development Goal&nbsp;4</a>.</p>
+          </div>`,
         choices: [
           {
             'text': 'Infographic',
@@ -1879,6 +1887,7 @@ let Story = [
     title: 'The Invisible Girls',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/gender-equality/',
+    UNGoalImage: 'un-goals/E-Goal-05-1024x1024.png',
     preview: 'gender-equality/cover.jpg',
     color: 'rgb(72, 119, 82)',
     numberImage: 'gender-equality/number.png',
@@ -2380,9 +2389,6 @@ let Story = [
             <div class="half">
               [image|gender-equality/invisible 25.jpg|Invisible Girls 25]
             </div>
-          </div>
-          <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=NZB9Kh0za7E" target="_blank">UN Sustainable Development Goal&nbsp;5</a>.</p>
           </div>`,
         choices: [
           {
@@ -2473,7 +2479,11 @@ let Story = [
       {
         id: 50,
         title: '',
-        content: '[tasks]',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage] 
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=NZB9Kh0za7E" target="_blank">UN Sustainable Development Goal&nbsp;5</a>.</p>
+          </div>`,
         choices: [
           {
             'text': 'Infographic',
@@ -2656,6 +2666,7 @@ let Story = [
     title: 'Nuclear Power',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/energy/',
+    UNGoalImage: 'un-goals/E-Goal-07-1024x1024.png',
     description: 'This is another empty story.',
     preview: 'nuclear-power/cover.jpg',
     color: 'rgb(255, 209, 0)',
@@ -3074,9 +3085,6 @@ let Story = [
             <div class="half">
               [image|nuclear-power/nuclear 25.jpg|Nuclear Power 25]
             </div>
-          </div>
-          <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=mmSbX1Rg2L0" target="_blank">UN Sustainable Development Goal&nbsp;7</a>.</p>
           </div>`,
         choices: [
           {
@@ -3167,7 +3175,11 @@ let Story = [
       {
         id: 50,
         title: '',
-        content: '[tasks]',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=mmSbX1Rg2L0" target="_blank">UN Sustainable Development Goal&nbsp;7</a>.</p>
+          </div>`,
         choices: [
           {
             'text': 'Infographic',
@@ -3310,6 +3322,7 @@ let Story = [
     title: 'Decent Work',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/economic-growth/',
+    UNGoalImage: 'un-goals/E-Goal-08-1024x1024.png',
     description: 'Sustained and inclusive economic growth can drive progress, create decent jobs for all and improve living standards.',
     preview: 'decent-work/cover.jpg',
     color: 'rgb(226, 10, 127)',
@@ -3452,7 +3465,7 @@ let Story = [
       {
         id: 0,
         title: 'Decent Work',
-        examQuestion: '<p>Local government should invest money in public transport to make it free and accessible to everyone, no matter their physical ability, age or wealth, and to contribute to more sustainable cities and communities for the future.</p><p class="last">Do you agree or disagree?</p>',
+        examQuestion: '<p>"People should realise that decent work and economic growth are closely linked."</p><p class="last">Please discuss this statement.</p>',
         content: `<h2>Introduction</h2>
           <div class="comic-grid">
             <div class="half">
@@ -3656,7 +3669,11 @@ let Story = [
       {
         id: 50,
         title: '',
-        content: '[tasks]',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=NqI3tmF-o30" target="_blank">UN Sustainable Development Goal&nbsp;8</a>.</p>
+          </div>`,
         choices: [
           {
             'text': 'Previous',
@@ -3759,6 +3776,7 @@ let Story = [
     title: 'Transport',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/cities/',
+    UNGoalImage: 'un-goals/E-Goal-11-1024x1024.png',
     description: 'This is an essay on transport.',
     preview: 'transports/cover.jpg',
     color: 'rgb(198, 32, 39)',
@@ -4015,9 +4033,6 @@ let Story = [
             <div class="half">
               [image|transports/transports 21.jpg|Transport 21]
             </div>
-          </div>
-          <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=-4iGPnF0Wzw" target="_blank">UN Sustainable Development Goal&nbsp;11</a>.</p>
           </div>`,
         choices: [
           {
@@ -4037,7 +4052,11 @@ let Story = [
       {
         id: 40,
         title: '',
-        content: '[tasks]',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=-4iGPnF0Wzw" target="_blank">UN Sustainable Development Goal&nbsp;11</a>.</p>
+          </div>`,
         choices: [
           {
             'text': 'Previous',
@@ -4120,6 +4139,7 @@ let Story = [
     title: 'Climate Action',
     description: 'This is a story about climate action.',
     url: 'https://www.un.org/sustainabledevelopment/climate-change/',
+    UNGoalImage: 'un-goals/E-Goal-13-1024x1024.png',
     author: 'CIELL Team',
     preview: 'climate-change/cover.jpg',
     color: 'rgb(213, 212, 36)',
@@ -4370,9 +4390,6 @@ let Story = [
             <div class="half">
               [image|climate-change/climate 20.jpg|Climate Change 20]
             </div>
-          </div>
-          <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=xivQ8zjqaRo" target="_blank">UN Sustainable Development Goal&nbsp;13</a>.</p>
           </div>`,
         choices: [
           {
@@ -4392,7 +4409,11 @@ let Story = [
       {
         id: 40,
         title: '',
-        content: '[tasks]',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=xivQ8zjqaRo" target="_blank">UN Sustainable Development Goal&nbsp;13</a>.</p>
+          </div>`,
         choices: [
           {
             'text': 'Previous',
@@ -4475,6 +4496,7 @@ let Story = [
     title: 'Cipta',
     description: 'This is a story about a girl named Cipta.',
     url: 'https://www.un.org/sustainabledevelopment/peace-justice/',
+    UNGoalImage: 'un-goals/E-Goal-16-1024x1024.png',
     author: 'CIELL Team',
     preview: 'cipta/cover.jpg',
     color: 'rgb(193, 116, 174)',
@@ -4728,9 +4750,6 @@ let Story = [
             <div class="half">
               [image|cipta/Cipta 18.jpg|Cipta 18]
             </div>
-          </div>
-          <div class="further-reading">
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=Ww_B0mvGiYc" target="_blank">UN Sustainable Development Goal&nbsp;16</a>.</p>
           </div>`,
         choices: [
           {
@@ -4821,7 +4840,11 @@ let Story = [
       {
         id: 50,
         title: '',
-        content: '[tasks]',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=Ww_B0mvGiYc" target="_blank">UN Sustainable Development Goal&nbsp;16</a>.</p>
+          </div>`,
         choices: [
           {
             'text': 'Previous',

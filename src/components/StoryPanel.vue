@@ -195,6 +195,15 @@ export default {
           case 'tasks': {
             return '<TaskList @openStory="openStory($event)" />'
           }
+          case 'UNGoalImage': {
+            let src = typeof _this.$props.story.UNGoalImage !== 'undefined' ? _this.$props.story.UNGoalImage : null
+
+            if (!src) {
+              return ''
+            }
+
+            return '<img class="un-goal-image" src="' + require('@/stories/ciell/assets/img/' + src) + '" alt="" />'
+          }
           default: {
             return ''
           }
@@ -320,6 +329,12 @@ export default {
 
 label {
   display: block;
+}
+
+.story-panel >>> .un-goal-image {
+  width: 196px;
+  max-width: 33.33%;
+  margin: 1em 0;
 }
 
 @media screen and (max-width: 640px) {

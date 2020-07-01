@@ -590,7 +590,7 @@ img {
   margin-bottom: .5em;
 }
 
-.exam-question, .further-reading {
+.exam-question {
   padding: 1em;
   /* background: #eff7f9; */
 }

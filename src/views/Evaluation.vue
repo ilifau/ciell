@@ -135,10 +135,10 @@ h2 {
   transition: background-color .2s linear, outline .2s linear;
 }
 
-.btn:focus {
+/* .btn:focus {
   outline: none;
   box-shadow: 0 0 .5em #219ac2;
-}
+} */
 
 .btn--wait {
   background: #08723d !important;

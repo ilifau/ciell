@@ -4941,6 +4941,468 @@ let Story = [
         ]
       }
     ]
+  },
+  {
+    id: 170,
+    title: 'Food Poverty',
+    description: 'This is a story about a food poverty.',
+    url: 'https://www.un.org/sustainabledevelopment/hunger/',
+    UNGoalImage: 'un-goals/E-Goal-02-1024x1024.png',
+    author: 'CIELL Team',
+    preview: 'food-poverty/cover.jpg',
+    color: 'rgb(193, 116, 174)',
+    numberImage: 'food-poverty/number.png',
+    chapters: [
+      {
+        id: 0,
+        title: 'Food Poverty',
+        examQuestion: '<p>A film magazine is running a series on International Cinema.  It has invited readers to send in reviews of films set in their own country.  You decide to send in a review of such a film considering how effectively the film illustrates particular aspects of life and attitudes in your country.</p>',
+        content: `<h2>Introduction</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|food-poverty/food-poverty-1.jpg|Food Poverty 1]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-2.jpg|Food Poverty 2]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-3.jpg|Food Poverty 3]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-4.jpg|Food Poverty 4]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        content: `<h2>Paragraph 1</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|food-poverty/food-poverty-5.jpg|Food Poverty 5]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-6.jpg|Food Poverty 6]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-7.jpg|Food Poverty 7]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-8.jpg|Food Poverty 8]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-9.jpg|Food Poverty 9]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-10.jpg|Food Poverty 10]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        content: `<h2>Paragraph 2</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|food-poverty/food-poverty-11.jpg|Food Poverty 11]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-12.jpg|Food Poverty 12]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-13.jpg|Food Poverty 13]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-14.jpg|Food Poverty 14]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        content: `<h2>Conclusion</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|food-poverty/food-poverty-15.jpg|Food Poverty 15]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-16.jpg|Food Poverty 16]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Infographic',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: 'Infographic: Basic Essay Structure',
+        titleClass: 'center',
+        content: `<h2 class="separator dotted-border">1. Introduction</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
+            </div>
+          </div>
+          <h2 class="separator dotted-border">2. Body</h2>
+          <h3 class="separator">Paragraph 1</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-3.jpg|Basic Essay Structure 3]
+            </div>
+            <div class="half last arrow">
+              [image|info-graphics/basic-essay-structure-4.jpg|Basic Essay Structure 4]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-5.jpg|Basic Essay Structure 5]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 2</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-7.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-8.jpg|Basic Essay Structure 8]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-9.jpg|Basic Essay Structure 9]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 3, 4, 5&hellip;</h3>
+          <p style="text-align:center">Feel free to add more paragraphs!</p>
+          <h2 class="separator dotted-border">3. Conclusion</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-1.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-2.jpg|Basic Essay Structure 8]
+            </div>
+          </div>
+          `,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        title: '',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=iteCytv0RqY" target="_blank">UN Sustainable Development Goal&nbsp;2</a>.</p>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconBefore': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 180,
+    title: 'ENABLE Festival',
+    description: 'This is a story about a the ENABLE Festival.',
+    url: 'https://www.un.org/sustainabledevelopment/globalpartnerships/',
+    UNGoalImage: 'un-goals/E-Goal-17-1024x1024.png',
+    author: 'CIELL Team',
+    preview: 'enable-festival/cover.jpg',
+    color: 'rgb(193, 116, 174)',
+    numberImage: 'enable-festival/number.png',
+    chapters: [
+      {
+        id: 0,
+        title: 'ENABLE Festival',
+        examQuestion: '<p>You belong to an English-language reading group which recently attended a short-film festival. You have agreed to write a review of the festival for the group’s website. In your review you should give your opinion of the festival and say whether you think short videos are a good way of disseminating an idea, in general.</p>',
+        content: `<h2>Introduction</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|enable-festival/enable-festival-1.jpg|ENABLE Festival 1]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-2.jpg|ENABLE Festival 2]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-3.jpg|ENABLE Festival 3]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-4.jpg|ENABLE Festival 4]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        content: `<h2>Paragraph 1</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|enable-festival/enable-festival-5.jpg|ENABLE Festival 5]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-6.jpg|ENABLE Festival 6]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-7.jpg|ENABLE Festival 7]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-8.jpg|ENABLE Festival 8]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-9.jpg|ENABLE Festival 9]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        content: `<h2>Paragraph 2</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|enable-festival/enable-festival-10.jpg|ENABLE Festival 10]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-11.jpg|ENABLE Festival 11]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-12.jpg|ENABLE Festival 12]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-13.jpg|ENABLE Festival 13]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-14.jpg|ENABLE Festival 14]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        content: `<h2>Conclusion</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|enable-festival/enable-festival-15.jpg|ENABLE Festival 15]
+            </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-16.jpg|ENABLE Festival 16]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Infographic',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: 'Infographic: Basic Essay Structure',
+        titleClass: 'center',
+        content: `<h2 class="separator dotted-border">1. Introduction</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
+            </div>
+          </div>
+          <h2 class="separator dotted-border">2. Body</h2>
+          <h3 class="separator">Paragraph 1</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-3.jpg|Basic Essay Structure 3]
+            </div>
+            <div class="half last arrow">
+              [image|info-graphics/basic-essay-structure-4.jpg|Basic Essay Structure 4]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-5.jpg|Basic Essay Structure 5]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 2</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-7.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-8.jpg|Basic Essay Structure 8]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-9.jpg|Basic Essay Structure 9]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 3, 4, 5&hellip;</h3>
+          <p style="text-align:center">Feel free to add more paragraphs!</p>
+          <h2 class="separator dotted-border">3. Conclusion</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-1.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-2.jpg|Basic Essay Structure 8]
+            </div>
+          </div>
+          `,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        title: '',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=56twmO4VFvk" target="_blank">UN Sustainable Development Goal&nbsp;17</a>.</p>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconBefore': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
   }
 ]
 

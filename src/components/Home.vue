@@ -7,7 +7,9 @@
         <a tabindex="0" v-on:click="openStory(id)" @keyup.enter="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
             <span class="number" v-on:click="openStory(id, true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
-              <span class="content">#{{ id + 1 }}</span>
+              <span class="content">
+                <span class="content-number">#{{ id + 1 }}</span>
+              </span>
               <span class="badge" v-html="badge(id)"></span>
             </span>
             <span class="story-title">{{ story.title }}</span>
@@ -150,12 +152,12 @@ export default {
     font-weight: 400;
   }
 
-  .story a:focus {
+  /* .story a:focus {
     outline: none;
     border: 0;
     box-shadow: 0 0 0 2px #219ac2;
     z-index: 9;
-  }
+  } */
 
   .story a .title {
     z-index: 2;
@@ -175,23 +177,28 @@ export default {
     text-align: center;
     font-size: .93875em;
     position: relative;
-    padding: 2.25em .0625em 0;
+    padding: 2.25em 0 0;
     line-height: 1;
-    /* overflow: hidden; */
     bottom: -.6em;
     left: 0;
-    margin-right: .25em;
-    width: 2.5em;
+    width: 2.6125em;
+    height: 4.125em;
     background-size: cover;
     background-position: center center;
   }
 
   .story a .title span.number .content {
-    position: relative;
+    position: absolute;
     display: block;
-    overflow: hidden;
     padding: .6125em 0 .5em;
     color: #fff;
+    top: 0;
+    left: .7em;
+  }
+
+  .content .content-number {
+    display: none !important;
+    font-size: .875em;
   }
 
   .story a:hover .title span.title-background {
@@ -208,15 +215,15 @@ export default {
   }
 
   .badge >>> .bronze {
-    top: -2.2em;
+    top: -2.47em;
   }
 
   .badge >>> .silver {
-    top: -3.7em;
+    top: -3.9em;
   }
 
   .badge >>> .gold {
-    top: -5em;
+    top: -5.3em;
   }
 
   .badge >>> .none {

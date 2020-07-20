@@ -165,9 +165,15 @@ export default {
   -webkit-tap-highlight-color: transparent;
 }
 
-*:focus {
+/* *:focus {
   outline: 2px solid #219ac2;
   box-shadow: none;
+} */
+
+/* Mobile */
+*:focus {
+  outline: none;
+  border: none;
 }
 
 .visibility-hidden {

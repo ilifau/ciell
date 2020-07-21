@@ -5231,6 +5231,9 @@ let Story = [
             <div class="half">
               [image|enable-festival/enable-festival-9.jpg|ENABLE Festival 9]
             </div>
+            <div class="half">
+              [image|enable-festival/enable-festival-10.jpg|ENABLE Festival 10]
+            </div>
           </div>`,
         choices: [
           {
@@ -5251,9 +5254,6 @@ let Story = [
         id: 20,
         content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
-            <div class="half">
-              [image|enable-festival/enable-festival-10.jpg|ENABLE Festival 10]
-            </div>
             <div class="half">
               [image|enable-festival/enable-festival-11.jpg|ENABLE Festival 11]
             </div>

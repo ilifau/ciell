@@ -4952,6 +4952,133 @@ let Story = [
     preview: 'food-poverty/cover.jpg',
     color: 'rgb(193, 116, 174)',
     numberImage: 'food-poverty/number.png',
+    tasks: [
+      {
+        id: 17010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-4.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'food-poverty/food-poverty-6.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'food-poverty/food-poverty-1.jpg'
+              },
+              {
+                text: '',
+                image: 'food-poverty/food-poverty-9.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 17020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'food-poverty/food-poverty-9.jpg'
+              },
+              {
+                text: '',
+                image: 'food-poverty/food-poverty-10.jpg'
+              },
+              {
+                text: '',
+                image: 'food-poverty/food-poverty-5.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 17030,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-10.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'food-poverty/food-poverty-14.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'food-poverty/food-poverty-11.jpg'
+              },
+              {
+                text: '',
+                image: 'food-poverty/food-poverty-1.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 17040,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'food-poverty/food-poverty-1.jpg'
+          },
+          {
+            order: 1,
+            image: 'food-poverty/food-poverty-2.jpg'
+          },
+          {
+            order: 2,
+            image: 'food-poverty/food-poverty-3.jpg'
+          },
+          {
+            order: 3,
+            image: 'food-poverty/food-poverty-4.jpg'
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -5164,9 +5291,89 @@ let Story = [
             'chapterId': 40
           },
           {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 17010,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 17020,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 17030,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 17040,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
+          },
+          {
             'text': 'Restart',
             'class': 'next',
-            'iconBefore': 'undo',
+            'iconAfter': 'undo',
             'chapterId': 0
           }
         ]
@@ -5183,6 +5390,133 @@ let Story = [
     preview: 'enable-festival/cover.jpg',
     color: 'rgb(193, 116, 174)',
     numberImage: 'enable-festival/number.png',
+    tasks: [
+      {
+        id: 18010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-4.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'enable-festival/enable-festival-13.jpg'
+              },
+              {
+                text: '',
+                image: 'enable-festival/enable-festival-13.jpg'
+              },
+              {
+                text: '',
+                image: 'enable-festival/enable-festival-12.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 18020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'enable-festival/enable-festival-5.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'enable-festival/enable-festival-15.jpg'
+              },
+              {
+                text: '',
+                image: 'enable-festival/enable-festival-2.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 18030,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-6.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'enable-festival/enable-festival-13.jpg'
+              },
+              {
+                text: '',
+                image: 'enable-festival/enable-festival-14.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'enable-festival/enable-festival-12.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 18040,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'enable-festival/enable-festival-1.jpg'
+          },
+          {
+            order: 1,
+            image: 'enable-festival/enable-festival-2.jpg'
+          },
+          {
+            order: 2,
+            image: 'enable-festival/enable-festival-3.jpg'
+          },
+          {
+            order: 3,
+            image: 'enable-festival/enable-festival-4.jpg'
+          }
+        ]
+      }
+    ],
     chapters: [
       {
         id: 0,
@@ -5395,9 +5729,89 @@ let Story = [
             'chapterId': 40
           },
           {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconBefore': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 18010,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 18020,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 18030,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 18040,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
+          },
+          {
             'text': 'Restart',
             'class': 'next',
-            'iconBefore': 'undo',
+            'iconAfter': 'undo',
             'chapterId': 0
           }
         ]

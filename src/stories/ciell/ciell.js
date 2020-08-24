@@ -2662,12 +2662,494 @@ let Story = [
     ]
   },
   {
+    id: 60,
+    title: 'Clean Water',
+    author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/water-and-sanitation/',
+    UNGoalImage: 'un-goals/E-Goal-07-1024x1024.png',
+    description: 'This is a story about clean water and sanitation.',
+    preview: 'clean-water/cover.jpg',
+    color: 'rgb(39, 189, 226)',
+    numberImage: 'clean-water/number.png',
+    tasks: [
+      {
+        id: 6000,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'clean-water/clean-water-02.jpg'
+              },
+              {
+                text: '',
+                image: 'clean-water/clean-water-03.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'clean-water/clean-water-08.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 6010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-7.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'clean-water/clean-water-07.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'clean-water/clean-water-08.jpg'
+              },
+              {
+                text: '',
+                image: 'clean-water/clean-water-11.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 6020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-1.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'clean-water/clean-water-01.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'clean-water/clean-water-11.jpg'
+              },
+              {
+                text: '',
+                image: 'clean-water/clean-water-09.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 6030,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-9.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'clean-water/clean-water-10.jpg'
+              },
+              {
+                text: '',
+                image: 'clean-water/clean-water-11.jpg'
+              },
+              {
+                text: '',
+                image: 'clean-water/clean-water-09.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 6040,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels of the introduction of this essay into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'clean-water/clean-water-07.jpg'
+          },
+          {
+            order: 1,
+            image: 'clean-water/clean-water-08.jpg'
+          },
+          {
+            order: 2,
+            image: 'clean-water/clean-water-09.jpg'
+          },
+          {
+            order: 3,
+            image: 'clean-water/clean-water-10.jpg'
+          }
+        ]
+      }
+    ],
+    chapters: [
+      {
+        id: 0,
+        title: 'Clean Water',
+        examQuestion: '<p class="last">Clean water and sanitation are basic human rights.  However, there is more and more discussion on how these rights are being ignored or even sabotaged thus preventing government spending to improve civil society.  Discuss the main points that support this statement and express your own opinion.</p>',
+        content: `<h2>Introduction</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|clean-water/clean-water-01.jpg|Clean Water 1]
+            </div>
+            <div class="half">
+              [image|clean-water/clean-water-02.jpg|Clean Water 2]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: '',
+        content: `<h2>Paragraph 1</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|clean-water/clean-water-03.jpg|Clean Water 3]
+            </div>
+            <div class="half">
+              [image|clean-water/clean-water-04.jpg|Clean Water 4]
+            </div>
+            <div class="half">
+              [image|clean-water/clean-water-05.jpg|Clean Water 5]
+            </div>
+            <div class="half">
+              [image|clean-water/clean-water-06.jpg|Clean Water 6]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconAfter': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        content: `<h2>Paragraph 2</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|clean-water/clean-water-07.jpg|Clean Water 7]
+            </div>
+            <div class="half">
+              [image|clean-water/clean-water-08.jpg|Clean Water 8]
+            </div>
+            <div class="half">
+              [image|clean-water/clean-water-09.jpg|Clean Water 9]
+            </div>
+            <div class="half">
+              [image|clean-water/clean-water-10.jpg|Clean Water 10]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconAfter': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        content: `<h2>Conclusion</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|clean-water/clean-water-11.jpg|Clean Water 11]
+            </div>
+            <div class="half">
+              [image|clean-water/clean-water-12.jpg|Clean Water 12]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconAfter': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Infographic',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: 'Infographic: Basic Essay Structure',
+        titleClass: 'center',
+        content: `<h2 class="separator dotted-border">1. Introduction</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
+            </div>
+          </div>
+          <h2 class="separator dotted-border">2. Body</h2>
+          <h3 class="separator">Paragraph 1</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-3.jpg|Basic Essay Structure 3]
+            </div>
+            <div class="half last arrow">
+              [image|info-graphics/basic-essay-structure-4.jpg|Basic Essay Structure 4]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-5.jpg|Basic Essay Structure 5]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 2</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-7.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-8.jpg|Basic Essay Structure 8]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-9.jpg|Basic Essay Structure 9]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 3, 4, 5&hellip;</h3>
+          <p style="text-align:center">Feel free to add more paragraphs!</p>
+          <h2 class="separator dotted-border">3. Conclusion</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-1.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-2.jpg|Basic Essay Structure 8]
+            </div>
+          </div>
+          `,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        title: '',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=FAuoxTHq_zw" target="_blank">UN Sustainable Development Goal&nbsp;6</a>.</p>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 6000,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 6010,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 6020,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 6030,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 100
+          }
+        ]
+      },
+      {
+        id: 100,
+        taskId: 6040,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 90
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: 70,
     title: 'Nuclear Power',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/energy/',
     UNGoalImage: 'un-goals/E-Goal-07-1024x1024.png',
-    description: 'This is another empty story.',
+    description: 'This is a story about nuclear power.',
     preview: 'nuclear-power/cover.jpg',
     color: 'rgb(255, 209, 0)',
     numberImage: 'nuclear-power/number.png',
@@ -4421,6 +4903,435 @@ let Story = [
     ]
   },
   {
+    id: 140,
+    title: 'Water Pollution',
+    description: 'This is a story about water pollution.',
+    url: 'https://www.un.org/sustainabledevelopment/oceans/',
+    UNGoalImage: 'un-goals/E-Goal-14-1024x1024.png',
+    author: 'CIELL Team',
+    preview: 'water-pollution/cover.jpg',
+    color: 'rgb(2, 124, 187)',
+    numberImage: 'water-pollution/number.png',
+    tasks: [
+      {
+        id: 14000,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-2.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'water-pollution/water-pollution-05.jpg'
+              },
+              {
+                text: '',
+                image: 'water-pollution/water-pollution-06.jpg'
+              },
+              {
+                text: '',
+                image: 'water-pollution/water-pollution-02.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 14010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-conclusion-1.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'water-pollution/water-pollution-03.jpg'
+              },
+              {
+                text: '',
+                image: 'water-pollution/water-pollution-11.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'water-pollution/water-pollution-04.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 14020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-10.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'water-pollution/water-pollution-01.jpg'
+              },
+              {
+                text: '',
+                image: 'water-pollution/water-pollution-09.jpg'
+              },
+              {
+                text: '',
+                image: 'water-pollution/water-pollution-06.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 14030,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'water-pollution/water-pollution-03.jpg'
+          },
+          {
+            order: 1,
+            image: 'water-pollution/water-pollution-04.jpg'
+          },
+          {
+            order: 2,
+            image: 'water-pollution/water-pollution-05.jpg'
+          },
+          {
+            order: 3,
+            image: 'water-pollution/water-pollution-06.jpg'
+          }
+        ]
+      }
+    ],
+    chapters: [
+      {
+        id: 0,
+        title: 'Water Pollution',
+        examQuestion: '<p>Water pollution has been an increasing problem in our oceans over the last few decades. What causes water pollution? How can we prevent this problem?</p>',
+        content: `<h2>Introduction</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|water-pollution/water-pollution-01.jpg|Water Pollution 1]
+            </div>
+            <div class="half">
+              [image|water-pollution/water-pollution-02.jpg|Water Pollution 2]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        content: `<h2>Paragraph 1</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|water-pollution/water-pollution-03.jpg|Water Pollution 3]
+            </div>
+            <div class="half">
+              [image|water-pollution/water-pollution-04.jpg|Water Pollution 4]
+            </div>
+            <div class="half">
+              [image|water-pollution/water-pollution-05.jpg|Water Pollution 5]
+            </div>
+            <div class="half">
+              [image|water-pollution/water-pollution-06.jpg|Water Pollution 6]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        content: `<h2>Paragraph 2</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|water-pollution/water-pollution-07.jpg|Water Pollution 7]
+            </div>
+            <div class="half">
+              [image|water-pollution/water-pollution-08.jpg|Water Pollution 8]
+            </div>
+            <div class="half">
+              [image|water-pollution/water-pollution-09.jpg|Water Pollution 9]
+            </div>
+            <div class="half">
+              [image|water-pollution/water-pollution-10.jpg|Water Pollution 10]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        content: `<h2>Conclusion 2</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|water-pollution/water-pollution-11.jpg|Water Pollution 11]
+            </div>
+            <div class="half">
+              [image|water-pollution/water-pollution-12.jpg|Water Pollution 12]
+            </div>
+            <div class="half">
+              [image|water-pollution/water-pollution-13.jpg|Water Pollution 13]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: 'Infographic: Basic Essay Structure',
+        titleClass: 'center',
+        content: `<h2 class="separator dotted-border">1. Introduction</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-1.jpg|Basic Essay Structure 1]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-2.jpg|Basic Essay Structure 2]
+            </div>
+          </div>
+          <h2 class="separator dotted-border">2. Body</h2>
+          <h3 class="separator">Paragraph 1</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-3.jpg|Basic Essay Structure 3]
+            </div>
+            <div class="half last arrow">
+              [image|info-graphics/basic-essay-structure-4.jpg|Basic Essay Structure 4]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-5.jpg|Basic Essay Structure 5]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-6.jpg|Basic Essay Structure 6]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 2</h3>
+          <div class="comic-grid narrow">
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-7.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-8.jpg|Basic Essay Structure 8]
+            </div>
+            <div class="half arrow">
+              [image|info-graphics/basic-essay-structure-9.jpg|Basic Essay Structure 9]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-10.jpg|Basic Essay Structure 10]
+            </div>
+          </div>
+          <h3 class="separator">Paragraph 3, 4, 5&hellip;</h3>
+          <p style="text-align:center">Feel free to add more paragraphs!</p>
+          <h2 class="separator dotted-border">3. Conclusion</h2>
+          <div class="comic-grid narrow">
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-1.jpg|Basic Essay Structure 7]
+            </div>
+            <div class="half">
+              [image|info-graphics/basic-essay-structure-conclusion-2.jpg|Basic Essay Structure 8]
+            </div>
+          </div>
+          `,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        title: '',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=pBn8ZCQvFoo" target="_blank">UN Sustainable Development Goal&nbsp;14</a>.</p>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 14000,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 14010,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 14020,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 14030,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: 160,
     title: 'Cipta',
     description: 'This is a story about a girl named Cipta.',
@@ -4453,12 +5364,12 @@ let Story = [
               },
               {
                 text: '',
-                image: 'cipta/Cipta 13.jpg',
-                correct: true
+                image: 'cipta/Cipta 15.jpg'
               },
               {
                 text: '',
-                image: 'cipta/Cipta 15.jpg'
+                image: 'cipta/Cipta 13.jpg',
+                correct: true
               }
             ]
           }

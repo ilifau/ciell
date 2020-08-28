@@ -183,9 +183,9 @@ export default {
         switch (type) {
           case 'image': {
             let src = params[1]
-            // let alt = params[2].replace(']', '')
+            let alt = params[2].replace(']', '')
             let img = require('@/stories/ciell/assets/img/' + src)
-            return '<img class="comic-panel" src="' + img + '" alt="" style="background-image:url(' + require('@/stories/ciell/assets/img/panel-placeholder.png') + ')" rel="preload" />'
+            return '<img class="comic-panel" src="' + img + '" alt="" style="background-image:url(' + require('@/stories/ciell/assets/img/panel-placeholder.png') + ')" rel="preload" alt="' + alt + '" />'
           }
           case 'decorator': {
             let text = params[1]

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Story from './views/Story.vue'
-import Tasks from './views/tasks.vue'
+import Tasks from './views/Tasks.vue'
 import About from './views/About.vue'
 import Evaluation from './views/Evaluation.vue'
 

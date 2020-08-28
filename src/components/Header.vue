@@ -166,14 +166,14 @@ export default {
 
 .nav {
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   position: fixed;
   z-index: 11;
   top: 0;
   left: -300px;
   width: 300px;
-  height: 125%;
+  height: 100%;
   max-width: 300px;
   background: #20323e;
   transition: all .25s ease;

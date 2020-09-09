@@ -126,13 +126,14 @@ export default {
   }
 }
 
-/* @supports(padding: max(0px)) {
+@supports(padding: max(0px)) {
   @media screen and (orientation: portrait) {
     .header {
-        padding-top: env(safe-area-inset-top);
+      padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
+      padding-top: env(safe-area-inset-top); /* iOS 11.2 */
     }
   }
-} */
+}
 
 .header a {
   flex-grow: 1;
@@ -186,7 +187,6 @@ export default {
 @supports(padding: max(0px)) {
   @media screen and (orientation: portrait) {
     .nav {
-        /* padding-top: max(0px, env(safe-area-inset-top)); */
         padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
         padding-top: env(safe-area-inset-top); /* iOS 11.2 */
     }

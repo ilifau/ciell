@@ -18,11 +18,20 @@
     <allow-intent href="geo:*" />
     <platform name="android">
         <allow-intent href="market:*" />
+        <splash density="hdpi" src="res/screen/android/screen-hdpi-landscape.png" />
+        <splash density="port-hdpi" src="res/screen/android/screen-hdpi-portrait.png" />
+        <splash density="ldpi" src="res/screen/android/screen-ldpi-landscape.png" />
+        <splash density="port-ldpi" src="res/screen/android/screen-ldpi-portrait.png" />
+        <splash density="mdpi" src="res/screen/android/screen-mdpi-landscape.png" />
+        <splash density="port-mdpi" src="res/screen/android/screen-mdpi-portrait.png" />
+        <splash density="xhdpi" src="res/screen/android/screen-xhdpi-landscape.png" />
+        <splash density="port-xhdpi" src="res/screen/android/screen-xhdpi-portrait.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+    <preference name="android-targetSdkVersion" value="29" />
     <preference name="Fullscreen" value="true" />
     <plugin name="cordova-plugin-fullscreen" spec="^1.2.0" />
     <engine name="android" spec="^8.1.0" />

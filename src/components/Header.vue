@@ -113,8 +113,9 @@ export default {
   top: 0;
   left: 0;
   right: 0;
-  padding: 0 .75em;
-  height: 2em;
+  padding: .5em .75em;
+  padding-top: max(.5em, env(safe-area-inset-top));
+  height: auto;
   z-index: 2;
   line-height: 1;
   flex-direction: row;
@@ -123,15 +124,6 @@ export default {
 @media screen and (max-width: 1365px) {
   .header {
     background: rgb(255, 255, 255, .9);
-  }
-}
-
-@supports(padding: max(0px)) {
-  @media screen and (orientation: portrait) {
-    .header {
-      padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
-      padding-top: env(safe-area-inset-top); /* iOS 11.2 */
-    }
   }
 }
 
@@ -187,8 +179,8 @@ export default {
 @supports(padding: max(0px)) {
   @media screen and (orientation: portrait) {
     .nav {
-        padding-top: constant(safe-area-inset-top); /* iOS 11.0 */
-        padding-top: env(safe-area-inset-top); /* iOS 11.2 */
+      padding-top: constant(safe-area-inset-top);
+      padding-top: env(safe-area-inset-top);
     }
   }
 }

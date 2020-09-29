@@ -411,10 +411,10 @@ let Story = [
               [image|homeless/homeless 12.jpg|A person needs health and social services as well as a supportive community to tackle the reasons for homelessness.]
             </div>
             <div class="half">
-              [image|homeless/homeless 13.jpg|For example, in Scotland, the "Social Bite" café provides jobs and training for homeless people]
+              [image|homeless/homeless 13.jpg|For example, in Scotland, the Social Bite café provides jobs and training for homeless people]
             </div>
             <div class="half">
-              [image|homeless/homeless 14.jpg|and the "Social Bite Village" offers accomodation and encouragement.]
+              [image|homeless/homeless 14.jpg|and the Social Bite Village offers accomodation and encouragement.]
             </div>
             <div class="half">
               [image|homeless/homeless 15.jpg|While different approaches are needed for different people around the world,]
@@ -2788,27 +2788,7 @@ let Story = [
             'chapterId': 20
           },
           {
-            'text': 'Infographic',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 40
-          }
-        ]
-      },
-      {
-        id: 40,
-        title: 'Infographic: Basic Essay Structure',
-        titleClass: 'center',
-        content: infographic,
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 30
-          },
-          {
-            'text': 'Tasks',
+            'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
             'chapterId': 50
@@ -2828,7 +2808,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 40
+            'chapterId': 30
           },
           {
             'text': 'Next',
@@ -4874,7 +4854,7 @@ let Story = [
       },
       {
         id: 30,
-        content: `<h2>Conclusion 2</h2>
+        content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|water-pollution/water-pollution-11.jpg|To conclude, water pollution is mainly due to human mismanagement of natural resources.]
@@ -5020,6 +5000,417 @@ let Story = [
             'text': 'Restart',
             'class': 'next',
             'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 150,
+    title: 'The Great Green Wall',
+    description: '',
+    url: 'https://www.un.org/sustainabledevelopment/biodiversity/',
+    UNGoalImage: 'un-goals/E-Goal-15-1024x1024.png',
+    author: 'CIELL Team',
+    preview: 'green-wall/cover.jpg',
+    color: 'rgb(193, 116, 174)',
+    numberImage: 'green-wall/number.png',
+    tasks: [
+      {
+        id: 15000,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'green-wall/green-wall-12.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'green-wall/green-wall-10.jpg'
+              },
+              {
+                text: '',
+                image: 'green-wall/green-wall-11.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 15010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-6.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'green-wall/green-wall-12.jpg'
+              },
+              {
+                text: '',
+                image: 'green-wall/green-wall-3.jpg'
+              },
+              {
+                text: '',
+                image: 'green-wall/green-wall-11.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 15020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-5.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'green-wall/green-wall-14.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'green-wall/green-wall-16.jpg'
+              },
+              {
+                text: '',
+                image: 'green-wall/green-wall-3.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 15030,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'green-wall/green-wall-5.jpg'
+          },
+          {
+            order: 1,
+            image: 'green-wall/green-wall-6.jpg'
+          },
+          {
+            order: 2,
+            image: 'green-wall/green-wall-7.jpg'
+          },
+          {
+            order: 3,
+            image: 'green-wall/green-wall-8.jpg'
+          },
+          {
+            order: 4,
+            image: 'green-wall/green-wall-9.jpg'
+          },
+          {
+            order: 5,
+            image: 'green-wall/green-wall-10.jpg'
+          },
+          {
+            order: 6,
+            image: 'green-wall/green-wall-11.jpg'
+          }
+        ]
+      }
+    ],
+    chapters: [
+      {
+        id: 0,
+        title: 'The Great Green Wall',
+        examQuestion: '<p>An environmental magazine has asked readers to contribute articles on innovative products or services that protect the planet. You decide to write an article in which you describe an environmental intervention, explain why you have chosen it and assess its significance for the wider community.</p>',
+        content: `<h2>Introduction</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|green-wall/green-wall-1.jpg|The Sahara dester has been slowly expanding for decades and indiduals, international organisations and governments in Africa]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-2.jpg|are combatting lad degredation and loss of animal habitats.]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-3.jpg|They are taking steps to reduce the consequences of rising temperature in the region and promote sustainable agriculture.]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-4.jpg|One of the most important environmental initiatives is &raquo;The Great Green Wall&laquo; in Africa.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        content: `<h2>Paragraph 1</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|green-wall/green-wall-5.jpg|Planting trees from east to west across Africa,]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-6.jpg|eleven countries are growing a world wonder]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-7.jpg|which saves animals, shelters the land and improves millions of lives.]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-8.jpg|This African-led movement aims at creating an 8,000km living wall of vegetation to protect the landscape,]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-9.jpg|create jobs and fight poverty.]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-10.jpg|For example, senegal has already made the biggest progress, planting 11 million acacia trees]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-11.jpg|that create a canopy that preserves the humidity of the soil. Thus, less water is needed for land cultivation and the erosion of the soil is reduced.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        content: `<h2>Paragraph 2</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|green-wall/green-wall-12.jpg|The Great Green Wall is a global symbol for humanity overcoming one of its biggest threats – desertification.]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-13.jpg|By establishing forests, people can increase food supplies, protect animals, and learn about sustainable forest management.]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-14.jpg|Men and women in the region were taught by experts how to plant trees, protect them from drought and cultivate the land without harming the forest.]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-15.jpg|By improving agricultural practices,]
+            </div>
+            <div class="half">
+              [image|green-wall/green-wall-16.jpg|Africans can reduce hunger and create more employment while respecting nature and animals.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        content: `<h2>Conclusion</h2>
+        <div class="comic-grid">
+          <div class="half">
+            [image|green-wall/green-wall-17.jpg|Increasing temperatures due to climate change has inspired eleven countries in Africa]
+          </div>
+          <div class="half">
+            [image|green-wall/green-wall-18.jpg|to implement one of the biggest sustainability projects in the world – The Great Green Wall.]
+          </div>
+          <div class="half">
+            [image|green-wall/green-wall-19.jpg|As a result, Africans can protect life and land,]
+          </div>
+          <div class="half">
+            [image|green-wall/green-wall-20.jpg|Learn about forestry and build a better future for generations to come.]
+          </div>
+        </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Infographic',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: 'Infographic: Basic Essay Structure',
+        titleClass: 'center',
+        content: infographic,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        title: '',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=556QXoUpjUY" target="_blank">UN Sustainable Development Goal&nbsp;15</a>.</p>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 15000,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 15010,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 15020,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 15030,
+        title: 'Task: Reorder the panels',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
             'chapterId': 0
           }
         ]
@@ -5174,7 +5565,7 @@ let Story = [
       {
         id: 0,
         title: 'Cipta',
-        examQuestion: '<p>You belong to an English-language reading group which recently read a book in a book contest. You have agreed to write a review of the book for the group’s website. In your review you should give your opinion of the format used for the book and say whether you think a book contest could be used to enhance students\' interest, in general.</p>',
+        examQuestion: '<p>You belong to an English-language reading group which recently read a book in a book contest. You have agreed to write a review of the book for the group’s website. In your review you should give your opinion of the format used for the book and say whether you think a book contest could be used to enhance students&apos; interest, in general.</p>',
         content: `<h2>Introduction</h2>
           <div class="comic-grid">
             <div class="half">

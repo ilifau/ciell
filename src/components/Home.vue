@@ -309,6 +309,14 @@ export default {
       justify-content: center;
     }
 
+    .story-level {
+      margin: 2em 0 1em;
+    }
+
+    .story-level:not(:first-of-type) {
+      margin-top: 4em;
+    }
+
     .story a .title {
       font-size: 1.06125em;
     }

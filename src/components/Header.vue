@@ -18,23 +18,22 @@
     <div class="close-nav" v-on:click="closeNav()" v-bind:class="{ active: navIsActive }"></div>
     <div class="nav" v-bind:class="{ active: navIsActive }" @keydown.esc="toggleNav()">
       <span class="nav-header">NAVIGATION</span>
-      <!-- <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Comics</router-link> -->
       <span class="story-level">Level 1</span>
       <div v-for="(story, id) in getStoriesByLevel(1)" :key="id">
-        <div class="story-link-wrapper" v-bind:class="{ current: id === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
-          <a class="story-link" v-on:click="openStory(id), closeNav()" @keyup.enter="openStory(id, true), closeNav()" tabindex="0">
+        <div class="story-link-wrapper" v-bind:class="{ current: getStoryKeyById(story.id) === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
+          <a class="story-link" v-on:click="openStory(getStoryKeyById(story.id)), closeNav()" @keyup.enter="openStory(getStoryKeyById(story.id), true), closeNav()" tabindex="0">
             {{ story.title }}
           </a>
-          <a class="task-link" v-bind:class="badgeClass($props.stories[id], $store.state.tasksComplete)" v-on:click="openStory(id, true), closeNav()" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/badges/star-' + getBadgeClass($props.stories[id], $store.state.tasksComplete) + '.png') + ')' }"></a>
+          <a class="task-link" v-bind:class="badgeClass($props.stories[getStoryKeyById(story.id)], $store.state.tasksComplete)" v-on:click="openStory(getStoryKeyById(story.id), true), closeNav()" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/badges/star-' + getBadgeClass($props.stories[getStoryKeyById(story.id)], $store.state.tasksComplete) + '.png') + ')' }"></a>
         </div>
       </div>
       <span class="story-level">Level 2</span>
       <div v-for="(story, id) in getStoriesByLevel(2)" :key="id">
-        <div class="story-link-wrapper" v-bind:class="{ current: id === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
-          <a class="story-link" v-on:click="openStory(id), closeNav()" @keyup.enter="openStory(id, true), closeNav()" tabindex="0">
+        <div class="story-link-wrapper" v-bind:class="{ current: getStoryKeyById(story.id) === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
+          <a class="story-link" v-on:click="openStory(getStoryKeyById(story.id)), closeNav()" @keyup.enter="openStory(getStoryKeyById(story.id), true), closeNav()" tabindex="0">
             {{ story.title }}
           </a>
-          <a class="task-link" v-bind:class="badgeClass($props.stories[id], $store.state.tasksComplete)" v-on:click="openStory(id, true), closeNav()" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/badges/star-' + getBadgeClass($props.stories[id], $store.state.tasksComplete) + '.png') + ')' }"></a>
+          <a class="task-link" v-bind:class="badgeClass($props.stories[getStoryKeyById(story.id)], $store.state.tasksComplete)" v-on:click="openStory(getStoryKeyById(story.id), true), closeNav()" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/badges/star-' + getBadgeClass($props.stories[getStoryKeyById(story.id)], $store.state.tasksComplete) + '.png') + ')' }"></a>
         </div>
       </div>
       <router-link to="/tasks" v-bind:class="{ current: $route.name === 'tasks' }" v-on:click.native="closeNav()">Stars earned<span class="tasks-num"><span v-html="starsTotal()"></span><span class="of">{{ $store.state.tasksComplete.length }} / {{ numTasks(stories) }}</span></span></router-link>
@@ -114,6 +113,11 @@ export default {
     getStoriesByLevel: function (level) {
       return this.stories.filter(function (story) {
         return story.level === level
+      })
+    },
+    getStoryKeyById: function (id) {
+      return this.stories.findIndex(function (story) {
+        return story.id === id
       })
     }
   }

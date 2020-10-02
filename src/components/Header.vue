@@ -19,7 +19,17 @@
     <div class="nav" v-bind:class="{ active: navIsActive }" @keydown.esc="toggleNav()">
       <span class="nav-header">NAVIGATION</span>
       <!-- <router-link to="/" v-bind:class="{ current: $route.name === 'home'}" v-on:click.native="closeNav()">Comics</router-link> -->
-      <div v-for="(story, id) in stories" :key="id">
+      <span class="story-level">Level 1</span>
+      <div v-for="(story, id) in getStoriesByLevel(1)" :key="id">
+        <div class="story-link-wrapper" v-bind:class="{ current: id === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
+          <a class="story-link" v-on:click="openStory(id), closeNav()" @keyup.enter="openStory(id, true), closeNav()" tabindex="0">
+            {{ story.title }}
+          </a>
+          <a class="task-link" v-bind:class="badgeClass($props.stories[id], $store.state.tasksComplete)" v-on:click="openStory(id, true), closeNav()" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/badges/star-' + getBadgeClass($props.stories[id], $store.state.tasksComplete) + '.png') + ')' }"></a>
+        </div>
+      </div>
+      <span class="story-level">Level 2</span>
+      <div v-for="(story, id) in getStoriesByLevel(2)" :key="id">
         <div class="story-link-wrapper" v-bind:class="{ current: id === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
           <a class="story-link" v-on:click="openStory(id), closeNav()" @keyup.enter="openStory(id, true), closeNav()" tabindex="0">
             {{ story.title }}
@@ -100,6 +110,11 @@ export default {
     },
     toggleBaseFont: function () {
       this.$emit('toggleBaseFont')
+    },
+    getStoriesByLevel: function (level) {
+      return this.stories.filter(function (story) {
+        return story.level === level
+      })
     }
   }
 }
@@ -155,6 +170,18 @@ export default {
 
 .ciell-logo img {
   height: 2em;
+}
+
+.story-level {
+  display: block;
+  width: 100%;
+  color: #28acd8;
+  font-size: .6125em;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding-left: 1em;
+  border-bottom: 1px solid rgba(255,255,255,.1);
+  padding: .75em .75em .75em 1.25em;
 }
 
 .nav {

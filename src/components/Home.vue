@@ -3,7 +3,22 @@
     <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt="CIELL logo" rel="preload"></div>
     <h2 class="home-subtitle">Visually enhanced learning of writing structures</h2>
     <div class="stories">
-      <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
+      <h3 class="story-level">Level 1</h3>
+      <div class="story" v-for="(story, id) in getStoriesByLevel(1)" :key="id">
+        <a tabindex="0" v-on:click="openStory(id)" @keyup.enter="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
+          <span class="title">
+            <span class="number" v-on:click="openStory(id, true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
+              <span class="content">
+                <span class="content-number">#{{ id + 1 }}</span>
+              </span>
+              <span class="badge" v-html="badge(id)"></span>
+            </span>
+            <span class="story-title">{{ story.title }}</span>
+          </span>
+        </a>
+      </div>
+      <h3 class="story-level">Level 2</h3>
+      <div class="story" v-for="(story, id) in getStoriesByLevel(2)" :key="id">
         <a tabindex="0" v-on:click="openStory(id)" @keyup.enter="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
             <span class="number" v-on:click="openStory(id, true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
@@ -47,6 +62,11 @@ export default {
       let checker = (arr, target) => target.every(v => arr.includes(v))
 
       return checker(this.$store.state.tasksComplete, taskIds)
+    },
+    getStoriesByLevel: function (level) {
+      return this.stories.filter(function (story) {
+        return story.level === level
+      })
     },
     badge (storyId) {
       let badge = this.badgeClass(this.$props.stories[storyId], this.$store.state.tasksComplete)
@@ -117,6 +137,15 @@ export default {
     align-items: center;
     position: relative;
     font-size: 1em;
+  }
+
+  .story-level {
+    display: block;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: .93875em;
   }
 
   .story {

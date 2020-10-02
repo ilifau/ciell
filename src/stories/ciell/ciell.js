@@ -61,6 +61,7 @@ let Story = [
     preview: 'homeless/cover.jpg',
     color: 'rgb(0, 98, 103)',
     numberImage: 'homeless/number.png',
+    level: 1,
     tasks: [
       {
         id: 1000,
@@ -666,6 +667,7 @@ let Story = [
     preview: 'poverty/cover.jpg',
     color: 'rgb(175, 31, 35)',
     numberImage: 'poverty/number.png',
+    level: 2,
     tasks: [
       {
         id: 1500,
@@ -1033,6 +1035,7 @@ let Story = [
     preview: 'zen-gardens/cover.jpg',
     color: 'rgb(234, 149, 34)',
     numberImage: 'zen-gardens/number.png',
+    level: 1,
     tasks: [
       {
         id: 3000,
@@ -1417,6 +1420,7 @@ let Story = [
     preview: 'agatha-christie/cover.jpg',
     color: 'rgb(235, 0, 135)',
     numberImage: 'agatha-christie/number.png',
+    level: 1,
     tasks: [
       {
         id: 4000,
@@ -1814,6 +1818,7 @@ let Story = [
     preview: 'gender-equality/cover.jpg',
     color: 'rgb(72, 119, 82)',
     numberImage: 'gender-equality/number.png',
+    level: 1,
     tasks: [
       {
         id: 5000,
@@ -2543,6 +2548,7 @@ let Story = [
     preview: 'clean-water/cover.jpg',
     color: 'rgb(39, 189, 226)',
     numberImage: 'clean-water/number.png',
+    level: 2,
     tasks: [
       {
         id: 6000,
@@ -2978,6 +2984,7 @@ let Story = [
     preview: 'nuclear-power/cover.jpg',
     color: 'rgb(255, 209, 0)',
     numberImage: 'nuclear-power/number.png',
+    level: 1,
     tasks: [
       {
         id: 7000,
@@ -3583,6 +3590,7 @@ let Story = [
     preview: 'decent-work/cover.jpg',
     color: 'rgb(226, 10, 127)',
     numberImage: 'decent-work/number.png',
+    level: 2,
     tasks: [
       {
         id: 8000,
@@ -3990,6 +3998,7 @@ let Story = [
     preview: 'transports/cover.jpg',
     color: 'rgb(198, 32, 39)',
     numberImage: 'transports/number.png',
+    level: 2,
     tasks: [
       {
         id: 1100,
@@ -4353,6 +4362,7 @@ let Story = [
     preview: 'climate-change/cover.jpg',
     color: 'rgb(213, 212, 36)',
     numberImage: 'climate-change/number.png',
+    level: 2,
     tasks: [
       {
         id: 1300,
@@ -4710,6 +4720,7 @@ let Story = [
     preview: 'water-pollution/cover.jpg',
     color: 'rgb(2, 124, 187)',
     numberImage: 'water-pollution/number.png',
+    level: 1,
     tasks: [
       {
         id: 14000,
@@ -5112,6 +5123,7 @@ let Story = [
     preview: 'green-wall/cover.jpg',
     color: 'rgb(193, 116, 174)',
     numberImage: 'green-wall/number.png',
+    level: 1,
     tasks: [
       {
         id: 15000,
@@ -5523,6 +5535,7 @@ let Story = [
     preview: 'cipta/cover.jpg',
     color: 'rgb(193, 116, 174)',
     numberImage: 'cipta/number.png',
+    level: 1,
     tasks: [
       {
         id: 16000,
@@ -5947,6 +5960,7 @@ let Story = [
     preview: 'food-poverty/cover.jpg',
     color: 'rgb(193, 116, 174)',
     numberImage: 'food-poverty/number.png',
+    level: 1,
     tasks: [
       {
         id: 17010,
@@ -6358,6 +6372,7 @@ let Story = [
     preview: 'enable-festival/cover.jpg',
     color: 'rgb(193, 116, 174)',
     numberImage: 'enable-festival/number.png',
+    level: 1,
     tasks: [
       {
         id: 18010,

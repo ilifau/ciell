@@ -1523,6 +1523,12 @@ let Story = [
         id: 0,
         title: 'Agatha Christie',
         examQuestion: '<p>A magazine has asked readers to send in articles on their favourite authors. You decide to write an article in which you describe your favourite author.</p><p class="last">Explain the reason for your choice, and assess the author\'s significance for the wider community.</p>',
+        audio: [
+          {
+            filename: 'agatha-christie/introduction.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Introduction</h2>
           <div class="comic-grid">
             <div class="half">
@@ -1562,6 +1568,12 @@ let Story = [
       {
         id: 10,
         title: '',
+        audio: [
+          {
+            filename: 'agatha-christie/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
@@ -1607,6 +1619,12 @@ let Story = [
       {
         id: 20,
         title: '',
+        audio: [
+          {
+            filename: 'agatha-christie/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
@@ -1649,6 +1667,12 @@ let Story = [
       {
         id: 30,
         title: '',
+        audio: [
+          {
+            filename: 'agatha-christie/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
@@ -2683,6 +2707,12 @@ let Story = [
       {
         id: 0,
         title: 'Clean Water',
+        audio: [
+          {
+            filename: 'clean-water/introduction.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p class="last">Clean water and sanitation are basic human rights.  However, there is more and more discussion on how these rights are being ignored or even sabotaged thus preventing government spending to improve civil society.  Discuss the main points that support this statement and express your own opinion.</p>',
         content: `<h2>Introduction</h2>
           <div class="comic-grid">
@@ -2705,6 +2735,12 @@ let Story = [
       {
         id: 10,
         title: '',
+        audio: [
+          {
+            filename: 'clean-water/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
@@ -2738,6 +2774,12 @@ let Story = [
       {
         id: 20,
         title: '',
+        audio: [
+          {
+            filename: 'clean-water/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
@@ -2771,6 +2813,12 @@ let Story = [
       {
         id: 30,
         title: '',
+        audio: [
+          {
+            filename: 'clean-water/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
@@ -3673,6 +3721,12 @@ let Story = [
       {
         id: 0,
         title: 'Decent Work',
+        audio: [
+          {
+            filename: 'decent-work/introduction.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p>"People should realise that decent work and economic growth are closely linked."</p><p class="last">Please discuss this statement.</p>',
         content: `<h2>Introduction</h2>
           <div class="comic-grid">
@@ -3695,6 +3749,12 @@ let Story = [
       {
         id: 10,
         title: '',
+        audio: [
+          {
+            filename: 'decent-work/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
@@ -3734,6 +3794,12 @@ let Story = [
       {
         id: 20,
         title: '',
+        audio: [
+          {
+            filename: 'decent-work/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
@@ -3779,6 +3845,12 @@ let Story = [
       {
         id: 30,
         title: '',
+        audio: [
+          {
+            filename: 'decent-work/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
@@ -4769,6 +4841,12 @@ let Story = [
       {
         id: 0,
         title: 'Water Pollution',
+        audio: [
+          {
+            filename: 'water-pollution/introduction.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p>Water pollution has been an increasing problem in our oceans over the last few decades. What causes water pollution? How can we prevent this problem?</p>',
         content: `<h2>Introduction</h2>
           <div class="comic-grid">
@@ -4790,6 +4868,12 @@ let Story = [
       },
       {
         id: 10,
+        audio: [
+          {
+            filename: 'water-pollution/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
@@ -4822,6 +4906,12 @@ let Story = [
       },
       {
         id: 20,
+        audio: [
+          {
+            filename: 'water-pollution/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
@@ -4854,6 +4944,12 @@ let Story = [
       },
       {
         id: 30,
+        audio: [
+          {
+            filename: 'water-pollution/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
@@ -5565,6 +5661,12 @@ let Story = [
       {
         id: 0,
         title: 'Cipta',
+        audio: [
+          {
+            filename: 'cipta/introduction.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p>You belong to an English-language reading group which recently read a book in a book contest. You have agreed to write a review of the book for the group’s website. In your review you should give your opinion of the format used for the book and say whether you think a book contest could be used to enhance students&apos; interest, in general.</p>',
         content: `<h2>Introduction</h2>
           <div class="comic-grid">
@@ -5604,6 +5706,12 @@ let Story = [
       },
       {
         id: 10,
+        audio: [
+          {
+            filename: 'cipta/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
@@ -5636,6 +5744,12 @@ let Story = [
       },
       {
         id: 20,
+        audio: [
+          {
+            filename: 'cipta/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
@@ -5668,6 +5782,12 @@ let Story = [
       },
       {
         id: 30,
+        audio: [
+          {
+            filename: 'cipta/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
@@ -5958,6 +6078,12 @@ let Story = [
       {
         id: 0,
         title: 'Food Poverty',
+        audio: [
+          {
+            filename: 'food-poverty/introduction.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p>A film magazine is running a series on International Cinema.  It has invited readers to send in reviews of films set in their own country.  You decide to send in a review of such a film considering how effectively the film illustrates particular aspects of life and attitudes in your country.</p>',
         content: `<h2>Introduction</h2>
           <div class="comic-grid">
@@ -5985,6 +6111,12 @@ let Story = [
       },
       {
         id: 10,
+        audio: [
+          {
+            filename: 'food-poverty/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
@@ -6023,6 +6155,12 @@ let Story = [
       },
       {
         id: 20,
+        audio: [
+          {
+            filename: 'food-poverty/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
@@ -6055,6 +6193,12 @@ let Story = [
       },
       {
         id: 30,
+        audio: [
+          {
+            filename: 'food-poverty/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
@@ -6345,6 +6489,12 @@ let Story = [
       {
         id: 0,
         title: 'Enable Festival',
+        audio: [
+          {
+            filename: 'enable-festival/introduction.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p>You belong to an English-language reading group which recently attended a short-film festival. You have agreed to write a review of the festival for the group’s website. In your review you should give your opinion of the festival and say whether you think short videos are a good way of disseminating an idea, in general.</p>',
         content: `<h2>Introduction</h2>
           <div class="comic-grid">
@@ -6372,6 +6522,12 @@ let Story = [
       },
       {
         id: 10,
+        audio: [
+          {
+            filename: 'enable-festival/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
@@ -6410,6 +6566,12 @@ let Story = [
       },
       {
         id: 20,
+        audio: [
+          {
+            filename: 'enable-festival/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
@@ -6442,6 +6604,12 @@ let Story = [
       },
       {
         id: 30,
+        audio: [
+          {
+            filename: 'enable-festival/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2>Conclusion</h2>
           <div class="comic-grid">
             <div class="half">

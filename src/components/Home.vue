@@ -5,13 +5,11 @@
     <div class="stories">
       <h3 class="story-level">Level 1</h3>
       <div class="story" v-for="(story, id) in getStoriesByLevel(1)" :key="id">
-        <a tabindex="0" v-on:click="openStory(id)" @keyup.enter="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
+        <a tabindex="0" v-on:click="openStory(getStoryKeyById(story.id))" @keyup.enter="openStory(getStoryKeyById(story.id))" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
-            <span class="number" v-on:click="openStory(id, true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
-              <span class="content">
-                <span class="content-number">#{{ id + 1 }}</span>
-              </span>
-              <span class="badge" v-html="badge(id)"></span>
+            <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
+              <span class="content"></span>
+              <span class="badge" v-html="badge(getStoryKeyById(story.id))"></span>
             </span>
             <span class="story-title">{{ story.title }}</span>
           </span>
@@ -19,13 +17,11 @@
       </div>
       <h3 class="story-level">Level 2</h3>
       <div class="story" v-for="(story, id) in getStoriesByLevel(2)" :key="id">
-        <a tabindex="0" v-on:click="openStory(id)" @keyup.enter="openStory(id)" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
+        <a tabindex="0" v-on:click="openStory(getStoryKeyById(story.id))" @keyup.enter="openStory(getStoryKeyById(story.id))" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
-            <span class="number" v-on:click="openStory(id, true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
-              <span class="content">
-                <span class="content-number">#{{ id + 1 }}</span>
-              </span>
-              <span class="badge" v-html="badge(id)"></span>
+            <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
+              <span class="content"></span>
+              <span class="badge" v-html="badge(getStoryKeyById(story.id))"></span>
             </span>
             <span class="story-title">{{ story.title }}</span>
           </span>
@@ -66,6 +62,11 @@ export default {
     getStoriesByLevel: function (level) {
       return this.stories.filter(function (story) {
         return story.level === level
+      })
+    },
+    getStoryKeyById: function (id) {
+      return this.stories.findIndex(function (story) {
+        return story.id === id
       })
     },
     badge (storyId) {
@@ -223,11 +224,6 @@ export default {
     color: #fff;
     top: 0;
     left: .7em;
-  }
-
-  .content .content-number {
-    display: none !important;
-    font-size: .875em;
   }
 
   .story a:hover .title span.title-background {

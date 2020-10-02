@@ -658,7 +658,7 @@ let Story = [
     ]
   },
   {
-    id: 15,
+    id: 20,
     title: 'Reduce Inequality',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/inequality/',

@@ -10,7 +10,7 @@
       <div class="story" v-for="(story, id) in getStoriesByLevel(1)" :key="id">
         <a tabindex="0" v-on:click="openStory(getStoryKeyById(story.id))" @keyup.enter="openStory(getStoryKeyById(story.id))" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
-            <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.UNGoalImage) + ')' }">
+            <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
               <span class="content"></span>
               <span class="badge" v-html="badge(getStoryKeyById(story.id))"></span>
             </span>
@@ -22,7 +22,7 @@
       <div class="story" v-for="(story, id) in getStoriesByLevel(2)" :key="id + '-lvl2'">
         <a tabindex="0" v-on:click="openStory(getStoryKeyById(story.id))" @keyup.enter="openStory(getStoryKeyById(story.id))" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
-            <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.UNGoalImage) + ')' }">
+            <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
               <span class="content"></span>
               <span class="badge" v-html="badge(getStoryKeyById(story.id))"></span>
             </span>

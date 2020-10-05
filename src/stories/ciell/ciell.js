@@ -56,11 +56,11 @@ let Story = [
     title: 'Homelessness',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/poverty/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-01.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-01.png',
     description: 'A story on the issue of homelessness.',
     preview: 'homeless/cover.jpg',
     color: 'rgb(0, 98, 103)',
-    numberImage: 'homeless/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-01.png',
     level: 1,
     tasks: [
       {
@@ -662,11 +662,11 @@ let Story = [
     title: 'Reduce Inequality',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/inequality/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-10.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-10.png',
     description: 'This is an essay on inequality.',
     preview: 'poverty/cover.jpg',
     color: 'rgb(175, 31, 35)',
-    numberImage: 'poverty/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-10.png',
     level: 2,
     tasks: [
       {
@@ -1030,11 +1030,11 @@ let Story = [
     title: 'Zen Gardens',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/health/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-03.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-03.png',
     description: 'A story on the Zen gardens.',
     preview: 'zen-gardens/cover.jpg',
     color: 'rgb(234, 149, 34)',
-    numberImage: 'zen-gardens/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-03.png',
     level: 1,
     tasks: [
       {
@@ -1415,11 +1415,11 @@ let Story = [
     title: 'Agatha Christie',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/education/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-04.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-04.png',
     description: 'A story on the issue of quality education.',
     preview: 'agatha-christie/cover.jpg',
     color: 'rgb(235, 0, 135)',
-    numberImage: 'agatha-christie/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-04.png',
     level: 1,
     tasks: [
       {
@@ -1814,10 +1814,10 @@ let Story = [
     title: 'The Invisible Girls',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/gender-equality/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-05.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-05.png',
     preview: 'gender-equality/cover.jpg',
     color: 'rgb(72, 119, 82)',
-    numberImage: 'gender-equality/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-05.png',
     level: 1,
     tasks: [
       {
@@ -2543,11 +2543,11 @@ let Story = [
     title: 'Clean Water',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/water-and-sanitation/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-07.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-07.png',
     description: 'This is a story about clean water and sanitation.',
     preview: 'clean-water/cover.jpg',
     color: 'rgb(39, 189, 226)',
-    numberImage: 'clean-water/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-07.png',
     level: 2,
     tasks: [
       {
@@ -2979,11 +2979,11 @@ let Story = [
     title: 'Nuclear Power',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/energy/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-07.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-07.png',
     description: 'This is a story about nuclear power.',
     preview: 'nuclear-power/cover.jpg',
     color: 'rgb(255, 209, 0)',
-    numberImage: 'nuclear-power/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-07.png',
     level: 1,
     tasks: [
       {
@@ -3585,11 +3585,11 @@ let Story = [
     title: 'Decent Work',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/economic-growth/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-08.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-08.png',
     description: 'Sustained and inclusive economic growth can drive progress, create decent jobs for all and improve living standards.',
     preview: 'decent-work/cover.jpg',
     color: 'rgb(226, 10, 127)',
-    numberImage: 'decent-work/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-08.png',
     level: 2,
     tasks: [
       {
@@ -3993,11 +3993,11 @@ let Story = [
     title: 'Transport',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/cities/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-11.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-11.png',
     description: 'This is an essay on transport.',
     preview: 'transports/cover.jpg',
     color: 'rgb(198, 32, 39)',
-    numberImage: 'transports/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-11.png',
     level: 2,
     tasks: [
       {
@@ -4357,11 +4357,11 @@ let Story = [
     title: 'Climate Action',
     description: 'This is a story about climate action.',
     url: 'https://www.un.org/sustainabledevelopment/climate-change/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-13.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-13.png',
     author: 'CIELL Team',
     preview: 'climate-change/cover.jpg',
     color: 'rgb(213, 212, 36)',
-    numberImage: 'climate-change/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-13.png',
     level: 2,
     tasks: [
       {
@@ -4715,11 +4715,11 @@ let Story = [
     title: 'Water Pollution',
     description: 'This is a story about water pollution.',
     url: 'https://www.un.org/sustainabledevelopment/oceans/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-14.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-14.png',
     author: 'CIELL Team',
     preview: 'water-pollution/cover.jpg',
     color: 'rgb(2, 124, 187)',
-    numberImage: 'water-pollution/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-14.png',
     level: 1,
     tasks: [
       {
@@ -5118,11 +5118,11 @@ let Story = [
     title: 'The Great Green Wall',
     description: '',
     url: 'https://www.un.org/sustainabledevelopment/biodiversity/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-15.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-15.png',
     author: 'CIELL Team',
     preview: 'green-wall/cover.jpg',
     color: 'rgb(193, 116, 174)',
-    numberImage: 'green-wall/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-15.png',
     level: 1,
     tasks: [
       {
@@ -5530,11 +5530,11 @@ let Story = [
     title: 'Cipta',
     description: 'This is a story about a girl named Cipta.',
     url: 'https://www.un.org/sustainabledevelopment/peace-justice/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-16.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-16.png',
     author: 'CIELL Team',
     preview: 'cipta/cover.jpg',
     color: 'rgb(193, 116, 174)',
-    numberImage: 'cipta/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-16.png',
     level: 1,
     tasks: [
       {
@@ -5955,11 +5955,11 @@ let Story = [
     title: 'Food Poverty',
     description: 'This is a story about a food poverty.',
     url: 'https://www.un.org/sustainabledevelopment/hunger/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-02.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-02.png',
     author: 'CIELL Team',
     preview: 'food-poverty/cover.jpg',
     color: 'rgb(193, 116, 174)',
-    numberImage: 'food-poverty/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-02.png',
     level: 1,
     tasks: [
       {
@@ -6367,11 +6367,11 @@ let Story = [
     title: 'Enable Festival',
     description: 'This is a story about a the Enable Festival.',
     url: 'https://www.un.org/sustainabledevelopment/globalpartnerships/',
-    UNGoalImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-17.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-17.png',
     author: 'CIELL Team',
     preview: 'enable-festival/cover.jpg',
     color: 'rgb(193, 116, 174)',
-    numberImage: 'enable-festival/number.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-17.png',
     level: 1,
     tasks: [
       {

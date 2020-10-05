@@ -166,7 +166,7 @@ export default {
 }
 
 /* *:focus {
-  outline: 2px solid #219ac2;
+  outline: 2px solid #04accc;
   box-shadow: none;
 } */
 
@@ -207,7 +207,7 @@ body {
                 sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2d383b;
+  color: #2d383a;
   padding: .5em 1em 0;
   width: 100%;
   height: 100%;
@@ -271,8 +271,8 @@ body {
 
 #loading-content {
   border: 3px solid transparent;
-  border-top-color: #219ac2;
-  border-bottom-color: #219ac2;
+  border-top-color: #04accc;
+  border-bottom-color: #04accc;
   border-radius: 50%;
   -webkit-animation: loader 2s linear infinite;
   -moz-animation: loader 2s linear infinite;
@@ -345,7 +345,7 @@ h6 { font-size: .875em; }
 
 .dotted-border {
   padding-bottom: .125em;
-  border-bottom: dotted 5px #2d383b;
+  border-bottom: dotted 5px #2d383a;
 }
 
 h3.dotted-border {
@@ -391,12 +391,12 @@ div.info h2 {
 
 .container a {
   font-weight: 700;
-  color: #219ac2;
+  color: #04accc;
   transition: color .3s linear;
 }
 
 .container a:hover {
-  color: #1c85a8
+  color: #069bb9
 }
 
 .highlight {
@@ -567,7 +567,7 @@ img {
 
 .msg--success {
   background: #d1e6db;
-  color: #08723d;
+  color: #0a8669;
 }
 
 .message-wrapper {
@@ -621,7 +621,7 @@ img {
 .exam-question h2,
 .further-reading h2 {
   font-size: 1.125em;
-  color: #209ac2;
+  color: #04accc;
   margin-bottom: .6125em;
   margin-top: 0;
   font-weight: 600;
@@ -636,7 +636,7 @@ img {
 .btn {
   color: #fff !important;
   text-decoration: none;
-  background-color: #219ac2;
+  background-color: #04accc;
   padding: .6125em .75em;
   border-radius: .25em;
   display: inline-block;
@@ -652,12 +652,12 @@ img {
 }
 
 .btn.btn--success {
-  background-color: #08723d;
+  background-color: #0a8669;
 }
 
 .btn.btn--success:hover,
 .btn.btn--success:focus {
-  background-color: #185d3a;
+  background-color: #097259;
 }
 
 /* Responsive */

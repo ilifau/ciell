@@ -239,7 +239,7 @@ export default {
 }
 
 .chapter-title-checkmark {
-  color: #08723d;
+  color: #0a8669;
   display: inline-block;
   margin-right: .125em;
 }
@@ -279,7 +279,7 @@ export default {
 }
 
 .choices a {
-  color: #2d383b;
+  color: #2d383a;
   font-weight: 400;
   font-family: 'aka-acidgr-diarygirlmedium';
 }

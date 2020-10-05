@@ -264,8 +264,8 @@ export default {
 
   /* When the checkbox is checked, add a blue background */
   .answer input:checked + div img {
-    border: 8px solid #219ac2;
-    background-color: #219ac2;
+    border: 8px solid #04accc;
+    background-color: #04accc;
     border-radius: 4px;
   }
 
@@ -287,7 +287,7 @@ export default {
     color: #fff !important;
     text-decoration: none;
     text-align: center;
-    background: #219ac2;
+    background: #04accc;
     padding: .75em;
     border-radius: 3px;
     display: block;
@@ -308,11 +308,11 @@ export default {
   }
 
   .completed .check-task {
-    background: #08723d;
+    background: #0a8669;
   }
 
   .completed .check-task:hover {
-    background: #185d3a;
+    background: #097259;
   }
 
   .completed .check-task::before {
@@ -321,8 +321,8 @@ export default {
   }
 
   .completed input:checked + div img {
-    border: 8px solid #08723d;
-    background: #08723d;
+    border: 8px solid #0a8669;
+    background: #0a8669;
   }
 
   @media screen and (max-width: 767px) {

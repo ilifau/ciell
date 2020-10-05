@@ -30,7 +30,7 @@ export default {
 .audio-buttons a {
   color: #fff;
   text-decoration: none;
-  background: #219ac2;
+  background: #04accc;
   padding: .6125em .75em;
   border-radius: 3px;
   display: inline-block;
@@ -39,12 +39,16 @@ export default {
   cursor: pointer;
 }
 
+.audio-buttons a:hover {
+  background: #069bb9;
+}
+
 .audio-buttons a.play {
-  background: #08723d;
+  background: #0a8669;
 }
 
 .audio-buttons a.play:hover {
-  background: #185d3a;
+  background: #097259;
 }
 
 .audio-buttons a:focus {
@@ -52,10 +56,10 @@ export default {
 }
 
 .audio-buttons a.play:focus {
-  box-shadow: 0 0 .5em #08723d;
+  box-shadow: 0 0 .5em #0a8669;
 }
 
 .audio-buttons a.stop:focus {
-  box-shadow: 0 0 .5em #219ac2;
+  box-shadow: 0 0 .5em #069bb9;
 }
 </style>

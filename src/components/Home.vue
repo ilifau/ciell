@@ -1,13 +1,16 @@
 <template>
   <div class="container home">
-    <div class="ciell-logo"><img src="@/assets/img/ciell-logo-bubble.jpg" alt="CIELL logo" rel="preload"></div>
+    <div class="ciell-logo">
+      <img src="@/assets/img/ciell-logo-bubble.png" class="logo-bubble" alt="" rel="preload">
+      <img src="@/assets/img/ciell-logo-text.png" class="logo-text" alt="CIELL" rel="preload">
+    </div>
     <h2 class="home-subtitle">Visually enhanced learning of writing structures</h2>
     <div class="stories">
       <h3 class="story-level">Level 1</h3>
       <div class="story" v-for="(story, id) in getStoriesByLevel(1)" :key="id">
         <a tabindex="0" v-on:click="openStory(getStoryKeyById(story.id))" @keyup.enter="openStory(getStoryKeyById(story.id))" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
-            <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
+            <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.UNGoalImage) + ')' }">
               <span class="content"></span>
               <span class="badge" v-html="badge(getStoryKeyById(story.id))"></span>
             </span>
@@ -16,10 +19,10 @@
         </a>
       </div>
       <h3 class="story-level">Level 2</h3>
-      <div class="story" v-for="(story, id) in getStoriesByLevel(2)" :key="id">
+      <div class="story" v-for="(story, id) in getStoriesByLevel(2)" :key="id + '-lvl2'">
         <a tabindex="0" v-on:click="openStory(getStoryKeyById(story.id))" @keyup.enter="openStory(getStoryKeyById(story.id))" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.preview) + ')' }">
           <span class="title">
-            <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
+            <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.UNGoalImage) + ')' }">
               <span class="content"></span>
               <span class="badge" v-html="badge(getStoryKeyById(story.id))"></span>
             </span>
@@ -77,17 +80,17 @@ export default {
         badgeClass = 'none'
       } else if (badge === 'bronze') {
         badgeClass = 'bronze'
-        badgeImage = require('@/stories/ciell/assets/img/badges/badge-bronze.png')
+        badgeImage = require('@/stories/ciell/assets/img/badges/badge-bronze-alt.png')
         title = 'Fair enough, but you can certainly do better than that!'
         alt = 'Bronze badge'
       } else if (badge === 'silver') {
         badgeClass = 'silver'
-        badgeImage = require('@/stories/ciell/assets/img/badges/badge-silver.png')
+        badgeImage = require('@/stories/ciell/assets/img/badges/badge-silver-alt.png')
         title = 'Good job, you earned a silver star for this essay!'
         alt = 'Silver badge'
       } else if (badge === 'gold') {
         badgeClass = 'gold'
-        badgeImage = require('@/stories/ciell/assets/img/badges/badge-gold.png')
+        badgeImage = require('@/stories/ciell/assets/img/badges/badge-gold-alt.png')
         title = 'Wow, awesome! You earned a gold star for this essay!'
         alt = 'Gold badge'
       }
@@ -115,7 +118,7 @@ export default {
   .ciell-logo {
     display: block;
     text-align: center;
-    width: 8em;
+    width: 5.5em;
     margin: 0 auto;
     position: relative;
     top: -.5em;
@@ -128,8 +131,9 @@ export default {
     line-height: 1.5;
     max-width: 90%;
     margin: .5em auto .75em;
-    font-weight: 600;
+    font-weight: 400;
     letter-spacing: .75px;
+    color: #04accc;
   }
 
   .stories {
@@ -185,7 +189,7 @@ export default {
   /* .story a:focus {
     outline: none;
     border: 0;
-    box-shadow: 0 0 0 2px #219ac2;
+    box-shadow: 0 0 0 2px #04accc;
     z-index: 9;
   } */
 
@@ -194,7 +198,7 @@ export default {
     position: absolute;
     left: 0;
     bottom: -.875em;
-    padding: 0 0 0 2em;
+    padding: 0 0 0 .75em;
     /* border: 1px solid red; */
     width: 90%;
     left: 5%;
@@ -205,14 +209,15 @@ export default {
   .story a .title span.number {
     display: inline-block;
     text-align: center;
-    font-size: .93875em;
+    font-size: 1em;
     position: relative;
-    padding: 2.25em 0 0;
+    padding: 0 0;
     line-height: 1;
     bottom: -.6em;
     left: 0;
-    width: 2.6125em;
-    height: 4.125em;
+    width: 4em;
+    height: 4em;
+    background-color: #15191a;
     background-size: cover;
     background-position: center center;
   }
@@ -237,25 +242,26 @@ export default {
     width: 100%;
     background-size: cover;
     height: auto;
+    top: -1.93em;
   }
 
-  .badge >>> .bronze {
-    top: -2.47em;
-  }
+  /* .badge >>> .bronze {
+    top: -1.25em;
+  } */
 
-  .badge >>> .silver {
+  /* .badge >>> .silver {
     top: -3.9em;
-  }
+  } */
 
-  .badge >>> .gold {
+  /* .badge >>> .gold {
     top: -5.3em;
-  }
+  } */
 
-  .badge >>> .none {
+  /* .badge >>> .none {
     top: -.6125em;
     width: 50%;
     left: 25%;
-  }
+  } */
 
   .badge img {
     display: none !important;
@@ -264,8 +270,8 @@ export default {
   }
 
   .story-title {
-    background: #fff;
-    padding: 0 .375em
+    padding: .125em 0 0 .25em;
+    color: #04accc;
   }
 
   .evaluation-link {
@@ -290,9 +296,15 @@ export default {
     margin-left: .25em;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 890px) {
     .story a .title {
       font-size: .85em;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .story a .title {
+      font-size: .75em;
     }
   }
 
@@ -329,7 +341,7 @@ export default {
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 420px) {
     .story a .title {
       font-size: .875em;
     }

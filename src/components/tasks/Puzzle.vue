@@ -148,7 +148,7 @@ export default {
   }
 
   .sortable-chosen img {
-    border: 6px solid #219ac2;
+    border: 6px solid #04accc;
     border-radius: 2px;
   }
 
@@ -158,19 +158,19 @@ export default {
 
   .sortable-ghost img {
     box-shadow: 0 0;
-    border: 6px dashed #219ac2;
+    border: 6px dashed #04accc;
   }
 
   .completed .task-item {
     background: #d1e6db;
-    color: #08723d;
+    color: #0a8669;
   }
 
   .check-task {
     color: #fff !important;
     text-decoration: none;
     text-align: center;
-    background: #219ac2;
+    background: #04accc;
     padding: .75em;
     border-radius: 3px;
     display: block;
@@ -191,11 +191,11 @@ export default {
   }
 
   .completed .check-task {
-    background: #08723d;
+    background: #0a8669;
   }
 
   .completed .check-task:hover {
-    background: #185d3a;
+    background: #097259;
   }
 
   .completed .check-task::before {

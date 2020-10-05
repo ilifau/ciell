@@ -137,11 +137,11 @@ h2 {
 
 /* .btn:focus {
   outline: none;
-  box-shadow: 0 0 .5em #219ac2;
+  box-shadow: 0 0 .5em #04accc;
 } */
 
 .btn--wait {
-  background: #08723d !important;
+  background: #0a8669 !important;
 }
 
 .error {

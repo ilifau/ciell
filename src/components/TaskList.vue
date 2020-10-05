@@ -82,22 +82,22 @@ export default {
         badge = null
         title = `
           <div style="display:block;padding:1em 0">
-            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-bronze.png')}" alt="Bronze star" />
-            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-silver.png')}" alt="Bronze star" />
-            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-gold.png')}" alt="Bronze star" />
+            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-bronze-alt.png')}" alt="Bronze star" />
+            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-silver-alt.png')}" alt="Bronze star" />
+            <img class="badge-image" src="${require('@/stories/ciell/assets/img/badges/badge-gold-alt.png')}" alt="Bronze star" />
           </div>
           <p>You can earn stars by completing the tasks in this essay. Open the next chapter to begin working on the tasks.</p>
           `
       } else if (percent > 0 && percent <= 34) {
-        badge = require('@/stories/ciell/assets/img/badges/star-bronze.png')
+        badge = require('@/stories/ciell/assets/img/badges/badge-bronze-alt.png')
         title = '<p>Fair enough, you earned yourself a <strong>bronze star</strong> for this essay.</p>'
         alt = 'Bronze badge'
       } else if (percent > 34 && percent < 99) {
-        badge = require('@/stories/ciell/assets/img/badges/star-silver.png')
+        badge = require('@/stories/ciell/assets/img/badges/badge-silver-alt.png')
         title = '<p>Good job, you earned yourself a <strong>silver star</strong> for this essay!</p>'
         alt = 'Silver badge'
       } else if (percent >= 99) {
-        badge = require('@/stories/ciell/assets/img/badges/star-gold.png')
+        badge = require('@/stories/ciell/assets/img/badges/badge-gold-alt.png')
         title = '<p>Wow, awesome! You completed all tasks for this essay and earned yourself a <strong>gold star</strong>!</p>'
         alt = 'Gold badge'
       }
@@ -175,21 +175,22 @@ export default {
   }
 
   .complete .task-name {
-    color: #08723d;
+    color: #0a8669;
   }
 
   .complete .task-name:hover {
-    color: #065e32;
+    color: #097259;
   }
 
   .task-checkmark {
-    color: #08723d;
+    color: #0a8669;
     display: inline-block;
   }
 
   .badge >>> .badge-image {
-    width: 48px;
-    max-width: 25%;
+    width: 5em;
+    max-width: 33%;
     margin-right: .75em;
+    margin-top: .75em;
   }
 </style>

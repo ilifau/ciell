@@ -28,7 +28,7 @@
         </div>
       </div>
       <span class="story-level">Level 2</span>
-      <div v-for="(story, id) in getStoriesByLevel(2)" :key="id">
+      <div v-for="(story, id) in getStoriesByLevel(2)" :key="id + '-lvl2'">
         <div class="story-link-wrapper" v-bind:class="{ current: getStoryKeyById(story.id) === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
           <a class="story-link" v-on:click="openStory(getStoryKeyById(story.id)), closeNav()" @keyup.enter="openStory(getStoryKeyById(story.id), true), closeNav()" tabindex="0">
             {{ story.title }}
@@ -156,9 +156,7 @@ export default {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   font-size: .75em;
-  color: #1c85a8;
-  /* overflow: hidden; */
-  /* text-transform: uppercase; */
+  color: #04accc;
   margin-right: auto;
 }
 
@@ -168,8 +166,13 @@ export default {
 }
 
 .header a.story-title:focus .story-title-outline {
-  outline: 2px solid #219ac2;
+  outline: 2px solid #04accc;
   padding: 10px 0;
+}
+
+.header a.story-title:focus,
+.header a.story-title:hover {
+  color: #069bb9;
 }
 
 .ciell-logo img {
@@ -179,12 +182,12 @@ export default {
 .story-level {
   display: block;
   width: 100%;
-  color: #28acd8;
+  color: #04accc;
   font-size: .6125em;
   letter-spacing: 3px;
   text-transform: uppercase;
   padding-left: 1em;
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255,255,255,.04);
   padding: .75em .75em .75em 1.25em;
 }
 
@@ -199,7 +202,7 @@ export default {
   width: 300px;
   height: 100%;
   max-width: 300px;
-  background: #20323e;
+  background: #213338;
   transition: all .25s ease;
   transform: translateZ(0);
   -webkit-transform: translateZ(0);
@@ -262,7 +265,7 @@ export default {
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #219ac2;
+  background: #04accc;
   transition: all ease-in .25s;
   margin-left: 6px;
   position: relative;
@@ -287,12 +290,17 @@ export default {
   left: 3px;
 }
 
+.nav-toggle:hover .nav-circle,
+.nav-toggle:focus .nav-circle {
+  background: #069bb9;
+}
+
 .nav a,
 .nav .nav-header {
   display: block;
   padding: .5rem .75rem;
   color: #fff;
-  border-bottom: 1px solid rgba(255,255,255,.1);
+  border-bottom: 1px solid rgba(255,255,255,.04);
 }
 
 .nav a {
@@ -302,16 +310,11 @@ export default {
   position: relative;
 }
 
-.nav a:not(.task-link):hover,
 .nav a:not(.task-link):focus,
-.nav .story-link-wrapper:hover,
-.nav .story-link-wrapper:focus {
-  background: rgba(0,0,0,.2);
-}
-
-.nav .story-link-wrapper:hover a:not(.task-link),
-.nav .story-link-wrapper:focus a:not(.task-link) {
-  background: none;
+.nav a:not(.task-link):hover,
+.nav a:not(.task-link):focus + a,
+.nav a:not(.task-link):hover + a {
+  background-color: rgba(0,0,0,.09) !important;
 }
 
 .nav .story-link-wrapper {
@@ -325,7 +328,7 @@ export default {
 }
 
 .nav .nav-header {
-  color: #28acd8;
+  color: #04accc;
   font-size: .875em;
   padding-top: .875em;
   padding-bottom: .875em;
@@ -397,9 +400,6 @@ export default {
   position: relative;
 }
 
-.nav .story-link:focus {
-  left: 2px;
-}
 .nav .story-link-wrapper:hover .task-link {
   background-size: auto 56%;
   background-position: center 44%;
@@ -444,7 +444,7 @@ export default {
 }
 
 #toggleBaseFont.inactive::after {
-  background: rgba(206, 38, 28, 0.5);
+  background: rgba(255,255,255,.2);
 }
 
 @media screen and (max-width: 767px) {

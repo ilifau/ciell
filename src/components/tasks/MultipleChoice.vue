@@ -173,7 +173,7 @@ export default {
 
   /* When the checkbox is checked, add a blue background */
   .answer input:checked ~ .checkmark {
-    background-color: #219ac2;
+    background-color: #04accc;
   }
 
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -222,7 +222,7 @@ export default {
     color: #fff !important;
     text-decoration: none;
     text-align: center;
-    background: #08723d;
+    background: #0a8669;
     padding: .75em;
     border-radius: 3px;
     display: block;
@@ -240,7 +240,7 @@ export default {
   }
 
   .check-task:hover {
-    background: #185d3a;
+    background: #097259;
     -webkit-box-shadow: 0 .375em 2.125em -.875em rgba(0,0,0,0.57);
     -moz-box-shadow: 0 .375em 2.125em -.875em rgba(0,0,0,0.57);
     box-shadow: .375em 2.125em -.875em rgba(0,0,0,0.57);
@@ -249,6 +249,6 @@ export default {
 
   /* When the checkbox is checked, add a blue background */
   .completed .answer input[value="true"]:checked ~ .checkmark {
-    background-color: #08723d;
+    background-color: #0a8669;
   }
 </style>

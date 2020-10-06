@@ -164,9 +164,10 @@ export default {
   }
 
   .task-list ul li {
-    line-height: 1.75;
+    line-height: 1.3;
     font-size: 1.125em;
     border-bottom: 1px solid #f3f3f3;
+    padding: .25em 0;
   }
 
   .task-name {

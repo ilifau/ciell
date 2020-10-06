@@ -1,6 +1,6 @@
 <template>
   <div class="container tasks">
-    <h1>Stars earned</h1>
+    <h1>Tasks</h1>
     <div class="stars-wrapper">
       <div v-html="getStar()"></div>
       <div>
@@ -89,13 +89,13 @@ export default {
       let percent = this.$store.state.tasksComplete.length / this.starsTotal * 100
 
       if (percent <= 49) {
-        return '(Bronze)'
+        return 'Bronze!'
       } else if (percent > 49 && percent <= 80) {
-        return '(Silver)'
+        return 'Silver!'
       } else if (percent > 80 && percent < 100) {
-        return '(Gold)'
+        return 'Gold!'
       } else if (percent >= 100) {
-        return '(Platinum)'
+        return 'Platinum!'
       }
     },
     openStory (params) {
@@ -162,9 +162,10 @@ export default {
 
   .story {
     display: block;
-    background: #fafafa;
-    padding: 1em;
+    background: #e0f2f7;
+    padding: 1em 1.5em;
     margin-bottom: 1em;
+    border-radius: 2em;
   }
 
   h3.story-title {
@@ -191,5 +192,10 @@ export default {
 
   .btn:hover {
     background-color: #1c81a3;
+  }
+
+  >>> .task-list ul {
+    padding: 0 1em;
+    margin-bottom: .75em;
   }
 </style>

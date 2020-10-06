@@ -1,6 +1,6 @@
 <template>
   <div class="welcome">
-    <div class="header" :style="{ backgroundImage: 'url(' + randomBanner() + ')' }"></div>
+    <div class="header" :style="{ backgroundColor: '#f7f7f7', backgroundImage: 'url(' + randomBanner() + ')' }"></div>
     <div class="body">
       <div class="ciell-logo">
         <img src="@/assets/img/ciell-logo-bubble.png" class="logo-bubble" alt="" rel="preload">
@@ -45,7 +45,6 @@ export default {
     left: 0;
     right: 0;
     width: 100%;
-    max-width: 960px;
     margin: 0 auto;
     height: 54vh;
     min-height: 10em;

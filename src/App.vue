@@ -389,7 +389,7 @@ div.info h2 {
   margin: 0 auto;
   width: 920px;
   max-width: 100%;
-  line-height: 1.5;
+  line-height: 1.4;
   padding: 2em 0;
   z-index: 1;
 }
@@ -645,7 +645,7 @@ img {
   border-radius: .25em;
   display: inline-block;
   border: 0;
-  transition: background-color .4s ease;
+  transition: all .4s ease;
   margin-top: 1em;
   cursor: pointer;
 }
@@ -662,6 +662,21 @@ img {
 .btn.btn--success:hover,
 .btn.btn--success:focus {
   background-color: #097259;
+}
+
+.btn.btn--outline {
+  border: 3px solid #04accc;
+  color: #2d383a !important;
+  background-color: #fff;
+}
+
+.btn.btn--outline:hover,
+.btn.btn--outline:focus {
+  background-color: #e0f2f7;
+}
+
+.btn--small {
+  font-size: .75em;
 }
 
 /* Responsive */

@@ -1,17 +1,20 @@
 <template>
   <div class="container about">
-    <h1>Rate this App</h1>
     <div class="ratings">
+      <div class="container-logo">
+        <img src="@/assets/img/ciell-logo-bubble.png" class="logo-bubble" alt="" rel="preload">
+      </div>
+      <h1>Rate this App!</h1>
       <label v-for="(rating, index) in ratings()" :key="index">
         <div class="rating-wrapper">
-          <h2>{{ index }} ({{ rating }}/5)</h2>
+          <h2>{{ index }}</h2>
           <a tabindex="0" v-on:click="rate(index, i)" @keyup.enter="rate(index, i)" v-for="i in rating" :key="'checked' + i"><img class="star" src="@/assets/img/star-rating.png" alt=""></a><a tabindex="0" v-on:click="rate(index, i + rating)" @keyup.enter="rate(index, i + rating)" v-for="i in (5 - rating)" :key="'unchecked' + i"><img class="star" src="@/assets/img/star-rating-unchecked.png" alt=""></a>
         </div>
       </label>
     </div>
-    <p>
+    <p style="text-align:center">
       <span class="error" v-if="this.submitError"><strong>Ooops!</strong> {{ this.submitError }}</span>
-      <a tabindex="0" v-if="canSubmit() || this.submitting" class="btn" v-on:click="submitRating()" @keyup.enter="submitRating()"><v-icon v-if="this.submitting" name="spinner" spin /> Submit</a>
+      <a tabindex="0" v-if="canSubmit() || this.submitting" class="btn btn--outline" v-on:click="submitRating()" @keyup.enter="submitRating()"><v-icon v-if="this.submitting" name="spinner" spin /> Submit</a>
       <a tabindex="0" v-if="!canSubmit() && !this.submitting" class="btn btn--wait" v-on:click="submitRating()" @keyup.enter="submitRating()">Thank you!</a>
     </p>
   </div>
@@ -101,16 +104,31 @@ export default {
 </script>
 
 <style scoped>
-.ratings,
-.rating-wrapper {
+.ratings {
+  background: #04accc;
   display: block;
-  padding-bottom: 1em;
+  margin-top: 3.5em;
+  padding: 1.5em 1em 1em;
+  border-radius: 3em;
+  text-align: center;
+  position: relative;
+}
+
+.rating-wrapper {
+  padding: 1.375em 1em;
+}
+
+.container-logo {
+  position: absolute;
+  right: 1em;
+  top: -3em;
+  width: 5em;
+  height: 5em;
 }
 
 .ratings a {
-  margin-right: .25em;
+  margin: 0 .25em;
   position: relative;
-  left: 2px;
 }
 
 label {
@@ -122,23 +140,29 @@ label {
 
 .star {
   display: inline-block;
-  width: 64px;
-  max-width: 16.67%;
+  width: 48px;
+  max-width: 10%;
+}
+
+h1 {
+  color: #fff;
+  font-size: 1.25em;
+  font-weight: 600;
 }
 
 h2 {
   line-height: 1;
-  margin-bottom: .5em;
+  margin-bottom: .75em;
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
 .btn {
   transition: background-color .2s linear, outline .2s linear;
 }
-
-/* .btn:focus {
-  outline: none;
-  box-shadow: 0 0 .5em #04accc;
-} */
 
 .btn--wait {
   background: #0a8669 !important;

@@ -32,7 +32,7 @@
       </div>
     </div>
     <div class="evaluation-link">
-      <p class="last"><router-link to="/evaluation">Rate this App<img src="@/assets/img/star-rating.png" alt=""></router-link></p>
+      <p class="last"><router-link to="/evaluation"><v-icon name="star" scale="1" /> Rate this app!</router-link></p>
     </div>
   </div>
 </template>
@@ -276,14 +276,23 @@ export default {
 
   .evaluation-link {
     display: block;
-    padding: 3em 0 0;
-    margin: 0 auto;
+    padding: .5em 1em;
     text-align: center;
     max-width: 90%;
+    margin: 1em auto 0;
+  }
+
+  @media screen and (max-width: 639px) {
+   .evaluation-link {
+     margin-top: 4em;
+   }
   }
 
   .evaluation-link a {
     font-weight: 400;
+    letter-spacing: 1px;
+    font-size: .75em;
+    color: #2d383a !important;
   }
 
   .evaluation-link a img {

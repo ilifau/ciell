@@ -159,14 +159,15 @@ export default {
 <style scoped>
   .task-list ul {
     list-style-type: none;
-    padding: 0;
     margin: 0 0 1em;
+    background: #e0f2f7;
+    padding: 1em 1.5em;
+    border-radius: 2em;
   }
 
   .task-list ul li {
     line-height: 1.3;
     font-size: 1.125em;
-    border-bottom: 1px solid #f3f3f3;
     padding: .25em 0;
   }
 

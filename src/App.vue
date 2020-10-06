@@ -187,6 +187,7 @@ html, body {
 }
 
 html {
+  height: 100vh;
   -webkit-user-select: none;
 }
 

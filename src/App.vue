@@ -1,6 +1,6 @@
 <template>
   <div
-    id="app" ref="top" v-bind:class="[this.$store.state.baseFont ? 'opendyslexic' : '', isAnimating ? 'is-animating' : '']">
+    id="app" ref="top" v-bind:class="[this.$store.state.baseFont ? 'opendyslexic' : '', isAnimating ? 'is-animating' : '', this.$route.name === 'welcome' ? 'welcome' : '']">
     <!-- Transition -->
     <transition name="slide-fade">
       <div class="message-wrapper" v-if="hasMessage" v-on:click="hideMessage()">
@@ -12,6 +12,7 @@
     </transition>
     <!-- Header -->
     <Header
+      v-if="this.$route.name !== 'welcome'"
       v-bind:story="this.stories[this.$store.state.currentStoryId]"
       v-bind:stories="this.stories"
       @openStory="openStory($event)"
@@ -222,6 +223,10 @@ body {
   display: none;
 }
 
+#app.welcome {
+  padding-bottom: 0;
+}
+
 @supports(padding: max(0px)) {
   @media screen and (orientation: portrait) {
     #app {
@@ -412,7 +417,6 @@ img {
   font-size: .75em;
   text-align: center;
   color: #aaa;
-  padding: 0 0 1em;
 }
 
 .clearfix {

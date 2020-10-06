@@ -118,7 +118,7 @@ export default {
   .ciell-logo {
     display: block;
     text-align: center;
-    width: 5.5em;
+    width: 4.5em;
     margin: 0 auto;
     position: relative;
     top: -.5em;
@@ -128,7 +128,7 @@ export default {
     font-family: 'aka-acidgr-diarygirlmedium';
     text-align: center;
     font-size: 1.25em;
-    line-height: 1.5;
+    line-height: 1.3;
     max-width: 90%;
     margin: .5em auto .75em;
     font-weight: 400;

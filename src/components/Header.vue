@@ -1,7 +1,7 @@
 <template>
   <div class="header-wrapper">
     <div class="header">
-      <router-link v-bind:class="showBacktoStoriesLink() ? '' : 'visibility-hidden'" class="story-title" to="/">
+      <router-link v-bind:class="showBacktoStoriesLink() ? '' : 'visibility-hidden'" class="story-title" to="/home">
         <div><span class="story-title-outline"><v-icon name="arrow-left" v-if="showBacktoStoriesLink()" scale="0.75" /> {{ storyTitle }}</span></div>
       </router-link>
       <div class="toggle-wrapper">
@@ -39,6 +39,7 @@
       <router-link to="/tasks" v-bind:class="{ current: $route.name === 'tasks' }" v-on:click.native="closeNav()">Stars earned<span class="tasks-num"><span v-html="starsTotal()"></span><span class="of">{{ $store.state.tasksComplete.length }} / {{ numTasks(stories) }}</span></span></router-link>
       <router-link to="/evaluation" v-bind:class="{ current: $route.name === 'evaluation' }" v-on:click.native="closeNav()">Rate this App</router-link>
       <router-link to="/about" v-bind:class="{ current: $route.name === 'about' }" v-on:click.native="closeNav()">About CIELL</router-link>
+      <router-link to="/" v-bind:class="{ current: $route.name === 'welcome' }" v-on:click.native="closeNav()">Welcome Screen</router-link>
       <a id="toggleBaseFont" tabindex="0" v-on:click="toggleBaseFont()" @keyup.enter="toggleBaseFont()" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
       <a tabindex="0" v-on:click="toggleNav()" @keyup.enter="toggleNav()">&times; Close navigation</a>
     </div>

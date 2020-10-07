@@ -4,7 +4,7 @@
       <img src="@/assets/img/ciell-logo-bubble.png" class="logo-bubble" alt="" rel="preload">
       <img src="@/assets/img/ciell-logo-text.png" class="logo-text" alt="CIELL" rel="preload">
     </div>
-    <h2 class="home-subtitle">Visually enhanced learning of writing structures</h2>
+    <h2 class="home-subtitle">Visually&nbsp;enhanced&nbsp;learning of&nbsp;writing&nbsp;structures</h2>
     <div class="stories">
       <h3 class="story-level">Level 1</h3>
       <div class="story" v-for="(story, id) in getStoriesByLevel(1)" :key="id">
@@ -200,7 +200,7 @@ export default {
     bottom: -.875em;
     padding: 0 0 0 .75em;
     /* border: 1px solid red; */
-    width: 90%;
+    width: 100%;
     left: 5%;
     text-align: left;
     font-size: 1.06125em;
@@ -213,13 +213,14 @@ export default {
     position: relative;
     padding: 0 0;
     line-height: 1;
-    bottom: -.6em;
+    bottom: -.4em;
     left: 0;
-    width: 4em;
-    height: 4em;
+    width: 3.5em;
+    height: 3.5em;
     background-color: #15191a;
-    background-size: cover;
-    background-position: center center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: .1em center;
   }
 
   .story a .title span.number .content {
@@ -242,7 +243,7 @@ export default {
     width: 100%;
     background-size: cover;
     height: auto;
-    top: -1.93em;
+    top: -1.65em;
   }
 
   /* .badge >>> .bronze {
@@ -305,6 +306,12 @@ export default {
     margin-left: .25em;
   }
 
+  @media screen and (max-width: 1024px) {
+    .home-subtitle {
+      font-size: 1.125em;
+    }
+  }
+
   @media screen and (max-width: 890px) {
     .story a .title {
       font-size: .85em;
@@ -339,7 +346,7 @@ export default {
     }
 
     .story a .title {
-      left: 0;
+      left: 5%;
       width: 95%;
     }
 
@@ -350,6 +357,12 @@ export default {
     }
   }
 
+  @media screen and (max-width: 480px) {
+    .home-subtitle {
+      font-size: 1em;
+    }
+  }
+
   @media screen and (max-width: 420px) {
     .story a .title {
       font-size: .875em;
@@ -357,6 +370,10 @@ export default {
   }
 
   @media screen and (max-width: 359px) {
+    .home-subtitle {
+      font-size: .875em;
+    }
+
     .story a .title {
       font-size: .75em;
     }

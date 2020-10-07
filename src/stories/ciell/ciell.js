@@ -323,7 +323,7 @@ let Story = [
         ],
         examQuestion: '<p>Homelessness is a serious issue in every part of the world. How could we resolve the issue in big cities?</p>',
         content: `
-          <h2>Introduction</h2>
+          <h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|homeless/homeless 01.jpg|The number of people living without homes is increasing not only in developing regions but also in the richest countries.]
@@ -357,7 +357,7 @@ let Story = [
           }
         ],
         content: `
-          <h2>Paragraph 1</h2>
+          <h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|homeless/homeless 05.jpg|Housing is a human right.]
@@ -403,7 +403,7 @@ let Story = [
           }
         ],
         content: `
-          <h2>Paragraph 2</h2>
+          <h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|homeless/homeless 11.jpg|A key to a flat is not the only solution needed; services and social connectedness play a crucial role as well.]
@@ -448,7 +448,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
         <div class="comic-grid">
             <div class="half">
               [image|homeless/homeless 17.jpg|In conclusion, homelessness is a serious urban social problem.]
@@ -781,7 +781,7 @@ let Story = [
         ],
         examQuestion: '<p>Investing in equal access to education, jobs and public services for young people with disabilities or learning difficulties will help to reduce world poverty.</p><p class="last">Do you agree or disagree with this statement? Explain the reasons for your opinion.</p>',
         content: `
-          <h2>Introduction</h2>
+          <h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|poverty/poverty 01.jpg|In some societies, young people with disabilities and learning difficulties]
@@ -821,7 +821,7 @@ let Story = [
           }
         ],
         content: `
-          <h2>Paragraph 1</h2>
+          <h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|poverty/poverty 07.jpg|In the first instance, it should be noted that, there are many millions of people around the world who have a disability or learning difficulty.]
@@ -867,7 +867,7 @@ let Story = [
           }
         ],
         content: `
-          <h2>Paragraph 2</h2>
+          <h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|poverty/poverty 13.jpg|On the other hand, if public services, education and work were available to all,]
@@ -916,7 +916,7 @@ let Story = [
           }
         ],
         content: `
-          <h2>Conclusion</h2>
+          <h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|poverty/poverty 20.jpg|In summary, whilst poverty is a huge challenge to take on,]
@@ -1149,7 +1149,7 @@ let Story = [
         ],
         examQuestion: '<p class="last">A travel magazine has asked readers to send in articles on their favourite travel destination. You decide to write an article in which you describe your favourite place, explain why it is your favourite and assess its significance for the wider community.</p>',
         content: `
-          <h2>Introduction</h2>
+          <h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|zen-gardens/zen gardens 01.jpg|My favourite travel destination is Ryōan-ji Zen gardens found in northwest Kyoto, Japan.]
@@ -1183,7 +1183,7 @@ let Story = [
           }
         ],
         content: `
-          <h2>Paragraph 1</h2>
+          <h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|zen-gardens/zen gardens 05.jpg|The Zen gardens are designed to be a place of natural beauty.]
@@ -1235,7 +1235,7 @@ let Story = [
           }
         ],
         content: `
-          <h2>Paragraph 2</h2>
+          <h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|zen-gardens/zen gardens 13.jpg|The gardens have a worldwide significance, promoting inner peace and contact with nature.]
@@ -1281,7 +1281,7 @@ let Story = [
           }
         ],
         content: `
-          <h2>Conclusion</h2>
+          <h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|zen-gardens/zen gardens 19.jpg|In conclusion, the Kyoto Zen gardens are pleasing to the eye due to the natural patterns, sophisticated design, and symbolism.]
@@ -1533,7 +1533,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 01.jpg|My favourite author is Agatha Christie who created the genius and eccentric detective, Hercule Poirot, 100 years ago.]
@@ -1578,7 +1578,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 09.jpg|Her talent, persistence and hard work, despite her learning difficulties, make her exceptional.]
@@ -1629,7 +1629,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 17.jpg|As a famous novelist, playwright, and short story writer Agatha Christie is called the queen of crime mysteries.]
@@ -1677,7 +1677,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|agatha-christie/agatha 24.jpg|Agatha Christie could be a role model for all those who struggle with writing.]
@@ -2165,7 +2165,7 @@ let Story = [
           }
         ],
         examQuestion: '<p>Due to different gender roles and poverty, teenagers-boys and girls face different challenges at home and schools especially in developing countries.</p><p class="last">Do you agree with this statement? Give examples to support your views.</p>',
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|gender-equality/invisible 00.jpg|IN 2016, the UN conducted research]
@@ -2213,7 +2213,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
             <div class="comic-grid">
             <div class="half">
               [image|gender-equality/invisible 10.jpg|Girls claimed that it was a challenge to stay in school.]
@@ -2264,7 +2264,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
             <div class="comic-grid">
             <div class="half">
               [image|gender-equality/invisible 18.jpg|Often, boys face a different set of expectations.]
@@ -2306,7 +2306,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|gender-equality/invisible 23.jpg|To sum up, both boys and girls perceive education as a potentially life-changing process.]
@@ -2720,7 +2720,7 @@ let Story = [
           }
         ],
         examQuestion: '<p class="last">Clean water and sanitation are basic human rights.  However, there is more and more discussion on how these rights are being ignored or even sabotaged thus preventing government spending to improve civil society.  Discuss the main points that support this statement and express your own opinion.</p>',
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|clean-water/clean-water-01.jpg|Clean water and sanitation are basic human rights and necessities.]
@@ -2747,7 +2747,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|clean-water/clean-water-03.jpg|One of the main issues is contamination of the Earth's water.]
@@ -2786,7 +2786,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|clean-water/clean-water-07.jpg|Another issue that people are facing is lack of facilities.]
@@ -2825,7 +2825,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|clean-water/clean-water-11.jpg|To sum up, undoubtedly toxic waste and poor infrastructure affect access to water and sanitation.]
@@ -3247,7 +3247,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|nuclear-power/nuclear 01.jpg|Nuclear power]
@@ -3283,7 +3283,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|nuclear-power/nuclear 06.jpg|Nuclear technology still has challenges related to safety.]
@@ -3340,7 +3340,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|nuclear-power/nuclear 16.jpg|The generation of nuclear energy is environmentally friendly, reliable and cost-effective.]
@@ -3388,7 +3388,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|nuclear-power/nuclear 23.jpg|In conclusion, the advantages outweigh the obstacles]
@@ -3736,7 +3736,7 @@ let Story = [
           }
         ],
         examQuestion: '<p>"People should realise that decent work and economic growth are closely linked."</p><p class="last">Please discuss this statement.</p>',
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|decent-work/decent-work-01.jpg|These days, experts argue that labour productivity has started to increase while unemployment is decreasing.]
@@ -3763,7 +3763,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|decent-work/decent-work-03.jpg|Firstly, it is important to encourage entrepreneurship.]
@@ -3808,7 +3808,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|decent-work/decent-work-09.jpg|Job opportunities, though, should be available for men,]
@@ -3859,7 +3859,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|decent-work/decent-work-17.jpg|In conclusion, I believe that by strengthening full and productive employment and income generation, the overall standard of living will be improved.]
@@ -4111,7 +4111,7 @@ let Story = [
           }
         ],
         examQuestion: '<p>Local government should invest money in public transport to make it free and accessible to everyone, no matter their physical ability, age or wealth, and to contribute to more sustainable cities and communities for the future.</p><p class="last">Do you agree or disagree?</p>',
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|transports/transports 01.jpg|In some countries public transportation such as trains, buses, metro and the underground]
@@ -4144,7 +4144,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|transports/transports 05.jpg|Most importantly, providing free public transport for all]
@@ -4192,7 +4192,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
         <div class="comic-grid">
           <div class="half">
             [image|transports/transports 12.jpg|Currently, in some cities and communnities, antiquated, inaccessible and expensive public transport]
@@ -4237,7 +4237,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|transports/transports 18.jpg|To conclude, it is clear that free and accessible public transport could be very beneficial to the environment,]
@@ -4475,7 +4475,7 @@ let Story = [
           }
         ],
         examQuestion: '<p>Greta Thunberg is a schoolgirl turned activist who has encouraged millions of young people to join in her school strike for climate change every Friday.</p><p class="last">Do you believe school pupils are right to skip school in order to protest for climate change?</p>',
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 01.jpg|Every Friday millions of pupils around the world fo on strike for their future,]
@@ -4513,7 +4513,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 07.jpg|It cannot now be ignored that]
@@ -4554,7 +4554,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 12.jpg|Moreover, as many students argue, if the planet changes in the way scientists predict as a result of the accelerated rate of climate change,]
@@ -4595,7 +4595,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|climate-change/climate 17.jpg|To conclude, to a certain extent, school pupils have little choice but to skip school for these protests.]
@@ -4859,7 +4859,7 @@ let Story = [
           }
         ],
         examQuestion: '<p>Water pollution has been an increasing problem in our oceans over the last few decades. What causes water pollution? How can we prevent this problem?</p>',
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|water-pollution/water-pollution-01.jpg|Water pollution is a global concern. UNESCO claims that there is a deterioration of coastal waters due to pollution that is having a negative effect on fishing which is an important food source.]
@@ -4885,7 +4885,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|water-pollution/water-pollution-03.jpg|Pollutants are materials in the water that can cause harm to people and ecosystems.]
@@ -4923,7 +4923,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|water-pollution/water-pollution-07.jpg|The UN recommends educational initiatives to reverse the decline in ocean health.]
@@ -4961,7 +4961,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|water-pollution/water-pollution-11.jpg|To conclude, water pollution is mainly due to human mismanagement of natural resources.]
@@ -5268,7 +5268,7 @@ let Story = [
         id: 0,
         title: 'The Great Green Wall',
         examQuestion: '<p>An environmental magazine has asked readers to contribute articles on innovative products or services that protect the planet. You decide to write an article in which you describe an environmental intervention, explain why you have chosen it and assess its significance for the wider community.</p>',
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|green-wall/green-wall-1.jpg|The Sahara dester has been slowly expanding for decades and indiduals, international organisations and governments in Africa]
@@ -5294,7 +5294,7 @@ let Story = [
       },
       {
         id: 10,
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|green-wall/green-wall-5.jpg|Planting trees from east to west across Africa,]
@@ -5335,7 +5335,7 @@ let Story = [
       },
       {
         id: 20,
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|green-wall/green-wall-12.jpg|The Great Green Wall is a global symbol for humanity overcoming one of its biggest threats – desertification.]
@@ -5370,7 +5370,7 @@ let Story = [
       },
       {
         id: 30,
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
         <div class="comic-grid">
           <div class="half">
             [image|green-wall/green-wall-17.jpg|Increasing temperatures due to climate change has inspired eleven countries in Africa]
@@ -5681,7 +5681,7 @@ let Story = [
           }
         ],
         examQuestion: '<p>You belong to an English-language reading group which recently read a book in a book contest. You have agreed to write a review of the book for the group’s website. In your review you should give your opinion of the format used for the book and say whether you think a book contest could be used to enhance students&apos; interest, in general.</p>',
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|cipta/Cipta 01.jpg|UNICEF and the United Nations organised an international comic book contest on the theme of ending violence in and around schools.]
@@ -5725,7 +5725,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|cipta/Cipta 09.jpg|The book is written in an artistic, accessible and fun comic book format.]
@@ -5763,7 +5763,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|cipta/Cipta 13.jpg|A book contest could be a major source of inspiration.]
@@ -5801,7 +5801,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|cipta/Cipta 17.jpg|In summary, Rizka's comic book 'Cipta' is a delightful way for students to understand their fears and build confidence at school.]
@@ -6099,7 +6099,7 @@ let Story = [
           }
         ],
         examQuestion: '<p>A film magazine is running a series on International Cinema.  It has invited readers to send in reviews of films set in their own country.  You decide to send in a review of such a film considering how effectively the film illustrates particular aspects of life and attitudes in your country.</p>',
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|food-poverty/food-poverty-1.jpg|'A Place at the Table' is a film directed by Lori Silverbush and Kristi Jacobson, featuring Jeff Bridges and chef Tom Colicchio.]
@@ -6131,7 +6131,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|food-poverty/food-poverty-5.jpg|The documentary portrays the lives of those facing food insecurity.]
@@ -6175,7 +6175,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|food-poverty/food-poverty-11.jpg|The film also asks why so many people do not have access to affordable, quality food in one of the richest countries in the world.]
@@ -6213,7 +6213,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|food-poverty/food-poverty-15.jpg|'A Place at the Table' highlights issues around food insecurity and healthy eating in the USA. It questions the values of American society where so many children go hungry and working people rely on food banks.]
@@ -6511,7 +6511,7 @@ let Story = [
           }
         ],
         examQuestion: '<p>You belong to an English-language reading group which recently attended a short-film festival. You have agreed to write a review of the festival for the group’s website. In your review you should give your opinion of the festival and say whether you think short videos are a good way of disseminating an idea, in general.</p>',
-        content: `<h2>Introduction</h2>
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
               [image|enable-festival/enable-festival-1.jpg|The 3rd of December is the international day of persons with disabilities.]
@@ -6543,7 +6543,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
               [image|enable-festival/enable-festival-5.jpg|Films from fifteen countries and four continents formed an exciting festival, presenting videos on a range of issues.]
@@ -6587,7 +6587,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
               [image|enable-festival/enable-festival-11.jpg|Short videos are a great channel to raise awareness of social inclusion.]
@@ -6625,7 +6625,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        content: `<h2>Conclusion</h2>
+        content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
               [image|enable-festival/enable-festival-15.jpg|In conclusion, the Enable short film festival is an amusing and educational initiative.]

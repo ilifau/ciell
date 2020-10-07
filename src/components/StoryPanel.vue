@@ -230,6 +230,16 @@ export default {
 </script>
 
 <style scoped>
+>>> h2.introduction {
+  font-size: 1.125em;
+  color: #04accc !important;
+  margin-bottom: .6125em;
+  margin-top: 0;
+  font-weight: 600;
+  padding-top: 1em;
+  padding-left: 2em;
+}
+
 .story-panel {
   position: relative;
 }

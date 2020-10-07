@@ -49,15 +49,14 @@ export default {
     height: 54vh;
     min-height: 10em;
     background-size: cover;
-    background-position: left -8em;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+    background-position: left center;
+    clip-path: inset(-500% -40% 0 -40% round 100%);
   }
 
   @media screen and (max-width: 1024px) {
     .welcome .header {
-      left: -5.5em;
-      width: calc(100% + 11em);
+      left: -1em;
+      width: calc(100% + 2em);
       max-width: none;
     }
   }
@@ -65,13 +64,6 @@ export default {
   @media screen and (max-width: 768px) {
     .welcome .header {
       height: 63vh;
-      background-position: left -8em;
-    }
-  }
-
-  @media screen and (max-width: 640px) {
-    .welcome .header {
-      background-position: left -4em;
     }
   }
 

@@ -430,7 +430,9 @@ img {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
-  max-width: 100%;
+  max-width: calc(100% + 1em);
+  width: calc(100% + 1em);
+  left: -.5em;
   margin: 1em auto 0 auto;
 }
 
@@ -602,7 +604,7 @@ img {
 }
 
 .exam-question {
-  padding: 1em;
+  padding: 1em 1em 1em 0;
   /* background: #eff7f9; */
 }
 
@@ -634,6 +636,10 @@ img {
 
 .further-reading {
   margin-top: 1.5em;
+}
+
+.exam-question h2 {
+  padding-left: 2em;
 }
 
 /* Buttons */

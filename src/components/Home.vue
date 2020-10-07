@@ -215,8 +215,8 @@ export default {
     line-height: 1;
     bottom: -.4em;
     left: 0;
-    width: 3.5em;
-    height: 3.5em;
+    width: 3.75em;
+    height: 3.75em;
     background-color: #15191a;
     background-size: 100%;
     background-repeat: no-repeat;

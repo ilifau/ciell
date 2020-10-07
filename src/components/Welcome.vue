@@ -42,9 +42,9 @@ export default {
   .welcome .header {
     position: relative;
     top: -1em;
-    left: 0;
+    left: -10%;
     right: 0;
-    width: 100%;
+    width: 120%;
     margin: 0 auto;
     height: 54vh;
     min-height: 10em;
@@ -54,6 +54,14 @@ export default {
   }
 
   @media screen and (max-width: 1024px) {
+    .welcome .header {
+      left: -3em;
+      width: calc(100% + 6em);
+      max-width: none;
+    }
+  }
+
+  @media screen and (max-width: 920px) {
     .welcome .header {
       left: -1em;
       width: calc(100% + 2em);

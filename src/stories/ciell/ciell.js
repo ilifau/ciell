@@ -659,18 +659,18 @@ let Story = [
   },
   {
     id: 20,
-    title: 'Reduce Inequality',
+    title: 'Food Poverty',
+    description: 'This is a story about a food poverty.',
+    url: 'https://www.un.org/sustainabledevelopment/hunger/',
+    UNGoalImage: 'un-goals/E-WEB-Goal-02.png',
     author: 'CIELL Team',
-    url: 'https://www.un.org/sustainabledevelopment/inequality/',
-    UNGoalImage: 'un-goals/E-WEB-Goal-10.png',
-    description: 'This is an essay on inequality.',
-    preview: 'poverty/cover.jpg',
-    color: 'rgb(175, 31, 35)',
-    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-10.png',
-    level: 2,
+    preview: 'food-poverty/cover.jpg',
+    color: 'rgb(193, 116, 174)',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-02.png',
+    level: 1,
     tasks: [
       {
-        id: 1500,
+        id: 2010,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -682,28 +682,28 @@ let Story = [
             question: 'Choose the panel that matches',
             answerTitle: 'Choose one of the following panels',
             images: [
-              'info-graphics/basic-essay-structure-8.jpg'
+              'info-graphics/basic-essay-structure-4.jpg'
             ],
             answers: [
               {
-                title: '',
-                image: 'poverty/poverty 09.jpg'
-              },
-              {
                 text: '',
-                image: 'poverty/poverty 16.jpg',
+                image: 'food-poverty/food-poverty-6.jpg',
                 correct: true
               },
               {
                 text: '',
-                image: 'poverty/poverty 17.jpg'
+                image: 'food-poverty/food-poverty-1.jpg'
+              },
+              {
+                text: '',
+                image: 'food-poverty/food-poverty-9.jpg'
               }
             ]
           }
         ]
       },
       {
-        id: 1510,
+        id: 2020,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -719,16 +719,16 @@ let Story = [
             ],
             answers: [
               {
-                title: '',
-                image: 'poverty/poverty 12.jpg'
+                text: '',
+                image: 'food-poverty/food-poverty-9.jpg'
               },
               {
                 text: '',
-                image: 'poverty/poverty 17.jpg'
+                image: 'food-poverty/food-poverty-10.jpg'
               },
               {
                 text: '',
-                image: 'poverty/poverty 07.jpg',
+                image: 'food-poverty/food-poverty-5.jpg',
                 correct: true
               }
             ]
@@ -736,7 +736,7 @@ let Story = [
         ]
       },
       {
-        id: 1520,
+        id: 2030,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -748,23 +748,49 @@ let Story = [
             question: 'Choose the panel that matches',
             answerTitle: 'Choose one of the following panels',
             images: [
-              'info-graphics/basic-essay-structure-2.jpg'
+              'info-graphics/basic-essay-structure-10.jpg'
             ],
             answers: [
               {
-                title: '',
-                image: 'poverty/poverty 19.jpg'
+                text: '',
+                image: 'food-poverty/food-poverty-14.jpg',
+                correct: true
               },
               {
                 text: '',
-                image: 'poverty/poverty 06.jpg',
-                corrent: true
+                image: 'food-poverty/food-poverty-11.jpg'
               },
               {
                 text: '',
-                image: 'poverty/poverty 17.jpg'
+                image: 'food-poverty/food-poverty-1.jpg'
               }
             ]
+          }
+        ]
+      },
+      {
+        id: 2040,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'food-poverty/food-poverty-1.jpg'
+          },
+          {
+            order: 1,
+            image: 'food-poverty/food-poverty-2.jpg'
+          },
+          {
+            order: 2,
+            image: 'food-poverty/food-poverty-3.jpg'
+          },
+          {
+            order: 3,
+            image: 'food-poverty/food-poverty-4.jpg'
           }
         ]
       }
@@ -772,34 +798,27 @@ let Story = [
     chapters: [
       {
         id: 0,
-        title: 'Reduce Inequality',
+        title: 'Food Poverty',
         audio: [
           {
-            filename: 'reduce-inequality/intro.mp3',
+            filename: 'food-poverty/introduction.mp3',
             label: 'Play'
           }
         ],
-        examQuestion: '<p>Investing in equal access to education, jobs and public services for young people with disabilities or learning difficulties will help to reduce world poverty.</p><p class="last">Do you agree or disagree with this statement? Explain the reasons for your opinion.</p>',
-        content: `
-          <h2 class="introduction">Introduction</h2>
+        examQuestion: '<p>A film magazine is running a series on International Cinema.  It has invited readers to send in reviews of films set in their own country.  You decide to send in a review of such a film considering how effectively the film illustrates particular aspects of life and attitudes in your country.</p>',
+        content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
-              [image|poverty/poverty 01.jpg|In some societies, young people with disabilities and learning difficulties]
+              [image|food-poverty/food-poverty-1.jpg|'A Place at the Table' is a film directed by Lori Silverbush and Kristi Jacobson, featuring Jeff Bridges and chef Tom Colicchio.]
             </div>
             <div class="half">
-              [image|poverty/poverty 02.jpg|have little or no access to education,]
+              [image|food-poverty/food-poverty-2.jpg|The film is derived from a book entitled 'A Place at the Table: The Crisis of 49 Million Hungry Americans and How to Solve It', edited by Peter Pringle.]
             </div>
             <div class="half">
-              [image|poverty/poverty 03.jpg|jobs or public services.]
+              [image|food-poverty/food-poverty-3.jpg|True stories are used to illustrate the challenges and consequences of food poverty in the United States.]
             </div>
             <div class="half">
-              [image|poverty/poverty 04.jpg|The lack of access contributes to world poverty, however,]
-            </div>
-            <div class="half">
-              [image|poverty/poverty 05.jpg|the situation could be reversed if equal opportunities were provided.]
-            </div>
-            <div class="half">
-              [image|poverty/poverty 06.jpg|This essay presents the arguments to support this opinion.]
+              [image|food-poverty/food-poverty-4.jpg|The film won the Pare Lorentz Award in 2013 because it raises awareness of this important social issue.]
             </div>
           </div>`,
         choices: [
@@ -813,33 +832,31 @@ let Story = [
       },
       {
         id: 10,
-        title: '',
         audio: [
           {
-            filename: 'reduce-inequality/paragraph-1.mp3',
+            filename: 'food-poverty/paragraph-1.mp3',
             label: 'Play'
           }
         ],
-        content: `
-          <h2 class="introduction">Paragraph 1</h2>
+        content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
-              [image|poverty/poverty 07.jpg|In the first instance, it should be noted that, there are many millions of people around the world who have a disability or learning difficulty.]
+              [image|food-poverty/food-poverty-5.jpg|The documentary portrays the lives of those facing food insecurity.]
             </div>
             <div class="half">
-            [image|poverty/poverty 08.jpg|If all of these individuals are denied equal opportunities in the form of access to schools,]
+              [image|food-poverty/food-poverty-6.jpg|In the USA, one in four children are malnourished, and do not have a healthy diet.]
             </div>
             <div class="half">
-              [image|poverty/poverty 09.jpg|local services and consequently, work,]
+              [image|food-poverty/food-poverty-7.jpg|For example, Rosie, a young girl from Colorado,]
             </div>
             <div class="half">
-              [image|poverty/poverty 10.jpg|this creates unnecessary dependence on the government and their families.]
+              [image|food-poverty/food-poverty-8.jpg|feels hungry all day long and cannot concentrate on doing her homework.]
             </div>
             <div class="half">
-              [image|poverty/poverty 11.jpg|Then, it is the government and family members who need to support them financially, socially and emotionally.]
+              [image|food-poverty/food-poverty-9.jpg|She relies on receiving food from friends and neighbours.]
             </div>
             <div class="half">
-              [image|poverty/poverty 12.jpg|This can be extremely frustrating for the individuals involved who are able and want to be independent but are denied this chance because the services are not made available to them.]
+              [image|food-poverty/food-poverty-10.jpg|Thus, lack of proper nutrition can affect many aspects of social life such as school performance.]
             </div>
           </div>`,
         choices: [
@@ -853,42 +870,31 @@ let Story = [
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 15
+            'chapterId': 20
           }
         ]
       },
       {
-        id: 15,
-        title: '',
+        id: 20,
         audio: [
           {
-            filename: 'reduce-inequality/paragraph-2.mp3',
+            filename: 'food-poverty/paragraph-2.mp3',
             label: 'Play'
           }
         ],
-        content: `
-          <h2 class="introduction">Paragraph 2</h2>
+        content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
-              [image|poverty/poverty 13.jpg|On the other hand, if public services, education and work were available to all,]
+              [image|food-poverty/food-poverty-11.jpg|The film also asks why so many people do not have access to affordable, quality food in one of the richest countries in the world.]
             </div>
             <div class="half">
-              [image|poverty/poverty 14.jpg|whatever a person's ability,]
+              [image|food-poverty/food-poverty-12.jpg|For example, it shows the life of a police officer]
             </div>
             <div class="half">
-              [image|poverty/poverty 15.jpg|then many more people would have the opportunity to realise their potential.]
+              [image|food-poverty/food-poverty-13.jpg|whose monthly salary is so low that he must visit a food back to survive.]
             </div>
             <div class="half">
-              [image|poverty/poverty 16.jpg|This could mean that a great deal more people would have the education they need to get them into a job, earn money and live independently.]
-            </div>
-            <div class="half">
-              [image|poverty/poverty 17.jpg|As a result, this could lead to less reliance on government and state funds]
-            </div>
-            <div class="half">
-              [image|poverty/poverty 18.jpg|while at the same time they would be making greater financial contribution to the economy.]
-            </div>
-            <div class="half">
-              [image|poverty/poverty 19.jpg|In addition, it would mean there would be more money available to dedicate to people experiencing poverty.]
+              [image|food-poverty/food-poverty-14.jpg|This real-life example confronts viewers expectations and helps them understand that some people in employment can struggle to find reasonably proced produce.]
             </div>
           </div>`,
         choices: [
@@ -902,51 +908,26 @@ let Story = [
             'text': 'Next',
             'class': 'next',
             'iconAfter': 'arrow-right',
-            'chapterId': 20
-          }
-        ]
-      },
-      {
-        id: 20,
-        title: '',
-        audio: [
-          {
-            filename: 'reduce-inequality/conclusion.mp3',
-            label: 'Play'
-          }
-        ],
-        content: `
-          <h2 class="introduction">Conclusion</h2>
-          <div class="comic-grid">
-            <div class="half">
-              [image|poverty/poverty 20.jpg|In summary, whilst poverty is a huge challenge to take on,]
-            </div>
-            <div class="half">
-              [image|poverty/poverty 21.jpg|ensuring equal access for those with disabilities could be one small way to help reduce poverty.]
-            </div>
-          </div>`,
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 15
-          },
-          {
-            'text': 'Tasks',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
             'chapterId': 30
           }
         ]
       },
       {
         id: 30,
-        title: '',
-        content: `[tasks]
-          <div class="further-reading">
-            [UNGoalImage]
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=IELvwDvbtmo" target="_blank">UN Sustainable Development Goal&nbsp;10</a>.</p>
+        audio: [
+          {
+            filename: 'food-poverty/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `<h2 class="introduction">Conclusion</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|food-poverty/food-poverty-15.jpg|'A Place at the Table' highlights issues around food insecurity and healthy eating in the USA. It questions the values of American society where so many children go hungry and working people rely on food banks.]
+            </div>
+            <div class="half">
+              [image|food-poverty/food-poverty-16.jpg|I would recommend this powerful documentary to anyone who wants to understand the social implications of food poverty.]
+            </div>
           </div>`,
         choices: [
           {
@@ -956,7 +937,7 @@ let Story = [
             'chapterId': 20
           },
           {
-            'text': 'Next',
+            'text': 'Infographic',
             'class': 'next',
             'iconAfter': 'arrow-right',
             'chapterId': 40
@@ -965,9 +946,9 @@ let Story = [
       },
       {
         id: 40,
-        taskId: 1500,
-        title: 'Task: Choose the panel that matches',
-        content: '',
+        title: 'Infographic: Basic Essay Structure',
+        titleClass: 'center',
+        content: infographic,
         choices: [
           {
             'text': 'Previous',
@@ -976,7 +957,7 @@ let Story = [
             'chapterId': 30
           },
           {
-            'text': 'Next',
+            'text': 'Tasks',
             'class': 'next',
             'iconAfter': 'arrow-right',
             'chapterId': 50
@@ -985,9 +966,12 @@ let Story = [
       },
       {
         id: 50,
-        taskId: 1510,
-        title: 'Task: Choose the panel that matches',
-        content: '',
+        title: '',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=iteCytv0RqY" target="_blank">UN Sustainable Development Goal&nbsp;2</a>.</p>
+          </div>`,
         choices: [
           {
             'text': 'Previous',
@@ -1005,8 +989,8 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 1520,
-        title: 'Task: Choose the panel that matches',
+        taskId: 2010,
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -1014,6 +998,66 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 2020,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 2030,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 2040,
+        title: 'Task: Matching Panel',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
           },
           {
             'text': 'Restart',
@@ -1038,7 +1082,7 @@ let Story = [
     level: 1,
     tasks: [
       {
-        id: 3000,
+        id: 3010,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -1071,7 +1115,7 @@ let Story = [
         ]
       },
       {
-        id: 3010,
+        id: 3020,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -1104,7 +1148,7 @@ let Story = [
         ]
       },
       {
-        id: 3020,
+        id: 3030,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -1350,7 +1394,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 3000,
+        taskId: 3010,
         title: 'Task: Choose the panel that matches',
         content: '',
         choices: [
@@ -1370,7 +1414,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 3010,
+        taskId: 3020,
         title: 'Task: Choose the panel that matches',
         content: '',
         choices: [
@@ -1390,7 +1434,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 3020,
+        taskId: 3030,
         title: 'Task: Choose the panel that matches',
         content: '',
         choices: [
@@ -1423,7 +1467,7 @@ let Story = [
     level: 1,
     tasks: [
       {
-        id: 4000,
+        id: 4010,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -1456,7 +1500,7 @@ let Story = [
         ]
       },
       {
-        id: 4010,
+        id: 4020,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -1489,7 +1533,7 @@ let Story = [
         ]
       },
       {
-        id: 4020,
+        id: 4030,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -1749,7 +1793,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 4000,
+        taskId: 4010,
         title: 'Task: Choose the panel that matches',
         content: '',
         choices: [
@@ -1769,7 +1813,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 4010,
+        taskId: 4020,
         title: 'Task: Choose the panel that matches',
         content: '',
         choices: [
@@ -1789,7 +1833,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 4020,
+        taskId: 4030,
         title: 'Task: Choose the panel that matches',
         content: '',
         choices: [
@@ -1821,7 +1865,7 @@ let Story = [
     level: 1,
     tasks: [
       {
-        id: 5000,
+        id: 5010,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -1863,7 +1907,7 @@ let Story = [
         ]
       },
       {
-        id: 5010,
+        id: 5020,
         name: 'Choose the correct image',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -1930,7 +1974,7 @@ let Story = [
         ]
       },
       {
-        id: 5020,
+        id: 5030,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -1964,7 +2008,7 @@ let Story = [
         ]
       },
       {
-        id: 5030,
+        id: 5040,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -2022,7 +2066,7 @@ let Story = [
         ]
       },
       {
-        id: 5040,
+        id: 5050,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -2055,7 +2099,7 @@ let Story = [
         ]
       },
       {
-        id: 5050,
+        id: 5060,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -2088,7 +2132,7 @@ let Story = [
         ]
       },
       {
-        id: 5060,
+        id: 5070,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -2121,7 +2165,7 @@ let Story = [
         ]
       },
       {
-        id: 5070,
+        id: 5080,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -2378,7 +2422,7 @@ let Story = [
       },
       {
         id: 55,
-        taskId: 5000,
+        taskId: 5010,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -2398,7 +2442,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 5010,
+        taskId: 5020,
         title: 'Task: Image Choice',
         content: '',
         choices: [
@@ -2418,7 +2462,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 5020,
+        taskId: 5030,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -2438,7 +2482,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 5030,
+        taskId: 5040,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -2458,7 +2502,7 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 5040,
+        taskId: 5050,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -2478,7 +2522,7 @@ let Story = [
       },
       {
         id: 100,
-        taskId: 5050,
+        taskId: 5060,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -2498,7 +2542,7 @@ let Story = [
       },
       {
         id: 110,
-        taskId: 5060,
+        taskId: 5070,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -2518,7 +2562,7 @@ let Story = [
       },
       {
         id: 120,
-        taskId: 5070,
+        taskId: 5080,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -2543,15 +2587,15 @@ let Story = [
     title: 'Clean Water',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/water-and-sanitation/',
-    UNGoalImage: 'un-goals/E-WEB-Goal-07.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-06.png',
     description: 'This is a story about clean water and sanitation.',
     preview: 'clean-water/cover.jpg',
     color: 'rgb(39, 189, 226)',
-    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-07.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-06.png',
     level: 2,
     tasks: [
       {
-        id: 6000,
+        id: 6010,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -2584,7 +2628,7 @@ let Story = [
         ]
       },
       {
-        id: 6010,
+        id: 6020,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -2617,7 +2661,7 @@ let Story = [
         ]
       },
       {
-        id: 6020,
+        id: 6030,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -2650,7 +2694,7 @@ let Story = [
         ]
       },
       {
-        id: 6030,
+        id: 6040,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -2683,7 +2727,7 @@ let Story = [
         ]
       },
       {
-        id: 6040,
+        id: 6050,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -2874,7 +2918,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 6000,
+        taskId: 6010,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -2894,7 +2938,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 6010,
+        taskId: 6020,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -2914,7 +2958,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 6020,
+        taskId: 6030,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -2934,7 +2978,7 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 6030,
+        taskId: 6040,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -2954,7 +2998,7 @@ let Story = [
       },
       {
         id: 100,
-        taskId: 6040,
+        taskId: 6050,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -2987,7 +3031,7 @@ let Story = [
     level: 1,
     tasks: [
       {
-        id: 7000,
+        id: 7010,
         name: 'Choose the correct image',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -3057,7 +3101,7 @@ let Story = [
         ]
       },
       {
-        id: 7010,
+        id: 7020,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -3087,7 +3131,7 @@ let Story = [
         ]
       },
       {
-        id: 7020,
+        id: 7030,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -3137,7 +3181,7 @@ let Story = [
         ]
       },
       {
-        id: 7030,
+        id: 7040,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -3170,7 +3214,7 @@ let Story = [
         ]
       },
       {
-        id: 7040,
+        id: 7050,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -3203,7 +3247,7 @@ let Story = [
         ]
       },
       {
-        id: 7050,
+        id: 7060,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -3460,7 +3504,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 7000,
+        taskId: 7010,
         title: 'Task: Image Choice',
         content: '',
         choices: [
@@ -3480,7 +3524,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 7010,
+        taskId: 7020,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -3500,7 +3544,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 7020,
+        taskId: 7030,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -3520,7 +3564,7 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 7030,
+        taskId: 7040,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -3540,7 +3584,7 @@ let Story = [
       },
       {
         id: 100,
-        taskId: 7040,
+        taskId: 7050,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -3560,7 +3604,7 @@ let Story = [
       },
       {
         id: 110,
-        taskId: 7050,
+        taskId: 7060,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -3593,7 +3637,7 @@ let Story = [
     level: 2,
     tasks: [
       {
-        id: 8000,
+        id: 8010,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -3626,7 +3670,7 @@ let Story = [
         ]
       },
       {
-        id: 8010,
+        id: 8020,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -3659,7 +3703,7 @@ let Story = [
         ]
       },
       {
-        id: 8020,
+        id: 8030,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -3692,7 +3736,7 @@ let Story = [
         ]
       },
       {
-        id: 8030,
+        id: 8040,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -3908,7 +3952,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 8000,
+        taskId: 8010,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -3928,7 +3972,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 8010,
+        taskId: 8020,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -3948,7 +3992,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 8020,
+        taskId: 8030,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -3968,7 +4012,7 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 8030,
+        taskId: 8040,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -3977,6 +4021,374 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 80
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 100,
+    title: 'Reduce Inequality',
+    author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/inequality/',
+    UNGoalImage: 'un-goals/E-WEB-Goal-10.png',
+    description: 'This is an essay on inequality.',
+    preview: 'poverty/cover.jpg',
+    color: 'rgb(175, 31, 35)',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-10.png',
+    level: 2,
+    tasks: [
+      {
+        id: 10010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-8.jpg'
+            ],
+            answers: [
+              {
+                title: '',
+                image: 'poverty/poverty 09.jpg'
+              },
+              {
+                text: '',
+                image: 'poverty/poverty 16.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'poverty/poverty 17.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 10020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                title: '',
+                image: 'poverty/poverty 12.jpg'
+              },
+              {
+                text: '',
+                image: 'poverty/poverty 17.jpg'
+              },
+              {
+                text: '',
+                image: 'poverty/poverty 07.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 10030,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-2.jpg'
+            ],
+            answers: [
+              {
+                title: '',
+                image: 'poverty/poverty 19.jpg'
+              },
+              {
+                text: '',
+                image: 'poverty/poverty 06.jpg',
+                corrent: true
+              },
+              {
+                text: '',
+                image: 'poverty/poverty 17.jpg'
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    chapters: [
+      {
+        id: 0,
+        title: 'Reduce Inequality',
+        audio: [
+          {
+            filename: 'reduce-inequality/intro.mp3',
+            label: 'Play'
+          }
+        ],
+        examQuestion: '<p>Investing in equal access to education, jobs and public services for young people with disabilities or learning difficulties will help to reduce world poverty.</p><p class="last">Do you agree or disagree with this statement? Explain the reasons for your opinion.</p>',
+        content: `
+          <h2 class="introduction">Introduction</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|poverty/poverty 01.jpg|In some societies, young people with disabilities and learning difficulties]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 02.jpg|have little or no access to education,]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 03.jpg|jobs or public services.]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 04.jpg|The lack of access contributes to world poverty, however,]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 05.jpg|the situation could be reversed if equal opportunities were provided.]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 06.jpg|This essay presents the arguments to support this opinion.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: '',
+        audio: [
+          {
+            filename: 'reduce-inequality/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `
+          <h2 class="introduction">Paragraph 1</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|poverty/poverty 07.jpg|In the first instance, it should be noted that, there are many millions of people around the world who have a disability or learning difficulty.]
+            </div>
+            <div class="half">
+            [image|poverty/poverty 08.jpg|If all of these individuals are denied equal opportunities in the form of access to schools,]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 09.jpg|local services and consequently, work,]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 10.jpg|this creates unnecessary dependence on the government and their families.]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 11.jpg|Then, it is the government and family members who need to support them financially, socially and emotionally.]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 12.jpg|This can be extremely frustrating for the individuals involved who are able and want to be independent but are denied this chance because the services are not made available to them.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 15
+          }
+        ]
+      },
+      {
+        id: 15,
+        title: '',
+        audio: [
+          {
+            filename: 'reduce-inequality/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `
+          <h2 class="introduction">Paragraph 2</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|poverty/poverty 13.jpg|On the other hand, if public services, education and work were available to all,]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 14.jpg|whatever a person's ability,]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 15.jpg|then many more people would have the opportunity to realise their potential.]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 16.jpg|This could mean that a great deal more people would have the education they need to get them into a job, earn money and live independently.]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 17.jpg|As a result, this could lead to less reliance on government and state funds]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 18.jpg|while at the same time they would be making greater financial contribution to the economy.]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 19.jpg|In addition, it would mean there would be more money available to dedicate to people experiencing poverty.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        audio: [
+          {
+            filename: 'reduce-inequality/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `
+          <h2 class="introduction">Conclusion</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|poverty/poverty 20.jpg|In summary, whilst poverty is a huge challenge to take on,]
+            </div>
+            <div class="half">
+              [image|poverty/poverty 21.jpg|ensuring equal access for those with disabilities could be one small way to help reduce poverty.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 15
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=IELvwDvbtmo" target="_blank">UN Sustainable Development Goal&nbsp;10</a>.</p>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        taskId: 10010,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        taskId: 10020,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 10030,
+        title: 'Task: Choose the panel that matches',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
           },
           {
             'text': 'Restart',
@@ -4001,7 +4413,7 @@ let Story = [
     level: 2,
     tasks: [
       {
-        id: 1100,
+        id: 11010,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -4034,7 +4446,7 @@ let Story = [
         ]
       },
       {
-        id: 1110,
+        id: 11020,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -4067,7 +4479,7 @@ let Story = [
         ]
       },
       {
-        id: 1120,
+        id: 11030,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -4292,7 +4704,7 @@ let Story = [
       },
       {
         id: 50,
-        taskId: 1100,
+        taskId: 11010,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -4312,7 +4724,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 1110,
+        taskId: 11020,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -4332,7 +4744,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 1120,
+        taskId: 11030,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -4365,7 +4777,7 @@ let Story = [
     level: 2,
     tasks: [
       {
-        id: 1300,
+        id: 13010,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -4398,7 +4810,7 @@ let Story = [
         ]
       },
       {
-        id: 1310,
+        id: 13020,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -4431,7 +4843,7 @@ let Story = [
         ]
       },
       {
-        id: 1320,
+        id: 13030,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -4650,7 +5062,7 @@ let Story = [
       },
       {
         id: 50,
-        taskId: 1300,
+        taskId: 13010,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -4670,7 +5082,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 1310,
+        taskId: 13020,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -4690,7 +5102,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 1320,
+        taskId: 13030,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -4723,7 +5135,7 @@ let Story = [
     level: 1,
     tasks: [
       {
-        id: 14000,
+        id: 14010,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -4756,7 +5168,7 @@ let Story = [
         ]
       },
       {
-        id: 14010,
+        id: 14020,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -4789,7 +5201,7 @@ let Story = [
         ]
       },
       {
-        id: 14020,
+        id: 14030,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -4822,7 +5234,7 @@ let Story = [
         ]
       },
       {
-        id: 14030,
+        id: 14040,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -5033,7 +5445,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 14000,
+        taskId: 14010,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -5053,7 +5465,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 14010,
+        taskId: 14020,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -5073,7 +5485,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 14020,
+        taskId: 14030,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -5093,7 +5505,7 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 14030,
+        taskId: 14040,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -5126,7 +5538,7 @@ let Story = [
     level: 1,
     tasks: [
       {
-        id: 15000,
+        id: 15010,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -5159,7 +5571,7 @@ let Story = [
         ]
       },
       {
-        id: 15010,
+        id: 15020,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -5192,7 +5604,7 @@ let Story = [
         ]
       },
       {
-        id: 15020,
+        id: 15030,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -5225,7 +5637,7 @@ let Story = [
         ]
       },
       {
-        id: 15030,
+        id: 15040,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -5445,7 +5857,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 15000,
+        taskId: 15010,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -5465,7 +5877,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 15010,
+        taskId: 15020,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -5485,7 +5897,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 15020,
+        taskId: 15030,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -5505,7 +5917,7 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 15030,
+        taskId: 15040,
         title: 'Task: Reorder the panels',
         content: '',
         choices: [
@@ -5538,7 +5950,7 @@ let Story = [
     level: 1,
     tasks: [
       {
-        id: 16000,
+        id: 16010,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -5571,7 +5983,7 @@ let Story = [
         ]
       },
       {
-        id: 16010,
+        id: 16020,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -5604,7 +6016,7 @@ let Story = [
         ]
       },
       {
-        id: 16020,
+        id: 16030,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -5637,7 +6049,7 @@ let Story = [
         ]
       },
       {
-        id: 16030,
+        id: 16040,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -5870,7 +6282,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 16000,
+        taskId: 16010,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -5890,7 +6302,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 16010,
+        taskId: 16020,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -5910,7 +6322,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 16020,
+        taskId: 16030,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -5930,7 +6342,7 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 16030,
+        taskId: 16040,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -5952,14 +6364,14 @@ let Story = [
   },
   {
     id: 170,
-    title: 'Food Poverty',
-    description: 'This is a story about a food poverty.',
-    url: 'https://www.un.org/sustainabledevelopment/hunger/',
-    UNGoalImage: 'un-goals/E-WEB-Goal-02.png',
+    title: 'Enable Festival',
+    description: 'This is a story about a the Enable Festival.',
+    url: 'https://www.un.org/sustainabledevelopment/globalpartnerships/',
+    UNGoalImage: 'un-goals/E-WEB-Goal-17.png',
     author: 'CIELL Team',
-    preview: 'food-poverty/cover.jpg',
+    preview: 'enable-festival/cover.jpg',
     color: 'rgb(193, 116, 174)',
-    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-02.png',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-17.png',
     level: 1,
     tasks: [
       {
@@ -5980,419 +6392,7 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'food-poverty/food-poverty-6.jpg',
-                correct: true
-              },
-              {
-                text: '',
-                image: 'food-poverty/food-poverty-1.jpg'
-              },
-              {
-                text: '',
-                image: 'food-poverty/food-poverty-9.jpg'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 17020,
-        name: 'Choose the panel that matches',
-        type: 'image-choice',
-        typeName: 'Image Choice',
-        title: '',
-        description: '',
-        items: [
-          {
-            singleChoice: true,
-            question: 'Choose the panel that matches',
-            answerTitle: 'Choose one of the following panels',
-            images: [
-              'info-graphics/basic-essay-structure-3.jpg'
-            ],
-            answers: [
-              {
-                text: '',
-                image: 'food-poverty/food-poverty-9.jpg'
-              },
-              {
-                text: '',
-                image: 'food-poverty/food-poverty-10.jpg'
-              },
-              {
-                text: '',
-                image: 'food-poverty/food-poverty-5.jpg',
-                correct: true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 17030,
-        name: 'Choose the panel that matches',
-        type: 'image-choice',
-        typeName: 'Image Choice',
-        title: '',
-        description: '',
-        items: [
-          {
-            singleChoice: true,
-            question: 'Choose the panel that matches',
-            answerTitle: 'Choose one of the following panels',
-            images: [
-              'info-graphics/basic-essay-structure-10.jpg'
-            ],
-            answers: [
-              {
-                text: '',
-                image: 'food-poverty/food-poverty-14.jpg',
-                correct: true
-              },
-              {
-                text: '',
-                image: 'food-poverty/food-poverty-11.jpg'
-              },
-              {
-                text: '',
-                image: 'food-poverty/food-poverty-1.jpg'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 17040,
-        name: 'Reorder the panels',
-        type: 'puzzle',
-        typeName: 'Puzzle',
-        title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
-        items: [
-          {
-            order: 0,
-            image: 'food-poverty/food-poverty-1.jpg'
-          },
-          {
-            order: 1,
-            image: 'food-poverty/food-poverty-2.jpg'
-          },
-          {
-            order: 2,
-            image: 'food-poverty/food-poverty-3.jpg'
-          },
-          {
-            order: 3,
-            image: 'food-poverty/food-poverty-4.jpg'
-          }
-        ]
-      }
-    ],
-    chapters: [
-      {
-        id: 0,
-        title: 'Food Poverty',
-        audio: [
-          {
-            filename: 'food-poverty/introduction.mp3',
-            label: 'Play'
-          }
-        ],
-        examQuestion: '<p>A film magazine is running a series on International Cinema.  It has invited readers to send in reviews of films set in their own country.  You decide to send in a review of such a film considering how effectively the film illustrates particular aspects of life and attitudes in your country.</p>',
-        content: `<h2 class="introduction">Introduction</h2>
-          <div class="comic-grid">
-            <div class="half">
-              [image|food-poverty/food-poverty-1.jpg|'A Place at the Table' is a film directed by Lori Silverbush and Kristi Jacobson, featuring Jeff Bridges and chef Tom Colicchio.]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-2.jpg|The film is derived from a book entitled 'A Place at the Table: The Crisis of 49 Million Hungry Americans and How to Solve It', edited by Peter Pringle.]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-3.jpg|True stories are used to illustrate the challenges and consequences of food poverty in the United States.]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-4.jpg|The film won the Pare Lorentz Award in 2013 because it raises awareness of this important social issue.]
-            </div>
-          </div>`,
-        choices: [
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 10
-          }
-        ]
-      },
-      {
-        id: 10,
-        audio: [
-          {
-            filename: 'food-poverty/paragraph-1.mp3',
-            label: 'Play'
-          }
-        ],
-        content: `<h2 class="introduction">Paragraph 1</h2>
-          <div class="comic-grid">
-            <div class="half">
-              [image|food-poverty/food-poverty-5.jpg|The documentary portrays the lives of those facing food insecurity.]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-6.jpg|In the USA, one in four children are malnourished, and do not have a healthy diet.]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-7.jpg|For example, Rosie, a young girl from Colorado,]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-8.jpg|feels hungry all day long and cannot concentrate on doing her homework.]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-9.jpg|She relies on receiving food from friends and neighbours.]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-10.jpg|Thus, lack of proper nutrition can affect many aspects of social life such as school performance.]
-            </div>
-          </div>`,
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 0
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 20
-          }
-        ]
-      },
-      {
-        id: 20,
-        audio: [
-          {
-            filename: 'food-poverty/paragraph-2.mp3',
-            label: 'Play'
-          }
-        ],
-        content: `<h2 class="introduction">Paragraph 2</h2>
-          <div class="comic-grid">
-            <div class="half">
-              [image|food-poverty/food-poverty-11.jpg|The film also asks why so many people do not have access to affordable, quality food in one of the richest countries in the world.]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-12.jpg|For example, it shows the life of a police officer]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-13.jpg|whose monthly salary is so low that he must visit a food back to survive.]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-14.jpg|This real-life example confronts viewers expectations and helps them understand that some people in employment can struggle to find reasonably proced produce.]
-            </div>
-          </div>`,
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 10
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 30
-          }
-        ]
-      },
-      {
-        id: 30,
-        audio: [
-          {
-            filename: 'food-poverty/conclusion.mp3',
-            label: 'Play'
-          }
-        ],
-        content: `<h2 class="introduction">Conclusion</h2>
-          <div class="comic-grid">
-            <div class="half">
-              [image|food-poverty/food-poverty-15.jpg|'A Place at the Table' highlights issues around food insecurity and healthy eating in the USA. It questions the values of American society where so many children go hungry and working people rely on food banks.]
-            </div>
-            <div class="half">
-              [image|food-poverty/food-poverty-16.jpg|I would recommend this powerful documentary to anyone who wants to understand the social implications of food poverty.]
-            </div>
-          </div>`,
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 20
-          },
-          {
-            'text': 'Infographic',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 40
-          }
-        ]
-      },
-      {
-        id: 40,
-        title: 'Infographic: Basic Essay Structure',
-        titleClass: 'center',
-        content: infographic,
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 30
-          },
-          {
-            'text': 'Tasks',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 50
-          }
-        ]
-      },
-      {
-        id: 50,
-        title: '',
-        content: `[tasks]
-          <div class="further-reading">
-            [UNGoalImage]
-            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=iteCytv0RqY" target="_blank">UN Sustainable Development Goal&nbsp;2</a>.</p>
-          </div>`,
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 40
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 60
-          }
-        ]
-      },
-      {
-        id: 60,
-        taskId: 17010,
-        title: 'Task: Matching Panel',
-        content: '',
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 50
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 70
-          }
-        ]
-      },
-      {
-        id: 70,
-        taskId: 17020,
-        title: 'Task: Matching Panel',
-        content: '',
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 60
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 80
-          }
-        ]
-      },
-      {
-        id: 80,
-        taskId: 17030,
-        title: 'Task: Matching Panel',
-        content: '',
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 70
-          },
-          {
-            'text': 'Next',
-            'class': 'next',
-            'iconAfter': 'arrow-right',
-            'chapterId': 90
-          }
-        ]
-      },
-      {
-        id: 90,
-        taskId: 17040,
-        title: 'Task: Matching Panel',
-        content: '',
-        choices: [
-          {
-            'text': 'Previous',
-            'class': 'previous',
-            'iconBefore': 'arrow-left',
-            'chapterId': 80
-          },
-          {
-            'text': 'Restart',
-            'class': 'next',
-            'iconAfter': 'undo',
-            'chapterId': 0
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 180,
-    title: 'Enable Festival',
-    description: 'This is a story about a the Enable Festival.',
-    url: 'https://www.un.org/sustainabledevelopment/globalpartnerships/',
-    UNGoalImage: 'un-goals/E-WEB-Goal-17.png',
-    author: 'CIELL Team',
-    preview: 'enable-festival/cover.jpg',
-    color: 'rgb(193, 116, 174)',
-    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-17.png',
-    level: 1,
-    tasks: [
-      {
-        id: 18010,
-        name: 'Choose the panel that matches',
-        type: 'image-choice',
-        typeName: 'Image Choice',
-        title: '',
-        description: '',
-        items: [
-          {
-            singleChoice: true,
-            question: 'Choose the panel that matches',
-            answerTitle: 'Choose one of the following panels',
-            images: [
-              'info-graphics/basic-essay-structure-4.jpg'
-            ],
-            answers: [
-              {
-                text: '',
-                image: 'enable-festival/enable-festival-13.jpg'
+                image: 'enable-festival/enable-festival-11.jpg'
               },
               {
                 text: '',
@@ -6408,7 +6408,7 @@ let Story = [
         ]
       },
       {
-        id: 18020,
+        id: 17020,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -6441,7 +6441,7 @@ let Story = [
         ]
       },
       {
-        id: 18030,
+        id: 17030,
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -6474,7 +6474,7 @@ let Story = [
         ]
       },
       {
-        id: 18040,
+        id: 17040,
         name: 'Reorder the panels',
         type: 'puzzle',
         typeName: 'Puzzle',
@@ -6694,7 +6694,7 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 18010,
+        taskId: 17010,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -6714,7 +6714,7 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 18020,
+        taskId: 17020,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -6734,7 +6734,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 18030,
+        taskId: 17030,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -6754,7 +6754,7 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 18040,
+        taskId: 17040,
         title: 'Task: Matching Panel',
         content: '',
         choices: [

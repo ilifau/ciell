@@ -608,16 +608,8 @@ img {
   /* background: #eff7f9; */
 }
 
-.exam-question {
-  padding-bottom: 2em;
-}
-
 .exam-question p {
   margin: 0 0;
-}
-
-.audio-wrapper {
-  padding: 1em 1em 1em 0;
 }
 
 .exam-question strong,
@@ -717,10 +709,6 @@ img {
 }
 
 @media screen and (max-width: 580px) {
-  .comic-grid {
-    max-width: 100%;
-  }
-
   .comic-grid .half {
     width: 100%;
   }

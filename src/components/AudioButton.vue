@@ -2,11 +2,11 @@
   <div class="audio-group">
     <div class="audio-buttons">
       <a tabindex="0" class="play" @click="togglePlayback" @keyup.enter="togglePlayback">
-        <span v-if="playing"><v-icon name="pause" scale=".75" /></span>
-        <span v-if="!playing"><v-icon name="play" scale=".75" /></span>
+        <span v-if="playing" aria-label="Pause"><v-icon name="pause" scale=".75" /></span>
+        <span v-if="!playing" aria-label="Play"><v-icon name="play" scale=".75" /></span>
         {{ playing ? this.$props.label : this.$props.label }}
       </a>
-      <a tabindex="0" class="stop" @click="stop" @keyup.enter="stop"><v-icon name="stop" scale=".75" /> Stop</a>
+      <a tabindex="0" class="stop" @click="stop" @keyup.enter="stop" aria-label="Stop"><v-icon name="stop" scale=".75" /> Stop</a>
     </div>
   </div>
 </template>
@@ -24,7 +24,7 @@ export default {
 .audio-buttons {
   display: inline-block;
   margin-right: .25em;
-  font-size: .75em;
+  font-size: .6875em;
 }
 
 .audio-buttons a {

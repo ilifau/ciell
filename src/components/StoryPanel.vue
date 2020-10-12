@@ -6,17 +6,17 @@
       {{ title() }} <span class="chapter-title-checkmark" v-if="taskDone()"><v-icon name="check" scale="1.5" /></span>
     </h1>
 
-    <!-- Exam question -->
-    <div v-if="(hasExamQuestion())" class="exam-question">
-      <h2 class="first">Exam question</h2>
-      <div v-html="examQuestion()"></div>
-    </div>
-
     <!-- Audio -->
     <div v-if="hasAudio()" class="audio-wrapper">
       <label v-for="(file, index) in audioSources" :key="index">
         <AudioButton v-bind:label="file.label" class="audio-button" :sources="file.path" :loop="false" />
       </label>
+    </div>
+
+    <!-- Exam question -->
+    <div v-if="(hasExamQuestion())" class="exam-question">
+      <h2 class="first">Exam question</h2>
+      <div v-html="examQuestion()"></div>
     </div>
 
     <!-- Content -->
@@ -335,6 +335,7 @@ export default {
 
 .audio-wrapper {
   display: block;
+  margin-bottom: 1em;
 }
 
 label {

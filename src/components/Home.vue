@@ -393,8 +393,8 @@ export default {
     .stories {
       display: block;
       margin: 0 auto;
-      width: 440px;
-      max-width: 86%;
+      width: 480px;
+      max-width: 100%;
       justify-content: center;
     }
 

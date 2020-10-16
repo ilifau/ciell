@@ -11,7 +11,7 @@
     <h2>Comics</h2>
     <div class="stories">
       <div class="story" v-for="(story, id) in this.$props.stories" :key="id">
-        <h3 class="story-title" v-on:click="openStoryByTitle(id, true)">
+        <h3 class="story-title">
           <span v-html="singleStar(story)"></span>
           {{story.title}}
         </h3>
@@ -98,13 +98,8 @@ export default {
         return 'Platinum!'
       }
     },
-    openStory (params) {
-      this.$emit('openStory', params)
-    },
-    openStoryByTitle (id, taskPage = false) {
-      this.$emit('openStory', {
-        id, taskPage
-      })
+    openStory (event) {
+      this.$emit('openStory', event)
     },
     resetLearningProgress () {
       let _this = this
@@ -171,7 +166,6 @@ export default {
   h3.story-title {
     margin-top: 0;
     padding-top: 0;
-    cursor: pointer;
   }
 
   h3 >>> .star {

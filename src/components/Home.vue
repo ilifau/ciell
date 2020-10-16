@@ -12,9 +12,13 @@
           <span class="title">
             <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
               <span class="content"></span>
-              <span class="badge" v-html="badge(getStoryKeyById(story.id))"></span>
+              <!-- <span class="badge" v-html="badge(getStoryKeyById(story.id))"></span> -->
             </span>
             <span class="story-title">{{ story.title }}</span>
+            <span class="tasks-completed">
+              <span class="star" v-html="star(story)"></span>
+              <span class="stars-num">{{ completedTasksNum(story) }} / {{ story.tasks.length }}</span>
+            </span>
           </span>
         </a>
       </div>
@@ -24,9 +28,13 @@
           <span class="title">
             <span class="number" v-on:click="openStory(getStoryKeyById(story.id), true)" :style="typeof story.numberImage === 'undefined' ? { backgroundColor: story.color } : { backgroundImage: 'url(' + require('@/stories/ciell/assets/img/' + story.numberImage) + ')' }">
               <span class="content"></span>
-              <span class="badge" v-html="badge(getStoryKeyById(story.id))"></span>
+              <!-- <span class="badge" v-html="badge(getStoryKeyById(story.id))"></span> -->
             </span>
             <span class="story-title">{{ story.title }}</span>
+            <span class="tasks-completed">
+              <span class="star" v-html="star(story)"></span>
+              <span class="stars-num">{{ completedTasksNum(story) }} / {{ story.tasks.length }}</span>
+            </span>
           </span>
         </a>
       </div>
@@ -71,6 +79,32 @@ export default {
       return this.stories.findIndex(function (story) {
         return story.id === id
       })
+    },
+    star: function (story) {
+      if (this.$store.state.tasksComplete.length === 0) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-none.png') + '" alt="" />'
+      }
+
+      let completed = this.completedTasksNum(story)
+      let percent = Math.ceil(completed / story.tasks.length * 100)
+
+      if (percent < 10) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-none.png') + '" alt="" />'
+      } else if (percent > 10 && percent <= 49) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-bronze.png') + '" alt="" />'
+      } else if (percent > 49 && percent <= 86) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-silver.png') + '" alt="" />'
+      } else if (percent > 86) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-gold.png') + '" alt="" />'
+      }
+    },
+    completedTasksNum: function (story) {
+      let allCompletedTasks = this.$store.state.tasksComplete
+      let completed = story.tasks.filter(function (task) {
+        return allCompletedTasks.includes(task.id)
+      })
+
+      return completed.length
     },
     badge (storyId) {
       let badge = this.badgeClass(this.$props.stories[storyId], this.$store.state.tasksComplete)
@@ -217,7 +251,7 @@ export default {
     left: 0;
     width: 3.75em;
     height: 3.75em;
-    background-color: #15191a;
+    background-color: #05181b;
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: .1em center;
@@ -281,6 +315,37 @@ export default {
     text-align: center;
     max-width: 90%;
     margin: 1em auto 0;
+  }
+
+  .tasks-completed {
+    position: absolute;
+    left: 1em;
+    bottom: 5.75em;
+    border-radius: .5em;
+    font-size: .7em;
+    background: #05181b;
+    color: #fff;
+    padding: .5em;
+    font-family: -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Oxygen-Sans,
+                Ubuntu,
+                Cantarell,
+                "Helvetica Neue",
+                sans-serif;
+  }
+
+  >>> img.stars-total {
+    width: .93875em;
+    height: .93875em;
+    position: relative;
+    top: .05em;
+  }
+
+  .stars-num {
+   opacity: .8;
   }
 
   @media screen and (max-width: 639px) {

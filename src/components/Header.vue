@@ -22,21 +22,19 @@
       <div v-for="(story, id) in getStoriesByLevel(1)" :key="id">
         <div class="story-link-wrapper" v-bind:class="{ current: getStoryKeyById(story.id) === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
           <a class="story-link" v-on:click="openStory(getStoryKeyById(story.id)), closeNav()" @keyup.enter="openStory(getStoryKeyById(story.id), true), closeNav()" tabindex="0">
-            {{ story.title }}
+            <span class="story-link-title">{{ story.title }}</span><span class="tasks-num"><span v-html="star(story)"></span><span class="of">{{ completedTasksNum(story) }} / {{ story.tasks.length }}</span></span>
           </a>
-          <a class="task-link" v-bind:class="badgeClass($props.stories[getStoryKeyById(story.id)], $store.state.tasksComplete)" v-on:click="openStory(getStoryKeyById(story.id), true), closeNav()" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/badges/star-' + getBadgeClass($props.stories[getStoryKeyById(story.id)], $store.state.tasksComplete) + '.png') + ')' }"></a>
         </div>
       </div>
       <span class="story-level">Level 2</span>
       <div v-for="(story, id) in getStoriesByLevel(2)" :key="id + '-lvl2'">
         <div class="story-link-wrapper" v-bind:class="{ current: getStoryKeyById(story.id) === $store.state.currentStoryId && $route.name === 'story', placeholder: story.placeholder }">
           <a class="story-link" v-on:click="openStory(getStoryKeyById(story.id)), closeNav()" @keyup.enter="openStory(getStoryKeyById(story.id), true), closeNav()" tabindex="0">
-            {{ story.title }}
+            <span class="story-link-title">{{ story.title }}</span><span class="tasks-num"><span v-html="star(story)"></span><span class="of">{{ completedTasksNum(story) }} / {{ story.tasks.length }}</span></span>
           </a>
-          <a class="task-link" v-bind:class="badgeClass($props.stories[getStoryKeyById(story.id)], $store.state.tasksComplete)" v-on:click="openStory(getStoryKeyById(story.id), true), closeNav()" :style="{ backgroundImage: 'url(' + require('@/stories/ciell/assets/img/badges/star-' + getBadgeClass($props.stories[getStoryKeyById(story.id)], $store.state.tasksComplete) + '.png') + ')' }"></a>
         </div>
       </div>
-      <router-link to="/tasks" v-bind:class="{ current: $route.name === 'tasks' }" v-on:click.native="closeNav()">All Tasks<span class="tasks-num"><span v-html="starsTotal()"></span><span class="of">{{ $store.state.tasksComplete.length }} / {{ numTasks(stories) }}</span></span></router-link>
+      <router-link to="/tasks" v-bind:class="{ current: $route.name === 'tasks' }" v-on:click.native="closeNav()">All Tasks<span class="tasks-num all-tasks"><span v-html="starTotal()"></span><span class="of">{{ $store.state.tasksComplete.length }} / {{ numTasks(stories) }}</span></span></router-link>
       <router-link to="/evaluation" v-bind:class="{ current: $route.name === 'evaluation' }" v-on:click.native="closeNav()">Rate this App</router-link>
       <router-link to="/about" v-bind:class="{ current: $route.name === 'about' }" v-on:click.native="closeNav()">About CIELL</router-link>
       <router-link to="/" v-bind:class="{ current: $route.name === 'welcome' }" v-on:click.native="closeNav()">Welcome Screen</router-link>
@@ -86,22 +84,50 @@ export default {
 
       return badgeClass
     },
-    starsTotal: function () {
+    star: function (story) {
       if (this.$store.state.tasksComplete.length === 0) {
-        return ''
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-none.png') + '" alt="" />'
+      }
+
+      let completed = this.completedTasksNum(story)
+      let percent = Math.ceil(completed / story.tasks.length * 100)
+
+      if (percent < 10) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-none.png') + '" alt="" />'
+      } else if (percent > 10 && percent <= 49) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-bronze.png') + '" alt="" />'
+      } else if (percent > 49 && percent <= 86) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-silver.png') + '" alt="" />'
+      } else if (percent > 86) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-gold.png') + '" alt="" />'
+      }
+    },
+    starTotal: function (storyId) {
+      if (this.$store.state.tasksComplete.length === 0) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-none.png') + '" alt="" />'
       }
 
       let percent = Math.ceil(this.$store.state.tasksComplete.length / this.numTasks(this.$props.stories) * 100)
 
-      if (percent > 10 && percent <= 49) {
-        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-bronze.png') + '" alt="Bronze star" />'
+      if (percent <= 10) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-none.png') + '" alt="" />'
+      } else if (percent > 10 && percent <= 49) {
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-bronze.png') + '" alt="" />'
       } else if (percent > 49 && percent <= 80) {
-        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-silver.png') + '" alt="Silver star" />'
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-silver.png') + '" alt="" />'
       } else if (percent > 80 && percent < 100) {
-        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-gold.png') + '" alt="Gold star" />'
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-gold.png') + '" alt="" />'
       } else if (percent >= 100) {
-        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-platinum.png') + '" alt="Platinum star" />'
+        return '<img class="stars-total" src="' + require('@/stories/ciell/assets/img/badges/star-platinum.png') + '" alt="" />'
       }
+    },
+    completedTasksNum: function (story) {
+      let allCompletedTasks = this.$store.state.tasksComplete
+      let completed = story.tasks.filter(function (task) {
+        return allCompletedTasks.includes(task.id)
+      })
+
+      return completed.length
     },
     openStory: function (id, taskPage = false) {
       this.$emit('openStory', {
@@ -199,10 +225,10 @@ export default {
   position: fixed;
   z-index: 11;
   top: 0;
-  left: -300px;
-  width: 300px;
+  left: -380px;
+  width: 380px;
   height: 100%;
-  max-width: 300px;
+  max-width: 88%;
   background: #213338;
   transition: all .25s ease;
   transform: translateZ(0);
@@ -312,9 +338,7 @@ export default {
 }
 
 .nav a:not(.task-link):focus,
-.nav a:not(.task-link):hover,
-.nav a:not(.task-link):focus + a,
-.nav a:not(.task-link):hover + a {
+.nav a:not(.task-link):hover {
   background-color: rgba(0,0,0,.09) !important;
 }
 
@@ -372,6 +396,21 @@ export default {
   width: 88%;
 }
 
+.story-link-title {
+  display: inline-block;
+  width: 75%;
+  padding-right: .75em;
+}
+
+.tasks-num {
+  display: inline-block;
+  width: 25%;
+}
+
+.tasks-num.all-tasks {
+  width: 33%;
+}
+
 .nav .task-link {
   display: table-cell;
   width: 12%;
@@ -423,6 +462,7 @@ export default {
   font-size: .75em;
   position: relative;
   top: .081em;
+  text-align: right;
 }
 
 #toggleBaseFont {

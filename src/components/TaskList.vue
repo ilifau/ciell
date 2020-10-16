@@ -2,18 +2,15 @@
   <div class="task-list">
     <h1 v-if="$route.name !== 'tasks'">
       Tasks
-      <span class="task-checkmark" v-if="allTasksDone()">
-        <v-icon name="check" scale="1.5" />
-      </span>
     </h1>
     <div v-if="getTasks() && getTasks().length > 0">
       <ul>
         <li v-for="(task, id) in getTasks()" :key="id" v-bind:class="{ 'complete' : taskDone(task.id) }">
           <div>
             <span>
-              <!-- <span class="task-checkmark" v-if="taskDone(task.id)">
+              <span class="task-checkmark" v-if="taskDone(task.id)">
                 <v-icon name="check" scale="1" />
-              </span> -->
+              </span>
               <a tabindex="0" class="task-name" v-on:click="openStory(task.id)" @keyup.enter="openStory(task.id)">Task {{ id+1 }}: {{ task.name }}</a>
               <!-- ({{ task.typeName }}) -->
             </span>
@@ -161,7 +158,7 @@ export default {
     list-style-type: none;
     margin: 0 0 1em;
     background: #e0f2f7;
-    padding: 1em 1.5em;
+    padding: 1em 2em;
     border-radius: 2em;
   }
 
@@ -169,6 +166,11 @@ export default {
     line-height: 1.3;
     font-size: 1.125em;
     padding: .25em 0;
+    position: relative;
+  }
+
+  .task-list ul li a {
+    /* color: #2d383a; */
   }
 
   .task-name {
@@ -187,6 +189,8 @@ export default {
   .task-checkmark {
     color: #0a8669;
     display: inline-block;
+    position: absolute;
+    left: -.875em;
   }
 
   .badge >>> .badge-image {

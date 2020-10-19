@@ -105,40 +105,40 @@ export default {
       })
 
       return completed.length
-    },
-    badge (storyId) {
-      let badge = this.badgeClass(this.$props.stories[storyId], this.$store.state.tasksComplete)
-      let badgeImage, badgeClass, title, alt
-
-      if (typeof badge === 'undefined' || !badge) {
-        badgeClass = 'none'
-      } else if (badge === 'bronze') {
-        badgeClass = 'bronze'
-        badgeImage = require('@/stories/ciell/assets/img/badges/badge-bronze-alt.png')
-        title = 'Fair enough, but you can certainly do better than that!'
-        alt = 'Bronze badge'
-      } else if (badge === 'silver') {
-        badgeClass = 'silver'
-        badgeImage = require('@/stories/ciell/assets/img/badges/badge-silver-alt.png')
-        title = 'Good job, you earned a silver star for this essay!'
-        alt = 'Silver badge'
-      } else if (badge === 'gold') {
-        badgeClass = 'gold'
-        badgeImage = require('@/stories/ciell/assets/img/badges/badge-gold-alt.png')
-        title = 'Wow, awesome! You earned a gold star for this essay!'
-        alt = 'Gold badge'
-      }
-
-      let html = '<span class="' + badgeClass + '">'
-
-      if (typeof badgeImage !== 'undefined') {
-        html += '<img src="' + badgeImage + '" title="' + title + '" alt="' + alt + '" />'
-      }
-
-      html += '</span>'
-
-      return html
     }
+    // badge (storyId) {
+    //   let badge = this.badgeClass(this.$props.stories[storyId], this.$store.state.tasksComplete)
+    //   let badgeImage, badgeClass, title, alt
+
+    //   if (typeof badge === 'undefined' || !badge) {
+    //     badgeClass = 'none'
+    //   } else if (badge === 'bronze') {
+    //     badgeClass = 'bronze'
+    //     badgeImage = require('@/stories/ciell/assets/img/badges/badge-bronze-alt.png')
+    //     title = 'Fair enough, but you can certainly do better than that!'
+    //     alt = 'Bronze badge'
+    //   } else if (badge === 'silver') {
+    //     badgeClass = 'silver'
+    //     badgeImage = require('@/stories/ciell/assets/img/badges/badge-silver-alt.png')
+    //     title = 'Good job, you earned a silver star for this essay!'
+    //     alt = 'Silver badge'
+    //   } else if (badge === 'gold') {
+    //     badgeClass = 'gold'
+    //     badgeImage = require('@/stories/ciell/assets/img/badges/badge-gold-alt.png')
+    //     title = 'Wow, awesome! You earned a gold star for this essay!'
+    //     alt = 'Gold badge'
+    //   }
+
+    //   let html = '<span class="' + badgeClass + '">'
+
+    //   if (typeof badgeImage !== 'undefined') {
+    //     html += '<img src="' + badgeImage + '" title="' + title + '" alt="' + alt + '" />'
+    //   }
+
+    //   html += '</span>'
+
+    //   return html
+    // }
   }
 }
 </script>
@@ -270,7 +270,7 @@ export default {
     opacity: .95;
   }
 
-  .badge >>> span {
+  /* .badge >>> span {
     position: absolute;
     z-index: -1;
     left: 0;
@@ -278,7 +278,7 @@ export default {
     background-size: cover;
     height: auto;
     top: -1.65em;
-  }
+  } */
 
   /* .badge >>> .bronze {
     top: -1.25em;
@@ -298,11 +298,11 @@ export default {
     left: 25%;
   } */
 
-  .badge img {
+  /* .badge img {
     display: none !important;
     position: relative;
     max-width: 1em;
-  }
+  } */
 
   .story-title {
     padding: .125em 0 0 .25em;

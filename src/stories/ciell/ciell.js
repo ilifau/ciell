@@ -2208,7 +2208,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        examQuestion: '<p>Due to different gender roles and poverty, teenagers-boys and girls face different challenges at home and schools especially in developing countries.</p><p class="last">Do you agree with this statement? Give examples to support your views.</p>',
+        examQuestion: '<p>Due to different gender roles and poverty, teenage boys and girls face different challenges at home and schools especially in developing countries.</p><p class="last">Do you agree with this statement? Give examples to support your views.</p>',
         content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">

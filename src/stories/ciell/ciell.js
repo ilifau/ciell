@@ -64,67 +64,139 @@ let Story = [
     level: 1,
     tasks: [
       {
-        id: 1000,
-        name: 'Reorder the panels',
-        type: 'puzzle',
-        typeName: 'Puzzle',
+        id: 1040,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
         title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        description: '',
         items: [
           {
-            order: 0,
-            image: 'homeless/homeless 01.jpg'
-          },
-          {
-            order: 1,
-            image: 'homeless/homeless 02.jpg'
-          },
-          {
-            order: 2,
-            image: 'homeless/homeless 03.jpg'
-          },
-          {
-            order: 3,
-            image: 'homeless/homeless 04.jpg'
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-7.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'homeless/homeless 05.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 09.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 16.jpg'
+              }
+            ]
           }
         ]
       },
       {
-        id: 1010,
-        name: 'Reorder the panels',
-        type: 'puzzle',
-        typeName: 'Puzzle',
+        id: 1050,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
         title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        description: '',
         items: [
           {
-            order: 0,
-            image: 'homeless/homeless 11.jpg'
-          },
-          {
-            order: 1,
-            image: 'homeless/homeless 12.jpg'
-          },
-          {
-            order: 2,
-            image: 'homeless/homeless 13.jpg'
-          },
-          {
-            order: 3,
-            image: 'homeless/homeless 14.jpg'
-          },
-          {
-            order: 4,
-            image: 'homeless/homeless 15.jpg'
-          },
-          {
-            order: 5,
-            image: 'homeless/homeless 16.jpg'
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-8.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'homeless/homeless 16.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 17.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 06.jpg',
+                correct: true
+              }
+            ]
           }
         ]
       },
       {
-        id: 1020,
+        id: 1060,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-9.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'homeless/homeless 10.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 09.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 16.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 1070,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-6.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'homeless/homeless 08.jpg'
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 10.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'homeless/homeless 09.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 1030,
         name: 'Choose the correct image',
         type: 'image-choice',
         typeName: 'Image Choice',
@@ -179,134 +251,62 @@ let Story = [
         ]
       },
       {
-        id: 1030,
-        name: 'Choose the panel that matches',
-        type: 'image-choice',
-        typeName: 'Image Choice',
+        id: 1010,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
         title: '',
-        description: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
         items: [
           {
-            singleChoice: true,
-            question: 'Choose the panel that matches',
-            answerTitle: 'Choose one of the following panels',
-            images: [
-              'info-graphics/basic-essay-structure-7.jpg'
-            ],
-            answers: [
-              {
-                text: '',
-                image: 'homeless/homeless 05.jpg',
-                correct: true
-              },
-              {
-                text: '',
-                image: 'homeless/homeless 09.jpg'
-              },
-              {
-                text: '',
-                image: 'homeless/homeless 16.jpg'
-              }
-            ]
+            order: 0,
+            image: 'homeless/homeless 01.jpg'
+          },
+          {
+            order: 1,
+            image: 'homeless/homeless 02.jpg'
+          },
+          {
+            order: 2,
+            image: 'homeless/homeless 03.jpg'
+          },
+          {
+            order: 3,
+            image: 'homeless/homeless 04.jpg'
           }
         ]
       },
       {
-        id: 1040,
-        name: 'Choose the panel that matches',
-        type: 'image-choice',
-        typeName: 'Image Choice',
+        id: 1020,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
         title: '',
-        description: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
         items: [
           {
-            singleChoice: true,
-            question: 'Choose the panel that matches',
-            answerTitle: 'Choose one of the following panels',
-            images: [
-              'info-graphics/basic-essay-structure-8.jpg'
-            ],
-            answers: [
-              {
-                text: '',
-                image: 'homeless/homeless 16.jpg'
-              },
-              {
-                text: '',
-                image: 'homeless/homeless 17.jpg'
-              },
-              {
-                text: '',
-                image: 'homeless/homeless 06.jpg',
-                correct: true
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 1050,
-        name: 'Choose the panel that matches',
-        type: 'image-choice',
-        typeName: 'Image Choice',
-        title: '',
-        description: '',
-        items: [
+            order: 0,
+            image: 'homeless/homeless 11.jpg'
+          },
           {
-            singleChoice: true,
-            question: 'Choose the panel that matches',
-            answerTitle: 'Choose one of the following panels',
-            images: [
-              'info-graphics/basic-essay-structure-9.jpg'
-            ],
-            answers: [
-              {
-                text: '',
-                image: 'homeless/homeless 10.jpg'
-              },
-              {
-                text: '',
-                image: 'homeless/homeless 09.jpg',
-                correct: true
-              },
-              {
-                text: '',
-                image: 'homeless/homeless 16.jpg'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 1060,
-        name: 'Choose the panel that matches',
-        type: 'image-choice',
-        typeName: 'Image Choice',
-        title: '',
-        description: '',
-        items: [
+            order: 1,
+            image: 'homeless/homeless 12.jpg'
+          },
           {
-            singleChoice: true,
-            question: 'Choose the panel that matches',
-            answerTitle: 'Choose one of the following panels',
-            images: [
-              'info-graphics/basic-essay-structure-6.jpg'
-            ],
-            answers: [
-              {
-                text: '',
-                image: 'homeless/homeless 08.jpg'
-              },
-              {
-                text: '',
-                image: 'homeless/homeless 10.jpg',
-                correct: true
-              },
-              {
-                text: '',
-                image: 'homeless/homeless 09.jpg'
-              }
-            ]
+            order: 2,
+            image: 'homeless/homeless 13.jpg'
+          },
+          {
+            order: 3,
+            image: 'homeless/homeless 14.jpg'
+          },
+          {
+            order: 4,
+            image: 'homeless/homeless 15.jpg'
+          },
+          {
+            order: 5,
+            image: 'homeless/homeless 16.jpg'
           }
         ]
       }
@@ -517,8 +517,8 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 1000,
-        title: 'Task: Puzzle',
+        taskId: 1040,
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -537,8 +537,8 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 1010,
-        title: 'Task: Puzzle',
+        taskId: 1050,
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -557,7 +557,7 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 1020,
+        taskId: 1060,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -577,7 +577,7 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 1030,
+        taskId: 1070,
         title: 'Task: Matching Panel',
         content: '',
         choices: [
@@ -597,8 +597,8 @@ let Story = [
       },
       {
         id: 100,
-        taskId: 1040,
-        title: 'Task: Matching Panel',
+        taskId: 1030,
+        title: 'Task: Image Choice',
         content: '',
         choices: [
           {
@@ -617,8 +617,8 @@ let Story = [
       },
       {
         id: 110,
-        taskId: 1050,
-        title: 'Task: Matching Panel',
+        taskId: 1010,
+        title: 'Task: Puzzle',
         content: '',
         choices: [
           {
@@ -637,8 +637,8 @@ let Story = [
       },
       {
         id: 120,
-        taskId: 1060,
-        title: 'Task: Matching Panel',
+        taskId: 1020,
+        title: 'Task: Puzzle',
         content: '',
         choices: [
           {
@@ -1865,207 +1865,6 @@ let Story = [
     level: 1,
     tasks: [
       {
-        id: 5010,
-        name: 'Reorder the panels',
-        type: 'puzzle',
-        typeName: 'Puzzle',
-        title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
-        items: [
-          {
-            order: 0,
-            image: 'gender-equality/invisible 00.jpg'
-          },
-          {
-            order: 1,
-            image: 'gender-equality/invisible 02.jpg'
-          },
-          {
-            order: 2,
-            image: 'gender-equality/invisible 03.jpg'
-          },
-          {
-            order: 3,
-            image: 'gender-equality/invisible 04.jpg'
-          },
-          {
-            order: 4,
-            image: 'gender-equality/invisible 05.jpg'
-          },
-          {
-            order: 5,
-            image: 'gender-equality/invisible 06 b.jpg'
-          },
-          {
-            order: 6,
-            image: 'gender-equality/invisible 07.jpg'
-          },
-          {
-            order: 7,
-            image: 'gender-equality/invisible 08.jpg'
-          }
-        ]
-      },
-      {
-        id: 5020,
-        name: 'Choose the correct image',
-        type: 'image-choice',
-        typeName: 'Image Choice',
-        title: '',
-        description: '',
-        items: [
-          {
-            singleChoice: true,
-            question: 'Choose the image that does not belong in the introduction',
-            answers: [
-              {
-                text: 'Examples',
-                image: 'info-graphics/basic-essay-structure-9.jpg',
-                correct: true
-              },
-              {
-                text: 'Rephrase Topic',
-                image: 'info-graphics/basic-essay-structure-1.jpg'
-              },
-              {
-                text: 'Answer the Question',
-                image: 'info-graphics/basic-essay-structure-2.jpg'
-              }
-            ]
-          },
-          {
-            singleChoice: true,
-            question: 'Choose the image that does not belong in the main body paragraph',
-            answers: [
-              {
-                text: 'Topic Sentence',
-                image: 'info-graphics/basic-essay-structure-3.jpg'
-              },
-              {
-                text: 'Examples',
-                image: 'info-graphics/basic-essay-structure-5.jpg'
-              },
-              {
-                text: 'Rephrase Topic',
-                image: 'info-graphics/basic-essay-structure-1.jpg',
-                correct: true
-              }
-            ]
-          },
-          {
-            singleChoice: true,
-            question: 'Choose the image that does not belong in the conclusion',
-            answers: [
-              {
-                text: 'Summary',
-                image: 'info-graphics/basic-essay-structure-conclusion-2.jpg'
-              },
-              {
-                text: 'Explanations',
-                image: 'info-graphics/basic-essay-structure-8.jpg',
-                correct: true
-              },
-              {
-                text: 'Conclusion',
-                image: 'info-graphics/basic-essay-structure-conclusion-1.jpg'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 5030,
-        name: 'Reorder the panels',
-        type: 'puzzle',
-        typeName: 'Puzzle',
-        title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
-        items: [
-          {
-            order: 0,
-            image: 'info-graphics/basic-essay-structure-1.jpg'
-          },
-          {
-            order: 1,
-            image: 'info-graphics/basic-essay-structure-3.jpg'
-          },
-          {
-            order: 2,
-            image: 'info-graphics/basic-essay-structure-4.jpg'
-          },
-          {
-            order: 3,
-            image: 'info-graphics/basic-essay-structure-5.jpg'
-          },
-          {
-            order: 4,
-            image: 'info-graphics/basic-essay-structure-6.jpg'
-          },
-          {
-            order: 5,
-            image: 'info-graphics/basic-essay-structure-conclusion-1.jpg'
-          }
-        ]
-      },
-      {
-        id: 5040,
-        name: 'Reorder the panels',
-        type: 'puzzle',
-        typeName: 'Puzzle',
-        title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
-        items: [
-          {
-            order: 10,
-            image: 'gender-equality/invisible 00.jpg'
-          },
-          {
-            order: 20,
-            image: 'gender-equality/invisible 06 b.jpg'
-          },
-          {
-            order: 30,
-            image: 'gender-equality/invisible 09.jpg'
-          },
-          {
-            order: 40,
-            image: 'gender-equality/invisible 10.jpg'
-          },
-          {
-            order: 45,
-            image: 'gender-equality/invisible 11.jpg'
-          },
-          {
-            order: 50,
-            image: 'gender-equality/invisible 12.jpg'
-          },
-          {
-            order: 60,
-            image: 'gender-equality/invisible 18.jpg'
-          },
-          {
-            order: 70,
-            image: 'gender-equality/invisible 20.jpg'
-          },
-          {
-            order: 80,
-            image: 'gender-equality/invisible 22.jpg'
-          },
-          {
-            order: 90,
-            image: 'gender-equality/invisible 23.jpg'
-          },
-          {
-            order: 100,
-            image: 'gender-equality/invisible 24.jpg'
-          },
-          {
-            order: 110,
-            image: 'gender-equality/invisible 25.jpg'
-          }
-        ]
-      },
-      {
         id: 5050,
         name: 'Choose the panel that matches',
         type: 'image-choice',
@@ -2194,6 +1993,207 @@ let Story = [
                 image: 'gender-equality/invisible 21.jpg'
               }
             ]
+          }
+        ]
+      },
+      {
+        id: 5020,
+        name: 'Choose the correct image',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the image that does not belong in the introduction',
+            answers: [
+              {
+                text: 'Examples',
+                image: 'info-graphics/basic-essay-structure-9.jpg',
+                correct: true
+              },
+              {
+                text: 'Rephrase Topic',
+                image: 'info-graphics/basic-essay-structure-1.jpg'
+              },
+              {
+                text: 'Answer the Question',
+                image: 'info-graphics/basic-essay-structure-2.jpg'
+              }
+            ]
+          },
+          {
+            singleChoice: true,
+            question: 'Choose the image that does not belong in the main body paragraph',
+            answers: [
+              {
+                text: 'Topic Sentence',
+                image: 'info-graphics/basic-essay-structure-3.jpg'
+              },
+              {
+                text: 'Examples',
+                image: 'info-graphics/basic-essay-structure-5.jpg'
+              },
+              {
+                text: 'Rephrase Topic',
+                image: 'info-graphics/basic-essay-structure-1.jpg',
+                correct: true
+              }
+            ]
+          },
+          {
+            singleChoice: true,
+            question: 'Choose the image that does not belong in the conclusion',
+            answers: [
+              {
+                text: 'Summary',
+                image: 'info-graphics/basic-essay-structure-conclusion-2.jpg'
+              },
+              {
+                text: 'Explanations',
+                image: 'info-graphics/basic-essay-structure-8.jpg',
+                correct: true
+              },
+              {
+                text: 'Conclusion',
+                image: 'info-graphics/basic-essay-structure-conclusion-1.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 5030,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'info-graphics/basic-essay-structure-1.jpg'
+          },
+          {
+            order: 1,
+            image: 'info-graphics/basic-essay-structure-3.jpg'
+          },
+          {
+            order: 2,
+            image: 'info-graphics/basic-essay-structure-4.jpg'
+          },
+          {
+            order: 3,
+            image: 'info-graphics/basic-essay-structure-5.jpg'
+          },
+          {
+            order: 4,
+            image: 'info-graphics/basic-essay-structure-6.jpg'
+          },
+          {
+            order: 5,
+            image: 'info-graphics/basic-essay-structure-conclusion-1.jpg'
+          }
+        ]
+      },
+      {
+        id: 5010,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'gender-equality/invisible 00.jpg'
+          },
+          {
+            order: 1,
+            image: 'gender-equality/invisible 02.jpg'
+          },
+          {
+            order: 2,
+            image: 'gender-equality/invisible 03.jpg'
+          },
+          {
+            order: 3,
+            image: 'gender-equality/invisible 04.jpg'
+          },
+          {
+            order: 4,
+            image: 'gender-equality/invisible 05.jpg'
+          },
+          {
+            order: 5,
+            image: 'gender-equality/invisible 06 b.jpg'
+          },
+          {
+            order: 6,
+            image: 'gender-equality/invisible 07.jpg'
+          },
+          {
+            order: 7,
+            image: 'gender-equality/invisible 08.jpg'
+          }
+        ]
+      },
+      {
+        id: 5040,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 10,
+            image: 'gender-equality/invisible 00.jpg'
+          },
+          {
+            order: 20,
+            image: 'gender-equality/invisible 06 b.jpg'
+          },
+          {
+            order: 30,
+            image: 'gender-equality/invisible 09.jpg'
+          },
+          {
+            order: 40,
+            image: 'gender-equality/invisible 10.jpg'
+          },
+          {
+            order: 45,
+            image: 'gender-equality/invisible 11.jpg'
+          },
+          {
+            order: 50,
+            image: 'gender-equality/invisible 12.jpg'
+          },
+          {
+            order: 60,
+            image: 'gender-equality/invisible 18.jpg'
+          },
+          {
+            order: 70,
+            image: 'gender-equality/invisible 20.jpg'
+          },
+          {
+            order: 80,
+            image: 'gender-equality/invisible 22.jpg'
+          },
+          {
+            order: 90,
+            image: 'gender-equality/invisible 23.jpg'
+          },
+          {
+            order: 100,
+            image: 'gender-equality/invisible 24.jpg'
+          },
+          {
+            order: 110,
+            image: 'gender-equality/invisible 25.jpg'
           }
         ]
       }
@@ -2422,8 +2422,8 @@ let Story = [
       },
       {
         id: 55,
-        taskId: 5010,
-        title: 'Task: Puzzle',
+        taskId: 5050,
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -2442,8 +2442,8 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 5020,
-        title: 'Task: Image Choice',
+        taskId: 5060,
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -2462,8 +2462,8 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 5030,
-        title: 'Task: Puzzle',
+        taskId: 5070,
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -2482,8 +2482,8 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 5040,
-        title: 'Task: Puzzle',
+        taskId: 5080,
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -2502,8 +2502,8 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 5050,
-        title: 'Task: Matching Panel',
+        taskId: 5020,
+        title: 'Task: Image Choice',
         content: '',
         choices: [
           {
@@ -2522,8 +2522,8 @@ let Story = [
       },
       {
         id: 100,
-        taskId: 5060,
-        title: 'Task: Matching Panel',
+        taskId: 5030,
+        title: 'Task: Puzzle',
         content: '',
         choices: [
           {
@@ -2542,8 +2542,8 @@ let Story = [
       },
       {
         id: 110,
-        taskId: 5070,
-        title: 'Task: Matching Panel',
+        taskId: 5010,
+        title: 'Task: Puzzle',
         content: '',
         choices: [
           {
@@ -2562,8 +2562,8 @@ let Story = [
       },
       {
         id: 120,
-        taskId: 5080,
-        title: 'Task: Matching Panel',
+        taskId: 5040,
+        title: 'Task: Puzzle',
         content: '',
         choices: [
           {
@@ -3031,6 +3031,105 @@ let Story = [
     level: 1,
     tasks: [
       {
+        id: 7040,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-9.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 20.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 23.jpg'
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 24.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 7050,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-6.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 05.jpg'
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 22.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 20.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 7060,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: '',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 16.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 20.jpg'
+              },
+              {
+                text: '',
+                image: 'nuclear-power/nuclear 21.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
         id: 7010,
         name: 'Choose the correct image',
         type: 'image-choice',
@@ -3177,105 +3276,6 @@ let Story = [
           {
             order: 9,
             image: 'nuclear-power/nuclear 15.jpg'
-          }
-        ]
-      },
-      {
-        id: 7040,
-        name: 'Choose the panel that matches',
-        type: 'image-choice',
-        typeName: 'Image Choice',
-        title: '',
-        description: '',
-        items: [
-          {
-            singleChoice: true,
-            question: 'Choose the panel that matches',
-            answerTitle: 'Choose one of the following panels',
-            images: [
-              'info-graphics/basic-essay-structure-9.jpg'
-            ],
-            answers: [
-              {
-                text: '',
-                image: 'nuclear-power/nuclear 20.jpg',
-                correct: true
-              },
-              {
-                text: '',
-                image: 'nuclear-power/nuclear 23.jpg'
-              },
-              {
-                text: '',
-                image: 'nuclear-power/nuclear 24.jpg'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 7050,
-        name: 'Choose the panel that matches',
-        type: 'image-choice',
-        typeName: 'Image Choice',
-        title: '',
-        description: '',
-        items: [
-          {
-            singleChoice: true,
-            question: 'Choose the panel that matches',
-            answerTitle: 'Choose one of the following panels',
-            images: [
-              'info-graphics/basic-essay-structure-6.jpg'
-            ],
-            answers: [
-              {
-                text: '',
-                image: 'nuclear-power/nuclear 05.jpg'
-              },
-              {
-                text: '',
-                image: 'nuclear-power/nuclear 22.jpg',
-                correct: true
-              },
-              {
-                text: '',
-                image: 'nuclear-power/nuclear 20.jpg'
-              }
-            ]
-          }
-        ]
-      },
-      {
-        id: 7060,
-        name: 'Choose the panel that matches',
-        type: 'image-choice',
-        typeName: 'Image Choice',
-        title: '',
-        description: '',
-        items: [
-          {
-            singleChoice: true,
-            question: 'Choose the panel that matches',
-            answerTitle: 'Choose one of the following panels',
-            images: [
-              'info-graphics/basic-essay-structure-3.jpg'
-            ],
-            answers: [
-              {
-                text: '',
-                image: 'nuclear-power/nuclear 16.jpg',
-                correct: true
-              },
-              {
-                text: '',
-                image: 'nuclear-power/nuclear 20.jpg'
-              },
-              {
-                text: '',
-                image: 'nuclear-power/nuclear 21.jpg'
-              }
-            ]
           }
         ]
       }
@@ -3504,8 +3504,8 @@ let Story = [
       },
       {
         id: 60,
-        taskId: 7010,
-        title: 'Task: Image Choice',
+        taskId: 7040,
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -3524,8 +3524,8 @@ let Story = [
       },
       {
         id: 70,
-        taskId: 7020,
-        title: 'Task: Puzzle',
+        taskId: 7050,
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -3544,8 +3544,8 @@ let Story = [
       },
       {
         id: 80,
-        taskId: 7030,
-        title: 'Task: Puzzle',
+        taskId: 7060,
+        title: 'Task: Matching Panel',
         content: '',
         choices: [
           {
@@ -3564,8 +3564,8 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 7040,
-        title: 'Task: Matching Panel',
+        taskId: 7010,
+        title: 'Task: Image Choice',
         content: '',
         choices: [
           {
@@ -3584,8 +3584,8 @@ let Story = [
       },
       {
         id: 100,
-        taskId: 7050,
-        title: 'Task: Matching Panel',
+        taskId: 7020,
+        title: 'Task: Puzzle',
         content: '',
         choices: [
           {
@@ -3604,8 +3604,8 @@ let Story = [
       },
       {
         id: 110,
-        taskId: 7060,
-        title: 'Task: Matching Panel',
+        taskId: 7030,
+        title: 'Task: Puzzle',
         content: '',
         choices: [
           {
@@ -3866,6 +3866,33 @@ let Story = [
             <div class="half">
               [image|decent-work/decent-work-12.jpg|According to research, young women are twice as likely as young men not to be in employment, education or training.]
             </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 25
+          }
+        ]
+      },
+      {
+        id: 25,
+        title: '',
+        audio: [
+          {
+            filename: 'decent-work/paragraph-3.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `<h2 class="introduction">Paragraph 3</h2>
+          <div class="comic-grid">
             <div class="half">
               [image|decent-work/decent-work-13.jpg|It is also important that labour rights and work in secure environments are taken into consideration.]
             </div>
@@ -3884,7 +3911,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 10
+            'chapterId': 20
           },
           {
             'text': 'Next',
@@ -3917,7 +3944,7 @@ let Story = [
             'text': 'Previous',
             'class': 'previous',
             'iconBefore': 'arrow-left',
-            'chapterId': 20
+            'chapterId': 25
           },
           {
             'text': 'Next',
@@ -4150,7 +4177,7 @@ let Story = [
         title: 'Reduce Inequality',
         audio: [
           {
-            filename: 'reduce-inequality/intro.mp3',
+            filename: 'reduce-inequality/intro-sha.mp3',
             label: 'Play'
           }
         ],
@@ -4191,7 +4218,7 @@ let Story = [
         title: '',
         audio: [
           {
-            filename: 'reduce-inequality/paragraph-1.mp3',
+            filename: 'reduce-inequality/paragraph-1-sha.mp3',
             label: 'Play'
           }
         ],
@@ -4237,7 +4264,7 @@ let Story = [
         title: '',
         audio: [
           {
-            filename: 'reduce-inequality/paragraph-2.mp3',
+            filename: 'reduce-inequality/paragraph-2-sha.mp3',
             label: 'Play'
           }
         ],
@@ -4286,7 +4313,7 @@ let Story = [
         title: '',
         audio: [
           {
-            filename: 'reduce-inequality/conclusion.mp3',
+            filename: 'reduce-inequality/conclusion-sha.mp3',
             label: 'Play'
           }
         ],
@@ -5679,6 +5706,12 @@ let Story = [
       {
         id: 0,
         title: 'The Great Green Wall',
+        audio: [
+          {
+            filename: 'green-wall/introduction.mp3',
+            label: 'Play'
+          }
+        ],
         examQuestion: '<p>An environmental magazine has asked readers to contribute articles on innovative products or services that protect the planet. You decide to write an article in which you describe an environmental intervention, explain why you have chosen it and assess its significance for the wider community.</p>',
         content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
@@ -5706,6 +5739,12 @@ let Story = [
       },
       {
         id: 10,
+        audio: [
+          {
+            filename: 'green-wall/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
@@ -5747,6 +5786,12 @@ let Story = [
       },
       {
         id: 20,
+        audio: [
+          {
+            filename: 'green-wall/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
@@ -5782,6 +5827,12 @@ let Story = [
       },
       {
         id: 30,
+        audio: [
+          {
+            filename: 'green-wall/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
         content: `<h2 class="introduction">Conclusion</h2>
         <div class="comic-grid">
           <div class="half">

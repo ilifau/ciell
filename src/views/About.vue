@@ -13,32 +13,13 @@
     <p>
       <em>The contents of this app are the sole responsibility of the authors and can in no way be taken to reflect the views of the National Agency and/or the European Commission.</em>
     </p>
-    <h2>Learning Design</h2>
-    <ul>
-      <li>
-        <a href="https://www.lancaster.ac.uk/educational-research/people/julie-ann-sime" target="_blank">Dr. Julie-Ann Sime</a>, Lancaster University, UK
-      </li>
-    </ul>
-    <h2>Writing Samples</h2>
-    <ul>
-      <li>
-        <a href="https://www.lancaster.ac.uk/educational-research/people/chryssa-themelis" target="_blank">Dr. Chryssa Themelis</a>, Lancaster University, UK
-      </li>
-      <li>
-        Damaskini Metzidaki, University of Cyprus, Cyprus
-      </li>
-      <li>
-        <a href="https://www.lancaster.ac.uk/arts-and-social-sciences/about-us/people/helena-stakounis" target="_blank">Helena Stakounis</a>, Lancaster University, UK
-      </li>
-    </ul>
-    <h2>Artwork</h2>
-    <ul>
-      <li><a href="https://www.behance.net/elenitsampra" target="_blank">Eleni Tsampra</a>, AKTO, Greece</li>
-    </ul>
-    <h2>Development</h2>
-    <ul>
-      <li><a href="https://www.ili.fau.de/team/sebastian-honert/" target="_blank">Dr. Sebastian Honert</a>, FAU, Germany</li>
-    </ul>
+    <h2>Project Partners</h2>
+    <div class="partner-logos">
+      <a href="https://www.lancaster.ac.uk/" target="_blank" rel="noopener noreferrer"><img src="@/assets/img/partners/lu.jpg" alt="" rel="preload"></a>
+      <a href="https://akto.gr/" target="_blank" rel="noopener noreferrer"><img src="@/assets/img/partners/akto.jpg" alt="" rel="preload"></a>
+      <a href="https://ili.faude/" target="_blank" rel="noopener noreferrer"><img src="@/assets/img/partners/ili.jpg" alt="" rel="preload"></a>
+      <a href="https://www.ucy.ac.cy/en/" target="_blank" rel="noopener noreferrer"><img src="@/assets/img/partners/ucy.jpg" alt="" rel="preload"></a>
+    </div>
   </div>
 </template>
 
@@ -61,8 +42,8 @@ export default {
   background: #04accc;
   color: #2d383a;
   padding: 1.5em 2em 1em;
-  border-top-left-radius: 3em;;
-  border-top-right-radius: 3em;;
+  border-top-left-radius: 3em;
+  border-top-right-radius: 3em;
   margin-top: 6em;
   position: relative;
   margin-bottom: -2em;
@@ -120,11 +101,28 @@ ul {
   list-style-type: none;
 }
 
+.partner-logos img {
+  width: 40%;
+  max-width: 13em;
+  height: auto;
+  border: 1em solid white;
+  border-radius: .5em;
+  margin: 1em 1em 0 0;
+}
+
 @media screen and (max-width: 800px) {
   .container.about {
     left: -1em;
     width: calc(100% + 2em);
     max-width: calc(100% + 2em);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .partner-logos img {
+    width: 100%;
+    max-width: 480px;
+    margin: 1em 0 0;
   }
 }
 </style>

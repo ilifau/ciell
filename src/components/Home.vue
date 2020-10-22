@@ -337,7 +337,7 @@ export default {
                 sans-serif;
   }
 
-  >>> img.stars-total {
+  .tasks-completed >>> img.stars-total {
     width: .93875em;
     height: .93875em;
     position: relative;

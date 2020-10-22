@@ -17,7 +17,7 @@
     <div class="partner-logos">
       <a href="https://www.lancaster.ac.uk/" target="_blank" rel="noopener noreferrer"><img src="@/assets/img/partners/lu.jpg" alt="" rel="preload"></a>
       <a href="https://akto.gr/" target="_blank" rel="noopener noreferrer"><img src="@/assets/img/partners/akto.jpg" alt="" rel="preload"></a>
-      <a href="https://ili.faude/" target="_blank" rel="noopener noreferrer"><img src="@/assets/img/partners/ili.jpg" alt="" rel="preload"></a>
+      <a href="https://ili.fau.de/" target="_blank" rel="noopener noreferrer"><img src="@/assets/img/partners/ili.jpg" alt="" rel="preload"></a>
       <a href="https://www.ucy.ac.cy/en/" target="_blank" rel="noopener noreferrer"><img src="@/assets/img/partners/ucy.jpg" alt="" rel="preload"></a>
     </div>
   </div>
@@ -105,8 +105,9 @@ ul {
   width: 40%;
   max-width: 13em;
   height: auto;
-  border: 1em solid white;
-  border-radius: .5em;
+  padding: 16px;
+  background: #fff;
+  border-radius: 8px;
   margin: 1em 1em 0 0;
 }
 
@@ -114,6 +115,7 @@ ul {
   .container.about {
     left: -1em;
     width: calc(100% + 2em);
+    padding: 12px;
     max-width: calc(100% + 2em);
   }
 }

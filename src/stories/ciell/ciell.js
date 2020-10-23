@@ -1050,7 +1050,7 @@ let Story = [
       {
         id: 90,
         taskId: 2040,
-        title: 'Task: Matching Panel',
+        title: 'Task: Puzzle',
         content: '',
         choices: [
           {
@@ -2522,7 +2522,7 @@ let Story = [
       },
       {
         id: 100,
-        taskId: 5030,
+        taskId: 5010,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -2542,7 +2542,7 @@ let Story = [
       },
       {
         id: 110,
-        taskId: 5010,
+        taskId: 5030,
         title: 'Task: Puzzle',
         content: '',
         choices: [
@@ -3564,8 +3564,8 @@ let Story = [
       },
       {
         id: 90,
-        taskId: 7010,
-        title: 'Task: Image Choice',
+        taskId: 7020,
+        title: 'Task: Puzzle',
         content: '',
         choices: [
           {
@@ -3584,8 +3584,8 @@ let Story = [
       },
       {
         id: 100,
-        taskId: 7020,
-        title: 'Task: Puzzle',
+        taskId: 7010,
+        title: 'Task: Image Choice',
         content: '',
         choices: [
           {

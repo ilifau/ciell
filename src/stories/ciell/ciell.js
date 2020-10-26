@@ -2064,40 +2064,6 @@ let Story = [
         ]
       },
       {
-        id: 5030,
-        name: 'Reorder the panels',
-        type: 'puzzle',
-        typeName: 'Puzzle',
-        title: '',
-        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
-        items: [
-          {
-            order: 0,
-            image: 'info-graphics/basic-essay-structure-1.jpg'
-          },
-          {
-            order: 1,
-            image: 'info-graphics/basic-essay-structure-3.jpg'
-          },
-          {
-            order: 2,
-            image: 'info-graphics/basic-essay-structure-4.jpg'
-          },
-          {
-            order: 3,
-            image: 'info-graphics/basic-essay-structure-5.jpg'
-          },
-          {
-            order: 4,
-            image: 'info-graphics/basic-essay-structure-6.jpg'
-          },
-          {
-            order: 5,
-            image: 'info-graphics/basic-essay-structure-conclusion-1.jpg'
-          }
-        ]
-      },
-      {
         id: 5010,
         name: 'Reorder the panels',
         type: 'puzzle',
@@ -2136,6 +2102,40 @@ let Story = [
           {
             order: 7,
             image: 'gender-equality/invisible 08.jpg'
+          }
+        ]
+      },
+      {
+        id: 5030,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'info-graphics/basic-essay-structure-1.jpg'
+          },
+          {
+            order: 1,
+            image: 'info-graphics/basic-essay-structure-3.jpg'
+          },
+          {
+            order: 2,
+            image: 'info-graphics/basic-essay-structure-4.jpg'
+          },
+          {
+            order: 3,
+            image: 'info-graphics/basic-essay-structure-5.jpg'
+          },
+          {
+            order: 4,
+            image: 'info-graphics/basic-essay-structure-6.jpg'
+          },
+          {
+            order: 5,
+            image: 'info-graphics/basic-essay-structure-conclusion-1.jpg'
           }
         ]
       },

@@ -518,7 +518,7 @@ let Story = [
       {
         id: 60,
         taskId: 1040,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -538,7 +538,7 @@ let Story = [
       {
         id: 70,
         taskId: 1050,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -558,7 +558,7 @@ let Story = [
       {
         id: 80,
         taskId: 1060,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -578,7 +578,7 @@ let Story = [
       {
         id: 90,
         taskId: 1070,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -990,7 +990,7 @@ let Story = [
       {
         id: 60,
         taskId: 2010,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -1010,7 +1010,7 @@ let Story = [
       {
         id: 70,
         taskId: 2020,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -1030,7 +1030,7 @@ let Story = [
       {
         id: 80,
         taskId: 2030,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -1177,6 +1177,32 @@ let Story = [
                 image: 'zen-gardens/zen gardens 04.jpg'
               }
             ]
+          }
+        ]
+      },
+      {
+        id: 3040,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'zen-gardens/zen gardens 01.jpg'
+          },
+          {
+            order: 1,
+            image: 'zen-gardens/zen gardens 02.jpg'
+          },
+          {
+            order: 2,
+            image: 'zen-gardens/zen gardens 03.jpg'
+          },
+          {
+            order: 3,
+            image: 'zen-gardens/zen gardens 04.jpg'
           }
         ]
       }
@@ -1395,7 +1421,7 @@ let Story = [
       {
         id: 60,
         taskId: 3010,
-        title: 'Task: Choose the panel that matches',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -1415,7 +1441,7 @@ let Story = [
       {
         id: 70,
         taskId: 3020,
-        title: 'Task: Choose the panel that matches',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -1435,7 +1461,7 @@ let Story = [
       {
         id: 80,
         taskId: 3030,
-        title: 'Task: Choose the panel that matches',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -1443,6 +1469,26 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 3040,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
           },
           {
             'text': 'Restart',
@@ -1562,6 +1608,48 @@ let Story = [
                 image: 'agatha-christie/agatha 18.jpg'
               }
             ]
+          }
+        ]
+      },
+      {
+        id: 4040,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'agatha-christie/agatha 01.jpg'
+          },
+          {
+            order: 1,
+            image: 'agatha-christie/agatha 02.jpg'
+          },
+          {
+            order: 2,
+            image: 'agatha-christie/agatha 03.jpg'
+          },
+          {
+            order: 3,
+            image: 'agatha-christie/agatha 04.jpg'
+          },
+          {
+            order: 4,
+            image: 'agatha-christie/agatha 05.jpg'
+          },
+          {
+            order: 5,
+            image: 'agatha-christie/agatha 06.jpg'
+          },
+          {
+            order: 6,
+            image: 'agatha-christie/agatha 07.jpg'
+          },
+          {
+            order: 7,
+            image: 'agatha-christie/agatha 08.jpg'
           }
         ]
       }
@@ -1834,7 +1922,7 @@ let Story = [
       {
         id: 80,
         taskId: 4030,
-        title: 'Task: Choose the panel that matches',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -1842,6 +1930,26 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 4040,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
           },
           {
             'text': 'Restart',
@@ -2423,7 +2531,7 @@ let Story = [
       {
         id: 55,
         taskId: 5050,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -2443,7 +2551,7 @@ let Story = [
       {
         id: 60,
         taskId: 5060,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -2463,7 +2571,7 @@ let Story = [
       {
         id: 70,
         taskId: 5070,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -2483,7 +2591,7 @@ let Story = [
       {
         id: 80,
         taskId: 5080,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -2919,7 +3027,7 @@ let Story = [
       {
         id: 60,
         taskId: 6010,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -2939,7 +3047,7 @@ let Story = [
       {
         id: 70,
         taskId: 6020,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -2959,7 +3067,7 @@ let Story = [
       {
         id: 80,
         taskId: 6030,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -2979,7 +3087,7 @@ let Story = [
       {
         id: 90,
         taskId: 6040,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -3505,7 +3613,7 @@ let Story = [
       {
         id: 60,
         taskId: 7040,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -3525,7 +3633,7 @@ let Story = [
       {
         id: 70,
         taskId: 7050,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -3545,7 +3653,7 @@ let Story = [
       {
         id: 80,
         taskId: 7060,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -3641,7 +3749,7 @@ let Story = [
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
-        title: '',
+        title: 'Task: Matching panel',
         description: '',
         items: [
           {
@@ -3674,7 +3782,7 @@ let Story = [
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
-        title: '',
+        title: 'Task: Matching panel',
         description: '',
         items: [
           {
@@ -3707,7 +3815,7 @@ let Story = [
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
-        title: '',
+        title: 'Task: Matching panel',
         description: '',
         items: [
           {
@@ -3740,7 +3848,7 @@ let Story = [
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
-        title: '',
+        title: 'Task: Puzzle',
         description: '',
         items: [
           {
@@ -3980,7 +4088,7 @@ let Story = [
       {
         id: 60,
         taskId: 8010,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -4000,7 +4108,7 @@ let Story = [
       {
         id: 70,
         taskId: 8020,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -4020,7 +4128,7 @@ let Story = [
       {
         id: 80,
         taskId: 8030,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -4040,7 +4148,423 @@ let Story = [
       {
         id: 90,
         taskId: 8040,
-        title: 'Task: Matching Panel',
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 90,
+    title: 'Economic Growth',
+    author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/infrastructure-industrialization/',
+    UNGoalImage: 'un-goals/E-WEB-Goal-08.png',
+    description: 'Inclusive and sustainable industrialization, together with innovation and infrastructure, can unleash dynamic and competitive economic forces that generate employment and income.',
+    preview: 'economic-growth/cover.jpg',
+    color: 'rgb(226, 10, 127)',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-09.png',
+    level: 2,
+    tasks: [
+      {
+        id: 9010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: 'Task: Matching panel',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-2.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'economic-growth/economic-growth-09.jpg'
+              },
+              {
+                text: '',
+                image: 'economic-growth/economic-growth-13.jpg'
+              },
+              {
+                text: '',
+                image: 'economic-growth/economic-growth-04.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 9020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: 'Task: Matching panel',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'economic-growth/economic-growth-12.jpg'
+              },
+              {
+                text: '',
+                image: 'economic-growth/economic-growth-05.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'economic-growth/economic-growth-14.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 9030,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: 'Task: Matching panel',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-5.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'economic-growth/economic-growth-01.jpg'
+              },
+              {
+                text: '',
+                image: 'economic-growth/economic-growth-13.jpg'
+              },
+              {
+                text: '',
+                image: 'economic-growth/economic-growth-07.jpg',
+                correct: true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 9040,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: 'Task: Puzzle',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'economic-growth/economic-growth-05.jpg'
+          },
+          {
+            order: 1,
+            image: 'economic-growth/economic-growth-06.jpg'
+          },
+          {
+            order: 2,
+            image: 'economic-growth/economic-growth-07.jpg'
+          },
+          {
+            order: 3,
+            image: 'economic-growth/economic-growth-08.jpg'
+          }
+        ]
+      }
+    ],
+    chapters: [
+      {
+        id: 0,
+        title: 'Economic Growth',
+        audio: [
+          {
+            filename: 'economic-growth/introduction.mp3',
+            label: 'Play'
+          }
+        ],
+        examQuestion: '<p>Developing countries will never be able to achieve economic growth and development. Discuss.</p>',
+        content: `<h2 class="introduction">Introduction</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|economic-growth/economic-growth-01.jpg|There is no doubt that technological growth has been flourishing in the last few decades]
+            </div>
+            <div class="half">
+              [image|economic-growth/economic-growth-02.jpg|allowing access to vast amounts of information and advanced technologies for people in developed countries.]
+            </div>
+            <div class="half">
+              [image|economic-growth/economic-growth-03.jpg|However, this is not always the case for developing countries where even basic infrastructure is often not available.]
+            </div>
+            <div class="half">
+              [image|economic-growth/economic-growth-04.jpg|Although achieving sustainable economic development in developing countries can be challenging, it is not impossible. Specific actions can help these countries thrive as well.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: '',
+        audio: [
+          {
+            filename: 'economic-growth/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `<h2 class="introduction">Paragraph 1</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|economic-growth/economic-growth-05.jpg|Firstly, it is important to invest in infrastructure such as telecommunications to promote growth of e-commerce and boost the economy of developing countries.]
+            </div>
+            <div class="half">
+              [image|economic-growth/economic-growth-06.jpg|Covid-19 has created not only a health crisis but also economic challenges threatening livelihoods and changing the way businesses and society operate.]
+            </div>
+            <div class="half">
+              [image|economic-growth/economic-growth-07.jpg|For example, a UN development project in Uganda has been working with an e-commerce company to create an online platform that connects farmers to market traders so they can sell their fresh produce. Another project brings together market traders and households through online sales and a home delivery service.]
+            </div>
+            <div class="half">
+              [image|economic-growth/economic-growth-08.jpg|Industry, though, must adopt clean and environmentally sound technologies and industrial processes in order to achieve sustainability.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        audio: [
+          {
+            filename: 'economic-growth/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `<h2 class="introduction">Paragraph 2</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|economic-growth/economic-growth-09.jpg|Secondly, manufacturing is an area of great significance as it can also lead to economic development and employment.  Providing new job opportunities to the community and supporting people's well-being.]
+            </div>
+            <div class="half">
+              [image|economic-growth/economic-growth-10.jpg|Industry, though, must adopt clean and environmentally sound technologies and industrial processes in order to achieve sustainability.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        audio: [
+          {
+            filename: 'economic-growth/paragraph-3.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `<h2 class="introduction">Paragraph 3</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|economic-growth/economic-growth-11.jpg|Finally, to help developing nations catch up, greater investment in scientific research and innovation is needed.]
+            </div>
+            <div class="half">
+              [image|economic-growth/economic-growth-12.jpg|Technological progress is important, of course, but innovation is not always technological. Sometimes it is just a matter of rethinking what is possible.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: '',
+        audio: [
+          {
+            filename: 'economic-growth/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `<h2 class="introduction">Conclusion</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|economic-growth/economic-growth-13.jpg|In conclusion, it is clear that sustainable social development and economic growth can be achieved if appropriate actions are taken.]
+            </div>
+            <div class="half">
+              [image|economic-growth/economic-growth-14.jpg|Advancement in the above-mentioned areas will not only have a positive impact on society but also on the environment and economy.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        title: '',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=IdZNdSaDH4I" target="_blank">UN Sustainable Development Goal&nbsp;9</a>.</p>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 9010,
+        title: '',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 9020,
+        title: '',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 9030,
+        title: '',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 9040,
+        title: '',
         content: '',
         choices: [
           {
@@ -4428,6 +4952,381 @@ let Story = [
     ]
   },
   {
+    id: 120,
+    title: 'Overproduction',
+    author: 'CIELL Team',
+    url: 'https://www.un.org/sustainabledevelopment/sustainable-consumption-production/',
+    UNGoalImage: 'un-goals/E-WEB-Goal-12.png',
+    description: 'Worldwide consumption and production — a driving force of the global economy — rest on the use of the natural environment and resources in a way that continues to have destructive impacts on the planet.',
+    preview: 'overproduction/cover.jpg',
+    color: 'rgb(198, 32, 39)',
+    numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-12.png',
+    level: 2,
+    tasks: [
+      {
+        id: 12010,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: 'Task: Matching panel',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'overproduction/overproduction-03.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'overproduction/overproduction-02.jpg'
+              },
+              {
+                text: '',
+                image: 'overproduction/overproduction-08.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 12020,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: 'Task: Matching panel',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-3.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'overproduction/overproduction-06.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'overproduction/overproduction-05.jpg'
+              },
+              {
+                text: '',
+                image: 'overproduction/overproduction-09.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 12030,
+        name: 'Choose the panel that matches',
+        type: 'image-choice',
+        typeName: 'Image Choice',
+        title: 'Task: Matching panel',
+        description: '',
+        items: [
+          {
+            singleChoice: true,
+            question: 'Choose the panel that matches',
+            answerTitle: 'Choose one of the following panels',
+            images: [
+              'info-graphics/basic-essay-structure-conclusion-1.jpg'
+            ],
+            answers: [
+              {
+                text: '',
+                image: 'overproduction/overproduction-07.jpg'
+              },
+              {
+                text: '',
+                image: 'overproduction/overproduction-11.jpg',
+                correct: true
+              },
+              {
+                text: '',
+                image: 'overproduction/overproduction-08.jpg'
+              }
+            ]
+          }
+        ]
+      },
+      {
+        id: 12040,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: 'Task: Puzzle',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'overproduction/overproduction-01.jpg'
+          },
+          {
+            order: 1,
+            image: 'overproduction/overproduction-02.jpg'
+          }
+        ]
+      }
+    ],
+    chapters: [
+      {
+        id: 0,
+        title: 'Overproduction',
+        audio: [
+          {
+            filename: 'overproduction/introduction.mp3',
+            label: 'Play'
+          }
+        ],
+        examQuestion: '<p>Experts argue that today\'s production and consumption habits are a threat to the ecosystem and human livelihood. To what extent do you agree?</p>',
+        content: `<h2 class="introduction">Introduction</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|overproduction/overproduction-01.jpg|Nowadays, without a doubt, there is massive availability of products which people love to consume. We purchase food, clothing, electronic gadgets and as a result use energy more than ever before.]
+            </div>
+            <div class="half">
+              [image|overproduction/overproduction-02.jpg|However, the growing trend of overproduction and overconsumption is threatening the sustainability of the planet.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 10
+          }
+        ]
+      },
+      {
+        id: 10,
+        title: '',
+        audio: [
+          {
+            filename: 'overproduction/paragraph-1.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `<h2 class="introduction">Paragraph 1</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|overproduction/overproduction-03.jpg|First of all, mass production has led to exploitation of energy and raw materials.]
+            </div>
+            <div class="half">
+              [image|overproduction/overproduction-04.jpg|Resources such as coal and natural gas are used extensively in manufacturing industries in order to meet high global demand for goods.]
+            </div>
+            <div class="half">
+              [image|overproduction/overproduction-05.jpg|This, in turn, leads to extreme stress on the planet and degradation of the environment.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 0
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 20
+          }
+        ]
+      },
+      {
+        id: 20,
+        title: '',
+        audio: [
+          {
+            filename: 'overproduction/paragraph-2.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `<h2 class="introduction">Paragraph 2</h2>
+        <div class="comic-grid">
+          <div class="half">
+            [image|overproduction/overproduction-06.jpg|Secondly, to make matters worse, we also waste products.]
+          </div>
+          <div class="half">
+            [image|overproduction/overproduction-07.jpg|It is argued that one third of the food produced for human consumption each year is wasted.]
+          </div>
+          <div class="half">
+            [image|overproduction/overproduction-08.jpg|Moreover, many countries use more products than can be sustainably produced.]
+          </div>
+          <div class="half">
+            [image|overproduction/overproduction-09.jpg|Households around the world actually devour almost thirty percent of the global energy]
+          </div>
+          <div class="half">
+            [image|overproduction/overproduction-10.jpg|and contribute a high percentage of CO2 emissions as a result.]
+          </div>
+        </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 10
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 30
+          }
+        ]
+      },
+      {
+        id: 30,
+        title: '',
+        audio: [
+          {
+            filename: 'overproduction/conclusion.mp3',
+            label: 'Play'
+          }
+        ],
+        content: `<h2 class="introduction">Conclusion</h2>
+          <div class="comic-grid">
+            <div class="half">
+              [image|overproduction/overproduction-11.jpg|In conclusion, many people wrongly assume that our planet can provide unlimited fossil fuels and food.]
+            </div>
+            <div class="half">
+              [image|overproduction/overproduction-12.jpg|We need to understand the environmental impact of manufacturing and food production and start rethinking our behavioural patterns. Radical changes to how we live are needed to lead to a more sustainable lifestyle.]
+            </div>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 20
+          },
+          {
+            'text': 'Tasks',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 40
+          }
+        ]
+      },
+      {
+        id: 40,
+        title: '',
+        content: `[tasks]
+          <div class="further-reading">
+            [UNGoalImage]
+            <p class="last">Find out more about <a href="https://www.youtube.com/watch?v=puEWxGStQrE" target="_blank">UN Sustainable Development Goal&nbsp;12</a>.</p>
+          </div>`,
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 30
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 50
+          }
+        ]
+      },
+      {
+        id: 50,
+        taskId: 12010,
+        title: '',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 40
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 60
+          }
+        ]
+      },
+      {
+        id: 60,
+        taskId: 12020,
+        title: '',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 50
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 70
+          }
+        ]
+      },
+      {
+        id: 70,
+        taskId: 12030,
+        title: '',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 12040,
+        title: '',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
+          },
+          {
+            'text': 'Restart',
+            'class': 'next',
+            'iconAfter': 'undo',
+            'chapterId': 0
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: 110,
     title: 'Transport',
     author: 'CIELL Team',
@@ -4535,6 +5434,32 @@ let Story = [
                 correct: true
               }
             ]
+          }
+        ]
+      },
+      {
+        id: 11040,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'transports/transports 01.jpg'
+          },
+          {
+            order: 1,
+            image: 'transports/transports 02.jpg'
+          },
+          {
+            order: 2,
+            image: 'transports/transports 03.jpg'
+          },
+          {
+            order: 3,
+            image: 'transports/transports 04.jpg'
           }
         ]
       }
@@ -4732,7 +5657,7 @@ let Story = [
       {
         id: 50,
         taskId: 11010,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -4752,7 +5677,7 @@ let Story = [
       {
         id: 60,
         taskId: 11020,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -4772,7 +5697,7 @@ let Story = [
       {
         id: 70,
         taskId: 11030,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -4780,6 +5705,26 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 11040,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
           },
           {
             'text': 'Restart',
@@ -4795,10 +5740,10 @@ let Story = [
     id: 130,
     title: 'Climate Action',
     description: 'This is a story about climate action.',
-    url: 'https://www.un.org/sustainabledevelopment/climate-change/',
+    url: 'https://www.un.org/sustainabledevelopment/climate-action/',
     UNGoalImage: 'un-goals/E-WEB-Goal-13.png',
     author: 'CIELL Team',
-    preview: 'climate-change/cover.jpg',
+    preview: 'climate-action/cover.jpg',
     color: 'rgb(213, 212, 36)',
     numberImage: 'un-goals/SDG_Icons_Inverted_Transparent_WEB-13.png',
     level: 2,
@@ -4821,16 +5766,16 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'climate-change/climate 06.jpg',
+                image: 'climate-action/climate 06.jpg',
                 correct: true
               },
               {
                 text: '',
-                image: 'climate-change/climate 11.jpg'
+                image: 'climate-action/climate 11.jpg'
               },
               {
                 text: '',
-                image: 'climate-change/climate 13.jpg'
+                image: 'climate-action/climate 13.jpg'
               }
             ]
           }
@@ -4854,16 +5799,16 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'climate-change/climate 08.jpg'
+                image: 'climate-action/climate 08.jpg'
               },
               {
                 text: '',
-                image: 'climate-change/climate 17.jpg',
+                image: 'climate-action/climate 17.jpg',
                 correct: true
               },
               {
                 text: '',
-                image: 'climate-change/climate 11.jpg'
+                image: 'climate-action/climate 11.jpg'
               }
             ]
           }
@@ -4887,18 +5832,48 @@ let Story = [
             answers: [
               {
                 text: '',
-                image: 'climate-change/climate 01.jpg'
+                image: 'climate-action/climate 01.jpg'
               },
               {
                 text: '',
-                image: 'climate-change/climate 04.jpg'
+                image: 'climate-action/climate 04.jpg'
               },
               {
                 text: '',
-                image: 'climate-change/climate 11.jpg',
+                image: 'climate-action/climate 11.jpg',
                 correct: true
               }
             ]
+          }
+        ]
+      },
+      {
+        id: 13040,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: '',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'climate-action/climate 07.jpg'
+          },
+          {
+            order: 1,
+            image: 'climate-action/climate 08.jpg'
+          },
+          {
+            order: 2,
+            image: 'climate-action/climate 09.jpg'
+          },
+          {
+            order: 3,
+            image: 'climate-action/climate 10.jpg'
+          },
+          {
+            order: 4,
+            image: 'climate-action/climate 11.jpg'
           }
         ]
       }
@@ -4917,22 +5892,22 @@ let Story = [
         content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
-              [image|climate-change/climate 01.jpg|Every Friday millions of pupils around the world fo on strike for their future,]
+              [image|climate-action/climate 01.jpg|Every Friday millions of pupils around the world fo on strike for their future,]
             </div>
             <div class="half">
-              [image|climate-change/climate 02.jpg|leaving their school to protest for the action needed to reverse and tackle the effects of climate change.]
+              [image|climate-action/climate 02.jpg|leaving their school to protest for the action needed to reverse and tackle the effects of climate change.]
             </div>
             <div class="half">
-              [image|climate-change/climate 03.jpg|Although some schools do not support this,]
+              [image|climate-action/climate 03.jpg|Although some schools do not support this,]
             </div>
             <div class="half">
-              [image|climate-change/climate 04.jpg|others have allowed their pupils to join the strike.]
+              [image|climate-action/climate 04.jpg|others have allowed their pupils to join the strike.]
             </div>
             <div class="half">
-              [image|climate-change/climate 05.jpg|I believe all young people should be given the right to attend these crucial demonstrations.]
+              [image|climate-action/climate 05.jpg|I believe all young people should be given the right to attend these crucial demonstrations.]
             </div>
             <div class="half">
-              [image|climate-change/climate 06.jpg|This essay will explain the reasons why I agree with pupils being allowed to take part in these potentially life-saving protests.]
+              [image|climate-action/climate 06.jpg|This essay will explain the reasons why I agree with pupils being allowed to take part in these potentially life-saving protests.]
             </div>
           </div>`,
         choices: [
@@ -4955,19 +5930,19 @@ let Story = [
         content: `<h2 class="introduction">Paragraph 1</h2>
           <div class="comic-grid">
             <div class="half">
-              [image|climate-change/climate 07.jpg|It cannot now be ignored that]
+              [image|climate-action/climate 07.jpg|It cannot now be ignored that]
             </div>
             <div class="half">
-              [image|climate-change/climate 08.jpg|scientists all around the world have declared a climate crisis]
+              [image|climate-action/climate 08.jpg|scientists all around the world have declared a climate crisis]
             </div>
             <div class="half">
-              [image|climate-change/climate 09.jpg|and state that if humans do not change their ways,]
+              [image|climate-action/climate 09.jpg|and state that if humans do not change their ways,]
             </div>
             <div class="half">
-              [image|climate-change/climate 10.jpg|the planet could become uninhabitable in the not too distant future.]
+              [image|climate-action/climate 10.jpg|the planet could become uninhabitable in the not too distant future.]
             </div>
             <div class="half">
-              [image|climate-change/climate 11.jpg|For this reason alone, young people should have the right to protest the lack of action taken by their governments to protect their future.]
+              [image|climate-action/climate 11.jpg|For this reason alone, young people should have the right to protest the lack of action taken by their governments to protect their future.]
             </div>
           </div>`,
         choices: [
@@ -4996,19 +5971,19 @@ let Story = [
         content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
-              [image|climate-change/climate 12.jpg|Moreover, as many students argue, if the planet changes in the way scientists predict as a result of the accelerated rate of climate change,]
+              [image|climate-action/climate 12.jpg|Moreover, as many students argue, if the planet changes in the way scientists predict as a result of the accelerated rate of climate change,]
             </div>
             <div class="half">
-              [image|climate-change/climate 13.jpg|then a traditional school education will be of little use.]
+              [image|climate-action/climate 13.jpg|then a traditional school education will be of little use.]
             </div>
             <div class="half">
-              [image|climate-change/climate 14.jpg|It is vital that action is taken urgently]
+              [image|climate-action/climate 14.jpg|It is vital that action is taken urgently]
             </div>
             <div class="half">
-              [image|climate-change/climate 15.jpg|if those currently in school are to even have a future.]
+              [image|climate-action/climate 15.jpg|if those currently in school are to even have a future.]
             </div>
             <div class="half">
-              [image|climate-change/climate 16.jpg|In light of this, recognising and acting in response to the climate crisis could be considered a great deal more important than going to school on Fridays.]
+              [image|climate-action/climate 16.jpg|In light of this, recognising and acting in response to the climate crisis could be considered a great deal more important than going to school on Fridays.]
             </div>
           </div>`,
         choices: [
@@ -5037,16 +6012,16 @@ let Story = [
         content: `<h2 class="introduction">Conclusion</h2>
           <div class="comic-grid">
             <div class="half">
-              [image|climate-change/climate 17.jpg|To conclude, to a certain extent, school pupils have little choice but to skip school for these protests.]
+              [image|climate-action/climate 17.jpg|To conclude, to a certain extent, school pupils have little choice but to skip school for these protests.]
             </div>
             <div class="half">
-              [image|climate-change/climate 18.jpg|If their governments refuse to take action to tacke the climate crisis]
+              [image|climate-action/climate 18.jpg|If their governments refuse to take action to tacke the climate crisis]
             </div>
             <div class="half">
-              [image|climate-change/climate 19.jpg|then the pupils will have to continue protesting until they do.]
+              [image|climate-action/climate 19.jpg|then the pupils will have to continue protesting until they do.]
             </div>
             <div class="half">
-              [image|climate-change/climate 20.jpg|After all, it is essentially their lives they are fighting for.]
+              [image|climate-action/climate 20.jpg|After all, it is essentially their lives they are fighting for.]
             </div>
           </div>`,
         choices: [
@@ -5090,7 +6065,7 @@ let Story = [
       {
         id: 50,
         taskId: 13010,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -5110,7 +6085,7 @@ let Story = [
       {
         id: 60,
         taskId: 13020,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -5130,7 +6105,7 @@ let Story = [
       {
         id: 70,
         taskId: 13030,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -5138,6 +6113,26 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 60
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 80
+          }
+        ]
+      },
+      {
+        id: 80,
+        taskId: 13040,
+        title: 'Task: Puzzle',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 70
           },
           {
             'text': 'Restart',
@@ -5473,7 +6468,7 @@ let Story = [
       {
         id: 60,
         taskId: 14010,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -5493,7 +6488,7 @@ let Story = [
       {
         id: 70,
         taskId: 14020,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -5513,7 +6508,7 @@ let Story = [
       {
         id: 80,
         taskId: 14030,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -5909,7 +6904,7 @@ let Story = [
       {
         id: 60,
         taskId: 15010,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -5929,7 +6924,7 @@ let Story = [
       {
         id: 70,
         taskId: 15020,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -5949,7 +6944,7 @@ let Story = [
       {
         id: 80,
         taskId: 15030,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -6334,7 +7329,7 @@ let Story = [
       {
         id: 60,
         taskId: 16010,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -6354,7 +7349,7 @@ let Story = [
       {
         id: 70,
         taskId: 16020,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -6374,7 +7369,7 @@ let Story = [
       {
         id: 80,
         taskId: 16030,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -6394,7 +7389,7 @@ let Story = [
       {
         id: 90,
         taskId: 16040,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -6746,7 +7741,7 @@ let Story = [
       {
         id: 60,
         taskId: 17010,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -6766,7 +7761,7 @@ let Story = [
       {
         id: 70,
         taskId: 17020,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -6786,7 +7781,7 @@ let Story = [
       {
         id: 80,
         taskId: 17030,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {
@@ -6806,7 +7801,7 @@ let Story = [
       {
         id: 90,
         taskId: 17040,
-        title: 'Task: Matching Panel',
+        title: 'Task: Matching panel',
         content: '',
         choices: [
           {

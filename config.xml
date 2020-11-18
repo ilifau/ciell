@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="org.odl.ciell" version="1.0.8" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="org.odl.ciell" version="1.0.9" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>CIELL</name>
     <description>
         Comics for Inclusive English Language Learning
@@ -58,5 +58,5 @@
     <preference name="Fullscreen" value="true" />
     <plugin name="cordova-plugin-fullscreen" spec="^1.2.0" />
     <engine name="android" spec="^8.1.0" />
-    <engine name="ios" spec="^6.0.0" />
+    <engine name="ios" spec="^6.1.1" />
 </widget>

@@ -3749,7 +3749,7 @@ let Story = [
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
-        title: 'Task: Matching panel',
+        title: '',
         description: '',
         items: [
           {
@@ -3782,7 +3782,7 @@ let Story = [
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
-        title: 'Task: Matching panel',
+        title: '',
         description: '',
         items: [
           {
@@ -3815,7 +3815,7 @@ let Story = [
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
-        title: 'Task: Matching panel',
+        title: '',
         description: '',
         items: [
           {
@@ -3848,7 +3848,7 @@ let Story = [
         name: 'Choose the panel that matches',
         type: 'image-choice',
         typeName: 'Image Choice',
-        title: 'Task: Puzzle',
+        title: '',
         description: '',
         items: [
           {
@@ -4172,7 +4172,7 @@ let Story = [
     title: 'Economic Growth',
     author: 'CIELL Team',
     url: 'https://www.un.org/sustainabledevelopment/infrastructure-industrialization/',
-    UNGoalImage: 'un-goals/E-WEB-Goal-08.png',
+    UNGoalImage: 'un-goals/E-WEB-Goal-09.png',
     description: 'Inclusive and sustainable industrialization, together with innovation and infrastructure, can unleash dynamic and competitive economic forces that generate employment and income.',
     preview: 'economic-growth/cover.jpg',
     color: 'rgb(226, 10, 127)',
@@ -5079,6 +5079,28 @@ let Story = [
             image: 'overproduction/overproduction-02.jpg'
           }
         ]
+      },
+      {
+        id: 12050,
+        name: 'Reorder the panels',
+        type: 'puzzle',
+        typeName: 'Puzzle',
+        title: 'Task: Puzzle',
+        description: '<p style="margin-bottom:1em"><strong>Drag and drop</strong> the panels into the correct order.</p>',
+        items: [
+          {
+            order: 0,
+            image: 'overproduction/overproduction-03.jpg'
+          },
+          {
+            order: 1,
+            image: 'overproduction/overproduction-04.jpg'
+          },
+          {
+            order: 2,
+            image: 'overproduction/overproduction-05.jpg'
+          }
+        ]
       }
     ],
     chapters: [
@@ -5315,6 +5337,26 @@ let Story = [
             'class': 'previous',
             'iconBefore': 'arrow-left',
             'chapterId': 70
+          },
+          {
+            'text': 'Next',
+            'class': 'next',
+            'iconAfter': 'arrow-right',
+            'chapterId': 90
+          }
+        ]
+      },
+      {
+        id: 90,
+        taskId: 12050,
+        title: '',
+        content: '',
+        choices: [
+          {
+            'text': 'Previous',
+            'class': 'previous',
+            'iconBefore': 'arrow-left',
+            'chapterId': 80
           },
           {
             'text': 'Restart',

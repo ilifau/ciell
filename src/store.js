@@ -13,9 +13,9 @@ export const store = new Vuex.Store({
     tasksComplete: [],
     baseFont: false,
     ratings: {
-      Useful: 0,
-      Fun: 0,
-      Usability: 0
+      'Useful': 0,
+      'Fun': 0,
+      'Easy to use': 0
     }
   },
   mutations: {

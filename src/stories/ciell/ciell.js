@@ -329,7 +329,7 @@ let Story = [
               [image|homeless/homeless 01.jpg|The number of people living without homes is increasing not only in developing regions but also in the richest countries.]
             </div>
             <div class="half">
-              [image|homeless/homeless 02.jpg|Governments, NGOs, and international organizations, such as UNICEF and the UN, trys to raise awareness about homelessness.]
+              [image|homeless/homeless 02.jpg|Governments, NGOs, and international organisations, such as UNICEF and the UN, try to raise awareness about homelessness.]
             </div>
             <div class="half">
               [image|homeless/homeless 03.jpg|Everyone has the right to housing; therefore, we should work towards ending homelessness.]
@@ -2316,7 +2316,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        examQuestion: '<p>Due to different gender roles and poverty, teenage boys and girls face different challenges at home and schools especially in developing countries.</p><p class="last">Do you agree with this statement? Give examples to support your views.</p>',
+        examQuestion: '<p>Due to different gender roles and poverty, teenage boys and girls face different challenges at home and in schools especially in developing countries.</p><p class="last">Do you agree with this statement? Give examples to support your views.</p>',
         content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
@@ -2428,7 +2428,7 @@ let Story = [
               [image|gender-equality/invisible 20.jpg|Due to different gender norms, boys matty at an older age and stay in education longer than girls.]
             </div>
             <div class="half">
-              [image|gender-equality/invisible 21.jpg|For example, parents of girls expect a man to pay a good 'bride price' before he can marry their daughter.]
+              [image|gender-equality/invisible 21.jpg|For example, parents of girls may expect a man to pay a good 'bride price' before he can marry their daughter.]
             </div>
             <div class="half">
               [image|gender-equality/invisible 22.jpg|Consequently, boys have more support to stay in school and make their dreams come true.]
@@ -3495,7 +3495,7 @@ let Story = [
         content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
-              [image|nuclear-power/nuclear 16.jpg|The generation of nuclear energy is environmentally friendly, reliable and cost-effective.]
+              [image|nuclear-power/nuclear 16.jpg|The generation of nuclear energy is environmentally-friendly, reliable and cost-effective.]
             </div>
             <div class="half">
               [image|nuclear-power/nuclear 17.jpg|It is a zero-emission, clean energy,]
@@ -3504,7 +3504,7 @@ let Story = [
               [image|nuclear-power/nuclear 18.jpg|that produces mimnimal waste and maximum electricity on less land than any outher clean-air source.]
             </div>
             <div class="half">
-              [image|nuclear-power/nuclear 19.jpg|In comparison to solar, wind and water generated energy, nuclear power would be cheaper, more reliable and more productive.]
+              [image|nuclear-power/nuclear 19.jpg|In comparison to solar, wind and water generated energy, nuclear power could be cheaper, more reliable and more productive.]
             </div>
             <div class="half">
               [image|nuclear-power/nuclear 20.jpg|For example, generating electricity from wind would require many wind turbines over a large area of land]
@@ -4391,7 +4391,7 @@ let Story = [
         content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
-              [image|economic-growth/economic-growth-09.jpg|Secondly, manufacturing is an area of great significance as it can also lead to economic development and employment.  Providing new job opportunities to the community and supporting people's well-being.]
+              [image|economic-growth/economic-growth-09.jpg|Secondly, manufacturing is an area of great significance as it can also lead to economic development and employment, providing new job opportunities to the community and supporting people's well-being.]
             </div>
             <div class="half">
               [image|economic-growth/economic-growth-10.jpg|Industry, though, must adopt clean and environmentally sound technologies and industrial processes in order to achieve sustainability.]
@@ -5559,7 +5559,7 @@ let Story = [
               [image|transports/transports 06.jpg|could discourage the use of cars and therefore help to reduce the amount of carbon dioxide emissions.]
             </div>
             <div class="half">
-              [image|transports/transports 07.jpg|This will result in more environmentally-friendly cities and also help to reduce the levels of congestion on roads.]
+              [image|transports/transports 07.jpg|This will result in more environmentally-friendly cities and also help to reduce levels of congestion on roads.]
             </div>
             <div class="half">
               [image|transports/transports 08.jpg|Currently, the heavy traffic sometimes leads to levels of air pollution that are toxic and unsafe for people's health.]
@@ -5571,7 +5571,7 @@ let Story = [
               [image|transports/transports 10.jpg|and many cities simply do not have the space or infrastructure to cope with the ever-increasing numbers of cars on their roads.]
             </div>
             <div class="half">
-              [image|transports/transports 11.jpg|Accessible and affordable public transport would help to alleviate the burden cars place on their existing road systems.]
+              [image|transports/transports 11.jpg|Accessible and affordable public transport would help to alleviate the burden cars place on existing road systems.]
             </div>
           </div>`,
         choices: [
@@ -5926,7 +5926,7 @@ let Story = [
         title: 'Climate Action',
         audio: [
           {
-            filename: 'climate-action/paragraph-1.mp3',
+            filename: 'climate-action/intro.mp3',
             label: 'Play'
           }
         ],
@@ -6013,7 +6013,7 @@ let Story = [
         content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
-              [image|climate-action/climate 12.jpg|Moreover, as many students argue, if the planet changes in the way scientists predict as a result of the accelerated rate of climate change,]
+              [image|climate-action/climate 12.jpg|Moreover, as Greta argues, if the planet changes in the way scientists predict as a result of the accelerated rate of climate change,]
             </div>
             <div class="half">
               [image|climate-action/climate 13.jpg|then a traditional school education will be of little use.]

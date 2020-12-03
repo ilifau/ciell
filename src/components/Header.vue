@@ -35,7 +35,6 @@
         </div>
       </div>
       <router-link to="/tasks" v-bind:class="{ current: $route.name === 'tasks' }" v-on:click.native="closeNav()">All Tasks<span class="tasks-num all-tasks"><span v-html="starTotal()"></span><span class="of">{{ $store.state.tasksComplete.length }} / {{ numTasks(stories) }}</span></span></router-link>
-      <router-link to="/evaluation" v-bind:class="{ current: $route.name === 'evaluation' }" v-on:click.native="closeNav()">Rate this App</router-link>
       <router-link to="/about" v-bind:class="{ current: $route.name === 'about' }" v-on:click.native="closeNav()">About CIELL</router-link>
       <router-link to="/" v-bind:class="{ current: $route.name === 'welcome' }" v-on:click.native="closeNav()">Welcome Screen</router-link>
       <a id="toggleBaseFont" tabindex="0" v-on:click="toggleBaseFont()" @keyup.enter="toggleBaseFont()" v-bind:class="this.$store.state.baseFont ? 'active' : 'inactive'">Open dyslexic mode</a>
@@ -54,7 +53,7 @@ export default {
   props: ['stories'],
   computed: {
     storyTitle: function () {
-      let show = ['tasks', 'about', 'home', 'evaluation']
+      let show = ['tasks', 'about', 'home']
       if (show.includes(this.$route.name)) {
         return 'Comics'
       } else if (this.$route.name === 'story') {
@@ -72,7 +71,7 @@ export default {
       this.navIsActive = false
     },
     showBacktoStoriesLink: function () {
-      let show = ['story', 'tasks', 'about', 'evaluation']
+      let show = ['story', 'tasks', 'about']
       return show.includes(this.$route.name)
     },
     getBadgeClass: function (id, tasks) {

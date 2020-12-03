@@ -2316,7 +2316,7 @@ let Story = [
             label: 'Play'
           }
         ],
-        examQuestion: '<p>Due to different gender roles and poverty, teenage boys and girls face different challenges at home and in schools especially in developing countries.</p><p class="last">Do you agree with this statement? Give examples to support your views.</p>',
+        examQuestion: '<p>Due to different gender roles and poverty, teenage boys and girls face different challenges at home and in school especially in developing countries.</p><p class="last">Do you agree with this statement? Give examples to support your views.</p>',
         content: `<h2 class="introduction">Introduction</h2>
           <div class="comic-grid">
             <div class="half">
@@ -3966,7 +3966,7 @@ let Story = [
               [image|decent-work/decent-work-09.jpg|Job opportunities, though, should be available for men,]
             </div>
             <div class="half">
-              [image|decent-work/decent-work-10.jpg|women, young people, migrants and also for persons with disabilities.]
+              [image|decent-work/decent-work-10.jpg|women, young people, migrants and also persons with disabilities.]
             </div>
             <div class="half">
               [image|decent-work/decent-work-11.jpg|Inequalities in opportunities and earnings are very often observed in our society and this is something that should be eradicated.]
@@ -4391,7 +4391,7 @@ let Story = [
         content: `<h2 class="introduction">Paragraph 2</h2>
           <div class="comic-grid">
             <div class="half">
-              [image|economic-growth/economic-growth-09.jpg|Secondly, manufacturing is an area of great significance as it can also lead to economic development and employment, providing new job opportunities to the community and supporting people's well-being.]
+              [image|economic-growth/economic-growth-09.jpg|Secondly, manufacturing is an area of great significance as it can also lead to economic development and employment, providing new opportunities to the community and supporting people's well-being.]
             </div>
             <div class="half">
               [image|economic-growth/economic-growth-10.jpg|Industry, though, must adopt clean and environmentally sound technologies and industrial processes in order to achieve sustainability.]

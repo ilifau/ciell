@@ -39,9 +39,6 @@
         </a>
       </div>
     </div>
-    <div class="evaluation-link">
-      <p class="last"><router-link to="/evaluation"><v-icon name="star" scale="1" /> Rate this app!</router-link></p>
-    </div>
   </div>
 </template>
 
@@ -309,14 +306,6 @@ export default {
     color: #04accc;
   }
 
-  .evaluation-link {
-    display: block;
-    padding: .5em 1em;
-    text-align: center;
-    max-width: 90%;
-    margin: 1em auto 0;
-  }
-
   .tasks-completed {
     position: absolute;
     left: 1em;
@@ -346,29 +335,6 @@ export default {
 
   .stars-num {
    opacity: .8;
-  }
-
-  @media screen and (max-width: 639px) {
-   .evaluation-link {
-     margin-top: 4em;
-   }
-  }
-
-  .evaluation-link a {
-    font-weight: 400;
-    letter-spacing: 1px;
-    font-size: .75em;
-    color: #2d383a !important;
-  }
-
-  .evaluation-link a img {
-    height: .93875em;
-    width: .93875em;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    top: -2px;
-    margin-left: .25em;
   }
 
   @media screen and (max-width: 1024px) {

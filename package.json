@@ -68,7 +68,7 @@
     "file-loader": "^6.2.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^4.5.0",
-    "node-notifier": "^6.0.0",
+    "node-notifier": "^8.0.1",
     "optimize-css-assets-webpack-plugin": "^5.0.4",
     "ora": "^4.1.1",
     "portfinder": "^1.0.28",
